@@ -1,0 +1,18 @@
+# Temporal-dynamics configuration - the committed recipe behind artifacts/dynamics/
+seed: 0
+k_for_stability: 3           # k-means k used for the 2023 vs 2024 membership comparison
+min_months_per_period: 12    # a territory enters the period feature space with >=12 months in each year
+transitions:
+  delta_threshold: 0.05      # a category's share must move by at least 5 percentage points
+  persist_months: 3          # and the deviation must hold the same sign for >=3 months from the end of 2024
+  min_months_total: 20       # ragged series below 20 of 24 months cannot generate a transition
+  strength_bands: {strong: 6, moderate: 4, thin: 3}
+geospatial_consistency:
+  change_layers:             # what would be needed to call a transition corroborated
+    - GLC-LC100 change-confidence (Zenodo 3939050, epoch 2015-2019)
+    - MODIS MCD64A1 burn date 2023 vs 2019-2022
+    - Hansen GFC loss year
+  verdict_when_absent: unverifiable_no_physical_layer
+reproduction:
+  tolerance: 0.02
+  rerun_command: .venv/bin/python scripts/run_dynamics.py

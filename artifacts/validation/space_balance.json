@@ -1,0 +1,329 @@
+{
+ "generated_by": "scripts/measure_space_balance.py",
+ "what_this_is": "How much of the between-cluster separation each feature family decides, per space and per k, and whether spending composition can enter the space while spending size stays outside it.",
+ "why": "In k-means on quantile-normalised features every column has equal scale, so a family's influence is proportional to how many columns it contributes. Column count is therefore a silent weighting unless it is measured and stated.",
+ "land_representative_set": [
+  "gls_fraction_urban",
+  "gls_fraction_crops",
+  "gls_fraction_tree",
+  "viirs_lit_mean",
+  "modis_ndvi_mean",
+  "elevation_mean"
+ ],
+ "shares_carry_no_size": "A category share is a ratio to the territory's own total, so the 5 category shares describe the shape of the spending basket without encoding how large the basket is. The panel carries 6 level columns, one of which is the total.",
+ "density_excluded_when_area_in_space": true,
+ "results": {
+  "land_68_money_free|k3": {
+   "family_split_share": {
+    "land": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.898,
+   "clusters_nameable_by_land": "3/3",
+   "kmeans_vs_ward_ari": 0.9532,
+   "stability_bootstrap_ari": 0.9968,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean",
+    "hansen_window_forest_loss_pct",
+    "soil_organic_carbon_surface",
+    "dynamic_world_built",
+    "burn_pct_of_territory"
+   ]
+  },
+  "land_68_money_free|k4": {
+   "family_split_share": {
+    "land": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.5459,
+   "clusters_nameable_by_land": "4/4",
+   "kmeans_vs_ward_ari": 0.8867,
+   "stability_bootstrap_ari": 0.9912,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean",
+    "hansen_window_forest_loss_pct",
+    "soil_organic_carbon_surface",
+    "dynamic_world_built",
+    "burn_pct_of_territory"
+   ]
+  },
+  "land_68_money_free|k5": {
+   "family_split_share": {
+    "land": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.4716,
+   "clusters_nameable_by_land": "5/5",
+   "kmeans_vs_ward_ari": 0.8104,
+   "stability_bootstrap_ari": 0.8565,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean",
+    "hansen_window_forest_loss_pct",
+    "soil_organic_carbon_surface",
+    "dynamic_world_built",
+    "burn_pct_of_territory"
+   ]
+  },
+  "land_68_money_free|k7": {
+   "family_split_share": {
+    "land": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.5806,
+   "clusters_nameable_by_land": "7/7",
+   "kmeans_vs_ward_ari": 0.7059,
+   "stability_bootstrap_ari": 0.755,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean",
+    "hansen_window_forest_loss_pct",
+    "soil_organic_carbon_surface",
+    "dynamic_world_built",
+    "burn_pct_of_territory"
+   ]
+  },
+  "land_6_representative|k3": {
+   "family_split_share": {
+    "land": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.9602,
+   "clusters_nameable_by_land": "3/3",
+   "kmeans_vs_ward_ari": 0.8147,
+   "stability_bootstrap_ari": 0.969,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean"
+   ]
+  },
+  "land_6_representative|k4": {
+   "family_split_share": {
+    "land": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.8589,
+   "clusters_nameable_by_land": "4/4",
+   "kmeans_vs_ward_ari": 0.7329,
+   "stability_bootstrap_ari": 0.8232,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean"
+   ]
+  },
+  "land_6_representative|k5": {
+   "family_split_share": {
+    "land": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.7551,
+   "clusters_nameable_by_land": "5/5",
+   "kmeans_vs_ward_ari": 0.5974,
+   "stability_bootstrap_ari": 0.8147,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean"
+   ]
+  },
+  "land_6_representative|k7": {
+   "family_split_share": {
+    "land": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.7426,
+   "clusters_nameable_by_land": "7/7",
+   "kmeans_vs_ward_ari": 0.5451,
+   "stability_bootstrap_ari": 0.7858,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean"
+   ]
+  },
+  "shares_only|k3": {
+   "family_split_share": {
+    "spending_shape": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.9106,
+   "clusters_nameable_by_land": "3/3",
+   "kmeans_vs_ward_ari": 0.4878,
+   "stability_bootstrap_ari": 0.8815,
+   "naming_is_circular_for": []
+  },
+  "shares_only|k4": {
+   "family_split_share": {
+    "spending_shape": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.6827,
+   "clusters_nameable_by_land": "4/4",
+   "kmeans_vs_ward_ari": 0.3878,
+   "stability_bootstrap_ari": 0.7738,
+   "naming_is_circular_for": []
+  },
+  "shares_only|k5": {
+   "family_split_share": {
+    "spending_shape": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.6317,
+   "clusters_nameable_by_land": "5/5",
+   "kmeans_vs_ward_ari": 0.3679,
+   "stability_bootstrap_ari": 0.6662,
+   "naming_is_circular_for": []
+  },
+  "shares_only|k7": {
+   "family_split_share": {
+    "spending_shape": 1.0,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.6858,
+   "clusters_nameable_by_land": "7/7",
+   "kmeans_vs_ward_ari": 0.4004,
+   "stability_bootstrap_ari": 0.6432,
+   "naming_is_circular_for": []
+  },
+  "balanced_land6_plus_shares6|k3": {
+   "family_split_share": {
+    "land": 0.7217,
+    "spending_shape": 0.2783,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.9456,
+   "clusters_nameable_by_land": "3/3",
+   "kmeans_vs_ward_ari": 0.6259,
+   "stability_bootstrap_ari": 0.9648,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean"
+   ]
+  },
+  "balanced_land6_plus_shares6|k4": {
+   "family_split_share": {
+    "land": 0.6894,
+    "spending_shape": 0.3106,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.7256,
+   "clusters_nameable_by_land": "4/4",
+   "kmeans_vs_ward_ari": 0.5485,
+   "stability_bootstrap_ari": 0.943,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean"
+   ]
+  },
+  "balanced_land6_plus_shares6|k5": {
+   "family_split_share": {
+    "land": 0.6796,
+    "spending_shape": 0.3204,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.6205,
+   "clusters_nameable_by_land": "5/5",
+   "kmeans_vs_ward_ari": 0.5436,
+   "stability_bootstrap_ari": 0.8816,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean"
+   ]
+  },
+  "balanced_land6_plus_shares6|k7": {
+   "family_split_share": {
+    "land": 0.6666,
+    "spending_shape": 0.3334,
+    "all_columns": 1.0
+   },
+   "external_spending_measures": 7,
+   "external_spending_separating_every_pair": 7,
+   "external_spending_gap_median_in_iqr": 0.6119,
+   "clusters_nameable_by_land": "7/7",
+   "kmeans_vs_ward_ari": 0.5591,
+   "stability_bootstrap_ari": 0.8329,
+   "naming_is_circular_for": [
+    "gls_fraction_urban",
+    "gls_fraction_crops",
+    "gls_fraction_tree",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean"
+   ]
+  }
+ }
+}

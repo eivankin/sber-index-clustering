@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Земля под тратами — три решения, показанные картинкой</title>
+<style>
+:root{
+  --paper:#f4f3ef; --card:#ffffff; --ink:#14161c; --muted:#5d616a;
+  --line:#e3dfd7; --accent:#8c3a2e; --accent2:#2e5d3a; --chip:#efece5;
+}
+*{box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font:16px/1.4 -apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+h2{margin:0 0 22px;font-size:30px;line-height:1.15;font-weight:650;letter-spacing:-0.01em}
+.lede{margin:8px 0 0;color:var(--muted);font-size:17px;max-width:56ch}
+.hero-title{font-size:34px;font-weight:700;line-height:1.12;margin:6px 0 0;max-width:24ch}
+.byline{display:flex;align-items:center;gap:16px;margin-top:28px;padding-top:18px;
+  border-top:1px solid var(--line);max-width:46ch}
+.byline .face{width:66px;height:66px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
+.byline .who{display:flex;flex-direction:column;gap:4px}
+.byline .who b{font-size:16px;font-weight:700}
+.byline .who small{font-size:13px;color:var(--muted);line-height:1.35}
+#rail{position:fixed;top:0;left:0;right:0;height:62px;z-index:40;
+  background:rgba(255,255,255,.86);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;padding:0 26px}
+#rail .brand{font-size:20px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;color:var(--ink);margin-right:24px}
+.hint{position:fixed;bottom:26px;left:50%;transform:translateX(-50%);z-index:20;font-size:13px;
+  font-weight:600;color:var(--ink);background:var(--card);border:1px solid var(--ink);
+  border-radius:999px;padding:7px 13px;display:flex;align-items:center;gap:9px;white-space:nowrap}
+.hint .chev{width:7px;height:7px;border-right:2px solid var(--ink);border-bottom:2px solid var(--ink);
+  transform:rotate(45deg);flex:0 0 auto}
+.hint[hidden]{display:none}
+#rail button{font:inherit;font-size:15px;font-weight:600;color:var(--muted);background:transparent;
+  border:0;border-radius:999px;padding:9px 16px;cursor:pointer}
+#rail button:hover{background:var(--chip);color:var(--ink)}
+#rail button[aria-selected="true"]{background:var(--ink);color:#fff}
+#story{position:absolute;inset:62px 0 0 0}
+.slide{position:absolute;inset:0;display:none;padding:14px 30px 30px;
+  grid-template-rows:auto 1fr auto;grid-template-columns:1fr}
+.slide.active{display:grid}
+#s-hero.active{display:flex;align-items:flex-end;gap:36px;padding:34px 46px 44px}
+.herotext{flex:1 1 36%;min-width:0}
+.heromapside{flex:1 1 64%;min-width:0;display:flex;justify-content:flex-end;align-items:flex-end}
+.heromap{display:block;width:100%;height:auto;max-height:84vh;object-fit:contain}
+#s-map.active{display:block;padding:0;height:calc(100vh - 84px)}
+#s-cadence .card{height:100%}
+#s-decision.active{display:grid;gap:16px;padding:16px 30px 20px;
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:auto auto minmax(0,1fr) auto}
+.dswitch{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.dswitch>span{font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+  margin-right:4px;font-weight:600}
+.dbtn{font:inherit;font-size:.86rem;font-weight:600;background:#fff;color:var(--ink);
+  border:1px solid var(--line);border-radius:8px;padding:7px 14px;cursor:pointer}
+.dbtn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.dpane{display:none;min-height:0}
+.dpane.active{display:flex;flex-direction:column;gap:12px;min-height:0}
+.dpane.active>*{flex:0 0 auto}
+.dpane.active .setrow,.dpane.active .volgrid{flex:1 1 auto;min-height:0}
+.dprompt{font-size:.86rem;color:var(--muted);margin:0}
+.dfoot{display:grid;gap:4px;font-size:.84rem}
+.setrow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;min-height:0}
+.setrow.kpair{grid-template-columns:repeat(2,minmax(0,1fr))}
+.bigmap{display:block;width:100%;height:auto;aspect-ratio:912/577;object-fit:contain;
+  object-position:center;background:#fff;border:1px solid var(--line);border-radius:10px}
+.volgrid{display:grid;grid-template-rows:minmax(0,1fr) auto;gap:12px;min-height:0}
+.volimg{display:block;width:100%;height:100%;min-height:0;max-height:52vh;object-fit:contain;
+  background:#fff;border:1px solid var(--line);border-radius:10px}
+#s-decision .decisionrow{display:grid;grid-template-columns:minmax(0,1fr);gap:14px;min-height:0}
+#s-decision .decisionrow .card{height:100%;min-height:0}
+.mapstrip{display:grid;grid-template-rows:repeat(3,minmax(0,1fr));gap:10px;min-height:0}
+.mapcell{margin:0;display:flex;flex-direction:column;min-height:0}
+.mapcell .mapimg{flex:1 1 auto;min-height:0;width:100%;max-height:19vh;object-fit:contain;
+  object-position:center center;background:#fff;border:1px solid var(--line);border-radius:10px}
+.mapcell figcaption{font-size:.84rem;font-weight:600;margin-top:6px;color:var(--ink)}
+.mapcell small{display:block;font-size:.76rem;color:var(--muted);margin-top:2px;
+  font-variant-numeric:tabular-nums}
+.kmapimg{display:block;width:100%;max-height:19vh;object-fit:contain;
+  background:#fff;border:1px solid var(--line);border-radius:10px}
+.proofimg{display:block;width:100%;height:auto;max-height:21vh;object-fit:contain;
+  background:#fff;border:1px solid var(--line);border-radius:10px}
+.sharestrip{border-top:1px solid var(--line);padding-top:10px}
+.sharehead{font-size:.74rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+  font-weight:600;margin-bottom:6px}
+.sharepair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.sharepair small{display:block;font-size:.76rem;color:var(--muted);margin-bottom:3px}
+.inbar{display:grid;grid-template-columns:minmax(86px,110px) minmax(0,1fr) minmax(46px,58px);
+  align-items:center;gap:7px;font-size:.78rem;padding:1px 0}
+.inbar b{font-weight:600}
+.inbar .track{height:6px;background:#eceef1;border-radius:4px;overflow:hidden}
+.inbar .fill{height:100%;border-radius:4px 0 0 4px}
+.inbar em{font-style:normal;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+.mapframe{width:100%;height:100%;border:0;background:#fff}
+#s-hero .kicker{margin-bottom:2px}
+.stage{flex:1;min-height:0;display:grid;gap:18px;align-content:stretch;grid-auto-rows:minmax(0,1fr)}
+.cadgroup{border-top:1px solid var(--line);padding:10px 0 8px}
+.cadgroup>b{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;
+  color:var(--muted);margin-bottom:6px}
+.cadrow{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:14px;
+  padding:4px 0;align-items:start}
+.cadname span{font-weight:600;font-size:.86rem}
+.cadname small{display:block;font-size:.72rem;color:var(--muted);overflow-wrap:anywhere;margin-top:2px}
+.trio{display:flex;flex-direction:column;gap:4px}
+.trioline{display:flex;gap:8px;align-items:center;font-size:.76rem;color:var(--muted)}
+.trioline small{min-width:88px}
+.fq{border:1px solid var(--line);border-radius:7px;padding:3px 9px;font-size:.8rem;font-weight:600;
+  background:var(--chip);white-space:nowrap}
+.cadtable{width:100%;border-collapse:collapse;font-size:.92rem}
+.cadtable th{text-align:left;font-size:.78rem;text-transform:uppercase;letter-spacing:.05em;
+  color:var(--muted);padding:0 10px 9px;border-bottom:1px solid var(--line);font-weight:600}
+.cadtable td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.cadtable tbody tr:last-child td{border-bottom:0}
+.cadtable .cadgroup{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.cadtable .cadname b{font-size:.95rem}
+.cadtable .cadcols .colname{font-size:.8rem;color:#3d444c;overflow-wrap:anywhere;padding:2px 0}
+.cadtable .cadlast b{font-size:.9rem}
+.cadtable .cadlast small{display:block;font-size:.78rem;color:var(--muted);overflow-wrap:anywhere;margin-top:3px}
+.cadtable .trio{gap:5px}
+.cadtable .trioline{font-size:.78rem;gap:9px}
+.cadtable .trioline small{min-width:96px}
+.mapcell{margin:0}
+.mapcell .mapimg{display:block;width:100%;height:auto;background:#fff;border:1px solid var(--line);
+  border-radius:10px}
+.mapcell figcaption{font-size:.8rem;font-weight:600;margin-top:6px;color:var(--ink)}
+.mapcell small{display:block;font-size:.76rem;color:var(--muted);margin-top:3px}
+.krow{display:flex;gap:8px;margin-bottom:10px}
+.kbtn{font:inherit;font-size:.86rem;font-weight:600;background:#fff;color:var(--ink);
+  border:1px solid var(--line);border-radius:8px;padding:6px 14px;cursor:pointer}
+.kbtn[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.kcaption{font-size:.86rem;font-weight:600;margin:8px 0 2px}
+.kstat{font-size:.82rem;color:var(--muted);font-variant-numeric:tabular-nums;margin:0}
+.proofimg{display:block;width:100%;height:auto}
+.card{min-height:0;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px;
+  box-shadow:0 1px 0 rgba(20,22,28,.04);position:relative;display:flex;flex-direction:column;min-height:0}
+.card h3{margin:0 0 6px;font-size:13px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);padding-right:150px}
+figure{margin:0;min-height:0;display:flex;flex-direction:column;flex:1}
+.cropbox{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;position:relative}
+.frame{position:relative;display:block;max-width:100%;max-height:100%}
+.frame>img{display:block;width:100%;height:auto}
+h3 .toggle{margin-left:12px;font:inherit;font-size:12px;letter-spacing:.04em;padding:4px 10px;border:1px solid var(--line);border-radius:999px;background:#fff;cursor:pointer;vertical-align:middle}
+h3 .toggle[aria-pressed="true"]{background:#f4efe4;border-color:#b8a88c;color:#14161c}
+h3 .jump{margin-left:14px;font-size:12px;font-weight:600;color:var(--accent);text-decoration:none;border-bottom:1px solid var(--line);vertical-align:middle}
+.bounds{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+figure img{width:100%;height:auto;max-height:100%;object-fit:contain;
+  border-radius:10px;background:#e9e6df}
+figcaption{margin-top:8px;font-size:15px;color:var(--ink);min-height:calc(1.35em * 2);
+  display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.legend{display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--muted)}
+.legend i{width:13px;height:13px;border-radius:3px;display:inline-block}
+.row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.row button{font:inherit;font-size:14px;font-weight:600;padding:8px 13px;border-radius:9px;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.row button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+.row button:disabled{opacity:.42;cursor:default}
+.row button small{display:block;font-weight:400;font-size:11px;color:currentColor;opacity:.75}
+.kicker{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:0}
+.stat{font-size:26px;font-weight:650;letter-spacing:-0.02em}
+.stat small{display:block;font-size:12px;font-weight:500;color:var(--muted);letter-spacing:0}
+.bars{display:grid;gap:7px;margin-top:8px}
+.bar{display:grid;grid-template-columns:112px 1fr 56px;align-items:center;gap:8px;font-size:13px}
+.bar b{font-weight:600;color:var(--muted)}
+.bar .track{height:9px;background:var(--chip);border-radius:5px;overflow:hidden}
+.bar .fill{height:100%;border-radius:5px}
+.bar em{font-style:normal;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+.note{font-size:14px;color:var(--muted);margin:10px 0 0}
+.desc{font-size:14px;color:var(--ink);line-height:1.45;margin:0 0 8px}
+.formula{font-size:13px;color:var(--ink);background:var(--chip);border:1px solid var(--line);
+  border-radius:8px;padding:6px 9px;margin:0 0 8px;font-variant-numeric:tabular-nums}
+.fine{margin:8px 0 0}
+.bar + .bar{margin-top:6px}
+.warn{border-left:3px solid var(--accent);padding-left:10px;font-size:14px;color:var(--ink)}
+/* The check-source control sits in the left rail, below the source, district and year selectors, because that
+   is where the reader has just chosen what to look at. The panel is a wide fixed overlay: it used to open inside
+   the figure card and was too small to hold the explanation. Cards behind it fade so it does not read as floating
+   over the legend. */
+details.src{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);position:relative}
+details.src>summary{display:block;width:100%;text-align:left;font-size:12px;font-weight:600;color:var(--muted);
+  cursor:pointer;list-style:none;background:var(--chip);border:1px solid var(--line);border-radius:10px;padding:8px 11px}
+details.src>summary::before{content:"ⓘ "}
+details.src[open]>summary{color:var(--accent)}
+details.src>div{position:absolute;left:0;bottom:calc(100% + 10px);width:min(620px,34vw);
+  overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;
+  box-shadow:0 18px 46px rgba(20,22,28,.18);font-size:13px;line-height:1.6;color:var(--muted);z-index:31}
+details.src>div button.close{float:right;font:inherit;font-size:12px;font-weight:600;background:var(--chip);
+  border:1px solid var(--line);border-radius:999px;padding:4px 10px;cursor:pointer;color:var(--ink)}
+details.src>div a{color:var(--accent);text-decoration:underline}
+.dline{margin:0 0 5px;font-size:12.5px;line-height:1.45;color:var(--ink)}
+.dline b{font-weight:600;color:var(--muted)}
+.laneGrid{display:grid;gap:4px;padding-top:22px}
+.laneRow{display:grid;grid-template-columns:110px repeat(4,minmax(0,1fr));gap:7px;align-items:start}
+.laneHead span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.laneHead b{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.laneCell{display:flex;flex-direction:column;gap:3px}
+.familyName{font-size:14px;font-weight:650;color:var(--ink)}
+.familyName small{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:2px}
+.inp{font:inherit;font-size:12px;text-align:left;background:var(--chip);border:1px solid var(--line);
+  border-radius:8px;padding:4px 6px;line-height:1.25}
+.inp .why{font-size:10px;color:var(--muted);margin-left:5px}
+.dot{width:7px;height:7px;border-radius:50%;display:inline-block;margin-right:7px;vertical-align:middle}
+.dot.measured{background:var(--accent)}
+.dot.page{background:#8d9aa5}
+.dot.artifact{background:#c9a227}
+.dot.none{background:transparent;border:1.5px dashed var(--muted)}
+.inp.unproven{border-style:dashed}
+.col{display:flex;flex-direction:column;gap:6px;min-height:0;align-content:start}
+.col button{text-align:left}
+.col button{font:inherit;font-size:13px;font-weight:600;text-align:left;width:100%;padding:7px 10px;
+  border-radius:8px;background:var(--chip);border:1px solid var(--line);color:var(--ink);cursor:pointer;line-height:1.3}
+.col button:hover{border-color:var(--accent)}
+.col button small{text-align:left;display:block;margin-top:2px;font-size:11px;color:var(--muted)}
+.steps{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;font-size:12px;color:var(--ink)}
+.steps span{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:5px 9px}
+.group{font-size:11px;color:var(--muted);letter-spacing:.05em;margin-top:10px;font-weight:600}
+.sourceHead{font-size:11px;color:var(--muted);letter-spacing:.05em;margin-bottom:4px;font-weight:600}
+button:disabled{opacity:.4;cursor:default}
+button[aria-pressed="true"]{background:var(--card);border-color:var(--accent);color:var(--ink);
+  box-shadow:inset 3px 0 0 var(--accent)}
+button[aria-pressed="true"] small{color:var(--muted)}
+.side{display:grid;gap:12px;min-height:0;align-content:start}
+.legend{display:flex;flex-direction:column;gap:7px;font-size:12px;color:var(--muted)}
+.legend .key{display:flex;align-items:center;gap:7px;color:var(--ink)}
+.legend i{width:13px;height:13px;border-radius:4px;flex:0 0 auto}
+.scaleRow{display:flex;gap:10px;align-items:stretch;min-height:132px}
+.ramp{width:17px;border-radius:4px;border:1px solid var(--line);flex:0 0 auto}
+.marks{display:flex;flex-direction:column;justify-content:space-between;font-size:11px;min-width:0}
+.marks .mid{text-align:center;color:var(--muted)}
+.fine{font-size:11px;color:var(--muted);line-height:1.35}
+.chain{display:grid;grid-template-columns:1fr auto;gap:4px 8px;align-items:center;font-size:11px}
+.chain span{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:4px 8px;
+  color:var(--ink);font-weight:600}
+.chain em{font-style:normal;color:var(--muted);font-size:10px}
+.chain .arrow{grid-column:1 / -1;text-align:center;color:var(--muted);font-size:12px;font-weight:400}
+details.src>div h4{margin:0 0 6px;font-size:12px;color:var(--ink)}
+details.src>div code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--ink)}
+.timeline{display:grid;gap:0;margin-top:6px}
+.tl{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;padding:7px 0;
+  border-bottom:1px solid var(--line);font-size:14px}
+.tl:last-child{border-bottom:0}
+.tl .fam{font-weight:600}
+.tl .chips{display:flex;gap:6px;flex-wrap:wrap}
+.tl .chips i{font-style:normal;font-size:12px;padding:4px 8px;border-radius:6px;background:var(--chip);color:var(--muted)}
+.tl .chips i.now{background:#e5efe6;color:var(--accent2)}
+.sheen{position:fixed;inset:auto 0 0 0;height:0;pointer-events:none}
+</style>
+</head>
+<body>
+<nav id="rail" role="tablist" aria-label="Три решения">
+  <span class="brand">Земля под тратами</span>
+</nav>
+<p class="hint" id="scroll-hint">колёсико вниз - следующий раздел <i class="chev"></i></p>
+<main id="story"></main>
+<script>
+const PDATA = {"legend": {"classes": [{"key": "trees", "label": "деревья", "color": "#2e5d3a"}, {"key": "grass", "label": "травы", "color": "#7fa860"}, {"key": "crops", "label": "пашня", "color": "#c9a227"}, {"key": "built", "label": "застройка", "color": "#b0413e"}, {"key": "bare", "label": "открытая земля", "color": "#b8a07a"}], "rule": "красивая картинка без легенды читателя не учит ничего: каждый цвет назван"}, "provenance": {"districts": [{"district": "городской округ город Нижний Тагил", "short": "Нижний Тагил", "cluster": 4, "tid": 2000, "why": "the most forested district of the forest-interior cluster", "years": {"2023": {"means": {"trees": 48.1, "grass": 4.9, "crops": 3.8, "built": 4.6, "bare": 5.0}, "region": [58.4573, 57.2373, 60.4214, 58.3171], "scale_m": 500, "asset_leaf": "dw_mean_2023_500m", "sha": "e6f8b14b615b", "cache": "gee-cache/crop_2000_2023_1964x1080_500m.tif"}, "2024": {"means": {"trees": 42.4, "grass": 5.0, "crops": 3.8, "built": 4.7, "bare": 5.3}, "region": [58.4573, 57.2373, 60.4214, 58.3171], "scale_m": 500, "asset_leaf": "dw_mean_2024_500m", "sha": "fcd161394449", "cache": "gee-cache/crop_2000_2024_1964x1080_500m.tif"}}, "images": {"2023": "assets/crop_2000_2023.png", "2024": "assets/crop_2000_2024.png"}, "region": "Свердловская область"}, {"district": "Сорокинский муниципальный район", "short": "Сорокинский", "cluster": 3, "tid": 2208, "why": "the most burnt district of the fire-affected cluster", "years": {"2023": {"means": {"trees": 22.7, "grass": 8.0, "crops": 8.1, "built": 3.9, "bare": 8.5}, "region": [69.2222, 56.395, 70.4472, 57.1401], "scale_m": 500, "asset_leaf": "dw_mean_2023_500m", "sha": "a7c5aedb3cbb", "cache": "gee-cache/crop_2208_2023_1225x745_500m.tif"}, "2024": {"means": {"trees": 24.5, "grass": 7.8, "crops": 6.4, "built": 4.0, "bare": 8.1}, "region": [69.2222, 56.395, 70.4472, 57.1401], "scale_m": 500, "asset_leaf": "dw_mean_2024_500m", "sha": "214d6f8fbce5", "cache": "gee-cache/crop_2208_2024_1225x745_500m.tif"}}, "images": {"2023": "assets/crop_2208_2023.png", "2024": "assets/crop_2208_2024.png"}, "region": "Тюменская область"}, {"district": "внутригородская территория города федерального значения муниципальный округ Марьина роща", "short": "Марьина роща", "cluster": 2, "tid": 2518, "why": "the most built-up district of the urbanised cluster", "years": {"2023": {"means": {"trees": 11.6, "grass": 3.6, "crops": 3.9, "built": 49.6, "bare": 5.1}, "region": [37.4869, 55.7166, 37.7369, 55.8766], "scale_m": 100, "asset_leaf": "dw_mean_2023_500m", "sha": "4faccadce584", "cache": "gee-cache/crop_2518_2023_250x160_100m.tif"}, "2024": {"means": {"trees": 11.8, "grass": 3.5, "crops": 3.8, "built": 46.9, "bare": 5.2}, "region": [37.4869, 55.7166, 37.7369, 55.8766], "scale_m": 100, "asset_leaf": "dw_mean_2024_500m", "sha": "ad435839e63a", "cache": "gee-cache/crop_2518_2024_250x160_100m.tif"}}, "images": {"2023": "assets/crop_2518_2023.png", "2024": "assets/crop_2518_2024.png"}, "region": "Москва"}], "sources": [{"key": "dynamic_world", "label": "земля по классам", "meaning": "каждый пиксель - класс земли с наибольшей уверенностью", "classes": [{"label": "деревья", "color": [46, 93, 58]}, {"label": "травы", "color": [127, 168, 96]}, {"label": "пашня", "color": [201, 162, 39]}, {"label": "застройка", "color": [176, 65, 62]}, {"label": "открытая земля", "color": [184, 160, 122]}], "ramp_colors": null, "reading": null, "pipeline": ["шаг съёмки 500 м на пиксель", "окно усредняется до 500 м и получает один класс на пиксель", "год наблюдения: 2023 и 2024", "входит в пространство кластеризации: 5 колонки"], "in_space": true, "matched": ["dynamic_world_bare", "dynamic_world_built", "dynamic_world_crops", "dynamic_world_grass", "dynamic_world_trees"], "periods": ["2023", "2024"], "step_labels": ["деревья", "травы", "пашня", "застройка", "открытая земля"], "step_shorts": [null, null, null, null, null], "step_colors": [[46, 93, 58], [127, 168, 96], [201, 162, 39], [176, 65, 62], [184, 160, 122]], "cell_km": 5.0, "scale_low": null, "scale_high": null, "coverage": null, "catalog": "https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1", "licence": "CC BY 4.0 - указано на странице набора", "explainer": "Классификация земной поверхности по пяти классам: деревья, трава, пашня, застройка, открытая земля.", "use": "Из него считаются доли классов - это основа пространства кластеризации.", "not_used": "Мы не берем из него площадь района: площадь берётся из официального реестра.", "native": "10 м на пиксель", "cadence": "новый классификатор - почти каждый год", "unit": "доля пикселей", "divide": null, "low_display": null, "high_display": null, "years": []}, {"key": "viirs", "label": "ночные огни", "meaning": "сколько света видно сверху ночью: чем ярче, тем больше освещённых объектов", "classes": [{"label": "света почти нет", "short": "тёмное", "color": [16, 18, 26], "edge_below": 1.0}, {"label": "слабое свечение: отдельные объекты", "short": "слабое", "color": [74, 58, 32], "edge_below": 3.0}, {"label": "видно поселение", "short": "поселение", "color": [176, 120, 48], "edge_below": 10.0}, {"label": "город: яркое плотное свечение", "short": "город", "color": [246, 224, 150], "edge_below": null}], "ramp_colors": null, "reading": "от почти тёмного к яркому: ступени 1, 3 и 10 единиц яркости", "pipeline": ["шаг съёмки 464 м на пиксель", "среднее по пикселям внутри района", "год наблюдения: 2023", "входит в пространство кластеризации: 1 колонка"], "in_space": true, "matched": ["viirs_lit_mean"], "periods": ["2023"], "step_labels": ["света почти нет", "слабое свечение: отдельные объекты", "видно поселение", "город: яркое плотное свечение"], "step_shorts": ["тёмное", "слабое", "поселение", "город"], "step_colors": [[16, 18, 26], [74, 58, 32], [176, 120, 48], [246, 224, 150]], "cell_km": 5.0, "scale_low": 0.4073, "scale_high": 641.6032, "coverage": 1.0, "catalog": "https://developers.google.com/earth-engine/datasets/catalog/NOAA_VIIRS_DNB_ANNUAL_V22", "licence": "условия использования описаны на странице набора в каталоге", "explainer": "Ночная подсветка: как ярко светятся населённые места ночью.", "use": "Как признаки того, что место застройено и активно.", "not_used": "Не является мерой доходов или зарплат - мы не выводим из него деньги.", "native": "около 750 м на пиксель", "cadence": "итог за год собирается один раз в год", "unit": "ед. яркости", "divide": null, "low_display": 0.41, "high_display": 641.6, "years": []}, {"key": "ndvi", "label": "вегетация", "meaning": "индекс зелёности MODIS: чем выше, тем активнее фотосинтез на этом пикселе", "classes": null, "ramp_colors": [[0.0, [138, 122, 94]], [0.45, [169, 181, 127]], [1.0, [46, 93, 58]]], "reading": "от низкого значения к высокому", "pipeline": ["шаг съёмки 250 м на пиксель", "среднее по месяцам, затем по году", "год наблюдения: 2023", "входит в пространство кластеризации: 1 колонка"], "in_space": true, "matched": ["modis_ndvi_mean"], "periods": ["2023", "2024"], "step_labels": ["почти без растительности", "растительность слабая", "растительность активная"], "step_shorts": ["без растительности", "слабая", "активная"], "step_colors": [], "cell_km": 5.0, "scale_low": -726.45, "scale_high": 6854.6957, "coverage": 1.0, "catalog": "https://developers.google.com/earth-engine/datasets/catalog/MODIS_061_MOD13Q1", "licence": "условия использования описаны на странице набора в каталоге", "explainer": "вегетация - NDVI (Normalized Difference Vegetation Index)", "full": "полное название - нормализованный различностный индекс растительности", "formula": "NDVI = ( ближний инфракрасный - красный ) / ( ближний инфракрасный + красный )", "use": "", "not_used": "", "native": "250 м на пиксель", "cadence": "новая точка каждые 16 дней", "unit": "NDVI", "divide": 10000.0, "low_display": -0.07, "high_display": 0.69, "years": []}, {"key": "terrain", "label": "высота местности", "meaning": "высота над уровнем моря, метры", "classes": null, "ramp_colors": [[0.0, [95, 122, 85]], [0.55, [168, 148, 104]], [1.0, [232, 227, 216]]], "reading": "от самой низкой точки этого окна к возвышенности", "pipeline": ["шаг съёмки 30 м на пиксель", "среднее по пикселям внутри района", "входит в пространство кластеризации: 1 колонка"], "in_space": true, "matched": ["elevation_mean"], "periods": [""], "step_labels": [], "step_shorts": [], "step_colors": [], "cell_km": 5.0, "scale_low": 60.0, "scale_high": 738.0, "coverage": 1.0, "catalog": "https://developers.google.com/earth-engine/datasets/catalog/USGS_SRTMGL1_003", "licence": "условия использования описаны на странице набора в каталоге", "explainer": "", "use": "", "not_used": "", "native": "30 м на пиксель", "cadence": "не меняется: это рельеф", "unit": "м над уровнем моря", "divide": null, "low_display": 60.0, "high_display": 738.0, "years": []}], "crops": {"dynamic_world": {"2000": {"2023": {"image": "assets/crop_2000_dw_2023_plain.png", "plain": "assets/crop_2000_dw_2023_plain.png", "coverage_pct": 100.0, "year": "2023", "window": null, "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": null, "mid_display": null, "high_display": null, "scale_basis": "класс земли - категория, а не уровень", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": null, "high": null, "uniform": false}, "2024": {"image": "assets/crop_2000_dw_2024_plain.png", "plain": "assets/crop_2000_dw_2024_plain.png", "coverage_pct": 100.0, "year": "2024", "window": null, "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": null, "mid_display": null, "high_display": null, "scale_basis": "класс земли - категория, а не уровень", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": null, "high": null, "uniform": false}}, "2208": {"2023": {"image": "assets/crop_2208_dw_2023_plain.png", "plain": "assets/crop_2208_dw_2023_plain.png", "coverage_pct": 100.0, "year": "2023", "window": null, "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": null, "mid_display": null, "high_display": null, "scale_basis": "класс земли - категория, а не уровень", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": null, "high": null, "uniform": false}, "2024": {"image": "assets/crop_2208_dw_2024_plain.png", "plain": "assets/crop_2208_dw_2024_plain.png", "coverage_pct": 100.0, "year": "2024", "window": null, "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": null, "mid_display": null, "high_display": null, "scale_basis": "класс земли - категория, а не уровень", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": null, "high": null, "uniform": false}}, "2518": {"2023": {"image": "assets/crop_2518_dw_2023_plain.png", "plain": "assets/crop_2518_dw_2023_plain.png", "coverage_pct": 100.0, "year": "2023", "window": null, "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": null, "mid_display": null, "high_display": null, "scale_basis": "класс земли - категория, а не уровень", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": null, "high": null, "uniform": false}, "2024": {"image": "assets/crop_2518_dw_2024_plain.png", "plain": "assets/crop_2518_dw_2024_plain.png", "coverage_pct": 100.0, "year": "2024", "window": null, "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": null, "mid_display": null, "high_display": null, "scale_basis": "класс земли - категория, а не уровень", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": null, "high": null, "uniform": false}}}, "hansen": {"2000": {"": {"image": "assets/crop_2000_hansen_plain.png", "plain": "assets/crop_2000_hansen_plain.png", "coverage_pct": 28.9, "year": null, "window": "потери леса до 2025 года включительно", "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": 1.0, "mid_display": 13.0, "high_display": 25.0, "scale_basis": "год потери леса - категория, а не уровень", "scale_mode": null, "zero_m": 153.0, "relief_m": 19.0, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 0.2892, "low": 1.0, "high": 25.0, "uniform": false}}, "2208": {"": {"image": "assets/crop_2208_hansen_plain.png", "plain": "assets/crop_2208_hansen_plain.png", "coverage_pct": 10.4, "year": null, "window": "потери леса до 2025 года включительно", "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": 1.0, "mid_display": 13.0, "high_display": 25.0, "scale_basis": "год потери леса - категория, а не уровень", "scale_mode": null, "zero_m": 153.0, "relief_m": 19.0, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 0.1041, "low": 1.0, "high": 25.0, "uniform": false}}, "2518": {"": {"image": "assets/crop_2518_hansen_plain.png", "plain": "assets/crop_2518_hansen_plain.png", "coverage_pct": 3.6, "year": null, "window": "потери леса до 2025 года включительно", "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": 1.0, "mid_display": 13.0, "high_display": 25.0, "scale_basis": "год потери леса - категория, а не уровень", "scale_mode": null, "zero_m": 153.0, "relief_m": 19.0, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 0.0356, "low": 1.0, "high": 25.0, "uniform": false}}}, "ndvi": {"2000": {"2023": {"image": "assets/crop_2000_ndvi_2023_plain.png", "plain": "assets/crop_2000_ndvi_2023_plain.png", "coverage_pct": 100.0, "year": 2023, "window": "2023 год, среднее по 16-дневным снимкам", "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": 0.0, "mid_display": 0.4, "high_display": 0.8, "scale_basis": "одна шкала на все примеры: linear", "scale_mode": "linear", "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": 0.0, "step_shares_pct": [0.1, 2.7, 97.2], "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": -551.2381, "high": 6932.0, "uniform": false}, "2024": {"image": "assets/crop_2000_ndvi_2024_plain.png", "plain": "assets/crop_2000_ndvi_2024_plain.png", "coverage_pct": 100.0, "year": 2024, "window": "2023 год, среднее по 16-дневным снимкам", "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": 0.0, "mid_display": 0.4, "high_display": 0.8, "scale_basis": "одна шкала на все примеры: linear", "scale_mode": "linear", "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": 0.0, "step_shares_pct": [0.1, 2.5, 97.4], "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": -282.45, "high": 6854.6957, "uniform": false}}, "2208": {"2023": {"image": "assets/crop_2208_ndvi_2023_plain.png", "plain": "assets/crop_2208_ndvi_2023_plain.png", "coverage_pct": 100.0, "year": 2023, "window": "2023 год, среднее по 16-дневным снимкам", "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": 0.0, "mid_display": 0.4, "high_display": 0.8, "scale_basis": "одна шкала на все примеры: linear", "scale_mode": "linear", "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": 0.0, "step_shares_pct": [0.0, 10.2, 89.8], "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": -917.65, "high": 5761.2174, "uniform": false}, "2024": {"image": "assets/crop_2208_ndvi_2024_plain.png", "plain": "assets/crop_2208_ndvi_2024_plain.png", "coverage_pct": 100.0, "year": 2024, "window": "2023 год, среднее по 16-дневным снимкам", "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": 0.0, "mid_display": 0.4, "high_display": 0.8, "scale_basis": "одна шкала на все примеры: linear", "scale_mode": "linear", "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": 0.0, "step_shares_pct": [0.0, 5.4, 94.6], "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": -726.45, "high": 5608.3043, "uniform": false}}, "2518": {"2023": {"image": "assets/crop_2518_ndvi_2023_plain.png", "plain": "assets/crop_2518_ndvi_2023_plain.png", "coverage_pct": 100.0, "year": 2023, "window": "2023 год, среднее по 16-дневным снимкам", "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": 0.0, "mid_display": 0.4, "high_display": 0.8, "scale_basis": "одна шкала на все примеры: linear", "scale_mode": "linear", "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": 0.0, "step_shares_pct": [0.0, 100.0, 0.0], "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 424.0435, "high": 5759.3478, "uniform": false}, "2024": {"image": "assets/crop_2518_ndvi_2024_plain.png", "plain": "assets/crop_2518_ndvi_2024_plain.png", "coverage_pct": 100.0, "year": 2024, "window": "2023 год, среднее по 16-дневным снимкам", "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": 0.0, "mid_display": 0.4, "high_display": 0.8, "scale_basis": "одна шкала на все примеры: linear", "scale_mode": "linear", "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": 0.0, "step_shares_pct": [1.1, 98.9, 0.0], "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 402.3913, "high": 5795.1304, "uniform": false}}}, "soil": {"2000": {"": {"image": "assets/crop_2000_soil_plain.png", "plain": "assets/crop_2000_soil_plain.png", "coverage_pct": 98.6, "year": null, "window": "почвенная съёмка SoilGrids версии 2_0", "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": 10.8, "mid_display": 19.39, "high_display": 27.99, "scale_basis": "шкала этого окна", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 0.9858, "low": 108.0, "high": 279.8706, "uniform": false}}, "2208": {"": {"image": "assets/crop_2208_soil_plain.png", "plain": "assets/crop_2208_soil_plain.png", "coverage_pct": 99.9, "year": null, "window": "почвенная съёмка SoilGrids версии 2_0", "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": 13.3, "mid_display": 20.28, "high_display": 27.26, "scale_basis": "шкала этого окна", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 0.9988, "low": 133.0, "high": 272.6132, "uniform": false}}, "2518": {"": {"image": "assets/crop_2518_soil_plain.png", "plain": "assets/crop_2518_soil_plain.png", "coverage_pct": 12.0, "year": null, "window": "почвенная съёмка SoilGrids версии 2_0", "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": 9.3, "mid_display": 12.15, "high_display": 15.0, "scale_basis": "шкала этого окна", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": null, "analysis_low": null, "step_shares_pct": null, "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 0.1198, "low": 93.0, "high": 150.0, "uniform": false}}}, "terrain": {"2000": {"": {"image": "assets/crop_2000_terrain_plain.png", "plain": "assets/crop_2000_terrain_plain.png", "coverage_pct": 100.0, "year": null, "window": "высота не меняется: это рельеф, а не наблюдение", "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": 78.0, "mid_display": 408.0, "high_display": 738.0, "scale_basis": "высота над уровнем моря: от самой низкой точки этого окна до самой высокой точки района", "scale_mode": "linear", "zero_m": 78.0, "relief_m": 660.0, "lit_share_pct": null, "analysis_low": 78.0, "step_shares_pct": null, "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 78.0, "high": 738.0, "uniform": false}}, "2208": {"": {"image": "assets/crop_2208_terrain_plain.png", "plain": "assets/crop_2208_terrain_plain.png", "coverage_pct": 100.0, "year": null, "window": "высота не меняется: это рельеф, а не наблюдение", "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": 72.0, "mid_display": 101.0, "high_display": 130.0, "scale_basis": "высота над уровнем моря: от самой низкой точки этого окна до самой высокой точки района", "scale_mode": "linear", "zero_m": 72.0, "relief_m": 58.0, "lit_share_pct": null, "analysis_low": 72.0, "step_shares_pct": null, "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 60.0, "high": 133.0, "uniform": false}}, "2518": {"": {"image": "assets/crop_2518_terrain_plain.png", "plain": "assets/crop_2518_terrain_plain.png", "coverage_pct": 100.0, "year": null, "window": "высота не меняется: это рельеф, а не наблюдение", "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": 153.0, "mid_display": 162.5, "high_display": 172.0, "scale_basis": "высота над уровнем моря: от самой низкой точки этого окна до самой высокой точки района", "scale_mode": "linear", "zero_m": 153.0, "relief_m": 19.0, "lit_share_pct": null, "analysis_low": 153.0, "step_shares_pct": null, "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 102.0, "high": 190.0, "uniform": false}}}, "viirs": {"2000": {"2023": {"image": "assets/crop_2000_viirs_2023_plain.png", "plain": "assets/crop_2000_viirs_2023_plain.png", "coverage_pct": 100.0, "year": 2023, "window": "2023 год, среднее по всем месяцам", "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": 0.5, "mid_display": 394.8, "high_display": 789.1, "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": 47.77, "analysis_low": 0.5, "step_shares_pct": [91.6, 3.8, 2.3, 2.3], "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 0.3608, "high": 789.0616, "uniform": false}, "2024": {"image": "assets/crop_2000_viirs_2024_plain.png", "plain": "assets/crop_2000_viirs_2024_plain.png", "coverage_pct": 100.0, "year": 2024, "window": "2023 год, среднее по всем месяцам", "capture": {"center_lon": 59.3073, "center_lat": 57.7671, "wide_deg": 1.9641, "tall_deg": 1.0798, "wide_km": 116.6, "tall_km": 119.4}, "scale_m": 500, "pixels": [242, 439], "pixel_east_m": 265.6, "pixel_north_m": 493.4, "low_display": 0.5, "mid_display": 277.0, "high_display": 553.5, "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": 97.91, "analysis_low": 0.5, "step_shares_pct": [88.6, 6.6, 2.2, 2.6], "boundary_paths": ["M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"], "boundary_pixels": [1756, 968], "interior_share_pct": 30.91, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 0.4235, "high": 553.516, "uniform": false}}, "2208": {"2023": {"image": "assets/crop_2208_viirs_2023_plain.png", "plain": "assets/crop_2208_viirs_2023_plain.png", "coverage_pct": 100.0, "year": 2023, "window": "2023 год, среднее по всем месяцам", "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": 0.5, "mid_display": 5.95, "high_display": 11.4, "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": 98.08, "analysis_low": 0.5, "step_shares_pct": [98.0, 1.4, 0.6, 0.0], "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 0.4352, "high": 11.3575, "uniform": false}, "2024": {"image": "assets/crop_2208_viirs_2024_plain.png", "plain": "assets/crop_2208_viirs_2024_plain.png", "coverage_pct": 100.0, "year": 2024, "window": "2023 год, среднее по всем месяцам", "capture": {"center_lon": 69.8066, "center_lat": 56.7321, "wide_deg": 1.225, "tall_deg": 0.7451, "wide_km": 74.8, "tall_km": 82.4}, "scale_m": 500, "pixels": [167, 274], "pixel_east_m": 273.0, "pixel_north_m": 493.3, "low_display": 0.5, "mid_display": 11.2, "high_display": 21.9, "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": 99.54, "analysis_low": 0.5, "step_shares_pct": [24.9, 74.2, 0.8, 0.1], "boundary_paths": ["M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"], "boundary_pixels": [1096, 668], "interior_share_pct": 42.99, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 0.4073, "high": 21.9041, "uniform": false}}, "2518": {"2023": {"image": "assets/crop_2518_viirs_2023_plain.png", "plain": "assets/crop_2518_viirs_2023_plain.png", "coverage_pct": 100.0, "year": 2023, "window": "2023 год, среднее по всем месяцам", "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": 0.5, "mid_display": 304.4, "high_display": 608.3, "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": 100.0, "analysis_low": 0.5, "step_shares_pct": [0.0, 0.0, 0.0, 100.0], "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 6.0089, "high": 608.3156, "uniform": false}, "2024": {"image": "assets/crop_2518_viirs_2024_plain.png", "plain": "assets/crop_2518_viirs_2024_plain.png", "coverage_pct": 100.0, "year": 2024, "window": "2023 год, среднее по всем месяцам", "capture": {"center_lon": 37.6116, "center_lat": 55.7972, "wide_deg": 0.25, "tall_deg": 0.16, "wide_km": 15.6, "tall_km": 17.7}, "scale_m": 100, "pixels": [179, 279], "pixel_east_m": 56.1, "pixel_north_m": 98.8, "low_display": 0.5, "mid_display": 321.05, "high_display": 641.6, "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5", "scale_mode": null, "zero_m": null, "relief_m": null, "lit_share_pct": 100.0, "analysis_low": 0.5, "step_shares_pct": [0.0, 0.0, 0.0, 100.0], "boundary_paths": ["M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"], "boundary_pixels": [1116, 716], "interior_share_pct": 1.66, "boundary_basis": "the extent the exported raster actually covers", "coverage": 1.0, "low": 7.6097, "high": 641.6032, "uniform": false}}}}, "boundary_source": "data/processed/territory_master.parquet, column geometry (well-known binary, EPSG:4326)", "outside_dimmed": true, "source_crops_artifact": "artifacts/landing/source_crops.json", "legends_artifact": "artifacts/landing/source_legends.json", "fallback": [], "chain": {"district": "Сорокинский муниципальный район", "short": "Сорокинский", "cluster": 3, "total_pixels": 2615, "classified_pixels": 2615, "classified_share_pct": 100.0, "shares": {"trees": 17.4, "grass": 8.6, "crops": 20.5, "built": 4.8, "bare": 7.2}, "official_km2": 2701.2, "osm_km2": 4917.9, "raw_over_official": 1.82, "spending_rub": 25255.0, "density": 9.35, "artifact": "artifacts/validation/derivation_chain.json"}, "geometry": {"sum_km2": 40001827.79, "union_km2": 39432101.33, "difference_km2": 569726.0, "artifact": "artifacts/geo/geometry_diagnostics.json", "top": [{"region": "Ямало-Ненецкий автономный округ", "ratio": 20.37, "official": 123587.0}, {"region": "Волгоградская область", "ratio": 5.56, "official": 31299.0}, {"region": "Камчатский край", "ratio": 4.28, "official": 270560.0}], "inflation_artifact": "artifacts/geo/region_inflation.csv"}, "crops_artifact": "artifacts/landing/provenance_crops.json", "recreations_artifact": "artifacts/landing/provenance_recreations.json", "chain_artifact": "artifacts/validation/derivation_chain.json", "asset_note": true}, "cadence": {"rows": [{"layer": "worldcover", "status": "static", "why": "one released map year, refreshed only when a new release exists", "proof": "none inside this asset", "seconds": null, "in_space": null, "asset": "ESA/WorldCover/v200/2021"}, {"layer": "gls_lcz", "status": "static", "why": "one vintage of this land-cover map is what the panel reads", "proof": "a year other than the one used exists", "seconds": null, "in_space": null, "asset": "COPERNICUS/Landcover/100m/Proba-V-C3/Global"}, {"layer": "gls_fraction", "status": "static", "why": "one vintage of this land-cover map is what the panel reads", "proof": "a year other than the one used exists", "seconds": null, "in_space": null, "asset": "COPERNICUS/Landcover/100m/Proba-V-C3/Global"}, {"layer": "viirs", "status": "refreshable", "why": "the monthly night-time collection grows continuously", "proof": "https://eogdata.mines.edu/products/vnl/ - HTTP 200 - \"A new consistently processed time series of annual global VIIRS nighttime lights has b", "seconds": null, "in_space": null, "asset": "NOAA/VIIRS/DNB/ANNUAL_V22"}, {"layer": "viirs_lit", "status": "refreshable", "why": "the monthly night-time collection grows continuously", "proof": "artifacts/validation/gee_access.json, layers.viirs_lit - images in the named year: 1; in the year before: 1", "seconds": null, "in_space": "viirs_lit_mean", "asset": "NOAA/VIIRS/DNB/ANNUAL_V22"}, {"layer": "modis_lcc", "status": "refreshable", "why": "annual land-cover products grow continuously", "proof": "artifacts/validation/gee_access.json, layers.modis_lcc - images in the named year: 1; in the year before: 1", "seconds": null, "in_space": null, "asset": "MODIS/061/MCD12Q1"}, {"layer": "modis_burn", "status": "refreshable", "why": "burned-area products grow continuously", "proof": "artifacts/validation/gee_access.json, layers.modis_burn - images in the named year: 12; in the year before: 12", "seconds": null, "in_space": null, "asset": "MODIS/061/MCD64A1"}, {"layer": "modis_ndvi", "status": "refreshable", "why": "16-day composites grow continuously", "proof": "artifacts/validation/gee_access.json, layers.modis_ndvi - images in the named year: 23; in the year before: 23", "seconds": null, "in_space": "modis_ndvi_mean", "asset": "MODIS/061/MOD13Q1"}, {"layer": "worldclim", "status": "static", "why": "climate normals are a 1979-2013 average by construction", "proof": "none inside this asset", "seconds": null, "in_space": null, "asset": "WORLDCLIM/V1/BIO"}, {"layer": "elevation", "status": "static", "why": "terrain height does not drift year to year", "proof": "none inside this asset", "seconds": null, "in_space": "elevation_mean", "asset": "USGS/SRTMGL1_003"}, {"layer": "dynamic_world", "status": "refreshable", "why": "a new annual classification is released every year", "proof": "['2024-01-01', '2025-01-01']", "seconds": 12.9, "in_space": "dynamic_world_bare, built, crops, grass, trees", "asset": "GOOGLE/DYNAMICWORLD/V1"}, {"layer": "hansen", "status": "refreshable", "why": "a new forest-change edition is published each year", "proof": "None", "seconds": 0.0, "in_space": null, "asset": "UMD/hansen/global_forest_change_2025_v1_13"}, {"layer": "soilgrids", "status": "static", "why": "a soil survey is a survey, not an annual observation", "proof": "None", "seconds": 0.0, "in_space": null, "asset": "ISRIC/SoilGrids250m/v2_0"}, {"layer": "sberindex_spending", "status": "refreshable", "why": "the series grows month by month", "proof": "committed artifact field", "seconds": null, "in_space": "Продовольствие, Здоровье, Маркетплейсы, Общественное питание, Транспорт shares", "asset": "SberIndex daily spending by municipality, 2023-01 to 2024-12"}, {"layer": "rosstat_official_land_area", "status": "refreshable", "why": "the register republishes area annually, most recent year prevailing", "proof": "older years are present in the file we hold, so a different area year can be used", "seconds": null, "in_space": null, "asset": "Rosstat indicator Y48006001, official land area per municipality"}], "counts": {"static": 6, "refreshable": 9}, "throughput": {"full_panel_fetch_seconds": 2644.5, "vintage_2018_fetch_seconds": 1232.2, "vintage_2022_fetch_seconds": 1212.8, "dw_asset_export_wait_seconds": 3392.6, "cache_replays_recorded_in_the_resolution_study": {"responses": 742, "bytes": 2353292, "directory": "gee-cache", "inside_the_repository": false}}, "scope": {"chosen": "annual", "coverage_gate": 0.5, "annual_coverage_mean_share": 1.0, "annual_status": "measured", "monthly_status": "not fetched", "monthly_reason": "monthly and quarterly were not fetched: annual was taken first, and a denser resolution is paid for only if annual proves too coarse for the measurements that need within-window land-cover change", "quarterly_status": "not fetched", "quarterly_reason": "monthly and quarterly were not fetched: annual was taken first, and a denser resolution is paid for only if annual proves too coarse for the measurements that need within-window land-cover change", "not_a_verified_claim": "That finer frequencies are noisier was never measured: monthly and quarterly were not fetched, so it stays a standing warning rather than a finding. The one annual movement that was measured is also uncorroborated by an independent annual forest signal, recorded in artifacts/validation/dw_temporal_signal.json.", "coverage_gate_pct": 50.0, "annual_share_pct": 100.0}, "claim": "Once a year for the land-cover and light layers, monthly for spending, annually for the register area. A single-year recompute of the geospatial panel measured 1212.8 and 1232.2 seconds; the whole multi-period fetch measured 2644.5 seconds; materialising one annual composite as an asset waited 3392.6 seconds of server-side work.", "artifact": "artifacts/validation/cadence_scope.json", "families": {"lanes": ["статично", "раз в год", "раз в месяц", "не доказано"], "families": [{"label": "траты", "members": [{"layer": "sberindex_spending", "label": "траты по категориям", "status": "refreshable", "lane": "раз в месяц", "lane_is_proven": true, "proof": "доказано записью в артефакте", "proof_style": "artifact", "space_columns": ["Продовольствие_share", "Здоровье_share", "Маркетплейсы_share", "Общественное питание_share", "Транспорт_share"], "in_space": true, "used_frequency": "раз в месяц", "possible_frequency": "раз в месяц", "recommended_frequency": "раз в месяц", "used_resolution": "по муниципалитету", "possible_resolution": "по муниципалитету", "recommended_resolution": "по муниципалитету", "basis": "SberIndex публикует помесячные ряды по каждому муниципальному образованию; чаще уже не бывает", "last_update": "2024-12", "last_update_basis": "последний месяц ряда, на котором собран ответ"}], "columns_in_space": ["Здоровье_share", "Маркетплейсы_share", "Общественное питание_share", "Продовольствие_share", "Транспорт_share"], "static_count": 0, "refreshable_count": 1, "unproven_count": 0}, {"label": "земля", "members": [{"layer": "worldcover", "label": "карта земли", "status": "static", "lane": "не доказано", "lane_is_proven": false, "proof": "не доказано", "proof_style": "none", "space_columns": [], "in_space": false, "last_update": "2021 год · издание v200", "last_update_basis": "поле реестра: image"}, {"layer": "gls_lcz", "label": "городские контуры", "status": "static", "lane": "раз в год", "lane_is_proven": true, "proof": "прочитано на странице набора", "proof_style": "page", "space_columns": [], "in_space": false, "last_update": "2019 год", "last_update_basis": "поле реестра: collection"}, {"layer": "gls_fraction", "label": "доли классов", "status": "static", "lane": "раз в год", "lane_is_proven": true, "proof": "прочитано на странице набора", "proof_style": "page", "space_columns": [], "in_space": false, "last_update": "2019 год", "last_update_basis": "поле реестра: collection"}, {"layer": "dynamic_world", "label": "земля по классам", "status": "refreshable", "lane": "раз в год", "lane_is_proven": true, "proof": "доказано записью в артефакте", "proof_style": "artifact", "space_columns": ["dynamic_world_bare", "dynamic_world_built", "dynamic_world_crops", "dynamic_world_grass", "dynamic_world_trees"], "in_space": true, "used_frequency": "раз в год", "possible_frequency": "раз в неделю", "recommended_frequency": "раз в год", "used_resolution": "500 м на пиксель", "possible_resolution": "10 м на пиксель", "recommended_resolution": "500 м на пиксель", "basis": "Dynamic World - слой близкий к реальному времени, построенный по Sentinel-2; чаще можно обращаться раз в неделю", "last_update": "2026-10-09", "last_update_basis": "период записи GOOGLE/DYNAMICWORLD/V1 в каталоге Earth Engine"}, {"layer": "modis_lcc", "label": "классификация земли", "status": "refreshable", "lane": "раз в год", "lane_is_proven": true, "proof": "доказано измерением по снимкам", "proof_style": "measured", "space_columns": [], "in_space": false, "last_update": "2023 год", "last_update_basis": "поле реестра: collection"}], "columns_in_space": ["dynamic_world_bare", "dynamic_world_built", "dynamic_world_crops", "dynamic_world_grass", "dynamic_world_trees"], "static_count": 3, "refreshable_count": 2, "unproven_count": 1}, {"label": "свет и зелень", "members": [{"layer": "modis_ndvi", "label": "вегетация MODIS", "status": "refreshable", "lane": "раз в год", "lane_is_proven": true, "proof": "доказано измерением по снимкам", "proof_style": "measured", "space_columns": ["modis_ndvi_mean"], "in_space": true, "used_frequency": "раз в год", "possible_frequency": "раз в 16 дней", "recommended_frequency": "раз в год", "used_resolution": "250 м на пиксель", "possible_resolution": "250 м на пиксель", "recommended_resolution": "250 м на пиксель", "basis": "MODIS MOD13Q1 возвращается каждые 16 дней; в пространство входит годовая величина", "last_update": "2026-09-14", "last_update_basis": "период MODIS/061/MOD13Q1 в каталоге Earth Engine"}, {"layer": "modis_burn", "label": "гарь MODIS", "status": "refreshable", "lane": "раз в год", "lane_is_proven": true, "proof": "доказано измерением по снимкам", "proof_style": "measured", "space_columns": [], "in_space": false, "last_update": "2023 год", "last_update_basis": "поле реестра: collection"}, {"layer": "viirs_lit", "label": "ночное свечение", "status": "refreshable", "lane": "раз в год", "lane_is_proven": true, "proof": "доказано измерением по снимкам", "proof_style": "measured", "space_columns": ["viirs_lit_mean"], "in_space": true, "used_frequency": "раз в год", "possible_frequency": "раз в месяц", "recommended_frequency": "раз в год", "used_resolution": "около 750 м на пиксель", "possible_resolution": "около 750 м на пиксель", "recommended_resolution": "около 750 м на пиксель", "basis": "VIIRS DNB существует и помесячно (VCMCFG), и годовым слоем (VNL); порог 0,5 заморожен записанным решением", "last_update": "2025-01-01 годовой · 2026-08-01 помесячный", "last_update_basis": "период NOAA/VIIRS/DNB в каталоге Earth Engine"}, {"layer": "viirs", "label": "сырые ночные огни", "status": "refreshable", "lane": "раз в год", "lane_is_proven": true, "proof": "прочитано на странице набора", "proof_style": "page", "space_columns": [], "in_space": false, "last_update": "2023 год", "last_update_basis": "поле реестра: collection"}], "columns_in_space": ["modis_ndvi_mean", "viirs_lit_mean"], "static_count": 0, "refreshable_count": 4, "unproven_count": 0}, {"label": "рельеф и климат", "members": [{"layer": "elevation", "label": "высота местности", "status": "static", "lane": "не доказано", "lane_is_proven": false, "proof": "не доказано", "proof_style": "none", "space_columns": ["elevation_mean"], "in_space": true, "used_frequency": "статично", "possible_frequency": "не пересчитывается", "recommended_frequency": "статично", "used_resolution": "30 м на пиксель", "possible_resolution": "30 м на пиксель", "recommended_resolution": "30 м на пиксель", "basis": "съёмка SRTM/COPERNICUS GLO30; высота места не дрейфует из года в год", "last_update": "съёмка 2000/2015", "last_update_basis": "SRTMGL1_003 и COPERNICUS/DEM/GLO30"}, {"layer": "worldclim", "label": "климатические нормы", "status": "static", "lane": "статично", "lane_is_proven": true, "proof": "прочитано на странице набора", "proof_style": "page", "space_columns": [], "in_space": false, "last_update": "нормы 1979–2013", "last_update_basis": "WORLDCLIM/V1/BIO, период нормальный"}], "columns_in_space": ["elevation_mean"], "static_count": 2, "refreshable_count": 0, "unproven_count": 1}, {"label": "площадь и границы", "members": [{"layer": "rosstat_official_land_area", "label": "площадь из реестра", "status": "refreshable", "lane": "раз в год", "lane_is_proven": true, "proof": "доказано записью в артефакте", "proof_style": "artifact", "space_columns": [], "in_space": false}], "columns_in_space": [], "static_count": 0, "refreshable_count": 1, "unproven_count": 0}, {"label": "справочные наборы", "members": [{"layer": "soilgrids", "label": "влага в почве", "status": "static", "lane": "не доказано", "lane_is_proven": false, "proof": "не доказано", "proof_style": "none", "space_columns": [], "in_space": false, "last_update": "издание v2_0", "last_update_basis": "asset id ISRIC/SoilGrids250m/v2_0"}, {"layer": "hansen", "label": "потеря леса", "status": "refreshable", "lane": "не доказано", "lane_is_proven": false, "proof": "не доказано", "proof_style": "none", "space_columns": [], "in_space": false, "last_update": "издание v1_13, потери до 2025 года", "last_update_basis": "asset id UMD/hansen/global_forest_change_2025_v1_13"}], "columns_in_space": [], "static_count": 1, "refreshable_count": 1, "unproven_count": 2}], "total": 15, "family_count": 6, "unproven": 4, "why_unproven_stay": "их место на шкале не доказано прочитанным источником, поэтому они стоят в отдельной полосе, а не под «раз в год»", "artifact": "artifacts/validation/cadence_families.json"}}, "decision_maps": [{"index": 0, "svg": "decision_state_0.svg", "caption": "земля и доли трат, без суммы · k=3", "ari": 0.6635, "moved_pct": 100.0, "sizes": {"0": 666, "1": 637, "2": 713}, "family_share_pct": {"land": 76.2, "spending_shape": 23.8, "all_columns": 100.0}, "image": "assets/land_and_shares_k3.png"}, {"index": 1, "svg": "decision_state_1.svg", "caption": "земля и доли трат, без суммы · k=4", "ari": 0.7764, "moved_pct": 99.75, "sizes": {"0": 636, "1": 292, "2": 374, "3": 714}, "family_share_pct": {"land": 73.1, "spending_shape": 26.9, "all_columns": 100.0}, "image": "assets/land_and_shares_k4.png"}, {"index": 2, "svg": "decision_state_2.svg", "caption": "земля и доли трат, без суммы · k=5", "ari": 0.9941, "moved_pct": 99.9, "sizes": {"0": 292, "1": 552, "2": 374, "3": 281, "4": 517}, "family_share_pct": {"land": 71.3, "spending_shape": 28.7, "all_columns": 100.0}, "image": "assets/land_and_shares_k5.png"}, {"index": 3, "svg": "decision_state_3.svg", "caption": "земля и доли трат, без суммы · k=6", "ari": 0.8061, "moved_pct": 99.85, "sizes": {"0": 294, "1": 177, "2": 399, "3": 518, "4": 372, "5": 256}, "family_share_pct": {"land": 70.3, "spending_shape": 29.7, "all_columns": 100.0}, "image": "assets/land_and_shares_k6.png"}, {"index": 6, "svg": "decision_state_6.svg", "caption": "только земля и съёмка · k=5", "ari": 0.7559, "moved_pct": 80.16, "sizes": {"0": 207, "1": 451, "2": 575, "3": 568, "4": 215}, "family_share_pct": {"land": 100.0, "spending_shape": 0.0, "all_columns": 100.0}, "image": "assets/land_only_k5.png"}, {"index": 10, "svg": "decision_state_10.svg", "caption": "только форма трат по категориям · k=5", "ari": 0.2315, "moved_pct": 90.38, "sizes": {"0": 287, "1": 408, "2": 513, "3": 351, "4": 457}, "family_share_pct": {"land": 0.0, "spending_shape": 100.0, "all_columns": 100.0}, "image": "assets/spending_shape_k5.png"}, {"index": 14, "svg": "decision_state_14.svg", "caption": "то же, но сумма трат внутри · k=5", "ari": 0.786, "moved_pct": 90.43, "sizes": {"0": 294, "1": 583, "2": 483, "3": 372, "4": 284}, "family_share_pct": {"land": 56.4, "spending_shape": 21.0, "spending_amount": 22.6, "all_columns": 100.0}, "image": "assets/with_amount_k5.png"}], "demo": {"states": [{"space": "land_and_shares", "space_title": "земля и доли трат, без суммы", "k": 3, "columns": 13, "districts": 2016, "image": "assets/land_and_shares_k3.png", "cluster_sizes": {"0": 666, "1": 637, "2": 713}, "family_share_pct": {"land": 76.2, "spending_shape": 23.8, "all_columns": 100.0}, "ari_vs_shipped": 0.6635, "moved_pct": 100.0}, {"space": "land_and_shares", "space_title": "земля и доли трат, без суммы", "k": 4, "columns": 13, "districts": 2016, "image": "assets/land_and_shares_k4.png", "cluster_sizes": {"0": 636, "1": 292, "2": 374, "3": 714}, "family_share_pct": {"land": 73.1, "spending_shape": 26.9, "all_columns": 100.0}, "ari_vs_shipped": 0.7764, "moved_pct": 99.75}, {"space": "land_and_shares", "space_title": "земля и доли трат, без суммы", "k": 5, "columns": 13, "districts": 2016, "image": "assets/land_and_shares_k5.png", "cluster_sizes": {"0": 292, "1": 552, "2": 374, "3": 281, "4": 517}, "family_share_pct": {"land": 71.3, "spending_shape": 28.7, "all_columns": 100.0}, "ari_vs_shipped": 0.9941, "moved_pct": 99.9}, {"space": "land_and_shares", "space_title": "земля и доли трат, без суммы", "k": 6, "columns": 13, "districts": 2016, "image": "assets/land_and_shares_k6.png", "cluster_sizes": {"0": 294, "1": 177, "2": 399, "3": 518, "4": 372, "5": 256}, "family_share_pct": {"land": 70.3, "spending_shape": 29.7, "all_columns": 100.0}, "ari_vs_shipped": 0.8061, "moved_pct": 99.85}, {"space": "land_only", "space_title": "только земля и съёмка", "k": 3, "columns": 8, "districts": 2016, "image": "assets/land_only_k3.png", "cluster_sizes": {"0": 666, "1": 654, "2": 696}, "family_share_pct": {"land": 100.0, "spending_shape": 0.0, "all_columns": 100.0}, "ari_vs_shipped": 0.6436, "moved_pct": 100.0}, {"space": "land_only", "space_title": "только земля и съёмка", "k": 4, "columns": 8, "districts": 2016, "image": "assets/land_only_k4.png", "cluster_sizes": {"0": 435, "1": 696, "2": 231, "3": 654}, "family_share_pct": {"land": 100.0, "spending_shape": 0.0, "all_columns": 100.0}, "ari_vs_shipped": 0.6966, "moved_pct": 61.95}, {"space": "land_only", "space_title": "только земля и съёмка", "k": 5, "columns": 8, "districts": 2016, "image": "assets/land_only_k5.png", "cluster_sizes": {"0": 207, "1": 451, "2": 575, "3": 568, "4": 215}, "family_share_pct": {"land": 100.0, "spending_shape": 0.0, "all_columns": 100.0}, "ari_vs_shipped": 0.7559, "moved_pct": 80.16}, {"space": "land_only", "space_title": "только земля и съёмка", "k": 6, "columns": 8, "districts": 2016, "image": "assets/land_only_k6.png", "cluster_sizes": {"0": 172, "1": 229, "2": 461, "3": 512, "4": 437, "5": 205}, "family_share_pct": {"land": 100.0, "spending_shape": 0.0, "all_columns": 100.0}, "ari_vs_shipped": 0.6166, "moved_pct": 98.36}, {"space": "spending_shape", "space_title": "только форма трат по категориям", "k": 3, "columns": 5, "districts": 2016, "image": "assets/spending_shape_k3.png", "cluster_sizes": {"0": 554, "1": 721, "2": 741}, "family_share_pct": {"land": 0.0, "spending_shape": 100.0, "all_columns": 100.0}, "ari_vs_shipped": 0.1872, "moved_pct": 94.99}, {"space": "spending_shape", "space_title": "только форма трат по категориям", "k": 4, "columns": 5, "districts": 2016, "image": "assets/spending_shape_k4.png", "cluster_sizes": {"0": 617, "1": 586, "2": 373, "3": 440}, "family_share_pct": {"land": 0.0, "spending_shape": 100.0, "all_columns": 100.0}, "ari_vs_shipped": 0.2117, "moved_pct": 62.25}, {"space": "spending_shape", "space_title": "только форма трат по категориям", "k": 5, "columns": 5, "districts": 2016, "image": "assets/spending_shape_k5.png", "cluster_sizes": {"0": 287, "1": 408, "2": 513, "3": 351, "4": 457}, "family_share_pct": {"land": 0.0, "spending_shape": 100.0, "all_columns": 100.0}, "ari_vs_shipped": 0.2315, "moved_pct": 90.38}, {"space": "spending_shape", "space_title": "только форма трат по категориям", "k": 6, "columns": 5, "districts": 2016, "image": "assets/spending_shape_k6.png", "cluster_sizes": {"0": 309, "1": 501, "2": 406, "3": 347, "4": 139, "5": 314}, "family_share_pct": {"land": 0.0, "spending_shape": 100.0, "all_columns": 100.0}, "ari_vs_shipped": 0.2178, "moved_pct": 82.79}, {"space": "with_amount", "space_title": "то же, но сумма трат внутри", "k": 3, "columns": 17, "districts": 2016, "image": "assets/with_amount_k3.png", "cluster_sizes": {"0": 665, "1": 637, "2": 714}, "family_share_pct": {"land": 59.9, "spending_shape": 18.9, "spending_amount": 21.2, "all_columns": 100.0}, "ari_vs_shipped": 0.6361, "moved_pct": 100.0}, {"space": "with_amount", "space_title": "то же, но сумма трат внутри", "k": 4, "columns": 17, "districts": 2016, "image": "assets/with_amount_k4.png", "cluster_sizes": {"0": 636, "1": 291, "2": 375, "3": 714}, "family_share_pct": {"land": 56.8, "spending_shape": 20.9, "spending_amount": 22.3, "all_columns": 100.0}, "ari_vs_shipped": 0.7318, "moved_pct": 97.47}, {"space": "with_amount", "space_title": "то же, но сумма трат внутри", "k": 5, "columns": 17, "districts": 2016, "image": "assets/with_amount_k5.png", "cluster_sizes": {"0": 294, "1": 583, "2": 483, "3": 372, "4": 284}, "family_share_pct": {"land": 56.4, "spending_shape": 21.0, "spending_amount": 22.6, "all_columns": 100.0}, "ari_vs_shipped": 0.786, "moved_pct": 90.43}, {"space": "with_amount", "space_title": "то же, но сумма трат внутри", "k": 6, "columns": 17, "districts": 2016, "image": "assets/with_amount_k6.png", "cluster_sizes": {"0": 485, "1": 277, "2": 343, "3": 583, "4": 282, "5": 46}, "family_share_pct": {"land": 54.3, "spending_shape": 21.2, "spending_amount": 24.5, "all_columns": 100.0}, "ari_vs_shipped": 0.7557, "moved_pct": 41.72}], "spaces": {"land_and_shares": ["dynamic_world_bare", "dynamic_world_built", "dynamic_world_crops", "dynamic_world_grass", "dynamic_world_trees", "viirs_lit_mean", "modis_ndvi_mean", "elevation_mean", "Продовольствие_share", "Здоровье_share", "Маркетплейсы_share", "Общественное питание_share", "Транспорт_share"], "with_amount": ["dynamic_world_bare", "dynamic_world_built", "dynamic_world_crops", "dynamic_world_grass", "dynamic_world_trees", "viirs_lit_mean", "modis_ndvi_mean", "elevation_mean", "Продовольствие_share", "Здоровье_share", "Маркетплейсы_share", "Общественное питание_share", "Транспорт_share", "total_log_mean", "total_mean_rub", "spending_per_km2_log", "total_per_official_km2"], "land_only": ["dynamic_world_bare", "dynamic_world_built", "dynamic_world_crops", "dynamic_world_grass", "dynamic_world_trees", "viirs_lit_mean", "modis_ndvi_mean", "elevation_mean"], "spending_shape": ["Продовольствие_share", "Здоровье_share", "Маркетплейсы_share", "Общественное питание_share", "Транспорт_share"]}, "space_titles": {"land_and_shares": "земля и доли трат, без суммы", "with_amount": "то же, но сумма трат внутри", "land_only": "только земля и съёмка", "spending_shape": "только форма трат по категориям"}, "k_values": [3, 4, 5, 6], "district_rule": "the panel population used by the shipped clustering, the same districts in every state", "nothing_computed_in_the_browser": true}, "decision": {"approved_k": 5, "space_name": "dynamic_world_land_plus_spending_shares", "columns": 13, "amount_excluded": true, "decided_by": "the entrant, on 2026-10-08", "reason": "Largest count that keeps all five selection criteria in the Dynamic World land-and-spending-shares space while adding a type that is economically distinct on measures deliberately excluded from the space. At k=5: Ward reproduces k-means at ARI 0,662, resampling stability holds at 0,887, all seven spending measures kept outside the space separate every pair, the median spending gap reaches 0,636 of the country's interquartile range, and all five clusters keep a name. The fifth group is 283 districts across the Siberian forest interior at a mean longitude of 99,5 degrees: its spending per official square kilometre is the lowest of all five at 4,35 rubles while its absolute monthly spending of 27 456 rubles sits above both farming groups - the same money spread over enormous emptiness. It is also the more spatially coherent partition: districts in the same group sit 1 589 km apart on average against 2 033 km for shuffled labels, a ratio of 0,781, where k=4 gives 0,825. And it moves: 4,3 % of districts change group between the 2023 and 2024 windows at ARI 0,899, which is something to track, whereas k=4 moves 1,8 % and demonstrates almost nothing for a requirement about cluster change over time.", "k_artifact": "artifacts/validation/k_decision.json", "dominance": {"without": {"land": 71.4, "spending_shape": 28.6, "all_columns": 100.0}, "with": {"land": 56.4, "spending_shape": 20.9, "spending_amount": 22.6, "all_columns": 100.0}, "labels": {"land": "земля", "spending_shape": "форма трат", "spending_amount": "сумма трат"}, "moved": 87.8, "artifact": "artifacts/validation/amount_dominance.json", "ramp_artifact": "artifacts/landing/amount_comparison_ramp_note.json"}, "filtering": {"filtered": {"clusters": [0, 1, 2, 3, 4], "smallest_cluster_districts": 283, "kmeans_vs_ward_ari": 0.6621, "stability_bootstrap_ari": 0.8874, "spending_measures_separating_every_pair": "7/7", "pairs_no_measure_can_tell_apart": 0, "clusters_nameable_by_spending": "5/5", "spending_gap_median_in_iqr": 0.6355, "columns": 13, "mean_abs_correlation": 0.1369}, "unfiltered": {"clusters": [0, 1, 2, 3, 4], "smallest_cluster_districts": 172, "kmeans_vs_ward_ari": 0.7383, "stability_bootstrap_ari": 0.9112, "spending_measures_separating_every_pair": "0/0", "pairs_no_measure_can_tell_apart": 10, "clusters_nameable_by_spending": "0/5", "spending_gap_median_in_iqr": null, "columns": 155, "mean_abs_correlation": 0.0877}, "verdict": "filtered is not better on stability", "artifact": "artifacts/validation/filtering_superiority.json"}, "arms": {"land_only": {"ari_2023_vs_2024": 0.649, "churn_after_alignment": 0.1533, "districts": 2016, "only_source_that_changed": "land cover only", "churn_pct": 15.3}, "shape_only": {"ari_2023_vs_2024": 0.8741, "churn_after_alignment": 0.058, "districts": 2016, "only_source_that_changed": "spending composition only", "churn_pct": 5.8}, "both": {"ari_2023_vs_2024": 0.8991, "churn_after_alignment": 0.0432, "districts": 2016, "only_source_that_changed": "land cover and spending composition", "churn_pct": 4.3}, "frozen": {"ari_2023_vs_2024": 1.0, "churn_after_alignment": 0.0, "districts": 2016, "moves": false, "churn_pct": 0.0}}, "arms_artifact": "artifacts/validation/dw_substitution.json", "control_artifact": "artifacts/validation/dw_temporal_signal.json", "names": {"0": "много потерянного леса, много лесов, бедные почвы", "1": "компактная территория, яркие ночные огни, мало выгоревших земель", "2": "много застроенной земли, высокие траты на километр, мало лугов и пастбищ", "3": "много пашни, много выгоревших земель, много лугов и пастбищ", "4": "возвышенность, огромная территория, тусклые ночные огни"}, "names_artifact": "artifacts/interpretation/cluster_names.json"}};
+const THIN = "\u2009";
+const story = document.getElementById("story");
+const rail = document.getElementById("rail");
+
+function num(value, decimals) {
+  if (value === null || value === undefined || isNaN(value)) return "нет данных";
+  const fixed = Number(value).toFixed(decimals).replace(".", ",");
+  const parts = fixed.split(",");
+  let whole = parts[0];
+  whole = whole.replace(/\B(?=(?:\d{3})+(?!\d))/g, THIN);
+  return parts.length > 1 ? whole + "," + parts[1] : whole;
+}
+function pct(value, decimals) {
+  const shown = num(value, decimals);
+  // A missing number must not come back as "нет данных %": the unit belongs to the number, not to the apology.
+  return shown === "нет данных" ? shown : shown + THIN + "%";
+}
+function el(tag, cls, text, extra) {
+  const node = document.createElement(tag);
+  if (cls) node.className = cls;
+  // Some call sites pass (tag, class, null, text). Without this, that text disappears without a trace -
+  // which is exactly the silent-empty defect this repository keeps hunting.
+  if (text === null || text === undefined) text = extra;
+  if (text !== null && text !== undefined) node.textContent = text;
+  return node;
+}
+function drawer(figure, lines) {
+  const details = el("details", "src");
+  details.appendChild(el("summary", null, "проверить источник"));
+  const body = el("div", null);
+  body.appendChild(el("h4", null, figure));
+  lines.forEach(function (pair) {
+    body.appendChild(el("div", null, pair[0] + ": "));
+    body.appendChild(el("code", null, String(pair[1])));
+  });
+  details.appendChild(body);
+  return details;
+}
+
+const TABS = [
+  { id: "s-hero", label: "О проекте" },
+  { id: "s-provenance", label: "Откуда данные" },
+  { id: "s-cadence", label: "Как часто" },
+  { id: "s-decision", label: "Признаки и k" },
+  { id: "s-map", label: "Карта" }
+];
+let active = 0;
+const slides = [];
+
+TABS.forEach(function (tab, index) {
+  const button = el("button", null, tab.label);
+  button.id = "tab-" + tab.id;
+  button.setAttribute("role", "tab");
+  button.setAttribute("aria-selected", index === 0 ? "true" : "false");
+  button.addEventListener("click", function () { select(index); });
+  rail.appendChild(button);
+  const slide = el("section", "slide");
+  slide.id = tab.id;
+  slide.setAttribute("role", "tabpanel");
+  slide.setAttribute("aria-labelledby", button.id);
+  story.appendChild(slide);
+  slides.push(slide);
+});
+
+// Title slide: the name, the hypothesis in one sentence, and the one person behind it.
+(function () {
+  const hero = document.getElementById("s-hero");
+  // The words sit in the lower left, the answer sits to their right. Stacking the map under the
+  // text made it spill past the fold on every screen; side by side it stays inside the first view.
+  const textCol = el("div", "herotext");
+  textCol.appendChild(el("h2", "hero-title", null, 'Больше, чем "тратят много" и "тратят мало"'));
+  textCol.appendChild(el("p", "lede", null,
+    "Кластеризация только по тратам разделит округа на те, что тратят много, и на те, что тратят мало."
+    + " Гипотеза: если обогатить данные о тратах геопространственными, разделение становится интереснее."
+    + " Проверка - на снимках: классы земли, ночные огни, вегетация."));
+  const by = el("div", "byline");
+  const face = el("img", "face");
+  face.src = "assets/author_avatar.jpg";
+  face.alt = "Евгений Иванкин";
+  by.appendChild(face);
+  const who = el("div", "who");
+  who.appendChild(el("b", null, "Евгений Иванкин"));
+  who.appendChild(el("small", null, "МФТИ - студент"));
+  who.appendChild(el("small", null, "Проект сделан одним человеком - это вся команда"));
+  by.appendChild(who);
+  textCol.appendChild(by);
+  const fine = el("p", "fine", null,
+    "Дальше - три вопроса: откуда берутся данные, как часто их можно пересчитывать, и почему типов ровно пять. ");
+  const reportLink = el("a", null);
+  reportLink.href = "../report/methodology-ru.md";
+  reportLink.appendChild(document.createTextNode("Полный отчёт по методологии - Markdown."));
+  fine.appendChild(reportLink);
+  textCol.appendChild(fine);
+  hero.appendChild(textCol);
+  // The answer, before the argument. This is the same partition the interactive map at the end of
+  // the story draws, baked as vector paths with no basemap under it, so nothing third party sits
+  // behind it and it stays crisp whatever the screen is.
+  const teaser = el("img", "heromap");
+  teaser.src = "assets/hero_map.svg";
+  teaser.alt = "Карта: каждый муниципалитет окрашен по своему типу экономики";
+  const mapCol = el("div", "heromapside");
+  mapCol.appendChild(teaser);
+  hero.appendChild(mapCol);
+})();
+
+// The map is the last section of the same story, not a separate site the reader has to leave. It is
+// the interactive page loaded inside this tab, with the two-year switch it already has.
+(function () {
+  const host = document.getElementById("s-map");
+  const frame = el("iframe", "mapframe");
+  frame.src = "../map/full/index.html";
+  frame.setAttribute("title", "Карта кластеров");
+  frame.setAttribute("loading", "lazy");
+  host.appendChild(frame);
+  window.__mapHref = function (tid) { return "../map/full/index.html#tid=" + tid; };
+})();
+
+// A link like #map_2518 says: open the map and show me this municipality. The map page already
+// understands #tid=2518, so the presentation only has to pass it on and move the reader to the map.
+(function () {
+  function readHash() {
+    const raw = (location.hash || "").replace(/^#/, "");
+    if (raw.indexOf("map_") !== 0) return;
+    const tid = raw.slice(4);
+    if (!tid) return;
+    select(TABS.findIndex(function (t) { return t.id === "s-map"; }));
+    const frame = document.querySelector("#s-map iframe");
+    if (frame) frame.src = "../map/full/index.html#tid=" + tid;
+  }
+  window.addEventListener("hashchange", readHash);
+  readHash();
+})();
+
+function select(index) {
+  active = index;
+  slides.forEach(function (slide, i) { slide.classList.toggle("active", i === index); });
+  TABS.forEach(function (tab, i) {
+    document.getElementById("tab-" + tab.id)
+      .setAttribute("aria-selected", i === index ? "true" : "false");
+  });
+  document.getElementById("scroll-hint").hidden = index !== 0;
+  window.scrollTo(0, 0);
+}
+
+// Scrolling is navigation here, not scrolling: the wheel moves between tabs and the page never scrolls.
+// Inside an open source drawer the wheel belongs to the drawer, so that case is let through.
+let lastMove = 0;
+window.addEventListener("wheel", function (event) {
+  if (event.target && event.target.closest && event.target.closest("details.src[open] > div")) return;
+  event.preventDefault();
+  const now = performance.now();
+  if (now - lastMove < 240) return;
+  if (Math.abs(event.deltaY) < 3) return;
+  active = Math.max(0, Math.min(TABS.length - 1, active + (event.deltaY > 0 ? 1 : -1)));
+  select(active);
+  lastMove = now;
+}, { passive: false });
+window.addEventListener("keydown", function (event) {
+  if (event.key === "ArrowRight") select(Math.min(TABS.length - 1, active + 1));
+  if (event.key === "ArrowLeft") select(Math.max(0, active - 1));
+});
+
+const P = PDATA.provenance;
+const legendBox = el("div", "legend");
+PDATA.legend.classes.forEach(function (c) {
+  const s = el("span", null);
+  const sw = el("i", null);
+  sw.style.background = c.color;
+  s.appendChild(sw);
+  s.appendChild(document.createTextNode(c.label));
+  legendBox.appendChild(s);
+});
+
+// Tab 1: one district at a time, one source at a time, with the pixel grid as a second committed image.
+(function buildProvenance() {
+  const slide = slides[1];
+  const P = PDATA.provenance;
+  const head = el("header", null);
+  head.appendChild(el("h2", null, "Собираем данные из открытых гео-наборов, которые покрывают весь мир"));
+  slide.appendChild(head);
+
+  const stage = el("div", "stage");
+  stage.style.gridTemplateColumns = "minmax(228px,244px) minmax(0,1fr) minmax(330px,430px)";
+
+  const figCard = el("div", "card");
+  const figureHeading = el("h3", null, "Окно над районом");
+  figCard.appendChild(figureHeading);
+  const sourceCol = el("div", "col");
+  P.sources.forEach(function (source) {
+    const b = el("button", null);
+    b.appendChild(document.createTextNode(source.label));
+    b.appendChild(el("small", null, source.native));
+    b.dataset.source = source.key;
+    b.addEventListener("click", function () { setSource(source.key); });
+    sourceCol.appendChild(b);
+  });
+  const figure = el("figure", null);
+  const box = el("div", "cropbox");
+  const image = el("img", null);
+  image.alt = "снимок земли вокруг выбранного района";
+  const frame = el("div", "frame");
+  frame.appendChild(image);
+  const boundsLayer = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  boundsLayer.setAttribute("class", "bounds");
+  boundsLayer.setAttribute("preserveAspectRatio", "none");
+  boundsLayer.setAttribute("width", "100%");
+  boundsLayer.setAttribute("height", "100%");
+  frame.appendChild(boundsLayer);
+  box.appendChild(frame);
+  const boundsToggle = el("button", "toggle");
+  boundsToggle.appendChild(document.createTextNode("граница района"));
+  boundsToggle.setAttribute("aria-pressed", "true");
+  boundsToggle.addEventListener("click", function () {
+    boundsOn = !boundsOn;
+    boundsToggle.setAttribute("aria-pressed", boundsOn ? "true" : "false");
+    paintBoundary(currentCrop());
+  });
+  figureHeading.appendChild(boundsToggle);
+  const mapJump = el("a", "jump");
+  mapJump.href = "#map";
+  mapJump.appendChild(document.createTextNode("показать на общей карте кластеров"));
+  mapJump.addEventListener("click", function (event) {
+    event.preventDefault();
+    const target = "map_" + (P.districts[picked] ? P.districts[picked].tid : picked);
+    location.hash = target;
+    select(TABS.findIndex(function (t) { return t.id === "s-map"; }));
+    const frame = document.querySelector("#s-map iframe");
+    if (frame) frame.src = "../map/full/index.html#tid=" + (P.districts[picked] ? P.districts[picked].tid : picked);
+  });
+  figureHeading.appendChild(mapJump);
+  figure.appendChild(box);
+  figCard.appendChild(figure);
+  sourceCol.appendChild(el("div", "group", null, "район"));
+  const pickerRow = el("div", "col");
+  P.districts.forEach(function (d, i) {
+    const b = el("button", null);
+    b.appendChild(document.createTextNode(d.short));
+    b.dataset.pick = String(i);
+    b.addEventListener("click", function () { pick(i); });
+    b.appendChild(el("small", null, d.region));
+    pickerRow.appendChild(b);
+  });
+  sourceCol.appendChild(pickerRow);
+  const yearRow = el("div", "col");
+  ["2023", "2024"].forEach(function (year) {
+    const b = el("button", null, year);
+    b.dataset.year = year;
+    b.addEventListener("click", function () { setYear(year); });
+    yearRow.appendChild(b);
+  });
+  sourceCol.appendChild(el("div", "group", null, "год - всё, кроме высоты и ночных огней"));
+  sourceCol.appendChild(yearRow);
+  stage.appendChild(sourceCol);
+  stage.appendChild(figCard);
+
+  const legend = el("div", "legend");
+  const side = el("div", "side");
+  const legendCard = el("div", "card");
+  legendCard.appendChild(el("h3", null, "Как читать снимок"));
+  legendCard.appendChild(legend);
+  const infoCard = el("div", "card");
+  const infoBody = el("div", null);
+  infoCard.appendChild(infoBody);
+  side.appendChild(legendCard);
+  side.appendChild(infoCard);
+  stage.appendChild(side);
+  slide.appendChild(stage);
+
+
+  const drawer = el("details", "src");
+  drawer.appendChild(el("summary", null, "проверить источник"));
+  const drawerBody = el("div", null);
+  drawer.appendChild(drawerBody);
+  sourceCol.appendChild(drawer);
+
+  const byKey = {};
+  P.sources.forEach(function (source) { byKey[source.key] = source; });
+
+  let picked = 0;
+  let sourceKey = "dynamic_world";
+  let year = "2023";
+
+  function markPressed(scope, chosen, attribute) {
+    // A subgroup may only clear its own buttons. The rail holds sources, districts and years together, and an
+    // unscoped pass used to wipe the highlight of the other two groups.
+    scope.querySelectorAll("button[" + attribute + "]").forEach(function (b) {
+      b.setAttribute("aria-pressed", b === chosen ? "true" : "false");
+    });
+  }
+  function pick(i) {
+    picked = i;
+    markPressed(pickerRow, pickerRow.querySelectorAll("button")[i], "data-pick");
+    render();
+  }
+let boundsOn = true;
+  function currentCrop() {
+    const source = P.sources.find(function (s) { return s.key === sourceKey; });
+    const period =
+      source && source.periods && source.periods.length > 1
+        ? year
+        : source && source.periods
+        ? source.periods[0]
+        : "";
+    const block = (P.crops || {})[sourceKey] || {};
+    const wanted = P.districts[picked] ? String(P.districts[picked].tid) : String(picked);
+    const slot = block[wanted] || {};
+    return slot[period] || slot[""] || null;
+  }
+  function paintBoundary(crop) {
+    boundsLayer.textContent = "";
+    if (!crop || !boundsOn || !crop.boundary_paths || !crop.boundary_paths.length) {
+      boundsLayer.removeAttribute("viewBox");
+      return;
+    }
+    const size = crop.boundary_pixels || [716, 452];
+    boundsLayer.setAttribute("viewBox", "0 0 " + size[0] + " " + size[1]);
+    crop.boundary_paths.forEach(function (d) {
+      ["casing", "line"].forEach(function (role) {
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", d);
+        path.setAttribute("fill", "none");
+        path.setAttribute("stroke", role === "casing" ? "#101216" : "#f2ead9");
+        path.setAttribute("stroke-width", role === "casing" ? "4" : "1.6");
+        path.setAttribute("stroke-linejoin", "round");
+        path.setAttribute("vector-effect", "non-scaling-stroke");
+        boundsLayer.appendChild(path);
+      });
+    });
+  }
+
+  function setSource(key) {
+    sourceKey = key;
+    markPressed(sourceCol, sourceCol.querySelector('[data-source="' + key + '"]'), "data-source");
+    const block = P.sources.find(function (s) { return s.key === key; });
+    yearRow.querySelectorAll("button").forEach(function (b) {
+      b.disabled = !(block && block.periods && block.periods.length > 1);
+    });
+    // The chosen year is a state of the page, not of one source: it survives a trip to a layer that has only
+    // one period and comes back highlighted when the reader returns to a layer that has both.
+    markPressed(yearRow, yearRow.querySelector('[data-year="' + year + '"]'), "data-year");
+    render();
+  }
+  function setYear(y) {
+    year = y;
+    markPressed(yearRow, yearRow.querySelector('[data-year="' + y + '"]'), "data-year");
+    render();
+  }
+
+  function paintLegend(source, crop) {
+    legend.textContent = "";
+    if (source.classes) {
+      source.classes.forEach(function (c) {
+        const line = el("div", "key");
+        const sw = el("i", null);
+        sw.style.background = "rgb(" + c.color[0] + "," + c.color[1] + "," + c.color[2] + ")";
+        line.appendChild(sw);
+        line.appendChild(el("span", null, c.label));
+        legend.appendChild(line);
+      });
+      legend.appendChild(el("div", "fine", null, source.meaning));
+    } else if (source.key === "sentinel2") {
+      legend.appendChild(el("div", "key", null,
+        "красный, зелёный и синий каналы - настоящие цвета, а не шкала"));
+    } else if (source.ramp_colors) {
+      const row = el("div", "scaleRow");
+      const bar = el("div", "ramp");
+      bar.style.background = "linear-gradient(to top, " + source.ramp_colors.map(function (stop) {
+        const color = stop[1] || stop;
+        return "rgb(" + color[0] + "," + color[1] + "," + color[2] + ")";
+      }).join(", ") + ")";
+      const marks = el("div", "marks");
+      marks.appendChild(el("span", null, num(crop.high_display, 2) + " " + (source.unit || "")));
+      marks.appendChild(el("span", "mid", null, num(crop.mid_display, 2)));
+      marks.appendChild(el("span", null, num(crop.low_display, 2) + " " + (source.unit || "")));
+      row.appendChild(bar);
+      row.appendChild(marks);
+      legend.appendChild(row);
+      legend.appendChild(el("div", "fine", null, source.meaning + " - " + (source.reading || "")));
+      if (crop.zero_m !== null && crop.zero_m !== undefined) {
+        legend.appendChild(el("div", "fine", null,
+          "самая низкая точка этого окна - " + num(crop.zero_m, 0)
+          + " м над уровнем моря; самый высокий пиксель района - "
+          + num(crop.zero_m + crop.relief_m, 0) + " м"));
+      }
+      if (crop.scale_mode === "log") {
+        legend.appendChild(el("div", "fine", null,
+          "шкала логарифмическая: один и тот же шаг цвета означает умножение яркости, а не прибавление."));
+      }
+    }
+    if (crop && crop.uniform) {
+      legend.appendChild(el("div", "warn", null, "во всём окне одно значение"));
+    }
+  }
+
+  function appendPipeline(crop) {
+    const c = P.chain;
+    const chain = el("div", "chain");
+    const steps = [
+      [num(c.total_pixels, 0) + " пикселей", "пиксель " + num(crop.pixel_north_m, 0) + " м"],
+      [num(c.classified_pixels, 0) + " с классом", pct(c.classified_share_pct, 1)],
+      ["доли 5 классов", "в процентах"],
+      [num(c.official_km2, 1) + " км²", "площадь из реестра"],
+      [num(c.spending_rub, 0) + " ₽", "за год"],
+      [num(c.density, 2) + " ₽/км²", "итог"]
+    ];
+    steps.forEach(function (step, i) {
+      chain.appendChild(el("span", null, step[0]));
+      chain.appendChild(el("em", null, step[1]));
+      if (i < steps.length - 1) chain.appendChild(el("b", "arrow", null, "→"));
+    });
+    infoBody.appendChild(chain);
+  }
+
+  function appendSteps(source) {
+    if (!source.pipeline || !source.pipeline.length) {
+      return;
+    }
+    const list = el("div", "steps");
+    source.pipeline.forEach(function (step) {
+      // The pipeline artifact names the year the column was built from; when the reader has chosen a year, that
+      // chip would contradict the picture on screen, so the control carries the fact instead.
+      if (source.periods && source.periods.length > 1 && /год наблюдения/.test(step)) return;
+      list.appendChild(el("span", null, step));
+    });
+    infoBody.appendChild(list);
+  }
+
+  function render() {
+    const d = P.districts[picked];
+    const source = byKey[sourceKey];
+    const period = source.periods && source.periods.length > 1 ? year : (source.periods ? source.periods[0] : "");
+    const crop = (P.crops[sourceKey] || {})[d.tid] ? (P.crops[sourceKey][d.tid][period]) : null;
+    if (!crop) {
+      image.removeAttribute("src");
+      infoBody.textContent = "";
+      return;
+    }
+    image.src = crop.image;
+    paintBoundary(crop);
+    paintLegend(source, crop);
+
+    infoBody.textContent = "";
+    infoCard.style.display = "";
+    if (sourceKey === "dynamic_world") {
+      const dw = P.districts[picked].years[year];
+      infoBody.appendChild(el("p", "kicker", null, "Доли классов земли, " + year + " год"));
+      PDATA.legend.classes.forEach(function (c) {
+        const line = el("div", "bar");
+        line.appendChild(el("b", null, c.label));
+        const track = el("div", "track");
+        const fill = el("div", "fill");
+        fill.style.width = Math.min(100, dw.means[c.key]) + "%";
+        fill.style.background = c.color;
+        track.appendChild(fill);
+        line.appendChild(track);
+        line.appendChild(el("em", null, pct(dw.means[c.key], 1)));
+        infoBody.appendChild(line);
+      });
+    } else if (sourceKey === "terrain") {
+      infoBody.textContent = "";
+      infoCard.style.display = "none";
+    } else if (sourceKey === "viirs") {
+      infoBody.appendChild(el("p", "kicker", null, "Яркость ночью, " + year + " год"));
+      (crop.step_shares_pct || []).forEach(function (share, index) {
+        const names = ["тёмное", "слабое", "поселение", "город"];
+        const colors = ["#10121a", "#4a3a20", "#b07830", "#f6e096"];
+        const bar = el("div", "bar");
+        bar.appendChild(el("b", null, names[index] || "шаг " + (index + 1)));
+        const track = el("div", "track");
+        const fill = el("div", "fill");
+        fill.style.width = Math.min(100, share) + "%";
+        fill.style.background = colors[index] || "#b07830";
+        track.appendChild(fill);
+        bar.appendChild(track);
+        bar.appendChild(el("em", null, pct(share, 1)));
+        infoBody.appendChild(bar);
+      });
+    } else {
+      if (sourceKey === "ndvi") {
+        infoBody.appendChild(el("p", "kicker", null, "Об этом источнике"));
+      }
+      infoBody.appendChild(el("p", "desc", null, source.explainer));
+      if (source.full) {
+        infoBody.appendChild(el("p", "desc", null, source.full + "."));
+      }
+      if (source.formula) {
+        infoBody.appendChild(el("p", "formula", null, source.formula));
+      }
+      if (sourceKey === "ndvi" && crop.step_shares_pct && crop.step_shares_pct.length) {
+        infoBody.appendChild(el("p", "kicker", null, "Что видно внутри района"));
+        const vegNames = ["без растительности", "слабая", "активная"];
+        const vegColors = ["rgb(138, 127, 106)", "rgb(111, 143, 87)", "rgb(63, 125, 60)"];
+        crop.step_shares_pct.forEach(function (share, index) {
+          const bar = el("div", "bar");
+          bar.appendChild(el("b", null, vegNames[index] || ""));
+          const track = el("div", "track");
+          const fill = el("div", "fill");
+          fill.style.width = Math.min(100, share) + "%";
+          fill.style.background = vegColors[index] || "rgb(111, 143, 87)";
+          track.appendChild(fill);
+          bar.appendChild(track);
+          bar.appendChild(el("em", null, pct(share, 1)));
+          infoBody.appendChild(bar);
+        });
+        infoBody.appendChild(el("p", "fine", null,
+          "порог 0,1 - ниже растительности почти нет; порог 0,3 - полог сомкнутый или посевы активные"));
+      }
+      if (source.use) {
+        infoBody.appendChild(el("p", "desc", null, source.use));
+      }
+      if (crop.lit_share_pct !== null && crop.lit_share_pct !== undefined) {
+        infoBody.appendChild(el("p", "fine", null,
+          "Освещённых пикселей в этом окне: " + pct(crop.lit_share_pct, 1)
+          + " - по порогу 0,5 ед. яркости, именно так считает кластеризация."));
+      }
+      if (source.not_used) {
+        infoBody.appendChild(el("p", "fine", null, source.not_used));
+      }
+      if (crop.uniform) {
+        infoBody.appendChild(el("p", "warn", null,
+          "Во всём окне значение одинаково: " + (sourceKey === "hansen" ? "ни одного пикселя с потерей леса" : "однотонный снимок") + "."));
+      }
+      if (sourceKey !== "terrain" && sourceKey !== "ndvi") {
+        infoBody.appendChild(el("p", "fine", null,
+          "пиксель на земле ≈ " + num(crop.pixel_east_m, 0) + " × " + num(crop.pixel_north_m, 0)
+          + " м; данных в окне " + pct(crop.coverage_pct, 1) + "."));
+      }
+    }
+
+    drawerBody.textContent = "";
+    document.addEventListener("click", function (event) {
+      if (!drawer.open) return;
+      if (drawer.contains(event.target)) return;
+      drawer.open = false;
+    });
+    drawerBody.appendChild(el("h4", null, "Что это за данные"));
+    function line(label, value) {
+      const p = el("p", "dline");
+      p.appendChild(el("b", null, label));
+      p.appendChild(document.createTextNode(": " + value));
+      drawerBody.appendChild(p);
+    }
+    line("что показывает", source.meaning);
+    line("родной размер пикселя", source.native);
+    line("как часто обновляется", source.cadence);
+    line("год наблюдения", /^\d{4}$/.test(period) ? period + " год" : "не зависит от года наблюдений");
+    line("шкала на картинке", crop.scale_basis || "ярность этого окна");
+    line("условия использования", source.licence);
+    drawerBody.appendChild(el("h4", null, "Как получено это окно"));
+    const cap = crop.capture;
+    line("центр окна", num(cap.center_lon, 4) + "° в.д., " + num(cap.center_lat, 4) + "° с.ш.");
+    line("размер окна", num(cap.wide_deg, 2) + " × " + num(cap.tall_deg, 2) + "° - примерно "
+      + num(cap.wide_km, 0) + " × " + num(cap.tall_km, 0) + " км");
+    line("масштаб", num(crop.pixel_east_m, 0) + " × " + num(crop.pixel_north_m, 0)
+      + " м на земле; мы просили " + num(crop.scale_m, 0) + " м");
+    line("пикселей с данными", pct(crop.coverage_pct, 1));
+    if (crop.lit_share_pct !== null && crop.lit_share_pct !== undefined) {
+      line("доля освещённых пикселей", pct(crop.lit_share_pct, 1) + " (порог " + num(crop.analysis_low, 1)
+        + " ед. яркости)");
+    }
+    if (source.catalog) {
+      const link = el("a", null, "страница набора данных в каталоге Earth Engine");
+      link.href = source.catalog;
+      link.target = "_blank";
+      link.rel = "noopener";
+      drawerBody.appendChild(el("div", null, "проверить снаружи: "));
+      drawerBody.appendChild(link);
+    }
+  }
+
+  markPressed(sourceCol, sourceCol.querySelector('[data-source="dynamic_world"]'), "data-source");
+  markPressed(pickerRow, pickerRow.querySelectorAll("button")[0], "data-pick");
+  markPressed(yearRow, yearRow.querySelector('[data-year="2023"]'), "data-year");
+  render();
+})();
+
+// Tab 2: families, not a per-layer table. The per-layer detail sits in the drawer.
+(function buildCadence() {
+  const slide = slides[2];
+  const C = PDATA.cadence;
+  const head = el("header", null);
+  head.appendChild(el("h2", null, "Что обновляется, а что нет"));
+  slide.appendChild(head);
+
+  const LANE_COLOUR = {
+    "раз в месяц": "#2a78d6",
+    "раз в год": "#2e5d3a",
+    "статично": "#8a94a0",
+    "не пересчитывается": "#8a94a0",
+    "не доказано": "#b08d3f",
+  };
+  function chip(text) {
+    const c = el("span", "fq");
+    c.appendChild(document.createTextNode(text));
+    const colour = LANE_COLOUR[text];
+    if (colour) {
+      c.style.borderColor = colour;
+      c.style.background = colour;
+      c.style.color = "#fff";
+    }
+    return c;
+  }
+  function stack(used, possible) {
+    const box = el("div", "trio");
+    [["сейчас", used], ["возможно", possible]].forEach(function (pair) {
+      if (!pair[1]) return;
+      const line = el("div", "trioline");
+      line.appendChild(el("small", null, pair[0]));
+      line.appendChild(chip(pair[1]));
+      box.appendChild(line);
+    });
+    return box;
+  }
+
+  const rows = [];
+  // Only the inputs that actually enter the shipped decision get a row. Listing every layer we could
+  // have touched turned the table into a catalogue, and the question is about the five we did use.
+  C.families.families.forEach(function (family) {
+    family.members.filter(function (m) { return m.in_space && m.used_frequency; })
+      .forEach(function (m) { rows.push([family.label, m]); });
+  });
+
+  const table = el("table", "cadtable");
+  const thead = el("thead", null);
+  const hr = el("tr", null);
+  ["семейство", "вход и его столбцы в решении", "частота", "разрешение", "последнее обновление"].forEach(function (name) {
+    const th = el("th", null);
+    th.appendChild(document.createTextNode(name));
+    hr.appendChild(th);
+  });
+  thead.appendChild(hr);
+  table.appendChild(thead);
+  const tbody = el("tbody", null);
+  rows.forEach(function (pair) {
+    const member = pair[1];
+    const tr = el("tr", null);
+    const group = el("td", "cadgroup");
+    group.appendChild(document.createTextNode(pair[0]));
+    tr.appendChild(group);
+    const who = el("td", "cadname");
+    who.appendChild(el("b", null, member.label));
+    // The verbose column names the decision uses belong under the input they came from, not in a
+    // column of their own that would widen the table past the screen.
+    if (member.space_columns && member.space_columns.length) {
+      who.appendChild(el("small", null, member.space_columns.join(" · ")));
+    }
+    tr.appendChild(who);
+    const freq = el("td", null);
+    // A static input still has an answer to the frequency question - it is "static" - so the cell is
+    // not left blank only because nobody wrote a cadence for it.
+    const staticWord = member.status === "static" ? "статично" : null;
+    freq.appendChild(stack(member.used_frequency || staticWord, member.possible_frequency));
+    tr.appendChild(freq);
+    const res = el("td", null);
+    res.appendChild(stack(member.used_resolution, member.possible_resolution));
+    tr.appendChild(res);
+    const last = el("td", "cadlast");
+    // Where a date came from is provenance, not something the reader needs in the row. It lives in
+    // the drawer under the table instead of printing a repository path on the face of the page.
+    if (member.last_update) {
+      last.appendChild(el("b", null, member.last_update));
+    } else {
+      last.appendChild(el("small", null, "не записано"));
+    }
+    tr.appendChild(last);
+    tbody.appendChild(tr);
+  });
+  table.appendChild(tbody);
+
+  const card = el("div", "card");
+  card.appendChild(table);
+  card.appendChild(el("p", "fine", null,
+    "Цвет частоты: синий - месяц, зелёный - год, серый - статично, песочный - не доказано."
+    + " «По муниципалитету» значит, что величина уже сведена к району, а не к пикселю."));
+  card.appendChild(drawer("Откуда это известно", [
+    ["артефакт семей", C.families.artifact],
+    ["артефакт частот", C.artifact],
+    ["основание дат", (C.families.families || []).map(function (f) {
+      return f.members.map(function (m) { return m.last_update_basis || "нет записи"; }).join(" · ");
+    }).join(" | ")]
+  ]));
+  slide.appendChild(card);
+})();
+
+// Tab 4: how the attributes and the number of types were chosen. Three views, one at a time, so each
+// picture can be big enough to read. The browser never computes anything: every map here is a
+// partition that was computed in Python and written to disk.
+(function buildDecision() {
+  const slide = slides[3];
+  const D = PDATA.decision;
+  const head = el("header", null);
+  head.appendChild(el("h2", null, "Как выбраны признаки и сколько типов"));
+  slide.appendChild(head);
+
+  const maps = PDATA.decision_maps || [];
+  const byIndex = {};
+  maps.forEach(function (m) { byIndex[m.index] = m; });
+
+  const switcher = el("div", "dswitch");
+  switcher.appendChild(el("span", null, "смотреть"));
+  const VIEWS = [
+    ["sets", "наборы признаков", "Три способа раскрасить одну и ту же страну"],
+    ["k", "сколько типов", "Один и тот же набор, разное число типов"],
+    ["volume", "деньги против типов", "Пять типов - не ранжирование по объёму"],
+  ];
+  const panes = {};
+
+  function makeCell(svg, caption, note) {
+    const cell = el("figure", "mapcell");
+    const img = el("img", "bigmap");
+    img.src = "assets/" + svg;
+    img.alt = caption;
+    cell.appendChild(img);
+    cell.appendChild(el("figcaption", null, caption));
+    if (note) cell.appendChild(el("small", null, note));
+    return cell;
+  }
+
+  // View one: the choice of attributes, shown as three full-size maps.
+  const paneSets = el("div", "dpane");
+  paneSets.appendChild(el("p", "dprompt", null, VIEWS[0][2]));
+  const setRow = el("div", "setrow");
+  setRow.appendChild(makeCell(
+    byIndex[10] ? byIndex[10].svg : "", "только форма трат по категориям",
+    byIndex[10] ? "совпадение с присланным ответом ARI " + num(byIndex[10].ari, 4) : ""));
+  setRow.appendChild(makeCell("decision_money.svg", "окрашено по сумме месячных трат",
+    "тёмное - от 48,7 тыс. ₽ в месяц, светлое - до 21,1 тыс.; серые - нет данных"));
+  setRow.appendChild(makeCell(
+    byIndex[2] ? byIndex[2].svg : "", "земля и доли трат, без суммы",
+    byIndex[2] ? "совпадение с присланным ответом ARI " + num(byIndex[2].ari, 4) : ""));
+  paneSets.appendChild(setRow);
+  panes.sets = paneSets;
+
+  // View two: the same attributes, different numbers of types, next to the money picture so the
+  // reader can see whether the split is following the money or the land.
+  const paneK = el("div", "dpane");
+  paneK.appendChild(el("p", "dprompt", null, VIEWS[1][2]));
+  const kRow = el("div", "krow");
+  const kToIndex = { 3: 0, 4: 1, 5: 2, 6: 3 };
+  const kCaption = el("p", "kcaption", null, "");
+  const kStat = el("p", "kstat", null, "");
+  const kMapCell = el("figure", "mapcell");
+  const kImg = el("img", "bigmap");
+  kImg.alt = "Разбиение на выбранном наборе признаков";
+  kMapCell.appendChild(kImg);
+  const moneyMapCell = makeCell("decision_money.svg", "для сравнения: окрашено по сумме трат",
+    "тёмное - от 48,7 тыс. ₽ в месяц, светлое - до 21,1 тыс.");
+  const kPair = el("div", "setrow kpair");
+  kPair.appendChild(kMapCell);
+  kPair.appendChild(moneyMapCell);
+  function showK(k) {
+    const m = byIndex[kToIndex[k]];
+    if (!m) return;
+    kImg.src = "assets/" + m.svg;
+    kCaption.textContent = m.caption;
+    kStat.textContent = Object.keys(m.sizes).map(function (key) { return m.sizes[key]; }).join(" · ") +
+      " округов · совпадение с присланным ответом ARI " + num(m.ari, 4);
+    Array.from(kRow.children).forEach(function (b) {
+      if (b.tagName === "BUTTON") b.setAttribute("aria-pressed", Number(b.dataset.k) === k ? "true" : "false");
+    });
+  }
+  [3, 4, 5, 6].forEach(function (k) {
+    const b = el("button", "kbtn");
+    b.textContent = "k=" + k;
+    b.dataset.k = String(k);
+    b.setAttribute("aria-pressed", k === 5 ? "true" : "false");
+    b.addEventListener("click", function () { showK(k); });
+    kRow.appendChild(b);
+  });
+  paneK.appendChild(kRow);
+  paneK.appendChild(kPair);
+  const kFoot = el("div", "dfoot");
+  kFoot.appendChild(kCaption);
+  kFoot.appendChild(kStat);
+  kFoot.appendChild(el("p", "note", null,
+    "k=5 - не за количество: он даёт тип, которого нет при k=4."));
+  paneK.appendChild(kFoot);
+  panes.k = paneK;
+
+  // View three: the accusation answered with pictures rather than numbers.
+  const paneVolume = el("div", "dpane");
+  paneVolume.appendChild(el("p", "dprompt", null, VIEWS[2][2]));
+  const volGrid = el("div", "volgrid");
+  const volImg = el("img", "volimg");
+  volImg.src = "assets/spending_vs_structure.png";
+  volImg.alt = "Слева - сколько округ тратит, справа - чем округи различаются по устройству";
+  volGrid.appendChild(volImg);
+  const barsBox = el("div", "sharepair");
+  function inlineBars(dict, label) {
+    const side = el("div", null);
+    side.appendChild(el("small", null, label));
+    const box = el("div", "inbars");
+    Object.keys(dict).forEach(function (key) {
+      if (key === "all_columns") return;
+      const line = el("div", "inbar");
+      line.appendChild(el("b", null, D.dominance.labels[key] || key));
+      const track = el("div", "track");
+      const fill = el("div", "fill");
+      fill.style.width = dict[key] + "%";
+      fill.style.background = key === "spending_amount" ? "var(--accent)"
+        : (key === "land" ? "var(--accent2)" : "#c9a227");
+      track.appendChild(fill);
+      line.appendChild(track);
+      line.appendChild(el("em", null, pct(dict[key], 1)));
+      box.appendChild(line);
+    });
+    side.appendChild(box);
+    return side;
+  }
+  barsBox.appendChild(inlineBars(D.dominance.without, "без суммы трат"));
+  barsBox.appendChild(inlineBars(D.dominance.with, "с суммой трат"));
+  volGrid.appendChild(barsBox);
+  paneVolume.appendChild(volGrid);
+  const volFoot = el("div", "dfoot");
+  volFoot.appendChild(el("p", "note", null,
+    "Сумма забирает " + pct(D.dominance.with.spending_amount, 1) + " разделения; между разбиением с ней и"
+    + " присланным ответом переезжают " + pct(D.dominance.moved, 1) + " районов."));
+  paneVolume.appendChild(volFoot);
+  panes.volume = paneVolume;
+
+  slide.appendChild(switcher);
+  VIEWS.forEach(function (view, position) {
+    const b = el("button", "dbtn");
+    b.textContent = view[1];
+    b.dataset.view = view[0];
+    b.setAttribute("aria-pressed", position === 0 ? "true" : "false");
+    b.addEventListener("click", function () { showView(view[0]); });
+    switcher.appendChild(b);
+    slide.appendChild(panes[view[0]]);
+  });
+  function showView(name) {
+    Object.keys(panes).forEach(function (key) {
+      panes[key].classList.toggle("active", key === name);
+    });
+    Array.from(switcher.querySelectorAll("button")).forEach(function (b) {
+      b.setAttribute("aria-pressed", b.dataset.view === name ? "true" : "false");
+    });
+    if (name === "k") showK(5);
+  }
+  showView("sets");
+
+  slide.appendChild(drawer("Чем это проверено", [
+    ["записанное решение", D.k_artifact],
+    ["доминирование суммы", D.dominance.artifact],
+    ["демонстрация k и пространств", "artifacts/landing/demo_states.json"],
+    ["печать картинок", "scripts/build_vector_choropleth.py"],
+    ["движение 2023 к 2024", D.arms_artifact]
+  ]));
+})();
+
+select(0);
+</script>
+</body>
+</html>

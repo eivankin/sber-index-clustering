@@ -1,0 +1,82 @@
+{
+  "generated_by": "scripts/measure_2024_refresh.py",
+  "what_this_is": "The shipped space re-clustered with greenness and night lights taken from the 2024 covariate run, alongside a frozen control at the same seed.",
+  "approved_k": 5,
+  "seed": 0,
+  "space_columns": 13,
+  "districts": 2016,
+  "reference_partition": "artifacts/icvi/cluster_assignments.parquet",
+  "covariate_2024_file": "data/processed/covariates_gee_2024.parquet",
+  "column_movement": {
+    "modis_ndvi_mean": {
+      "mean_2023": 0.5831,
+      "mean_2024": 0.6013,
+      "mean_abs_change": 0.0298,
+      "districts_moved_over_1pp": 1551
+    },
+    "viirs_lit_mean": {
+      "mean_2023": 0.8057,
+      "mean_2024": 0.886,
+      "mean_abs_change": 0.1041,
+      "districts_moved_over_1pp": 1066
+    }
+  },
+  "arms": {
+    "frozen_2023": {
+      "columns_replaced": [],
+      "ari_vs_shipped": 1.0,
+      "moved_pct": 0.0,
+      "cluster_sizes": {
+        "0": 516,
+        "1": 372,
+        "2": 294,
+        "3": 551,
+        "4": 283
+      }
+    },
+    "ndvi_only_2024": {
+      "columns_replaced": [
+        "modis_ndvi_mean"
+      ],
+      "ari_vs_shipped": 0.9691,
+      "moved_pct": 1.19,
+      "cluster_sizes": {
+        "0": 527,
+        "1": 373,
+        "2": 293,
+        "3": 551,
+        "4": 272
+      }
+    },
+    "viirs_only_2024": {
+      "columns_replaced": [
+        "viirs_lit_mean"
+      ],
+      "ari_vs_shipped": 0.674,
+      "moved_pct": 44.79,
+      "cluster_sizes": {
+        "0": 527,
+        "1": 298,
+        "2": 410,
+        "3": 447,
+        "4": 334
+      }
+    },
+    "both_2024": {
+      "columns_replaced": [
+        "modis_ndvi_mean",
+        "viirs_lit_mean"
+      ],
+      "ari_vs_shipped": 0.7789,
+      "moved_pct": 75.25,
+      "cluster_sizes": {
+        "0": 299,
+        "1": 290,
+        "2": 512,
+        "3": 506,
+        "4": 409
+      }
+    }
+  },
+  "control_note": "frozen_2023 repeats the shipped inputs at the shipped seed; anything above it is the data, not the seed."
+}

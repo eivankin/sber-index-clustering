@@ -1,0 +1,444 @@
+{
+  "generated_by": "scripts/build_demo_partitions.py",
+  "what_this_is": "Every state of the decision demo: four attribute spaces crossed with k=3..6, clustered and drawn here so the page only switches a picture and numbers that already exist.",
+  "spaces": {
+    "land_and_shares": [
+      "dynamic_world_bare",
+      "dynamic_world_built",
+      "dynamic_world_crops",
+      "dynamic_world_grass",
+      "dynamic_world_trees",
+      "viirs_lit_mean",
+      "modis_ndvi_mean",
+      "elevation_mean",
+      "Продовольствие_share",
+      "Здоровье_share",
+      "Маркетплейсы_share",
+      "Общественное питание_share",
+      "Транспорт_share"
+    ],
+    "with_amount": [
+      "dynamic_world_bare",
+      "dynamic_world_built",
+      "dynamic_world_crops",
+      "dynamic_world_grass",
+      "dynamic_world_trees",
+      "viirs_lit_mean",
+      "modis_ndvi_mean",
+      "elevation_mean",
+      "Продовольствие_share",
+      "Здоровье_share",
+      "Маркетплейсы_share",
+      "Общественное питание_share",
+      "Транспорт_share",
+      "total_log_mean",
+      "total_mean_rub",
+      "spending_per_km2_log",
+      "total_per_official_km2"
+    ],
+    "land_only": [
+      "dynamic_world_bare",
+      "dynamic_world_built",
+      "dynamic_world_crops",
+      "dynamic_world_grass",
+      "dynamic_world_trees",
+      "viirs_lit_mean",
+      "modis_ndvi_mean",
+      "elevation_mean"
+    ],
+    "spending_shape": [
+      "Продовольствие_share",
+      "Здоровье_share",
+      "Маркетплейсы_share",
+      "Общественное питание_share",
+      "Транспорт_share"
+    ]
+  },
+  "space_titles": {
+    "land_and_shares": "земля и доли трат, без суммы",
+    "with_amount": "то же, но сумма трат внутри",
+    "land_only": "только земля и съёмка",
+    "spending_shape": "только форма трат по категориям"
+  },
+  "k_values": [
+    3,
+    4,
+    5,
+    6
+  ],
+  "seed": 42,
+  "district_rule": "the panel population used by the shipped clustering, the same districts in every state",
+  "amount_columns": [
+    "total_log_mean",
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "total_per_official_km2"
+  ],
+  "states": [
+    {
+      "space": "land_and_shares",
+      "space_title": "земля и доли трат, без суммы",
+      "k": 3,
+      "columns": 13,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/land_and_shares_k3.parquet",
+      "image": "assets/land_and_shares_k3.png",
+      "cluster_sizes": {
+        "0": 666,
+        "1": 637,
+        "2": 713
+      },
+      "family_share_pct": {
+        "land": 76.2,
+        "spending_shape": 23.8,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.6635,
+      "moved_pct": 100.0
+    },
+    {
+      "space": "land_and_shares",
+      "space_title": "земля и доли трат, без суммы",
+      "k": 4,
+      "columns": 13,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/land_and_shares_k4.parquet",
+      "image": "assets/land_and_shares_k4.png",
+      "cluster_sizes": {
+        "0": 636,
+        "1": 292,
+        "2": 374,
+        "3": 714
+      },
+      "family_share_pct": {
+        "land": 73.1,
+        "spending_shape": 26.9,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.7764,
+      "moved_pct": 99.75
+    },
+    {
+      "space": "land_and_shares",
+      "space_title": "земля и доли трат, без суммы",
+      "k": 5,
+      "columns": 13,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/land_and_shares_k5.parquet",
+      "image": "assets/land_and_shares_k5.png",
+      "cluster_sizes": {
+        "0": 292,
+        "1": 552,
+        "2": 374,
+        "3": 281,
+        "4": 517
+      },
+      "family_share_pct": {
+        "land": 71.3,
+        "spending_shape": 28.7,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.9941,
+      "moved_pct": 99.9
+    },
+    {
+      "space": "land_and_shares",
+      "space_title": "земля и доли трат, без суммы",
+      "k": 6,
+      "columns": 13,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/land_and_shares_k6.parquet",
+      "image": "assets/land_and_shares_k6.png",
+      "cluster_sizes": {
+        "0": 294,
+        "1": 177,
+        "2": 399,
+        "3": 518,
+        "4": 372,
+        "5": 256
+      },
+      "family_share_pct": {
+        "land": 70.3,
+        "spending_shape": 29.7,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.8061,
+      "moved_pct": 99.85
+    },
+    {
+      "space": "land_only",
+      "space_title": "только земля и съёмка",
+      "k": 3,
+      "columns": 8,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/land_only_k3.parquet",
+      "image": "assets/land_only_k3.png",
+      "cluster_sizes": {
+        "0": 666,
+        "1": 654,
+        "2": 696
+      },
+      "family_share_pct": {
+        "land": 100.0,
+        "spending_shape": 0.0,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.6436,
+      "moved_pct": 100.0
+    },
+    {
+      "space": "land_only",
+      "space_title": "только земля и съёмка",
+      "k": 4,
+      "columns": 8,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/land_only_k4.parquet",
+      "image": "assets/land_only_k4.png",
+      "cluster_sizes": {
+        "0": 435,
+        "1": 696,
+        "2": 231,
+        "3": 654
+      },
+      "family_share_pct": {
+        "land": 100.0,
+        "spending_shape": 0.0,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.6966,
+      "moved_pct": 61.95
+    },
+    {
+      "space": "land_only",
+      "space_title": "только земля и съёмка",
+      "k": 5,
+      "columns": 8,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/land_only_k5.parquet",
+      "image": "assets/land_only_k5.png",
+      "cluster_sizes": {
+        "0": 207,
+        "1": 451,
+        "2": 575,
+        "3": 568,
+        "4": 215
+      },
+      "family_share_pct": {
+        "land": 100.0,
+        "spending_shape": 0.0,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.7559,
+      "moved_pct": 80.16
+    },
+    {
+      "space": "land_only",
+      "space_title": "только земля и съёмка",
+      "k": 6,
+      "columns": 8,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/land_only_k6.parquet",
+      "image": "assets/land_only_k6.png",
+      "cluster_sizes": {
+        "0": 172,
+        "1": 229,
+        "2": 461,
+        "3": 512,
+        "4": 437,
+        "5": 205
+      },
+      "family_share_pct": {
+        "land": 100.0,
+        "spending_shape": 0.0,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.6166,
+      "moved_pct": 98.36
+    },
+    {
+      "space": "spending_shape",
+      "space_title": "только форма трат по категориям",
+      "k": 3,
+      "columns": 5,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/spending_shape_k3.parquet",
+      "image": "assets/spending_shape_k3.png",
+      "cluster_sizes": {
+        "0": 554,
+        "1": 721,
+        "2": 741
+      },
+      "family_share_pct": {
+        "land": 0.0,
+        "spending_shape": 100.0,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.1872,
+      "moved_pct": 94.99
+    },
+    {
+      "space": "spending_shape",
+      "space_title": "только форма трат по категориям",
+      "k": 4,
+      "columns": 5,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/spending_shape_k4.parquet",
+      "image": "assets/spending_shape_k4.png",
+      "cluster_sizes": {
+        "0": 617,
+        "1": 586,
+        "2": 373,
+        "3": 440
+      },
+      "family_share_pct": {
+        "land": 0.0,
+        "spending_shape": 100.0,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.2117,
+      "moved_pct": 62.25
+    },
+    {
+      "space": "spending_shape",
+      "space_title": "только форма трат по категориям",
+      "k": 5,
+      "columns": 5,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/spending_shape_k5.parquet",
+      "image": "assets/spending_shape_k5.png",
+      "cluster_sizes": {
+        "0": 287,
+        "1": 408,
+        "2": 513,
+        "3": 351,
+        "4": 457
+      },
+      "family_share_pct": {
+        "land": 0.0,
+        "spending_shape": 100.0,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.2315,
+      "moved_pct": 90.38
+    },
+    {
+      "space": "spending_shape",
+      "space_title": "только форма трат по категориям",
+      "k": 6,
+      "columns": 5,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/spending_shape_k6.parquet",
+      "image": "assets/spending_shape_k6.png",
+      "cluster_sizes": {
+        "0": 309,
+        "1": 501,
+        "2": 406,
+        "3": 347,
+        "4": 139,
+        "5": 314
+      },
+      "family_share_pct": {
+        "land": 0.0,
+        "spending_shape": 100.0,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.2178,
+      "moved_pct": 82.79
+    },
+    {
+      "space": "with_amount",
+      "space_title": "то же, но сумма трат внутри",
+      "k": 3,
+      "columns": 17,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/with_amount_k3.parquet",
+      "image": "assets/with_amount_k3.png",
+      "cluster_sizes": {
+        "0": 665,
+        "1": 637,
+        "2": 714
+      },
+      "family_share_pct": {
+        "land": 59.9,
+        "spending_shape": 18.9,
+        "spending_amount": 21.2,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.6361,
+      "moved_pct": 100.0
+    },
+    {
+      "space": "with_amount",
+      "space_title": "то же, но сумма трат внутри",
+      "k": 4,
+      "columns": 17,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/with_amount_k4.parquet",
+      "image": "assets/with_amount_k4.png",
+      "cluster_sizes": {
+        "0": 636,
+        "1": 291,
+        "2": 375,
+        "3": 714
+      },
+      "family_share_pct": {
+        "land": 56.8,
+        "spending_shape": 20.9,
+        "spending_amount": 22.3,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.7318,
+      "moved_pct": 97.47
+    },
+    {
+      "space": "with_amount",
+      "space_title": "то же, но сумма трат внутри",
+      "k": 5,
+      "columns": 17,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/with_amount_k5.parquet",
+      "image": "assets/with_amount_k5.png",
+      "cluster_sizes": {
+        "0": 294,
+        "1": 583,
+        "2": 483,
+        "3": 372,
+        "4": 284
+      },
+      "family_share_pct": {
+        "land": 56.4,
+        "spending_shape": 21.0,
+        "spending_amount": 22.6,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.786,
+      "moved_pct": 90.43
+    },
+    {
+      "space": "with_amount",
+      "space_title": "то же, но сумма трат внутри",
+      "k": 6,
+      "columns": 17,
+      "districts": 2016,
+      "assignments": "artifacts/validation/demo_partitions/with_amount_k6.parquet",
+      "image": "assets/with_amount_k6.png",
+      "cluster_sizes": {
+        "0": 485,
+        "1": 277,
+        "2": 343,
+        "3": 583,
+        "4": 282,
+        "5": 46
+      },
+      "family_share_pct": {
+        "land": 54.3,
+        "spending_shape": 21.2,
+        "spending_amount": 24.5,
+        "all_columns": 100.0
+      },
+      "ari_vs_shipped": 0.7557,
+      "moved_pct": 41.72
+    }
+  ],
+  "nothing_computed_in_the_browser": true
+}

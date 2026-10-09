@@ -1,0 +1,370 @@
+{
+ "generated_by": "scripts/recluster_at_vintages.py",
+ "what_this_is": "Whether the clustering answer changes when the observable geography is taken at the vintages the sources actually publish, instead of the single moment the shipped partition reads.",
+ "space": [
+  "total_per_official_km2",
+  "total_mean_rub",
+  "gls_fraction_crops",
+  "gls_fraction_grass",
+  "gls_fraction_urban",
+  "burn_pct_of_territory",
+  "modis_ndvi_mean",
+  "viirs_lit_mean",
+  "official_land_area_km2",
+  "hansen_window_forest_loss_pct",
+  "hansen_tree_cover_2000_pct",
+  "hansen_forest_gain_pct",
+  "soil_organic_carbon_surface",
+  "dynamic_world_built",
+  "dynamic_world_crops"
+ ],
+ "edge_features_excluded": "Edge-derived features are not part of this space. They were measured: adding 21 network features moved ARI to 0.1342, churn to 81.69% and separability from 5 of 15 contrasts to 0 of 15, while each family's own label-propagation communities agreed with the attribute clustering only at ARI 0.002-0.064. So they are excluded on measurement, and the new time-alignment family is reported through its own structural statistics rather than smuggled into the clustering space.",
+ "recipe": "k-means, k = 3, seed 0, quantile-normalised input - the shipped recipe",
+ "inputs_present": {
+  "v2018": {
+   "status": "measured"
+  },
+  "v2022": {
+   "status": "measured"
+  }
+ },
+ "shipped_covariates_year": "read from artifacts/geo/covariates_diagnostics.json",
+ "results": {
+  "v2018": {
+   "years_read_from_the_fetch": {
+    "gls_lcz": 2019,
+    "gls_fraction": 2019
+   },
+   "columns_swapped": [
+    "gls_fraction_crops",
+    "gls_fraction_grass",
+    "gls_fraction_urban"
+   ],
+   "territories_compared": 2016,
+   "ari_vs_shipped": 0.1681,
+   "nmi_vs_shipped": 0.2051,
+   "churn_pct_after_alignment": 40.43,
+   "label_mapping": {
+    "0": 2,
+    "1": 1,
+    "2": 2
+   },
+   "ari_vs_this_year_baseline": 1.0,
+   "cluster_sizes": {
+    "0": 633,
+    "1": 555,
+    "2": 1002
+   },
+   "profile_move": {
+    "total_per_official_km2": {
+     "clusters_tested": 3,
+     "clusters_whose_median_left_the_interval": 0,
+     "per_cluster": {
+      "0": {
+       "reference_median": 9.7798,
+       "vintage_median": 9.7798,
+       "interval": [
+        9.1454,
+        10.5804
+       ],
+       "outside": false
+      },
+      "1": {
+       "reference_median": 955.2694,
+       "vintage_median": 955.2694,
+       "interval": [
+        762.7298,
+        1140.3511
+       ],
+       "outside": false
+      },
+      "2": {
+       "reference_median": 8.1428,
+       "vintage_median": 8.1428,
+       "interval": [
+        7.5852,
+        8.7691
+       ],
+       "outside": false
+      }
+     }
+    },
+    "gls_fraction_crops": {
+     "clusters_tested": 3,
+     "clusters_whose_median_left_the_interval": 0,
+     "per_cluster": {
+      "0": {
+       "reference_median": 10.8407,
+       "vintage_median": 10.7927,
+       "interval": [
+        9.4558,
+        12.5092
+       ],
+       "outside": false
+      },
+      "1": {
+       "reference_median": 7.6798,
+       "vintage_median": 7.6194,
+       "interval": [
+        7.1256,
+        8.6606
+       ],
+       "outside": false
+      },
+      "2": {
+       "reference_median": 19.5035,
+       "vintage_median": 19.4375,
+       "interval": [
+        17.6647,
+        21.3975
+       ],
+       "outside": false
+      }
+     }
+    },
+    "gls_fraction_urban": {
+     "clusters_tested": 3,
+     "clusters_whose_median_left_the_interval": 0,
+     "per_cluster": {
+      "0": {
+       "reference_median": 0.6633,
+       "vintage_median": 0.6603,
+       "interval": [
+        0.597,
+        0.7348
+       ],
+       "outside": false
+      },
+      "1": {
+       "reference_median": 41.576,
+       "vintage_median": 41.5914,
+       "interval": [
+        38.479,
+        45.0155
+       ],
+       "outside": false
+      },
+      "2": {
+       "reference_median": 0.7456,
+       "vintage_median": 0.7431,
+       "interval": [
+        0.6826,
+        0.8134
+       ],
+       "outside": false
+      }
+     }
+    },
+    "viirs_lit_mean": {
+     "clusters_tested": 3,
+     "clusters_whose_median_left_the_interval": 0,
+     "per_cluster": {
+      "0": {
+       "reference_median": 0.8613,
+       "vintage_median": 0.8613,
+       "interval": [
+        0.8348,
+        0.8759
+       ],
+       "outside": false
+      },
+      "1": {
+       "reference_median": 1.0,
+       "vintage_median": 1.0,
+       "interval": [
+        1.0,
+        1.0
+       ],
+       "outside": false
+      },
+      "2": {
+       "reference_median": 0.9164,
+       "vintage_median": 0.9164,
+       "interval": [
+        0.8976,
+        0.932
+       ],
+       "outside": false
+      }
+     }
+    }
+   }
+  },
+  "v2022": {
+   "years_read_from_the_fetch": {
+    "viirs": 2022,
+    "viirs_lit": 2022,
+    "modis_lcc": 2022,
+    "modis_burn": 2022,
+    "modis_ndvi": 2022
+   },
+   "columns_swapped": [
+    "mcd_c1_pct",
+    "burn_pct_of_territory",
+    "modis_ndvi_mean",
+    "viirs_lit_mean",
+    "viirs_average"
+   ],
+   "territories_compared": 2016,
+   "ari_vs_shipped": 0.1827,
+   "nmi_vs_shipped": 0.2206,
+   "churn_pct_after_alignment": 39.48,
+   "label_mapping": {
+    "0": 2,
+    "1": 2,
+    "2": 1
+   },
+   "ari_vs_this_year_baseline": 0.3275,
+   "cluster_sizes": {
+    "0": 975,
+    "1": 711,
+    "2": 504
+   },
+   "profile_move": {
+    "total_per_official_km2": {
+     "clusters_tested": 3,
+     "clusters_whose_median_left_the_interval": 0,
+     "per_cluster": {
+      "0": {
+       "reference_median": 7.351,
+       "vintage_median": 7.351,
+       "interval": [
+        6.9773,
+        7.7209
+       ],
+       "outside": false
+      },
+      "1": {
+       "reference_median": 12.9802,
+       "vintage_median": 12.9802,
+       "interval": [
+        11.9415,
+        13.5338
+       ],
+       "outside": false
+      },
+      "2": {
+       "reference_median": 1208.878,
+       "vintage_median": 1208.878,
+       "interval": [
+        989.8997,
+        1851.1145
+       ],
+       "outside": false
+      }
+     }
+    },
+    "gls_fraction_crops": {
+     "clusters_tested": 3,
+     "clusters_whose_median_left_the_interval": 0,
+     "per_cluster": {
+      "0": {
+       "reference_median": 15.5305,
+       "vintage_median": 15.5305,
+       "interval": [
+        14.0079,
+        16.8322
+       ],
+       "outside": false
+      },
+      "1": {
+       "reference_median": 14.6282,
+       "vintage_median": 14.6282,
+       "interval": [
+        13.3691,
+        17.0542
+       ],
+       "outside": false
+      },
+      "2": {
+       "reference_median": 7.6679,
+       "vintage_median": 7.6679,
+       "interval": [
+        7.03,
+        8.4978
+       ],
+       "outside": false
+      }
+     }
+    },
+    "gls_fraction_urban": {
+     "clusters_tested": 3,
+     "clusters_whose_median_left_the_interval": 0,
+     "per_cluster": {
+      "0": {
+       "reference_median": 0.5904,
+       "vintage_median": 0.5904,
+       "interval": [
+        0.529,
+        0.6355
+       ],
+       "outside": false
+      },
+      "1": {
+       "reference_median": 0.9507,
+       "vintage_median": 0.9507,
+       "interval": [
+        0.8415,
+        1.0373
+       ],
+       "outside": false
+      },
+      "2": {
+       "reference_median": 45.8373,
+       "vintage_median": 45.8373,
+       "interval": [
+        42.6484,
+        49.1932
+       ],
+       "outside": false
+      }
+     }
+    },
+    "viirs_lit_mean": {
+     "clusters_tested": 3,
+     "clusters_whose_median_left_the_interval": 2,
+     "per_cluster": {
+      "0": {
+       "reference_median": 0.8946,
+       "vintage_median": 0.2078,
+       "interval": [
+        0.8546,
+        0.9172
+       ],
+       "outside": true
+      },
+      "1": {
+       "reference_median": 0.918,
+       "vintage_median": 0.3647,
+       "interval": [
+        0.9034,
+        0.9293
+       ],
+       "outside": true
+      },
+      "2": {
+       "reference_median": 1.0,
+       "vintage_median": 1.0,
+       "interval": [
+        1.0,
+        1.0
+       ],
+       "outside": false
+      }
+     }
+    }
+   }
+  }
+ },
+ "verdict": {
+  "agreement_threshold": 0.8,
+  "churn_threshold_pct": 10.0,
+  "rule": "the rule named in the artifact",
+  "per_vintage": {
+   "v2018": true,
+   "v2022": true
+  },
+  "answer": "the partition moves at the vintages the inputs really have",
+  "spending_only_run_label": "the monthly experiment varied only the month of spending and reported a mean ARI of 0.9263; that run is the suspect baseline, not evidence about the other inputs"
+ }
+}

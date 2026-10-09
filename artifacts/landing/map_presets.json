@@ -1,0 +1,112 @@
+[
+ {
+  "key": "москва",
+  "label": "Москва",
+  "short": "Москва",
+  "lat": 55.7202,
+  "lng": 37.5462,
+  "zoom": 10,
+  "n_territories": 146,
+  "provenance": "territory_master.parquet: mean centroid of territories whose name or region contains this city"
+ },
+ {
+  "key": "санктпетербург",
+  "label": "Санкт-Петербург",
+  "short": "Санкт-Петербург",
+  "lat": 59.9358,
+  "lng": 30.2671,
+  "zoom": 10,
+  "n_territories": 111,
+  "provenance": "territory_master.parquet: mean centroid of territories whose name or region contains this city"
+ },
+ {
+  "key": "казань",
+  "label": "Казань",
+  "short": "Казань",
+  "lat": 55.7916,
+  "lng": 49.1295,
+  "zoom": 10,
+  "n_territories": 1,
+  "provenance": "territory_master.parquet: mean centroid of territories whose name or region contains this city"
+ },
+ {
+  "key": "екатеринбург",
+  "label": "Екатеринбург",
+  "short": "Екатеринбург",
+  "lat": 56.7897,
+  "lng": 60.5389,
+  "zoom": 10,
+  "n_territories": 1,
+  "provenance": "territory_master.parquet: mean centroid of territories whose name or region contains this city"
+ },
+ {
+  "key": "новосибирск",
+  "label": "Новосибирск",
+  "short": "Новосибирск",
+  "lat": 54.9768,
+  "lng": 80.4919,
+  "zoom": 10,
+  "n_territories": 35,
+  "provenance": "territory_master.parquet: mean centroid of territories whose name or region contains this city"
+ },
+ {
+  "key": "cluster0",
+  "label": "Тверская область · где скопился кластер",
+  "short": "кластер 0 · Тверская",
+  "lat": 57.1689,
+  "lng": 34.9391,
+  "zoom": 8,
+  "n_territories": 35,
+  "provenance": "cluster_regions.csv (region with most members of this cluster) + territory_master centroids of those members"
+ },
+ {
+  "key": "cluster1",
+  "label": "Московская область · где скопился кластер",
+  "short": "кластер 1 · Московская",
+  "lat": 55.5557,
+  "lng": 37.7709,
+  "zoom": 8,
+  "n_territories": 29,
+  "provenance": "cluster_regions.csv (region with most members of this cluster) + territory_master centroids of those members"
+ },
+ {
+  "key": "cluster2",
+  "label": "Москва · где скопился кластер",
+  "short": "кластер 2 · Москва",
+  "lat": 55.7462,
+  "lng": 37.5846,
+  "zoom": 8,
+  "n_territories": 131,
+  "provenance": "cluster_regions.csv (region with most members of this cluster) + territory_master centroids of those members"
+ },
+ {
+  "key": "cluster3",
+  "label": "Алтайский край · где скопился кластер",
+  "short": "кластер 3 · Алтайский",
+  "lat": 52.641,
+  "lng": 81.9238,
+  "zoom": 8,
+  "n_territories": 46,
+  "provenance": "cluster_regions.csv (region with most members of this cluster) + territory_master centroids of those members"
+ },
+ {
+  "key": "cluster4",
+  "label": "Приморский край · где скопился кластер",
+  "short": "кластер 4 · Приморский",
+  "lat": 44.2348,
+  "lng": 133.3939,
+  "zoom": 8,
+  "n_territories": 28,
+  "provenance": "cluster_regions.csv (region with most members of this cluster) + territory_master centroids of those members"
+ },
+ {
+  "key": "defect",
+  "label": "раздутые территории",
+  "short": "раздутые территории",
+  "lat": 56.9729,
+  "lng": 92.8672,
+  "zoom": 6,
+  "n_territories": 57,
+  "provenance": "territory_master.parquet flag area_suspect; Krasnoyarsk territories when there are enough of them"
+ }
+]

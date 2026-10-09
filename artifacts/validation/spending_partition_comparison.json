@@ -1,0 +1,14 @@
+{
+ "generated_by": "hand-written at the rebuild, from the pre-rebuild committed assignments",
+ "what_this_is": "The partition the entry shipped before the Dynamic World decision: k=3 on spending levels and shares, where the spending amount is inside the space.",
+ "role": "comparison only. It is not the answer, and no surface may present it as the shipped clustering.",
+ "file": "artifacts/icvi/cluster_assignments_spending_k3_comparison.parquet",
+ "method": "kmeans_k3",
+ "clusters": [
+  0,
+  1,
+  2
+ ],
+ "districts": 2016,
+ "why_kept": "The dominance story needs the partition with money in it, measured against the partition without money in it."
+}

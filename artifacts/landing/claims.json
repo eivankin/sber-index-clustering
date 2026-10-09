@@ -1,0 +1,487 @@
+{
+ "_comment": "Every headline number on the public pages is paired here with the artifact and field that produce it. scripts/build_landing.py reads the value from the artifact rather than from this file; scripts/check_landing.py compares what this file records with what the artifact now says, so a claim cannot drift from the analysis and cannot be typed in by hand.",
+ "generated_by": "scripts/build_claims.py",
+ "licence_text_required": "CC BY-SA 4.0",
+ "claims": [
+  {
+   "id": "geom-sum",
+   "kind": "value",
+   "artifact": "artifacts/geo/geometry_diagnostics.json",
+   "field": "geometry.sum_polygons_km2",
+   "value": 40001827.79380042,
+   "format": "thousands_2dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "geom-union",
+   "kind": "value",
+   "artifact": "artifacts/geo/geometry_diagnostics.json",
+   "field": "geometry.union_km2",
+   "value": 39432101.33262708,
+   "format": "thousands_2dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "geom-kara-laptev",
+   "kind": "value",
+   "artifact": "artifacts/geo/geometry_diagnostics.json",
+   "field": "sea_overlap_km2.kara_laptev",
+   "value": 4789810.832606008,
+   "format": "thousands_2dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "geom-krasnoyarsk",
+   "kind": "value",
+   "artifact": "artifacts/geo/region_inflation.csv",
+   "field": "inflation_ratio",
+   "row_filter": {
+    "region_name": "Красноярский край"
+   },
+   "value": 2.952422816735272,
+   "format": "ratio_2dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "gap-470",
+   "kind": "value",
+   "artifact": "artifacts/geo/geometry_diagnostics.json",
+   "field": "gaps.G_minus_C",
+   "value": 470,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "gap-typing-total",
+   "kind": "value",
+   "artifact": "artifacts/gaps/gap_typing_polygon_without_consumption.csv",
+   "field": "__row_count__",
+   "value": 470,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "territories-2660",
+   "kind": "value",
+   "artifact": "artifacts/geo/geometry_diagnostics.json",
+   "field": "n_territories",
+   "value": 2660,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "cluster-n-1",
+   "kind": "value",
+   "artifact": "artifacts/interpretation/cluster_profile.csv",
+   "field": "n",
+   "row_filter": {
+    "cluster": 1
+   },
+   "value": 372.0,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "cluster-median-1",
+   "kind": "value",
+   "artifact": "artifacts/interpretation/cluster_profile.csv",
+   "field": "median_spending_rub",
+   "row_filter": {
+    "cluster": 1
+   },
+   "value": 29842.5,
+   "format": "thousands_0dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "cluster-median-0",
+   "kind": "value",
+   "artifact": "artifacts/interpretation/cluster_profile.csv",
+   "field": "median_spending_rub",
+   "row_filter": {
+    "cluster": 0
+   },
+   "value": 23537.6875,
+   "format": "thousands_0dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "cluster-median-2",
+   "kind": "value",
+   "artifact": "artifacts/interpretation/cluster_profile.csv",
+   "field": "median_spending_rub",
+   "row_filter": {
+    "cluster": 2
+   },
+   "value": 46239.7708,
+   "format": "thousands_0dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "icvi-default",
+   "kind": "value",
+   "artifact": "artifacts/icvi/method_comparison.csv",
+   "field": "ICVI_avg",
+   "row_filter": {
+    "method": "kmeans_k3",
+    "k": 3
+   },
+   "value": 0.5835291776193737,
+   "format": "decimal_3dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "icvi-land",
+   "kind": "value",
+   "artifact": "artifacts/icvi/method_comparison_land.csv",
+   "field": "ICVI_avg",
+   "row_filter": {
+    "method": "average_linkage_k8",
+    "k": 8
+   },
+   "value": 0.635225793321168,
+   "format": "decimal_3dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "icvi-density",
+   "kind": "value",
+   "artifact": "artifacts/icvi/method_comparison_density.csv",
+   "field": "ICVI_avg",
+   "row_filter": {
+    "method": "average_linkage_k8",
+    "k": 8
+   },
+   "value": 0.6321549195476436,
+   "format": "decimal_3dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "transitions-total",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/geospatial_consistency.json",
+   "field": "transitions",
+   "value": 546,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "transitions-corroborated",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/geospatial_consistency.json",
+   "field": "verdicts.corroborated",
+   "value": 303,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "transitions-stable",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/geospatial_consistency.json",
+   "field": "verdicts.land_stable",
+   "value": 243,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "land-gain-socio",
+   "kind": "value",
+   "artifact": "artifacts/interpretation/land_validation.json",
+   "field": "mean_gain_over_socio_baseline",
+   "value": 0.1107,
+   "format": "decimal_4dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "land-gain-access",
+   "kind": "value",
+   "artifact": "artifacts/interpretation/land_validation.json",
+   "field": "mean_gain_over_access_only",
+   "value": 0.1142,
+   "format": "decimal_4dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "agreement-ari-kmeans",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/dynamics_summary.json",
+   "field": "kmeans.adjusted_rand",
+   "value": 0.0147,
+   "format": "decimal_4dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "agreement-nmi-kmeans",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/dynamics_summary.json",
+   "field": "kmeans.normalized_mutual_info",
+   "value": 0.0097,
+   "format": "decimal_4dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "agreement-ari-ward",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/dynamics_summary.json",
+   "field": "ward.adjusted_rand",
+   "value": 0.0136,
+   "format": "decimal_4dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "agreement-nmi-ward",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/dynamics_summary.json",
+   "field": "ward.normalized_mutual_info",
+   "value": 0.0122,
+   "format": "decimal_4dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "stability-kmeans",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/dynamics_summary.json",
+   "field": "kmeans.stability_F_ii",
+   "value": 0.2649,
+   "format": "decimal_4dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "stability-ward",
+   "kind": "value",
+   "artifact": "artifacts/dynamics/dynamics_summary.json",
+   "field": "ward.stability_F_ii",
+   "value": 0.3442,
+   "format": "decimal_4dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "sparsification-exp",
+   "kind": "value",
+   "artifact": "artifacts/edges/edge_rules_summary.csv",
+   "field": "edges",
+   "row_filter": {
+    "family": "complementarity_exp",
+    "variant": "knn10"
+   },
+   "second_field": "edges",
+   "second_row_filter": {
+    "family": "complementarity_exp",
+    "variant": "dense"
+   },
+   "value": 21090,
+   "format": "pruned_share",
+   "appears_on": [
+    "ru"
+   ],
+   "second": 21090
+  },
+  {
+   "id": "reciprocity-trunc",
+   "kind": "value",
+   "artifact": "artifacts/edges/edge_diagnostics.json",
+   "field": "complementarity_trunc.clique_hub10.reciprocity",
+   "value": 0.1601,
+   "format": "decimal_2dp_plain",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "reciprocity-similarity",
+   "kind": "value",
+   "artifact": "artifacts/edges/edge_diagnostics.json",
+   "field": "similarity.clique_hub10.reciprocity",
+   "value": 1.0,
+   "format": "decimal_2dp_plain",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "largest-component-compl",
+   "kind": "value",
+   "artifact": "artifacts/edges/edge_rules_summary.csv",
+   "field": "largest_component_share",
+   "row_filter": {
+    "family": "complementarity_exp",
+    "variant": "knn10"
+   },
+   "value": 0.9665,
+   "format": "percent_1dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "largest-component-temporal",
+   "kind": "value",
+   "artifact": "artifacts/edges/edge_rules_summary.csv",
+   "field": "largest_component_share",
+   "row_filter": {
+    "family": "growth_correlation",
+    "variant": "knn10"
+   },
+   "value": 0.7534,
+   "format": "percent_1dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "rostat-match-rate",
+   "kind": "value",
+   "artifact": "artifacts/geo/geometry_diagnostics.json",
+   "field": "rostat.match_rate",
+   "value": 0.912,
+   "format": "percent_1dp",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "features-shape",
+   "kind": "value",
+   "artifact": "artifacts/features/feature_space_report.json",
+   "field": "rows",
+   "second_field": "columns",
+   "value": 2190,
+   "format": "two_ints",
+   "appears_on": [
+    "ru"
+   ],
+   "second": 177
+  },
+  {
+   "id": "map-measured",
+   "kind": "value",
+   "artifact": "artifacts/landing/map_summary.json",
+   "field": "measured",
+   "value": 2016,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "similar-with-similar",
+   "kind": "value",
+   "artifact": "artifacts/landing/map_similar.json",
+   "field": "counts.with_similar",
+   "value": 1603,
+   "format": "thousands_0dp",
+   "appears_on": []
+  },
+  {
+   "id": "similar-with-partners",
+   "kind": "value",
+   "artifact": "artifacts/landing/map_similar.json",
+   "field": "counts.with_partners",
+   "value": 2004,
+   "format": "thousands_0dp",
+   "appears_on": []
+  },
+  {
+   "id": "similar-without-spending",
+   "kind": "value",
+   "artifact": "artifacts/landing/map_similar.json",
+   "field": "counts.without_spending_data",
+   "value": 644,
+   "format": "integer",
+   "appears_on": []
+  },
+  {
+   "id": "absence-no-spending-rows",
+   "kind": "value",
+   "artifact": "artifacts/landing/territory_measures.json",
+   "field": "counts.no_spending_rows",
+   "value": 470,
+   "format": "integer",
+   "appears_on": []
+  },
+  {
+   "id": "absence-spending-but-excluded",
+   "kind": "value",
+   "artifact": "artifacts/landing/territory_measures.json",
+   "field": "counts.spending_but_excluded",
+   "value": 174,
+   "format": "integer",
+   "appears_on": []
+  },
+  {
+   "id": "map-unmeasured",
+   "kind": "value",
+   "artifact": "artifacts/landing/map_summary.json",
+   "field": "unmeasured",
+   "value": 644,
+   "format": "integer",
+   "appears_on": [
+    "ru"
+   ]
+  },
+  {
+   "id": "geom-official-land",
+   "kind": "value",
+   "artifact": "data/processed/territory_master.parquet",
+   "field": "official_land_area_km2.__sum__",
+   "value": 15950431.258000001,
+   "format": "thousands_0dp",
+   "appears_on": [
+    "ru"
+   ],
+   "note": "Rosstat official land area of the municipalities that matched it; the denominator the densities use. Read from the master table, never typed in."
+  }
+ ],
+ "placement_note": "Placement reflects the surfaces as they are now. The stage-one presentation (web/presentation/index.html) renders its figures from its own payload and names the artifact behind each one; the numbers listed here belong to the Russian landing page. The 'en' placement was dropped on 2026-10-09 at the entrant's instruction that the submission is Russian only, and the English surfaces were removed. No claim is placed on a page that does not show it.",
+ "what_this_is": "The claim registry: every public number, the artifact and field it resolves to, and the surfaces that show it. Values here are re-read from the artifacts, so a drift is visible instead of silent."
+}

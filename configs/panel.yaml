@@ -1,0 +1,47 @@
+# Panel configuration - read by scripts/build_panel.py and the clustering scripts.
+# Shapes below were produced by the build on 2026-10-06 and are asserted by scripts/check_panel.py.
+
+panel:
+  source: data/raw/sber_hackathon/consumption.parquet
+  license: CC BY-SA 4.0 (SberIndex, see data/raw/sber_hackathon/Данные_СберИндекс_лицензия.pdf)
+  period: 2023-01 .. 2024-12
+  unit: RUB per resident per month
+  categories:
+    - Продовольствие
+    - Здоровье
+    - Маркетплейсы
+    - Общественное питание
+    - Транспорт
+    - Все категории          # the total series, never the sum of the five above
+  territories_measured: 2190
+  months_expected: 24
+  grid_cells_total: 315360          # 2190 x 24 x 6
+  observed_cells: 303126            # 96.1% of the grid is actually measured
+  territories_full_24m: 2016        # modelling panel
+  territories_ge_12m: 2131          # reporting panel
+  territories_ge_18m: 2058
+
+nan_policy:
+  missing_cells: kept as NaN in the long panel; never zero-filled
+  model_panel_threshold_months: 24
+  report_panel_threshold_months: 12
+  short_series_handling: retained in the reporting panel with months_available recorded,
+    excluded from clustering, listed in artifacts/tables/panel_by_region.csv
+
+normalization:
+  levels: log1p of the 24-month mean per category        # *_log_mean
+  shares: category mean divided by the Все категории mean # *_share
+  volatility: coefficient of variation over observed months
+  trend: h2_over_h1 (2024 mean / 2023 mean) and dec24_over_mean
+  robust_scaling: rank-based (quantile) transform applied inside clustering to tolerate the heavy right tail of Moscow / city okrugs
+  standardization: z-score computed on the model panel only
+
+model_panel:
+  rows: 2016
+  feature_groups:
+    levels: [total_log_mean, Продовольствие_log_mean, Здоровье_log_mean, Маркетплейсы_log_mean,
+             Общественное питание_log_mean, Транспорт_log_mean]
+    shares: [Продовольствие_share, Здоровье_share, Маркетплейсы_share,
+             Общественное питание_share, Транспорт_share]
+    dynamics: [total_cv, h2_over_h1, dec24_over_mean, total_slope_rub_per_month]
+    land: [to be joined from data/processed/covariates_gee.parquet]

@@ -1,0 +1,68 @@
+{
+  "layer": "hansen",
+  "asset": "UMD/hansen/global_forest_change_2025_v1_13",
+  "citation": "UMD Global Forest Change 2025, version v1.13 (Hansen et al. methodology)",
+  "licence": "not read from a page - see licence_attempts",
+  "licence_attempts": {
+    "read_from": "https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen-global_forest_change_2025_v1_13",
+    "read_on": "2026-10-08",
+    "outcome": "HTTP 404 under this and three other plausible slugs, so the licence is unverified"
+  },
+  "coverage_threshold": 0.5,
+  "coverage": {
+    "measured_over": "panel rows",
+    "columns": [
+      "hly_unclassified_pct",
+      "hly_c1_pct",
+      "hly_c10_pct",
+      "hly_c11_pct",
+      "hly_c12_pct",
+      "hly_c13_pct",
+      "hly_c14_pct",
+      "hly_c15_pct",
+      "hly_c16_pct",
+      "hly_c17_pct",
+      "hly_c18_pct",
+      "hly_c19_pct",
+      "hly_c20_pct",
+      "hly_c21_pct",
+      "hly_c22_pct",
+      "hly_c23_pct",
+      "hly_c24_pct",
+      "hly_c25_pct",
+      "hly_c3_pct",
+      "hly_c4_pct",
+      "hly_c5_pct",
+      "hly_c6_pct",
+      "hly_c7_pct",
+      "hly_c8_pct",
+      "hly_c9_pct",
+      "hly_classified_px",
+      "hly_px_total",
+      "hly_total_px",
+      "hly_c2_pct",
+      "hansen_canopy_gain",
+      "hansen_canopy_loss",
+      "hansen_canopy_treecover2000"
+    ],
+    "max_coverage": 0.0
+  },
+  "job": {
+    "rows": 5320.0,
+    "chunks": 44.0,
+    "failed_chunks": 0.0,
+    "seconds": 0.2,
+    "asset": "UMD/hansen/global_forest_change_2025_v1_13",
+    "cache_dir": "gee-cache",
+    "output_path": [],
+    "scale_m": "250",
+    "jobs": [
+      "hansen_canopy",
+      "hansen_lossyear"
+    ]
+  },
+  "derived_columns_in_panel": [],
+  "geometry_source": null,
+  "errors": {},
+  "error_rule": "a chunk or period Earth Engine refused is counted here with its error type and message; the run continues past it, so coverage below the threshold may reflect a recorded refusal rather than a missing layer"
+}

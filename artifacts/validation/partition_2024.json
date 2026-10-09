@@ -1,0 +1,76 @@
+{
+  "generated_by": "scripts/build_2024_partition.py",
+  "what_this_is": "The same attribute space and the same method, re-read with the values that have a 2024 observation. Nothing is recomputed from a column that has no 2024 source.",
+  "k": 5,
+  "seed": 0,
+  "method": "kmeans",
+  "districts": 2016,
+  "columns_used": [
+    "dynamic_world_bare",
+    "dynamic_world_built",
+    "dynamic_world_crops",
+    "dynamic_world_grass",
+    "dynamic_world_trees",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean",
+    "Продовольствие_share",
+    "Здоровье_share",
+    "Маркетплейсы_share",
+    "Общественное питание_share",
+    "Транспорт_share"
+  ],
+  "replaced_with_2024": {
+    "dynamic_world_bare": "dw_bare@2024",
+    "dynamic_world_built": "dw_built@2024",
+    "dynamic_world_crops": "dw_crops@2024",
+    "dynamic_world_grass": "dw_grass@2024",
+    "dynamic_world_trees": "dw_trees@2024",
+    "modis_ndvi_mean": "covariates_gee_2024.parquet: modis_ndvi_mean",
+    "Продовольствие_share": "spending_2024_shares.csv: Продовольствие_share_2024",
+    "Здоровье_share": "spending_2024_shares.csv: Здоровье_share_2024",
+    "Маркетплейсы_share": "spending_2024_shares.csv: Маркетплейсы_share_2024",
+    "Общественное питание_share": "spending_2024_shares.csv: Общественное питание_share_2024",
+    "Транспорт_share": "spending_2024_shares.csv: Транспорт_share_2024"
+  },
+  "kept_from_2023": [
+    "viirs_lit_mean",
+    "elevation_mean"
+  ],
+  "frozen_by_the_written_decision": [
+    "viirs_lit_mean",
+    "elevation_mean"
+  ],
+  "sizes": {
+    "0": 479,
+    "1": 374,
+    "2": 292,
+    "3": 537,
+    "4": 334
+  },
+  "agreement": {
+    "ari": 0.8782810994905846,
+    "nmi": 0.8679063729962418,
+    "moved_districts": 106,
+    "moved_pct": 5.26
+  },
+  "single_family_variants": {
+    "ndvi_only": {
+      "ari": 0.9691,
+      "nmi": 0.96,
+      "moved_districts": 24,
+      "moved_pct": 1.19
+    },
+    "land_only": {
+      "ari": 0.9129,
+      "nmi": 0.8998,
+      "moved_districts": 75,
+      "moved_pct": 3.72
+    }
+  },
+  "before_anchoring": {
+    "ari": 0.8782810994905846,
+    "nmi": 0.8679063729962418,
+    "moved_districts": 106
+  }
+}

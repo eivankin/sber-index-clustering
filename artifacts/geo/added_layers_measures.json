@@ -1,0 +1,140 @@
+{
+ "generated_by": "scripts/build_added_layers.py",
+ "jobs": {
+  "hansen_lossyear": {
+   "rows": 2660,
+   "chunks": 22,
+   "failed_rows": 0,
+   "failed_chunks": 0,
+   "seconds": 0.2,
+   "scale_m": 250,
+   "asset": "UMD/hansen/global_forest_change_2025_v1_13",
+   "cache_dir": "gee-cache"
+  },
+  "hansen_canopy": {
+   "rows": 2660,
+   "chunks": 22,
+   "failed_rows": 0,
+   "failed_chunks": 0,
+   "seconds": 0.0,
+   "scale_m": 250,
+   "asset": "UMD/hansen/global_forest_change_2025_v1_13",
+   "cache_dir": "gee-cache"
+  },
+  "soilgrids": {
+   "rows": 2660,
+   "chunks": 13,
+   "failed_chunks": 0,
+   "seconds": 0.0,
+   "scale_m": 250,
+   "asset": "ISRIC/SoilGrids250m/v2_0",
+   "property_identification": "the collection's metadata does not name the property behind val_*; the value range (87-209 g/kg in Voronezh, 115-276 in Krasnodar, scaled by the documented 0.001 factor) identifies it as soil organic carbon concentration rather than texture, pH or bulk density",
+   "cache_dir": "gee-cache"
+  },
+  "dw_annual_2023": {
+   "rows": 2660,
+   "chunks": 13,
+   "failed_chunks": 0,
+   "seconds": 16.7,
+   "scale_m": 500,
+   "asset": "GOOGLE/DYNAMICWORLD/V1",
+   "window": [
+    "2023-01-01",
+    "2024-01-01"
+   ],
+   "cache_dir": "gee-cache"
+  },
+  "dw_annual_2024": {
+   "rows": 2660,
+   "chunks": 13,
+   "failed_chunks": 0,
+   "seconds": 12.9,
+   "scale_m": 500,
+   "asset": "GOOGLE/DYNAMICWORLD/V1",
+   "window": [
+    "2024-01-01",
+    "2025-01-01"
+   ],
+   "cache_dir": "gee-cache"
+  }
+ },
+ "outcome": "fetched",
+ "output": "data/processed/covariates_added.parquet",
+ "territories": 2660,
+ "coverage_rule": "a measure is usable in the feature panel when it carries a value for at least this share of territories; the threshold is 50%",
+ "coverage": {
+  "hly_unclassified_pct": 0.9992,
+  "hly_c1_pct": 0.9511,
+  "hly_c10_pct": 0.9545,
+  "hly_c11_pct": 0.9414,
+  "hly_c12_pct": 0.9477,
+  "hly_c13_pct": 0.962,
+  "hly_c14_pct": 0.9075,
+  "hly_c15_pct": 0.8056,
+  "hly_c16_pct": 0.8489,
+  "hly_c17_pct": 0.882,
+  "hly_c18_pct": 0.8011,
+  "hly_c19_pct": 0.8233,
+  "hly_c20_pct": 0.8447,
+  "hly_c21_pct": 0.8714,
+  "hly_c22_pct": 0.8508,
+  "hly_c23_pct": 0.8496,
+  "hly_c24_pct": 0.8391,
+  "hly_c25_pct": 0.8492,
+  "hly_c3_pct": 0.8898,
+  "hly_c4_pct": 0.947,
+  "hly_c5_pct": 0.9489,
+  "hly_c6_pct": 0.9575,
+  "hly_c7_pct": 0.9541,
+  "hly_c8_pct": 0.9237,
+  "hly_c9_pct": 0.9523,
+  "hly_classified_px": 0.9992,
+  "hly_px_total": 0.9992,
+  "hly_total_px": 0.9992,
+  "hly_c2_pct": 0.9316,
+  "hansen_canopy_gain": 0.9996,
+  "hansen_canopy_loss": 0.9996,
+  "hansen_canopy_treecover2000": 0.9996,
+  "soil_val_0_5cm_mean": 0.9842,
+  "soil_val_15_30cm_mean": 0.9842,
+  "dw_bare@2023": 1.0,
+  "dw_built@2023": 1.0,
+  "dw_crops@2023": 1.0,
+  "dw_grass@2023": 1.0,
+  "dw_trees@2023": 1.0,
+  "dw_bare@2024": 1.0,
+  "dw_built@2024": 1.0,
+  "dw_crops@2024": 1.0,
+  "dw_grass@2024": 1.0,
+  "dw_trees@2024": 1.0
+ },
+ "measures_below_threshold": [],
+ "licences": {
+  "UMD/hansen/global_forest_change_2025_v1_13": "unverified - the Earth Engine catalog page could not be located under this asset id, so the licence behind the lossyear and treecover bands is recorded as owed rather than asserted",
+  "GOOGLE/DYNAMICWORLD/V1": "CC BY 4.0, stated on the dataset's catalog page, which also carries an attribution sentence beginning: This dataset is produced for the Dynamic World",
+  "ISRIC/SoilGrids250m/v2_0": "CC BY 4.0, stated on the dataset's catalog page, which points to isric.org/explore/soilgrids for the full soil dataset documentation"
+ },
+ "licence_evidence": {
+  "GOOGLE/DYNAMICWORLD/V1": {
+   "read_from": "https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1",
+   "read_on": "2026-10-08",
+   "outcome": "HTTP 200, page states CC-BY 4.0"
+  },
+  "ISRIC/SoilGrids250m/v2_0": {
+   "read_from": "https://developers.google.com/earth-engine/datasets/catalog/ISRIC_SoilGrids250m_v2_0",
+   "read_on": "2026-10-08",
+   "outcome": "HTTP 200, page states CC-BY-4.0"
+  },
+  "UMD/hansen/global_forest_change_2025_v1_13": {
+   "read_from": "https://developers.google.com/earth-engine/datasets/catalog/UMD_hansen-global_forest_change_2025_v1_13",
+   "read_on": "2026-10-08",
+   "outcome": "HTTP 404 under this and three other plausible slugs, so the licence is unverified"
+  }
+ },
+ "protected_files_untouched": [
+  "data/processed/covariates_gee.parquet",
+  "artifacts/geo/covariates_diagnostics.json"
+ ],
+ "errors": {},
+ "error_rule": "a chunk or period Earth Engine refused is counted here with its error type and message; the run continues past it, so coverage below the threshold may reflect a recorded refusal rather than a missing layer"
+}

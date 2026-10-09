@@ -1,0 +1,83 @@
+{
+ "generated_by": "scripts/measure_space_decisions.py",
+ "what_this_is": "How much of the between-cluster separation the spending-amount family decides when amount is in the space and when it is not, at the shipped k, plus how the filtered space compares with taking every indicator without filtering.",
+ "method": "family split share: mean distance of each cluster centroid from the overall centroid, per column, summed by family and normalised so the families share 1.0",
+ "shipped_k": 5,
+ "approved_columns": [
+  "dynamic_world_bare",
+  "dynamic_world_built",
+  "dynamic_world_crops",
+  "dynamic_world_grass",
+  "dynamic_world_trees",
+  "viirs_lit_mean",
+  "modis_ndvi_mean",
+  "elevation_mean",
+  "Продовольствие_share",
+  "Здоровье_share",
+  "Маркетплейсы_share",
+  "Общественное питание_share",
+  "Транспорт_share"
+ ],
+ "amount_columns": [
+  "total_log_mean",
+  "total_mean_rub",
+  "spending_per_km2_log",
+  "total_per_official_km2"
+ ],
+ "external_spending_measures": [
+  "Продовольствие_log_mean",
+  "Здоровье_log_mean",
+  "Маркетплейсы_log_mean",
+  "Общественное питание_log_mean",
+  "Транспорт_log_mean",
+  "total_mean_rub",
+  "total_log_mean"
+ ],
+ "dominance": {
+  "without_amount": {
+   "columns": 13,
+   "family_split_share": {
+    "land": 0.7135,
+    "spending_shape": 0.2865,
+    "all_columns": 1.0
+   },
+   "clusters": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "smallest_cluster_districts": 283,
+   "kmeans_vs_ward_ari": 0.6621,
+   "stability_bootstrap_ari": 0.8874,
+   "spending_measures_separating_every_pair": "7/7",
+   "pairs_no_measure_can_tell_apart": 0,
+   "clusters_nameable_by_spending": "5/5",
+   "spending_gap_median_in_iqr": 0.6355
+  },
+  "with_amount": {
+   "columns": 17,
+   "family_split_share": {
+    "land": 0.5642,
+    "spending_shape": 0.2095,
+    "spending_amount": 0.2263,
+    "all_columns": 1.0
+   },
+   "clusters": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "smallest_cluster_districts": 286,
+   "kmeans_vs_ward_ari": 0.5063,
+   "stability_bootstrap_ari": 0.9216,
+   "spending_measures_separating_every_pair": "7/7",
+   "pairs_no_measure_can_tell_apart": 0,
+   "clusters_nameable_by_spending": "5/5",
+   "spending_gap_median_in_iqr": 0.6337
+  }
+ }
+}

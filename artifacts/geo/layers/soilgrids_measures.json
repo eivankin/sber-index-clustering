@@ -1,0 +1,37 @@
+{
+  "layer": "soilgrids",
+  "asset": "ISRIC/SoilGrids250m/v2_0",
+  "citation": "ISRIC SoilGrids250m v2.0",
+  "licence": "CC BY 4.0",
+  "licence_attempts": {
+    "read_from": "https://developers.google.com/earth-engine/datasets/catalog/ISRIC_SoilGrids250m_v2_0",
+    "read_on": "2026-10-08",
+    "outcome": "HTTP 200, page states CC-BY-4.0"
+  },
+  "coverage_threshold": 0.5,
+  "coverage": {
+    "measured_over": "panel rows",
+    "columns": [
+      "soil_val_0_5cm_mean",
+      "soil_val_15_30cm_mean"
+    ],
+    "max_coverage": 0.0
+  },
+  "job": {
+    "rows": 2660.0,
+    "chunks": 13.0,
+    "failed_chunks": 0.0,
+    "seconds": 0.0,
+    "asset": "ISRIC/SoilGrids250m/v2_0",
+    "cache_dir": "gee-cache",
+    "output_path": [],
+    "scale_m": "250",
+    "jobs": [
+      "soilgrids"
+    ]
+  },
+  "derived_columns_in_panel": [],
+  "geometry_source": null,
+  "errors": {},
+  "error_rule": "a chunk or period Earth Engine refused is counted here with its error type and message; the run continues past it, so coverage below the threshold may reflect a recorded refusal rather than a missing layer"
+}

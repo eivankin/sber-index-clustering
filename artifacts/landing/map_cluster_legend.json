@@ -1,0 +1,2612 @@
+{
+ "generated_by": "scripts/build_cluster_legend.py",
+ "what_this_is": "Сравнения между кластерами, а не признаки, по которым округ в кластер определяют. Округ может сильно отходить от медианы по одной мере и всё равно принадлежать этому кластеру.",
+ "headline_measures": [
+  "gls_fraction_bare",
+  "gls_fraction_crops",
+  "gls_fraction_urban",
+  "viirs_lit_mean",
+  "elevation_mean",
+  "burn_pct_of_territory",
+  "total_mean_rub",
+  "spending_per_km2_log",
+  "official_land_area_km2"
+ ],
+ "provenance": {
+  "fingerprints": "artifacts/interpretation/cluster_fingerprints.csv",
+  "profile": "artifacts/interpretation/cluster_profile.csv",
+  "assignments": "artifacts/icvi/cluster_assignments.parquet",
+  "names": "artifacts/interpretation/cluster_names.json",
+  "per_territory_values": "data/processed/feature_space.parquet",
+  "candidates_shipped": true
+ },
+ "clusters": [
+  {
+   "cluster": 0,
+   "short_name": "кластер 0",
+   "meaning": "много потерянного леса, много лесов, бедные почвы",
+   "n": 516,
+   "months_of_observation_mean": 24.0,
+   "median_official_area_km2": 2666.38,
+   "median_spending_rub": 23537.69,
+   "spending_per_official_km2": 8.83,
+   "spending_per_official_km2_note": "отношение медиан: медиана среднемесячных трат по округам кластера делённая на медиану официальной площади; это не медиана плотности по округам",
+   "measures": [
+    {
+     "statistic": "gls_fraction_bare",
+     "caption": "доля открытой земли, % классифицированных пикселей",
+     "median": 0.0221,
+     "coverage": 1.0,
+     "n_members": 516,
+     "p25": 0.0094,
+     "p75": 0.0432,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 0.0809,
+       "difference": -0.0588
+      },
+      {
+       "cluster": 2,
+       "other_median": 0.0306,
+       "difference": -0.0085
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.0764,
+       "difference": -0.0543
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.0472,
+       "difference": -0.0251
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_crops",
+     "caption": "доля пашни, % классифицированных пикселей",
+     "median": 5.8194,
+     "coverage": 1.0,
+     "n_members": 516,
+     "p25": 1.0368,
+     "p75": 14.6706,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 14.186,
+       "difference": -8.3666
+      },
+      {
+       "cluster": 2,
+       "other_median": 5.6883,
+       "difference": 0.1311
+      },
+      {
+       "cluster": 3,
+       "other_median": 40.8609,
+       "difference": -35.0415
+      },
+      {
+       "cluster": 4,
+       "other_median": 4.5339,
+       "difference": 1.2855
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_urban",
+     "caption": "доля застройки, % классифицированных пикселей",
+     "median": 0.4695,
+     "coverage": 1.0,
+     "n_members": 516,
+     "p25": 0.1938,
+     "p75": 0.9601,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 8.8074,
+       "difference": -8.3378
+      },
+      {
+       "cluster": 2,
+       "other_median": 71.6528,
+       "difference": -71.1833
+      },
+      {
+       "cluster": 3,
+       "other_median": 1.0569,
+       "difference": -0.5873
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.254,
+       "difference": 0.2155
+      }
+     ]
+    },
+    {
+     "statistic": "viirs_lit_mean",
+     "caption": "ночное свечение по освещённым пикселям",
+     "median": 0.79,
+     "coverage": 1.0,
+     "n_members": 516,
+     "p25": 0.475,
+     "p75": 0.9383,
+     "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean | annual DNB statistics",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 1.0,
+       "difference": -0.21
+      },
+      {
+       "cluster": 2,
+       "other_median": 1.0,
+       "difference": -0.21
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.96,
+       "difference": -0.17
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.6329,
+       "difference": 0.1571
+      }
+     ]
+    },
+    {
+     "statistic": "elevation_mean",
+     "caption": "средняя высота над уровнем моря, м",
+     "median": 158.9415,
+     "coverage": 0.8934,
+     "n_members": 516,
+     "p25": 125.2711,
+     "p75": 210.5923,
+     "provenance": "USGS/SRTMGL1_003 | year=None | scale=250 m | reducer=mean | mean elevation",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 174.744,
+       "difference": -15.8025
+      },
+      {
+       "cluster": 2,
+       "other_median": 140.501,
+       "difference": 18.4405
+      },
+      {
+       "cluster": 3,
+       "other_median": 154.028,
+       "difference": 4.9134
+      },
+      {
+       "cluster": 4,
+       "other_median": 347.8081,
+       "difference": -188.8667
+      }
+     ]
+    },
+    {
+     "statistic": "burn_pct_of_territory",
+     "caption": "доля выгоревшей площади от территории, %",
+     "median": 0.0,
+     "coverage": 1.0,
+     "n_members": 516,
+     "p25": 0.0,
+     "p75": 0.0233,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 0.0,
+       "difference": 0.0
+      },
+      {
+       "cluster": 2,
+       "other_median": 0.0,
+       "difference": 0.0
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.1261,
+       "difference": -0.1261
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.0269,
+       "difference": -0.0269
+      }
+     ]
+    },
+    {
+     "statistic": "total_mean_rub",
+     "caption": "среднемесячные траты по округу всего, ₽",
+     "median": 23537.6875,
+     "coverage": 1.0,
+     "n_members": 516,
+     "p25": 21369.5938,
+     "p75": 26639.2396,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 29842.5,
+       "difference": -6304.8125
+      },
+      {
+       "cluster": 2,
+       "other_median": 46239.7708,
+       "difference": -22702.0833
+      },
+      {
+       "cluster": 3,
+       "other_median": 20641.8333,
+       "difference": 2895.8542
+      },
+      {
+       "cluster": 4,
+       "other_median": 27456.0833,
+       "difference": -3918.3958
+      }
+     ]
+    },
+    {
+     "statistic": "spending_per_km2_log",
+     "caption": "траты на км² официальной площади (log1p)",
+     "median": 2.2687,
+     "coverage": 0.8391,
+     "n_members": 516,
+     "p25": 1.6246,
+     "p75": 2.7089,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 4.3133,
+       "difference": -2.0445
+      },
+      {
+       "cluster": 2,
+       "other_median": 8.564,
+       "difference": -6.2952
+      },
+      {
+       "cluster": 3,
+       "other_median": 2.4254,
+       "difference": -0.1566
+      },
+      {
+       "cluster": 4,
+       "other_median": 1.602,
+       "difference": 0.6667
+      }
+     ]
+    },
+    {
+     "statistic": "official_land_area_km2",
+     "caption": "официальная площадь земли Росстата, км²",
+     "median": 2666.38,
+     "coverage": 0.8217,
+     "n_members": 516,
+     "p25": 1593.26,
+     "p75": 5434.1425,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 1,
+       "other_median": 428.34,
+       "difference": 2238.04
+      },
+      {
+       "cluster": 2,
+       "other_median": 9.1,
+       "difference": 2657.28
+      },
+      {
+       "cluster": 3,
+       "other_median": 2034.0,
+       "difference": 632.38
+      },
+      {
+       "cluster": 4,
+       "other_median": 5618.695,
+       "difference": -2952.315
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "short_name": "кластер 1",
+   "meaning": "компактная территория, яркие ночные огни, мало выгоревших земель",
+   "n": 372,
+   "months_of_observation_mean": 24.0,
+   "median_official_area_km2": 428.34,
+   "median_spending_rub": 29842.5,
+   "spending_per_official_km2": 69.67,
+   "spending_per_official_km2_note": "отношение медиан: медиана среднемесячных трат по округам кластера делённая на медиану официальной площади; это не медиана плотности по округам",
+   "measures": [
+    {
+     "statistic": "gls_fraction_bare",
+     "caption": "доля открытой земли, % классифицированных пикселей",
+     "median": 0.0809,
+     "coverage": 1.0,
+     "n_members": 372,
+     "p25": 0.0335,
+     "p75": 0.1983,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.0221,
+       "difference": 0.0588
+      },
+      {
+       "cluster": 2,
+       "other_median": 0.0306,
+       "difference": 0.0503
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.0764,
+       "difference": 0.0045
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.0472,
+       "difference": 0.0337
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_crops",
+     "caption": "доля пашни, % классифицированных пикселей",
+     "median": 14.186,
+     "coverage": 1.0,
+     "n_members": 372,
+     "p25": 1.4018,
+     "p75": 30.2059,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 5.8194,
+       "difference": 8.3666
+      },
+      {
+       "cluster": 2,
+       "other_median": 5.6883,
+       "difference": 8.4977
+      },
+      {
+       "cluster": 3,
+       "other_median": 40.8609,
+       "difference": -26.6749
+      },
+      {
+       "cluster": 4,
+       "other_median": 4.5339,
+       "difference": 9.6521
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_urban",
+     "caption": "доля застройки, % классифицированных пикселей",
+     "median": 8.8074,
+     "coverage": 1.0,
+     "n_members": 372,
+     "p25": 1.7094,
+     "p75": 23.81,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.4695,
+       "difference": 8.3378
+      },
+      {
+       "cluster": 2,
+       "other_median": 71.6528,
+       "difference": -62.8455
+      },
+      {
+       "cluster": 3,
+       "other_median": 1.0569,
+       "difference": 7.7505
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.254,
+       "difference": 8.5533
+      }
+     ]
+    },
+    {
+     "statistic": "viirs_lit_mean",
+     "caption": "ночное свечение по освещённым пикселям",
+     "median": 1.0,
+     "coverage": 1.0,
+     "n_members": 372,
+     "p25": 1.0,
+     "p75": 1.0,
+     "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean | annual DNB statistics",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.79,
+       "difference": 0.21
+      },
+      {
+       "cluster": 2,
+       "other_median": 1.0,
+       "difference": 0.0
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.96,
+       "difference": 0.04
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.6329,
+       "difference": 0.3671
+      }
+     ]
+    },
+    {
+     "statistic": "elevation_mean",
+     "caption": "средняя высота над уровнем моря, м",
+     "median": 174.744,
+     "coverage": 0.7957,
+     "n_members": 372,
+     "p25": 123.9782,
+     "p75": 212.4929,
+     "provenance": "USGS/SRTMGL1_003 | year=None | scale=250 m | reducer=mean | mean elevation",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 158.9415,
+       "difference": 15.8025
+      },
+      {
+       "cluster": 2,
+       "other_median": 140.501,
+       "difference": 34.243
+      },
+      {
+       "cluster": 3,
+       "other_median": 154.028,
+       "difference": 20.7159
+      },
+      {
+       "cluster": 4,
+       "other_median": 347.8081,
+       "difference": -173.0641
+      }
+     ]
+    },
+    {
+     "statistic": "burn_pct_of_territory",
+     "caption": "доля выгоревшей площади от территории, %",
+     "median": 0.0,
+     "coverage": 1.0,
+     "n_members": 372,
+     "p25": 0.0,
+     "p75": 0.0938,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.0,
+       "difference": 0.0
+      },
+      {
+       "cluster": 2,
+       "other_median": 0.0,
+       "difference": 0.0
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.1261,
+       "difference": -0.1261
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.0269,
+       "difference": -0.0269
+      }
+     ]
+    },
+    {
+     "statistic": "total_mean_rub",
+     "caption": "среднемесячные траты по округу всего, ₽",
+     "median": 29842.5,
+     "coverage": 1.0,
+     "n_members": 372,
+     "p25": 24583.6875,
+     "p75": 36412.5521,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 23537.6875,
+       "difference": 6304.8125
+      },
+      {
+       "cluster": 2,
+       "other_median": 46239.7708,
+       "difference": -16397.2708
+      },
+      {
+       "cluster": 3,
+       "other_median": 20641.8333,
+       "difference": 9200.6667
+      },
+      {
+       "cluster": 4,
+       "other_median": 27456.0833,
+       "difference": 2386.4167
+      }
+     ]
+    },
+    {
+     "statistic": "spending_per_km2_log",
+     "caption": "траты на км² официальной площади (log1p)",
+     "median": 4.3133,
+     "coverage": 0.9704,
+     "n_members": 372,
+     "p25": 2.9921,
+     "p75": 6.0072,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 2.2687,
+       "difference": 2.0445
+      },
+      {
+       "cluster": 2,
+       "other_median": 8.564,
+       "difference": -4.2507
+      },
+      {
+       "cluster": 3,
+       "other_median": 2.4254,
+       "difference": 1.8879
+      },
+      {
+       "cluster": 4,
+       "other_median": 1.602,
+       "difference": 2.7112
+      }
+     ]
+    },
+    {
+     "statistic": "official_land_area_km2",
+     "caption": "официальная площадь земли Росстата, км²",
+     "median": 428.34,
+     "coverage": 0.9624,
+     "n_members": 372,
+     "p25": 76.5787,
+     "p75": 1432.535,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 2666.38,
+       "difference": -2238.04
+      },
+      {
+       "cluster": 2,
+       "other_median": 9.1,
+       "difference": 419.24
+      },
+      {
+       "cluster": 3,
+       "other_median": 2034.0,
+       "difference": -1605.66
+      },
+      {
+       "cluster": 4,
+       "other_median": 5618.695,
+       "difference": -5190.355
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "short_name": "кластер 2",
+   "meaning": "много застроенной земли, высокие траты на километр, мало лугов и пастбищ",
+   "n": 294,
+   "months_of_observation_mean": 24.0,
+   "median_official_area_km2": 9.1,
+   "median_spending_rub": 46239.77,
+   "spending_per_official_km2": 5081.29,
+   "spending_per_official_km2_note": "отношение медиан: медиана среднемесячных трат по округам кластера делённая на медиану официальной площади; это не медиана плотности по округам",
+   "measures": [
+    {
+     "statistic": "gls_fraction_bare",
+     "caption": "доля открытой земли, % классифицированных пикселей",
+     "median": 0.0306,
+     "coverage": 1.0,
+     "n_members": 294,
+     "p25": 0.0111,
+     "p75": 0.0877,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.0221,
+       "difference": 0.0085
+      },
+      {
+       "cluster": 1,
+       "other_median": 0.0809,
+       "difference": -0.0503
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.0764,
+       "difference": -0.0458
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.0472,
+       "difference": -0.0166
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_crops",
+     "caption": "доля пашни, % классифицированных пикселей",
+     "median": 5.6883,
+     "coverage": 1.0,
+     "n_members": 294,
+     "p25": 2.8012,
+     "p75": 10.1589,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 5.8194,
+       "difference": -0.1311
+      },
+      {
+       "cluster": 1,
+       "other_median": 14.186,
+       "difference": -8.4977
+      },
+      {
+       "cluster": 3,
+       "other_median": 40.8609,
+       "difference": -35.1726
+      },
+      {
+       "cluster": 4,
+       "other_median": 4.5339,
+       "difference": 1.1544
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_urban",
+     "caption": "доля застройки, % классифицированных пикселей",
+     "median": 71.6528,
+     "coverage": 1.0,
+     "n_members": 294,
+     "p25": 46.813,
+     "p75": 87.9883,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.4695,
+       "difference": 71.1833
+      },
+      {
+       "cluster": 1,
+       "other_median": 8.8074,
+       "difference": 62.8455
+      },
+      {
+       "cluster": 3,
+       "other_median": 1.0569,
+       "difference": 70.596
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.254,
+       "difference": 71.3988
+      }
+     ]
+    },
+    {
+     "statistic": "viirs_lit_mean",
+     "caption": "ночное свечение по освещённым пикселям",
+     "median": 1.0,
+     "coverage": 1.0,
+     "n_members": 294,
+     "p25": 1.0,
+     "p75": 1.0,
+     "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean | annual DNB statistics",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.79,
+       "difference": 0.21
+      },
+      {
+       "cluster": 1,
+       "other_median": 1.0,
+       "difference": 0.0
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.96,
+       "difference": 0.04
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.6329,
+       "difference": 0.3671
+      }
+     ]
+    },
+    {
+     "statistic": "elevation_mean",
+     "caption": "средняя высота над уровнем моря, м",
+     "median": 140.501,
+     "coverage": 0.9524,
+     "n_members": 294,
+     "p25": 18.8438,
+     "p75": 165.5091,
+     "provenance": "USGS/SRTMGL1_003 | year=None | scale=250 m | reducer=mean | mean elevation",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 158.9415,
+       "difference": -18.4405
+      },
+      {
+       "cluster": 1,
+       "other_median": 174.744,
+       "difference": -34.243
+      },
+      {
+       "cluster": 3,
+       "other_median": 154.028,
+       "difference": -13.5271
+      },
+      {
+       "cluster": 4,
+       "other_median": 347.8081,
+       "difference": -207.3072
+      }
+     ]
+    },
+    {
+     "statistic": "burn_pct_of_territory",
+     "caption": "доля выгоревшей площади от территории, %",
+     "median": 0.0,
+     "coverage": 1.0,
+     "n_members": 294,
+     "p25": 0.0,
+     "p75": 0.0,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.0,
+       "difference": 0.0
+      },
+      {
+       "cluster": 1,
+       "other_median": 0.0,
+       "difference": 0.0
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.1261,
+       "difference": -0.1261
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.0269,
+       "difference": -0.0269
+      }
+     ]
+    },
+    {
+     "statistic": "total_mean_rub",
+     "caption": "среднемесячные траты по округу всего, ₽",
+     "median": 46239.7708,
+     "coverage": 1.0,
+     "n_members": 294,
+     "p25": 41691.6042,
+     "p75": 49299.4062,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 23537.6875,
+       "difference": 22702.0833
+      },
+      {
+       "cluster": 1,
+       "other_median": 29842.5,
+       "difference": 16397.2708
+      },
+      {
+       "cluster": 3,
+       "other_median": 20641.8333,
+       "difference": 25597.9375
+      },
+      {
+       "cluster": 4,
+       "other_median": 27456.0833,
+       "difference": 18783.6875
+      }
+     ]
+    },
+    {
+     "statistic": "spending_per_km2_log",
+     "caption": "траты на км² официальной площади (log1p)",
+     "median": 8.564,
+     "coverage": 1.0,
+     "n_members": 294,
+     "p25": 7.2776,
+     "p75": 9.133,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 2.2687,
+       "difference": 6.2952
+      },
+      {
+       "cluster": 1,
+       "other_median": 4.3133,
+       "difference": 4.2507
+      },
+      {
+       "cluster": 3,
+       "other_median": 2.4254,
+       "difference": 6.1386
+      },
+      {
+       "cluster": 4,
+       "other_median": 1.602,
+       "difference": 6.9619
+      }
+     ]
+    },
+    {
+     "statistic": "official_land_area_km2",
+     "caption": "официальная площадь земли Росстата, км²",
+     "median": 9.1,
+     "coverage": 1.0,
+     "n_members": 294,
+     "p25": 5.3853,
+     "p75": 30.4375,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 2666.38,
+       "difference": -2657.28
+      },
+      {
+       "cluster": 1,
+       "other_median": 428.34,
+       "difference": -419.24
+      },
+      {
+       "cluster": 3,
+       "other_median": 2034.0,
+       "difference": -2024.9
+      },
+      {
+       "cluster": 4,
+       "other_median": 5618.695,
+       "difference": -5609.595
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "short_name": "кластер 3",
+   "meaning": "много пашни, много выгоревших земель, много лугов и пастбищ",
+   "n": 551,
+   "months_of_observation_mean": 24.0,
+   "median_official_area_km2": 2034.0,
+   "median_spending_rub": 20641.83,
+   "spending_per_official_km2": 10.15,
+   "spending_per_official_km2_note": "отношение медиан: медиана среднемесячных трат по округам кластера делённая на медиану официальной площади; это не медиана плотности по округам",
+   "measures": [
+    {
+     "statistic": "gls_fraction_bare",
+     "caption": "доля открытой земли, % классифицированных пикселей",
+     "median": 0.0764,
+     "coverage": 1.0,
+     "n_members": 551,
+     "p25": 0.0345,
+     "p75": 0.1687,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.0221,
+       "difference": 0.0543
+      },
+      {
+       "cluster": 1,
+       "other_median": 0.0809,
+       "difference": -0.0045
+      },
+      {
+       "cluster": 2,
+       "other_median": 0.0306,
+       "difference": 0.0458
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.0472,
+       "difference": 0.0292
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_crops",
+     "caption": "доля пашни, % классифицированных пикселей",
+     "median": 40.8609,
+     "coverage": 1.0,
+     "n_members": 551,
+     "p25": 30.4472,
+     "p75": 54.3914,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 5.8194,
+       "difference": 35.0415
+      },
+      {
+       "cluster": 1,
+       "other_median": 14.186,
+       "difference": 26.6749
+      },
+      {
+       "cluster": 2,
+       "other_median": 5.6883,
+       "difference": 35.1726
+      },
+      {
+       "cluster": 4,
+       "other_median": 4.5339,
+       "difference": 36.327
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_urban",
+     "caption": "доля застройки, % классифицированных пикселей",
+     "median": 1.0569,
+     "coverage": 1.0,
+     "n_members": 551,
+     "p25": 0.5632,
+     "p75": 1.7995,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.4695,
+       "difference": 0.5873
+      },
+      {
+       "cluster": 1,
+       "other_median": 8.8074,
+       "difference": -7.7505
+      },
+      {
+       "cluster": 2,
+       "other_median": 71.6528,
+       "difference": -70.596
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.254,
+       "difference": 0.8028
+      }
+     ]
+    },
+    {
+     "statistic": "viirs_lit_mean",
+     "caption": "ночное свечение по освещённым пикселям",
+     "median": 0.96,
+     "coverage": 1.0,
+     "n_members": 551,
+     "p25": 0.7129,
+     "p75": 0.996,
+     "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean | annual DNB statistics",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.79,
+       "difference": 0.17
+      },
+      {
+       "cluster": 1,
+       "other_median": 1.0,
+       "difference": -0.04
+      },
+      {
+       "cluster": 2,
+       "other_median": 1.0,
+       "difference": -0.04
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.6329,
+       "difference": 0.327
+      }
+     ]
+    },
+    {
+     "statistic": "elevation_mean",
+     "caption": "средняя высота над уровнем моря, м",
+     "median": 154.028,
+     "coverage": 1.0,
+     "n_members": 551,
+     "p25": 117.2034,
+     "p75": 201.261,
+     "provenance": "USGS/SRTMGL1_003 | year=None | scale=250 m | reducer=mean | mean elevation",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 158.9415,
+       "difference": -4.9134
+      },
+      {
+       "cluster": 1,
+       "other_median": 174.744,
+       "difference": -20.7159
+      },
+      {
+       "cluster": 2,
+       "other_median": 140.501,
+       "difference": 13.5271
+      },
+      {
+       "cluster": 4,
+       "other_median": 347.8081,
+       "difference": -193.7801
+      }
+     ]
+    },
+    {
+     "statistic": "burn_pct_of_territory",
+     "caption": "доля выгоревшей площади от территории, %",
+     "median": 0.1261,
+     "coverage": 1.0,
+     "n_members": 551,
+     "p25": 0.0,
+     "p75": 0.698,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.0,
+       "difference": 0.1261
+      },
+      {
+       "cluster": 1,
+       "other_median": 0.0,
+       "difference": 0.1261
+      },
+      {
+       "cluster": 2,
+       "other_median": 0.0,
+       "difference": 0.1261
+      },
+      {
+       "cluster": 4,
+       "other_median": 0.0269,
+       "difference": 0.0992
+      }
+     ]
+    },
+    {
+     "statistic": "total_mean_rub",
+     "caption": "среднемесячные траты по округу всего, ₽",
+     "median": 20641.8333,
+     "coverage": 1.0,
+     "n_members": 551,
+     "p25": 19219.3125,
+     "p75": 22707.2292,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 23537.6875,
+       "difference": -2895.8542
+      },
+      {
+       "cluster": 1,
+       "other_median": 29842.5,
+       "difference": -9200.6667
+      },
+      {
+       "cluster": 2,
+       "other_median": 46239.7708,
+       "difference": -25597.9375
+      },
+      {
+       "cluster": 4,
+       "other_median": 27456.0833,
+       "difference": -6814.25
+      }
+     ]
+    },
+    {
+     "statistic": "spending_per_km2_log",
+     "caption": "траты на км² официальной площади (log1p)",
+     "median": 2.4254,
+     "coverage": 0.9782,
+     "n_members": 551,
+     "p25": 2.0481,
+     "p75": 2.8205,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 2.2687,
+       "difference": 0.1566
+      },
+      {
+       "cluster": 1,
+       "other_median": 4.3133,
+       "difference": -1.8879
+      },
+      {
+       "cluster": 2,
+       "other_median": 8.564,
+       "difference": -6.1386
+      },
+      {
+       "cluster": 4,
+       "other_median": 1.602,
+       "difference": 0.8233
+      }
+     ]
+    },
+    {
+     "statistic": "official_land_area_km2",
+     "caption": "официальная площадь земли Росстата, км²",
+     "median": 2034.0,
+     "coverage": 0.971,
+     "n_members": 551,
+     "p25": 1344.285,
+     "p75": 3040.875,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 2666.38,
+       "difference": -632.38
+      },
+      {
+       "cluster": 1,
+       "other_median": 428.34,
+       "difference": 1605.66
+      },
+      {
+       "cluster": 2,
+       "other_median": 9.1,
+       "difference": 2024.9
+      },
+      {
+       "cluster": 4,
+       "other_median": 5618.695,
+       "difference": -3584.695
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "short_name": "кластер 4",
+   "meaning": "возвышенность, огромная территория, тусклые ночные огни",
+   "n": 283,
+   "months_of_observation_mean": 24.0,
+   "median_official_area_km2": 5618.69,
+   "median_spending_rub": 27456.08,
+   "spending_per_official_km2": 4.89,
+   "spending_per_official_km2_note": "отношение медиан: медиана среднемесячных трат по округам кластера делённая на медиану официальной площади; это не медиана плотности по округам",
+   "measures": [
+    {
+     "statistic": "gls_fraction_bare",
+     "caption": "доля открытой земли, % классифицированных пикселей",
+     "median": 0.0472,
+     "coverage": 1.0,
+     "n_members": 283,
+     "p25": 0.0162,
+     "p75": 0.1767,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.0221,
+       "difference": 0.0251
+      },
+      {
+       "cluster": 1,
+       "other_median": 0.0809,
+       "difference": -0.0337
+      },
+      {
+       "cluster": 2,
+       "other_median": 0.0306,
+       "difference": 0.0166
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.0764,
+       "difference": -0.0292
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_crops",
+     "caption": "доля пашни, % классифицированных пикселей",
+     "median": 4.5339,
+     "coverage": 1.0,
+     "n_members": 283,
+     "p25": 0.5992,
+     "p75": 11.3318,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 5.8194,
+       "difference": -1.2855
+      },
+      {
+       "cluster": 1,
+       "other_median": 14.186,
+       "difference": -9.6521
+      },
+      {
+       "cluster": 2,
+       "other_median": 5.6883,
+       "difference": -1.1544
+      },
+      {
+       "cluster": 3,
+       "other_median": 40.8609,
+       "difference": -36.327
+      }
+     ]
+    },
+    {
+     "statistic": "gls_fraction_urban",
+     "caption": "доля застройки, % классифицированных пикселей",
+     "median": 0.254,
+     "coverage": 1.0,
+     "n_members": 283,
+     "p25": 0.0781,
+     "p75": 0.8907,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.4695,
+       "difference": -0.2155
+      },
+      {
+       "cluster": 1,
+       "other_median": 8.8074,
+       "difference": -8.5533
+      },
+      {
+       "cluster": 2,
+       "other_median": 71.6528,
+       "difference": -71.3988
+      },
+      {
+       "cluster": 3,
+       "other_median": 1.0569,
+       "difference": -0.8028
+      }
+     ]
+    },
+    {
+     "statistic": "viirs_lit_mean",
+     "caption": "ночное свечение по освещённым пикселям",
+     "median": 0.6329,
+     "coverage": 1.0,
+     "n_members": 283,
+     "p25": 0.1703,
+     "p75": 0.9175,
+     "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean | annual DNB statistics",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.79,
+       "difference": -0.1571
+      },
+      {
+       "cluster": 1,
+       "other_median": 1.0,
+       "difference": -0.3671
+      },
+      {
+       "cluster": 2,
+       "other_median": 1.0,
+       "difference": -0.3671
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.96,
+       "difference": -0.327
+      }
+     ]
+    },
+    {
+     "statistic": "elevation_mean",
+     "caption": "средняя высота над уровнем моря, м",
+     "median": 347.8081,
+     "coverage": 0.947,
+     "n_members": 283,
+     "p25": 196.8264,
+     "p75": 671.0835,
+     "provenance": "USGS/SRTMGL1_003 | year=None | scale=250 m | reducer=mean | mean elevation",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 158.9415,
+       "difference": 188.8667
+      },
+      {
+       "cluster": 1,
+       "other_median": 174.744,
+       "difference": 173.0641
+      },
+      {
+       "cluster": 2,
+       "other_median": 140.501,
+       "difference": 207.3072
+      },
+      {
+       "cluster": 3,
+       "other_median": 154.028,
+       "difference": 193.7801
+      }
+     ]
+    },
+    {
+     "statistic": "burn_pct_of_territory",
+     "caption": "доля выгоревшей площади от территории, %",
+     "median": 0.0269,
+     "coverage": 1.0,
+     "n_members": 283,
+     "p25": 0.0,
+     "p75": 0.5101,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 0.0,
+       "difference": 0.0269
+      },
+      {
+       "cluster": 1,
+       "other_median": 0.0,
+       "difference": 0.0269
+      },
+      {
+       "cluster": 2,
+       "other_median": 0.0,
+       "difference": 0.0269
+      },
+      {
+       "cluster": 3,
+       "other_median": 0.1261,
+       "difference": -0.0992
+      }
+     ]
+    },
+    {
+     "statistic": "total_mean_rub",
+     "caption": "среднемесячные траты по округу всего, ₽",
+     "median": 27456.0833,
+     "coverage": 1.0,
+     "n_members": 283,
+     "p25": 23895.0833,
+     "p75": 32175.2083,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 23537.6875,
+       "difference": 3918.3958
+      },
+      {
+       "cluster": 1,
+       "other_median": 29842.5,
+       "difference": -2386.4167
+      },
+      {
+       "cluster": 2,
+       "other_median": 46239.7708,
+       "difference": -18783.6875
+      },
+      {
+       "cluster": 3,
+       "other_median": 20641.8333,
+       "difference": 6814.25
+      }
+     ]
+    },
+    {
+     "statistic": "spending_per_km2_log",
+     "caption": "траты на км² официальной площади (log1p)",
+     "median": 1.602,
+     "coverage": 0.9329,
+     "n_members": 283,
+     "p25": 0.8249,
+     "p75": 2.1693,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 2.2687,
+       "difference": -0.6667
+      },
+      {
+       "cluster": 1,
+       "other_median": 4.3133,
+       "difference": -2.7112
+      },
+      {
+       "cluster": 2,
+       "other_median": 8.564,
+       "difference": -6.9619
+      },
+      {
+       "cluster": 3,
+       "other_median": 2.4254,
+       "difference": -0.8233
+      }
+     ]
+    },
+    {
+     "statistic": "official_land_area_km2",
+     "caption": "официальная площадь земли Росстата, км²",
+     "median": 5618.695,
+     "coverage": 0.8622,
+     "n_members": 283,
+     "p25": 3054.2125,
+     "p75": 16804.4665,
+     "provenance": "nan",
+     "contrast_with_others": [
+      {
+       "cluster": 0,
+       "other_median": 2666.38,
+       "difference": 2952.315
+      },
+      {
+       "cluster": 1,
+       "other_median": 428.34,
+       "difference": 5190.355
+      },
+      {
+       "cluster": 2,
+       "other_median": 9.1,
+       "difference": 5609.595
+      },
+      {
+       "cluster": 3,
+       "other_median": 2034.0,
+       "difference": 3584.695
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "examples": [
+  {
+   "cluster": 0,
+   "statistic": "gls_fraction_bare",
+   "tid": 2330,
+   "value": 0.0222,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 2330,
+     "value": 0.0222,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 670,
+     "value": 0.0221,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 217,
+     "value": 0.0223,
+     "distance_to_median": 0.0002
+    }
+   ]
+  },
+  {
+   "cluster": 0,
+   "statistic": "gls_fraction_crops",
+   "tid": 442,
+   "value": 5.8138,
+   "distance_to_median": 0.0056,
+   "candidates": [
+    {
+     "tid": 442,
+     "value": 5.8138,
+     "distance_to_median": 0.0056
+    },
+    {
+     "tid": 1584,
+     "value": 5.8251,
+     "distance_to_median": 0.0056
+    },
+    {
+     "tid": 1068,
+     "value": 5.8478,
+     "distance_to_median": 0.0284
+    }
+   ]
+  },
+  {
+   "cluster": 0,
+   "statistic": "gls_fraction_urban",
+   "tid": 1786,
+   "value": 0.4679,
+   "distance_to_median": 0.0016,
+   "candidates": [
+    {
+     "tid": 1786,
+     "value": 0.4679,
+     "distance_to_median": 0.0016
+    },
+    {
+     "tid": 2053,
+     "value": 0.4711,
+     "distance_to_median": 0.0016
+    },
+    {
+     "tid": 2015,
+     "value": 0.4723,
+     "distance_to_median": 0.0027
+    }
+   ]
+  },
+  {
+   "cluster": 0,
+   "statistic": "viirs_lit_mean",
+   "tid": 1299,
+   "value": 0.7896,
+   "distance_to_median": 0.0004,
+   "candidates": [
+    {
+     "tid": 1299,
+     "value": 0.7896,
+     "distance_to_median": 0.0004
+    },
+    {
+     "tid": 734,
+     "value": 0.7903,
+     "distance_to_median": 0.0004
+    },
+    {
+     "tid": 618,
+     "value": 0.7887,
+     "distance_to_median": 0.0013
+    }
+   ]
+  },
+  {
+   "cluster": 0,
+   "statistic": "elevation_mean",
+   "tid": 1047,
+   "value": 158.9415,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 1047,
+     "value": 158.9415,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 1329,
+     "value": 158.8613,
+     "distance_to_median": 0.0802
+    },
+    {
+     "tid": 1293,
+     "value": 159.0323,
+     "distance_to_median": 0.0908
+    }
+   ]
+  },
+  {
+   "cluster": 0,
+   "statistic": "burn_pct_of_territory",
+   "tid": 14,
+   "value": 0.0,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 14,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 19,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 70,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    }
+   ]
+  },
+  {
+   "cluster": 0,
+   "statistic": "total_mean_rub",
+   "tid": 697,
+   "value": 23550.7083,
+   "distance_to_median": 13.0208,
+   "candidates": [
+    {
+     "tid": 697,
+     "value": 23550.7083,
+     "distance_to_median": 13.0208
+    },
+    {
+     "tid": 2043,
+     "value": 23524.6667,
+     "distance_to_median": 13.0208
+    },
+    {
+     "tid": 2137,
+     "value": 23557.75,
+     "distance_to_median": 20.0625
+    }
+   ]
+  },
+  {
+   "cluster": 0,
+   "statistic": "spending_per_km2_log",
+   "tid": 2111,
+   "value": 2.2687,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 2111,
+     "value": 2.2687,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 2110,
+     "value": 2.2655,
+     "distance_to_median": 0.0033
+    },
+    {
+     "tid": 1284,
+     "value": 2.2728,
+     "distance_to_median": 0.0041
+    }
+   ]
+  },
+  {
+   "cluster": 0,
+   "statistic": "official_land_area_km2",
+   "tid": 2132,
+   "value": 2675.02,
+   "distance_to_median": 8.64,
+   "candidates": [
+    {
+     "tid": 2132,
+     "value": 2675.02,
+     "distance_to_median": 8.64
+    },
+    {
+     "tid": 1320,
+     "value": 2657.74,
+     "distance_to_median": 8.64
+    },
+    {
+     "tid": 2813,
+     "value": 2675.14,
+     "distance_to_median": 8.76
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "gls_fraction_bare",
+   "tid": 335,
+   "value": 0.0815,
+   "distance_to_median": 0.0006,
+   "candidates": [
+    {
+     "tid": 335,
+     "value": 0.0815,
+     "distance_to_median": 0.0006
+    },
+    {
+     "tid": 2245,
+     "value": 0.0803,
+     "distance_to_median": 0.0006
+    },
+    {
+     "tid": 75,
+     "value": 0.0818,
+     "distance_to_median": 0.0009
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "gls_fraction_crops",
+   "tid": 2297,
+   "value": 14.1811,
+   "distance_to_median": 0.0049,
+   "candidates": [
+    {
+     "tid": 2297,
+     "value": 14.1811,
+     "distance_to_median": 0.0049
+    },
+    {
+     "tid": 2019,
+     "value": 14.1909,
+     "distance_to_median": 0.0049
+    },
+    {
+     "tid": 1252,
+     "value": 14.1549,
+     "distance_to_median": 0.0311
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "gls_fraction_urban",
+   "tid": 2647,
+   "value": 8.8603,
+   "distance_to_median": 0.0529,
+   "candidates": [
+    {
+     "tid": 2647,
+     "value": 8.8603,
+     "distance_to_median": 0.0529
+    },
+    {
+     "tid": 76,
+     "value": 8.7544,
+     "distance_to_median": 0.0529
+    },
+    {
+     "tid": 1225,
+     "value": 8.8739,
+     "distance_to_median": 0.0665
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "viirs_lit_mean",
+   "tid": 1,
+   "value": 1.0,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 1,
+     "value": 1.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 2,
+     "value": 1.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 5,
+     "value": 1.0,
+     "distance_to_median": 0.0
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "elevation_mean",
+   "tid": 1474,
+   "value": 174.8636,
+   "distance_to_median": 0.1197,
+   "candidates": [
+    {
+     "tid": 1474,
+     "value": 174.8636,
+     "distance_to_median": 0.1197
+    },
+    {
+     "tid": 504,
+     "value": 174.6243,
+     "distance_to_median": 0.1197
+    },
+    {
+     "tid": 1709,
+     "value": 174.8955,
+     "distance_to_median": 0.1515
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "burn_pct_of_territory",
+   "tid": 2,
+   "value": 0.0,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 2,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 10,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 22,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "total_mean_rub",
+   "tid": 1668,
+   "value": 29848.5,
+   "distance_to_median": 6.0,
+   "candidates": [
+    {
+     "tid": 1668,
+     "value": 29848.5,
+     "distance_to_median": 6.0
+    },
+    {
+     "tid": 1875,
+     "value": 29836.5,
+     "distance_to_median": 6.0
+    },
+    {
+     "tid": 2186,
+     "value": 29790.875,
+     "distance_to_median": 51.625
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "spending_per_km2_log",
+   "tid": 2227,
+   "value": 4.3133,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 2227,
+     "value": 4.3133,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 2281,
+     "value": 4.3475,
+     "distance_to_median": 0.0343
+    },
+    {
+     "tid": 1225,
+     "value": 4.3533,
+     "distance_to_median": 0.04
+    }
+   ]
+  },
+  {
+   "cluster": 1,
+   "statistic": "official_land_area_km2",
+   "tid": 1233,
+   "value": 424.27,
+   "distance_to_median": 4.07,
+   "candidates": [
+    {
+     "tid": 1233,
+     "value": 424.27,
+     "distance_to_median": 4.07
+    },
+    {
+     "tid": 1136,
+     "value": 432.41,
+     "distance_to_median": 4.07
+    },
+    {
+     "tid": 1527,
+     "value": 421.53,
+     "distance_to_median": 6.81
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "gls_fraction_bare",
+   "tid": 2526,
+   "value": 0.0308,
+   "distance_to_median": 0.0002,
+   "candidates": [
+    {
+     "tid": 2526,
+     "value": 0.0308,
+     "distance_to_median": 0.0002
+    },
+    {
+     "tid": 1456,
+     "value": 0.0304,
+     "distance_to_median": 0.0002
+    },
+    {
+     "tid": 2545,
+     "value": 0.0309,
+     "distance_to_median": 0.0003
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "gls_fraction_crops",
+   "tid": 2583,
+   "value": 5.601,
+   "distance_to_median": 0.0874,
+   "candidates": [
+    {
+     "tid": 2583,
+     "value": 5.601,
+     "distance_to_median": 0.0874
+    },
+    {
+     "tid": 2369,
+     "value": 5.7757,
+     "distance_to_median": 0.0874
+    },
+    {
+     "tid": 2584,
+     "value": 5.7961,
+     "distance_to_median": 0.1078
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "gls_fraction_urban",
+   "tid": 2560,
+   "value": 71.3527,
+   "distance_to_median": 0.3001,
+   "candidates": [
+    {
+     "tid": 2560,
+     "value": 71.3527,
+     "distance_to_median": 0.3001
+    },
+    {
+     "tid": 2515,
+     "value": 71.9529,
+     "distance_to_median": 0.3001
+    },
+    {
+     "tid": 2561,
+     "value": 72.122,
+     "distance_to_median": 0.4692
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "viirs_lit_mean",
+   "tid": 21,
+   "value": 1.0,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 21,
+     "value": 1.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 25,
+     "value": 1.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 29,
+     "value": 1.0,
+     "distance_to_median": 0.0
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "elevation_mean",
+   "tid": 2521,
+   "value": 140.6981,
+   "distance_to_median": 0.1971,
+   "candidates": [
+    {
+     "tid": 2521,
+     "value": 140.6981,
+     "distance_to_median": 0.1971
+    },
+    {
+     "tid": 2546,
+     "value": 140.3038,
+     "distance_to_median": 0.1971
+    },
+    {
+     "tid": 2479,
+     "value": 140.2565,
+     "distance_to_median": 0.2445
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "burn_pct_of_territory",
+   "tid": 21,
+   "value": 0.0,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 21,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 25,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 29,
+     "value": 0.0,
+     "distance_to_median": 0.0
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "total_mean_rub",
+   "tid": 2358,
+   "value": 46179.5833,
+   "distance_to_median": 60.1875,
+   "candidates": [
+    {
+     "tid": 2358,
+     "value": 46179.5833,
+     "distance_to_median": 60.1875
+    },
+    {
+     "tid": 2426,
+     "value": 46299.9583,
+     "distance_to_median": 60.1875
+    },
+    {
+     "tid": 2457,
+     "value": 46318.0833,
+     "distance_to_median": 78.3125
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "spending_per_km2_log",
+   "tid": 2476,
+   "value": 8.567,
+   "distance_to_median": 0.003,
+   "candidates": [
+    {
+     "tid": 2476,
+     "value": 8.567,
+     "distance_to_median": 0.003
+    },
+    {
+     "tid": 2393,
+     "value": 8.5609,
+     "distance_to_median": 0.003
+    },
+    {
+     "tid": 2382,
+     "value": 8.5599,
+     "distance_to_median": 0.0041
+    }
+   ]
+  },
+  {
+   "cluster": 2,
+   "statistic": "official_land_area_km2",
+   "tid": 2382,
+   "value": 9.067,
+   "distance_to_median": 0.033,
+   "candidates": [
+    {
+     "tid": 2382,
+     "value": 9.067,
+     "distance_to_median": 0.033
+    },
+    {
+     "tid": 2565,
+     "value": 9.133,
+     "distance_to_median": 0.033
+    },
+    {
+     "tid": 2549,
+     "value": 9.06,
+     "distance_to_median": 0.04
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "gls_fraction_bare",
+   "tid": 1950,
+   "value": 0.0764,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 1950,
+     "value": 0.0764,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 36,
+     "value": 0.0763,
+     "distance_to_median": 0.0001
+    },
+    {
+     "tid": 1016,
+     "value": 0.0763,
+     "distance_to_median": 0.0001
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "gls_fraction_crops",
+   "tid": 436,
+   "value": 40.8609,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 436,
+     "value": 40.8609,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 1909,
+     "value": 40.9682,
+     "distance_to_median": 0.1073
+    },
+    {
+     "tid": 1702,
+     "value": 40.7449,
+     "distance_to_median": 0.116
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "gls_fraction_urban",
+   "tid": 277,
+   "value": 1.0569,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 277,
+     "value": 1.0569,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 1934,
+     "value": 1.0548,
+     "distance_to_median": 0.002
+    },
+    {
+     "tid": 1757,
+     "value": 1.0545,
+     "distance_to_median": 0.0024
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "viirs_lit_mean",
+   "tid": 1555,
+   "value": 0.96,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 1555,
+     "value": 0.96,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 486,
+     "value": 0.96,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 492,
+     "value": 0.9605,
+     "distance_to_median": 0.0005
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "elevation_mean",
+   "tid": 1920,
+   "value": 154.028,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 1920,
+     "value": 154.028,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 2080,
+     "value": 154.0224,
+     "distance_to_median": 0.0056
+    },
+    {
+     "tid": 364,
+     "value": 154.1442,
+     "distance_to_median": 0.1162
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "burn_pct_of_territory",
+   "tid": 1703,
+   "value": 0.1261,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 1703,
+     "value": 0.1261,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 365,
+     "value": 0.1227,
+     "distance_to_median": 0.0034
+    },
+    {
+     "tid": 1862,
+     "value": 0.1311,
+     "distance_to_median": 0.005
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "total_mean_rub",
+   "tid": 392,
+   "value": 20641.8333,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 392,
+     "value": 20641.8333,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 530,
+     "value": 20651.2083,
+     "distance_to_median": 9.375
+    },
+    {
+     "tid": 1949,
+     "value": 20618.6667,
+     "distance_to_median": 23.1667
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "spending_per_km2_log",
+   "tid": 2271,
+   "value": 2.4254,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 2271,
+     "value": 2.4254,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 72,
+     "value": 2.4311,
+     "distance_to_median": 0.0057
+    },
+    {
+     "tid": 1691,
+     "value": 2.4318,
+     "distance_to_median": 0.0064
+    }
+   ]
+  },
+  {
+   "cluster": 3,
+   "statistic": "official_land_area_km2",
+   "tid": 359,
+   "value": 2034.0,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 359,
+     "value": 2034.0,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 1699,
+     "value": 2027.37,
+     "distance_to_median": 6.63
+    },
+    {
+     "tid": 298,
+     "value": 2024.47,
+     "distance_to_median": 9.53
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "gls_fraction_bare",
+   "tid": 801,
+   "value": 0.0472,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 801,
+     "value": 0.0472,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 870,
+     "value": 0.0471,
+     "distance_to_median": 0.0001
+    },
+    {
+     "tid": 1151,
+     "value": 0.0469,
+     "distance_to_median": 0.0004
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "gls_fraction_crops",
+   "tid": 2341,
+   "value": 4.5339,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 2341,
+     "value": 4.5339,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 1167,
+     "value": 4.5026,
+     "distance_to_median": 0.0313
+    },
+    {
+     "tid": 1243,
+     "value": 4.5717,
+     "distance_to_median": 0.0378
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "gls_fraction_urban",
+   "tid": 601,
+   "value": 0.254,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 601,
+     "value": 0.254,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 1160,
+     "value": 0.2533,
+     "distance_to_median": 0.0008
+    },
+    {
+     "tid": 873,
+     "value": 0.2548,
+     "distance_to_median": 0.0008
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "viirs_lit_mean",
+   "tid": 54,
+   "value": 0.6329,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 54,
+     "value": 0.6329,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 61,
+     "value": 0.6365,
+     "distance_to_median": 0.0036
+    },
+    {
+     "tid": 885,
+     "value": 0.6457,
+     "distance_to_median": 0.0128
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "elevation_mean",
+   "tid": 63,
+   "value": 348.1745,
+   "distance_to_median": 0.3664,
+   "candidates": [
+    {
+     "tid": 63,
+     "value": 348.1745,
+     "distance_to_median": 0.3664
+    },
+    {
+     "tid": 852,
+     "value": 347.4417,
+     "distance_to_median": 0.3664
+    },
+    {
+     "tid": 61,
+     "value": 346.8008,
+     "distance_to_median": 1.0073
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "burn_pct_of_territory",
+   "tid": 416,
+   "value": 0.0269,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 416,
+     "value": 0.0269,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 2161,
+     "value": 0.0263,
+     "distance_to_median": 0.0006
+    },
+    {
+     "tid": 1147,
+     "value": 0.0259,
+     "distance_to_median": 0.001
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "total_mean_rub",
+   "tid": 38,
+   "value": 27456.0833,
+   "distance_to_median": 0.0,
+   "candidates": [
+    {
+     "tid": 38,
+     "value": 27456.0833,
+     "distance_to_median": 0.0
+    },
+    {
+     "tid": 1147,
+     "value": 27451.5833,
+     "distance_to_median": 4.5
+    },
+    {
+     "tid": 1995,
+     "value": 27462.25,
+     "distance_to_median": 6.1667
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "spending_per_km2_log",
+   "tid": 1163,
+   "value": 1.595,
+   "distance_to_median": 0.007,
+   "candidates": [
+    {
+     "tid": 1163,
+     "value": 1.595,
+     "distance_to_median": 0.007
+    },
+    {
+     "tid": 883,
+     "value": 1.609,
+     "distance_to_median": 0.007
+    },
+    {
+     "tid": 873,
+     "value": 1.5867,
+     "distance_to_median": 0.0153
+    }
+   ]
+  },
+  {
+   "cluster": 4,
+   "statistic": "official_land_area_km2",
+   "tid": 1246,
+   "value": 5606.84,
+   "distance_to_median": 11.855,
+   "candidates": [
+    {
+     "tid": 1246,
+     "value": 5606.84,
+     "distance_to_median": 11.855
+    },
+    {
+     "tid": 35,
+     "value": 5630.55,
+     "distance_to_median": 11.855
+    },
+    {
+     "tid": 717,
+     "value": 5600.575,
+     "distance_to_median": 18.12
+    }
+   ]
+  }
+ ]
+}

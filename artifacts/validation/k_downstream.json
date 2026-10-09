@@ -1,0 +1,136 @@
+{
+ "generated_by": "scripts/apply_k_downstream.py",
+ "outcome": "applied",
+ "decision": {
+  "approved_k": 5,
+  "reason": "Largest count that keeps all five selection criteria in the Dynamic World land-and-spending-shares space while adding a type that is economically distinct on measures deliberately excluded from the space. At k=5: Ward reproduces k-means at ARI 0,662, resampling stability holds at 0,887, all seven spending measures kept outside the space separate every pair, the median spending gap reaches 0,636 of the country's interquartile range, and all five clusters keep a name. The fifth group is 283 districts across the Siberian forest interior at a mean longitude of 99,5 degrees: its spending per official square kilometre is the lowest of all five at 4,35 rubles while its absolute monthly spending of 27 456 rubles sits above both farming groups - the same money spread over enormous emptiness. It is also the more spatially coherent partition: districts in the same group sit 1 589 km apart on average against 2 033 km for shuffled labels, a ratio of 0,781, where k=4 gives 0,825. And it moves: 4,3 % of districts change group between the 2023 and 2024 windows at ARI 0,899, which is something to track, whereas k=4 moves 1,8 % and demonstrates almost nothing for a requirement about cluster change over time.",
+  "decided_by": "the entrant, on 2026-10-08",
+  "space": {
+   "name": "dynamic_world_land_plus_spending_shares",
+   "columns": [
+    "dynamic_world_bare",
+    "dynamic_world_built",
+    "dynamic_world_crops",
+    "dynamic_world_grass",
+    "dynamic_world_trees",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean",
+    "Продовольствие_share",
+    "Здоровье_share",
+    "Маркетплейсы_share",
+    "Общественное питание_share",
+    "Транспорт_share"
+   ],
+   "spending_amount_excluded": true,
+   "why": "Clustering on spending in order to explain spending is circular. Category shares are ratios to a territory's own monthly total, so they encode the shape of the basket while leaving its size recoverable nowhere in the space; spending size then becomes the external test rather than a feature.",
+   "probav_dropped_from_space_kept_as_reference": true
+  },
+  "rule": {
+   "every_cluster_must_be_nameable_by_spending": true,
+   "at_least_one_spending_measure_must_separate_every_pair": true,
+   "kmeans_vs_ward_ari_min": 0.5,
+   "stability_min": 0.7,
+   "median_spending_gap_in_iqr_min": 0.5,
+   "selection_among_passing_counts": "spatial coherence, economic distinctness of the added type, and measurable year-to-year movement",
+   "stated_before_results": "The five criteria were written into scripts/study_combo_space.py and scripts/measure_dw_substitution.py before their numbers existed. The tie-breakers between passing counts were applied after, and are named here rather than presented as pre-registration."
+  },
+  "overridden": {
+   "what": "The pre-registered meaningfulness rule D, with its 0,80 agreement and 10 % churn thresholds, was fixed inside the spending space.",
+   "why_it_does_not_choose_here": "In the spending space only k=2 and k=3 clear that agreement bar, and counts below 4 are ruled out by the entrant. The space itself was changed to break the circularity, so selection now runs on the criteria above, which were stated before the combo and Dynamic World results existed.",
+   "robustness_given_up": "k=4 holds Ward at 0,774 and stability at 0,977 against 0,662 and 0,887 at k=5. The decision knowingly trades that robustness for an interpretable fifth type, a more coherent map and a demonstrable temporal signal."
+  },
+  "counts_rejected": {
+   "k_below_4": "ruled out by the entrant",
+   "k_6_and_7": "stability falls to 0,773 and 0,705; k=7 moves 17,9 % of districts across a single year, which is not persistence",
+   "k_8": "stability 0,689 fails the bar; smallest cluster 50 districts"
+  },
+  "evidence": [
+   "artifacts/validation/dw_substitution.json",
+   "artifacts/validation/combo_space_study.json",
+   "artifacts/validation/combo_increment_test.json",
+   "artifacts/validation/land_only_k.json",
+   "artifacts/validation/dw_temporal_signal.json",
+   "artifacts/validation/k_sweep.csv"
+  ],
+  "caveats_recorded": {
+   "map_area_shares": "The 37,3 % and 51,4 % area shares come from raw OSM municipal polygons, which the geometry audit measures as inflated - a sum of 40 001 827,79 km2 against a union of 39 432 101,33 km2, with a x20,4 inflation in the northern districts. Visual dominance is therefore partly a geometry artefact; all density figures use Rosstat official area.",
+   "land_naming_is_circular": "The land measures used to describe clusters are columns the partition was built from. The independent evidence is always the spending test on columns excluded from the space.",
+   "dw_year_differences_are_unverified": "A mean tree-cover swing of 3,08 percentage points between the 2023 and 2024 composites is not corroborated by any independent annual forest signal held here - the Hansen loss band is cumulative over the whole window, not an annual delta. Part of the measured movement is the classifier changing its mind. This is a standing caution, not a verified claim, and no noise measurement was made.",
+   "monthly_and_quarterly_noise_not_measured": "The Dynamic World resolution study produced population-level numbers only for annual composites; its monthly and quarterly result blocks are empty. Finer frequency is therefore out of scope for cost reasons and remains unmeasured for noise."
+  },
+  "downstream_consequence": "Every surface that reads the clustering must be rebuilt in this space: cluster assignments, names and vocabulary, the legend, monthly clusters, dynamics, map similarity and labels, landing claims and the interpretation seed. Numbers on the public surface change as a result; they are regenerated from artifacts, never hand-edited."
+ },
+ "approved_k": 5,
+ "measured_nameability": {
+  "shipped|k2|kmeans": true,
+  "shipped|k3|kmeans": true,
+  "shipped|k4|kmeans": false,
+  "shipped|k5|kmeans": false,
+  "shipped|k6|kmeans": false,
+  "shipped|k7|kmeans": false,
+  "shipped|k8|kmeans": false,
+  "shipped|k9|kmeans": false,
+  "shipped|k10|kmeans": false,
+  "shipped|k11|kmeans": false,
+  "shipped|k12|kmeans": false,
+  "shipped|k13|kmeans": false,
+  "shipped|k14|kmeans": false
+ },
+ "rebuilt": [
+  {
+   "script": "scripts/run_clustering.py",
+   "exit": 0,
+   "tail": [
+    "method x k partitions compared: 39"
+   ]
+  },
+  {
+   "script": "scripts/build_cluster_names.py",
+   "exit": 0,
+   "tail": [
+    "wrote cluster_names.csv and cluster_names.json; measures used: 13"
+   ]
+  },
+  {
+   "script": "scripts/interpret_clusters.py",
+   "exit": 0,
+   "tail": [
+    "method=kmeans_k5 k=5 assigned=2016 with_profile=2016"
+   ]
+  },
+  {
+   "script": "scripts/build_territory_measures.py",
+   "exit": 0,
+   "tail": [
+    "territory measures: 2016 districts with a cluster, 644 without one (470 with no spending rows, 174 with spending rows but below the panel gate), written to artifacts/landing/territory_measures.json (1,086,290 B)"
+   ]
+  }
+ ],
+ "failures": {},
+ "agreement": {
+  "shipped_partition": "kmeans_k5",
+  "assignments_rows": 2016,
+  "assignments_k_values": [
+   0,
+   1,
+   2,
+   3,
+   4
+  ],
+  "assignments_k_matches_decision": true,
+  "measures_with_cluster": 2016,
+  "measures_matches_assignments": true,
+  "named_clusters": 5,
+  "names_match_k": true,
+  "profile_clusters": 5,
+  "profiles_sum_n": 2016,
+  "profiles_match_k": true,
+  "profiles_sum_matches_assignments": true,
+  "icvi_row_present": true,
+  "icvi_SW": 0.2267743052985388,
+  "icvi_MQ": 0.684594362756927,
+  "icvi_k_matches_decision": true
+ },
+ "agreement_rule": "the assignment file, the cluster names, the cluster profiles, the territory measures and the ICVI table must all describe the same number of clusters and the same number of clustered districts; each is read from the committed artifact rather than inferred from a log"
+}

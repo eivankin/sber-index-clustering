@@ -1,0 +1,6722 @@
+{
+ "shipped|k4|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.2181799841061639,
+   "CH": 823.6845305095798,
+   "S_Dbw": 1.7059227033696336,
+   "AVI": 4.986804728138562,
+   "AVU": 4.1173096937321745,
+   "MQ": 0.6136892504046103
+  },
+  "pairs_considered": 6,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 3,
+   "names": [
+    "gls_fraction_urban",
+    "viirs_lit_mean",
+    "total_mean_rub"
+   ]
+  },
+  "grab_bag_measures": 7,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 602,
+    "share": 0.2986,
+    "mean_silhouette": 0.1912,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.67 sd vs the rest)",
+     "gls_fraction_crops (+0.61 sd vs the rest)",
+     "viirs_lit_mean (-0.50 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "viirs_lit_mean"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 628,
+    "share": 0.3115,
+    "mean_silhouette": 0.1812,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.69 sd vs the rest)",
+     "gls_fraction_crops (-0.52 sd vs the rest)",
+     "elevation_mean (+0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "elevation_mean"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 415,
+    "share": 0.2059,
+    "mean_silhouette": 0.138,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.78 sd vs the rest)",
+     "gls_fraction_crops (+0.70 sd vs the rest)",
+     "spending_per_km2_log (-0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 371,
+    "share": 0.184,
+    "mean_silhouette": 0.4225,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.38 sd vs the rest)",
+     "gls_fraction_urban (+2.18 sd vs the rest)",
+     "total_mean_rub (+2.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7648,
+  "churn_vs_shipped_k3": 0.252,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k4|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1654046293246448,
+   "CH": 702.9068576030074,
+   "S_Dbw": 1.9797048507098383,
+   "AVI": 5.101886736302015,
+   "AVU": 4.048259477617523,
+   "MQ": 0.6010195846803088
+  },
+  "pairs_considered": 6,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 3,
+   "names": [
+    "gls_fraction_urban",
+    "total_mean_rub",
+    "spending_per_km2_log"
+   ]
+  },
+  "grab_bag_measures": 6,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 540,
+    "share": 0.2679,
+    "mean_silhouette": 0.1164,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.66 sd vs the rest)",
+     "total_mean_rub (-0.58 sd vs the rest)",
+     "viirs_lit_mean (-0.39 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 688,
+    "share": 0.3413,
+    "mean_silhouette": 0.0773,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.79 sd vs the rest)",
+     "gls_fraction_crops (+0.36 sd vs the rest)",
+     "spending_per_km2_log (-0.36 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "gls_fraction_crops",
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 285,
+    "share": 0.1414,
+    "mean_silhouette": 0.4804,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.76 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 503,
+    "share": 0.2495,
+    "mean_silhouette": 0.1662,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.91 sd vs the rest)",
+     "gls_fraction_crops (-0.56 sd vs the rest)",
+     "spending_per_km2_log (+0.17 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.806,
+  "churn_vs_shipped_k3": 0.4177,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k5|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.21640529541304712,
+   "CH": 721.6546538826266,
+   "S_Dbw": 1.707877984311463,
+   "AVI": 4.815417010008686,
+   "AVU": 4.059388227605507,
+   "MQ": 0.6422538285700135
+  },
+  "pairs_considered": 10,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 4,
+   "names": [
+    "gls_fraction_crops",
+    "viirs_lit_mean",
+    "total_mean_rub",
+    "spending_per_km2_log"
+   ]
+  },
+  "grab_bag_measures": 6,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 337,
+    "share": 0.1672,
+    "mean_silhouette": 0.4293,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.44 sd vs the rest)",
+     "gls_fraction_urban (+2.41 sd vs the rest)",
+     "total_mean_rub (+2.18 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 532,
+    "share": 0.2639,
+    "mean_silhouette": 0.2229,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.59 sd vs the rest)",
+     "spending_per_km2_log (+0.18 sd vs the rest)",
+     "viirs_lit_mean (+0.12 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log",
+     "viirs_lit_mean"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 566,
+    "share": 0.2808,
+    "mean_silhouette": 0.1707,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "viirs_lit_mean (-0.52 sd vs the rest)",
+     "gls_fraction_crops (+0.42 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "viirs_lit_mean",
+     "gls_fraction_crops"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 174,
+    "share": 0.0863,
+    "mean_silhouette": 0.1271,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.13 sd vs the rest)",
+     "spending_per_km2_log (-0.74 sd vs the rest)",
+     "total_mean_rub (+0.67 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 407,
+    "share": 0.2019,
+    "mean_silhouette": 0.1429,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.04 sd vs the rest)",
+     "total_mean_rub (-0.80 sd vs the rest)",
+     "spending_per_km2_log (-0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.6888,
+  "churn_vs_shipped_k3": 0.3532,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k5|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1607914578206425,
+   "CH": 607.107851072417,
+   "S_Dbw": 1.7886195242937097,
+   "AVI": 4.752325088829413,
+   "AVU": 3.9956898006306902,
+   "MQ": 0.6223537984892515
+  },
+  "pairs_considered": 10,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 2,
+   "names": [
+    "gls_fraction_urban",
+    "total_mean_rub"
+   ]
+  },
+  "grab_bag_measures": 6,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 688,
+    "share": 0.3413,
+    "mean_silhouette": 0.0258,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.79 sd vs the rest)",
+     "gls_fraction_crops (+0.36 sd vs the rest)",
+     "spending_per_km2_log (-0.36 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 503,
+    "share": 0.2495,
+    "mean_silhouette": 0.1467,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.91 sd vs the rest)",
+     "gls_fraction_crops (-0.56 sd vs the rest)",
+     "spending_per_km2_log (+0.17 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 285,
+    "share": 0.1414,
+    "mean_silhouette": 0.4804,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.76 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 346,
+    "share": 0.1716,
+    "mean_silhouette": 0.1814,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.27 sd vs the rest)",
+     "gls_fraction_crops (+0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.1896,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "viirs_lit_mean",
+     "total_mean_rub"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.6523,
+  "churn_vs_shipped_k3": 0.4177,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k6|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.21948256151235046,
+   "CH": 663.4861112352314,
+   "S_Dbw": 1.6026113248295242,
+   "AVI": 4.504462135916737,
+   "AVU": 4.03641873105136,
+   "MQ": 0.6755256602100768
+  },
+  "pairs_considered": 15,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 1,
+   "names": [
+    "total_mean_rub"
+   ]
+  },
+  "grab_bag_measures": 7,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 354,
+    "share": 0.1756,
+    "mean_silhouette": 0.1366,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.89 sd vs the rest)",
+     "total_mean_rub (-0.76 sd vs the rest)",
+     "spending_per_km2_log (-0.22 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 330,
+    "share": 0.1637,
+    "mean_silhouette": 0.4261,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.45 sd vs the rest)",
+     "spending_per_km2_log (+2.44 sd vs the rest)",
+     "total_mean_rub (+2.18 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 226,
+    "share": 0.1121,
+    "mean_silhouette": 0.1941,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.64 sd vs the rest)",
+     "total_mean_rub (-0.56 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 161,
+    "share": 0.0799,
+    "mean_silhouette": 0.1141,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.78 sd vs the rest)",
+     "spending_per_km2_log (-0.72 sd vs the rest)",
+     "total_mean_rub (+0.69 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 441,
+    "share": 0.2188,
+    "mean_silhouette": 0.1635,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.46 sd vs the rest)",
+     "total_mean_rub (-0.45 sd vs the rest)",
+     "spending_per_km2_log (-0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 504,
+    "share": 0.25,
+    "mean_silhouette": 0.2458,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.64 sd vs the rest)",
+     "gls_fraction_crops (-0.18 sd vs the rest)",
+     "spending_per_km2_log (+0.18 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7215,
+  "churn_vs_shipped_k3": 0.4296,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k6|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1612356399208713,
+   "CH": 559.6057905638787,
+   "S_Dbw": 1.8304211650050894,
+   "AVI": 4.600962144223913,
+   "AVU": 3.808349863794725,
+   "MQ": 0.659577711217076
+  },
+  "pairs_considered": 15,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 6,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 503,
+    "share": 0.2495,
+    "mean_silhouette": 0.0994,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.91 sd vs the rest)",
+     "gls_fraction_crops (-0.56 sd vs the rest)",
+     "spending_per_km2_log (+0.17 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 369,
+    "share": 0.183,
+    "mean_silhouette": 0.0935,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.09 sd vs the rest)",
+     "total_mean_rub (-0.76 sd vs the rest)",
+     "spending_per_km2_log (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 319,
+    "share": 0.1582,
+    "mean_silhouette": 0.0832,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.93 sd vs the rest)",
+     "spending_per_km2_log (-0.34 sd vs the rest)",
+     "gls_fraction_crops (-0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 346,
+    "share": 0.1716,
+    "mean_silhouette": 0.1429,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.27 sd vs the rest)",
+     "gls_fraction_crops (+0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.1671,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 285,
+    "share": 0.1414,
+    "mean_silhouette": 0.4804,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.76 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.6533,
+  "churn_vs_shipped_k3": 0.4866,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k7|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.21193894559935214,
+   "CH": 623.1171507311111,
+   "S_Dbw": 1.4829968686418804,
+   "AVI": 4.220571056705542,
+   "AVU": 4.018087449809802,
+   "MQ": 0.6725785118080707
+  },
+  "pairs_considered": 21,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 6,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.1411,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.93 sd vs the rest)",
+     "spending_per_km2_log (-0.78 sd vs the rest)",
+     "total_mean_rub (+0.73 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 423,
+    "share": 0.2098,
+    "mean_silhouette": 0.2501,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.74 sd vs the rest)",
+     "spending_per_km2_log (+0.38 sd vs the rest)",
+     "viirs_lit_mean (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 268,
+    "share": 0.1329,
+    "mean_silhouette": 0.1194,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.67 sd vs the rest)",
+     "gls_fraction_crops (+0.62 sd vs the rest)",
+     "viirs_lit_mean (-0.33 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 302,
+    "share": 0.1498,
+    "mean_silhouette": 0.4036,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.63 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 228,
+    "share": 0.1131,
+    "mean_silhouette": 0.1814,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.84 sd vs the rest)",
+     "viirs_lit_mean (-0.60 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 243,
+    "share": 0.1205,
+    "mean_silhouette": 0.1511,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.56 sd vs the rest)",
+     "total_mean_rub (-0.52 sd vs the rest)",
+     "spending_per_km2_log (-0.18 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 415,
+    "share": 0.2059,
+    "mean_silhouette": 0.1825,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.26 sd vs the rest)",
+     "total_mean_rub (-0.24 sd vs the rest)",
+     "gls_fraction_crops (-0.13 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7377,
+  "churn_vs_shipped_k3": 0.5496,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k7|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.17031511086157344,
+   "CH": 533.3986430585542,
+   "S_Dbw": 1.716022875751939,
+   "AVI": 4.529118515205549,
+   "AVU": 4.01984305351554,
+   "MQ": 0.6690914748001145
+  },
+  "pairs_considered": 21,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 369,
+    "share": 0.183,
+    "mean_silhouette": 0.0935,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.09 sd vs the rest)",
+     "total_mean_rub (-0.76 sd vs the rest)",
+     "spending_per_km2_log (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 424,
+    "share": 0.2103,
+    "mean_silhouette": 0.1875,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.83 sd vs the rest)",
+     "spending_per_km2_log (+0.41 sd vs the rest)",
+     "gls_fraction_crops (-0.32 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 319,
+    "share": 0.1582,
+    "mean_silhouette": 0.0615,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.93 sd vs the rest)",
+     "spending_per_km2_log (-0.34 sd vs the rest)",
+     "gls_fraction_crops (-0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 346,
+    "share": 0.1716,
+    "mean_silhouette": 0.1345,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.27 sd vs the rest)",
+     "gls_fraction_crops (+0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.1587,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 285,
+    "share": 0.1414,
+    "mean_silhouette": 0.4256,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.76 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 79,
+    "share": 0.0392,
+    "mean_silhouette": 0.211,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.73 sd vs the rest)",
+     "total_mean_rub (+1.41 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7282,
+  "churn_vs_shipped_k3": 0.5243,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k8|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.19239639314584014,
+   "CH": 580.6218807371922,
+   "S_Dbw": 1.5208552540694917,
+   "AVI": 3.912727737558385,
+   "AVU": 3.9629613425795136,
+   "MQ": 0.6882237559227347
+  },
+  "pairs_considered": 28,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 1,
+   "names": [
+    "total_mean_rub"
+   ]
+  },
+  "grab_bag_measures": 3,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 109,
+    "share": 0.0541,
+    "mean_silhouette": 0.1642,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.32 sd vs the rest)",
+     "total_mean_rub (+1.20 sd vs the rest)",
+     "spending_per_km2_log (-0.88 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 310,
+    "share": 0.1538,
+    "mean_silhouette": 0.2175,
+    "most_extreme_measures": [
+     "gls_fraction_crops (-0.36 sd vs the rest)",
+     "total_mean_rub (+0.36 sd vs the rest)",
+     "elevation_mean (+0.12 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 253,
+    "share": 0.1255,
+    "mean_silhouette": 0.1784,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.75 sd vs the rest)",
+     "viirs_lit_mean (-0.65 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 309,
+    "share": 0.1533,
+    "mean_silhouette": 0.2083,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.90 sd vs the rest)",
+     "spending_per_km2_log (+0.76 sd vs the rest)",
+     "gls_fraction_urban (+0.37 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 297,
+    "share": 0.1473,
+    "mean_silhouette": 0.129,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.61 sd vs the rest)",
+     "total_mean_rub (-0.41 sd vs the rest)",
+     "spending_per_km2_log (-0.13 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 273,
+    "share": 0.1354,
+    "mean_silhouette": 0.138,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.02 sd vs the rest)",
+     "total_mean_rub (-0.72 sd vs the rest)",
+     "spending_per_km2_log (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.3811,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.92 sd vs the rest)",
+     "spending_per_km2_log (+2.51 sd vs the rest)",
+     "total_mean_rub (+2.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 208,
+    "share": 0.1032,
+    "mean_silhouette": 0.123,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.38 sd vs the rest)",
+     "spending_per_km2_log (-0.31 sd vs the rest)",
+     "elevation_mean (+0.22 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.6555,
+  "churn_vs_shipped_k3": 0.5957,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k8|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.16634697165755155,
+   "CH": 491.5749995381206,
+   "S_Dbw": 1.7359607069752596,
+   "AVI": 4.350590841130059,
+   "AVU": 3.9871988110642023,
+   "MQ": 0.6703531918496923
+  },
+  "pairs_considered": 28,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 424,
+    "share": 0.2103,
+    "mean_silhouette": 0.1874,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.83 sd vs the rest)",
+     "spending_per_km2_log (+0.41 sd vs the rest)",
+     "gls_fraction_crops (-0.32 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 346,
+    "share": 0.1716,
+    "mean_silhouette": 0.1093,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.27 sd vs the rest)",
+     "gls_fraction_crops (+0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 319,
+    "share": 0.1582,
+    "mean_silhouette": 0.0462,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.93 sd vs the rest)",
+     "spending_per_km2_log (-0.34 sd vs the rest)",
+     "gls_fraction_crops (-0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 196,
+    "share": 0.0972,
+    "mean_silhouette": 0.1148,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.40 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "spending_per_km2_log (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.1287,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 285,
+    "share": 0.1414,
+    "mean_silhouette": 0.4256,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.76 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 79,
+    "share": 0.0392,
+    "mean_silhouette": 0.211,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.73 sd vs the rest)",
+     "total_mean_rub (+1.41 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.1408,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "gls_fraction_crops (+0.42 sd vs the rest)",
+     "viirs_lit_mean (-0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.6625,
+  "churn_vs_shipped_k3": 0.5714,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k9|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.19522974428953754,
+   "CH": 545.4969421698736,
+   "S_Dbw": 1.523978834375649,
+   "AVI": 3.832035790472924,
+   "AVU": 3.975598710039717,
+   "MQ": 0.6861138324435764
+  },
+  "pairs_considered": 36,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 102,
+    "share": 0.0506,
+    "mean_silhouette": 0.1299,
+    "most_extreme_measures": [
+     "total_mean_rub (+1.22 sd vs the rest)",
+     "official_land_area_km2 (+1.10 sd vs the rest)",
+     "spending_per_km2_log (-0.90 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "official_land_area_km2",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 235,
+    "share": 0.1166,
+    "mean_silhouette": 0.1279,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.67 sd vs the rest)",
+     "gls_fraction_crops (+0.64 sd vs the rest)",
+     "viirs_lit_mean (-0.27 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 321,
+    "share": 0.1592,
+    "mean_silhouette": 0.1697,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.36 sd vs the rest)",
+     "spending_per_km2_log (-0.28 sd vs the rest)",
+     "gls_fraction_crops (-0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 251,
+    "share": 0.1245,
+    "mean_silhouette": 0.2386,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.69 sd vs the rest)",
+     "spending_per_km2_log (+0.68 sd vs the rest)",
+     "gls_fraction_urban (+0.36 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 223,
+    "share": 0.1106,
+    "mean_silhouette": 0.2021,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.75 sd vs the rest)",
+     "gls_fraction_crops (-0.40 sd vs the rest)",
+     "spending_per_km2_log (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 271,
+    "share": 0.1344,
+    "mean_silhouette": 0.3876,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.88 sd vs the rest)",
+     "spending_per_km2_log (+2.50 sd vs the rest)",
+     "total_mean_rub (+2.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 276,
+    "share": 0.1369,
+    "mean_silhouette": 0.1391,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.34 sd vs the rest)",
+     "viirs_lit_mean (-0.32 sd vs the rest)",
+     "gls_fraction_crops (+0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "gls_fraction_crops"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 206,
+    "share": 0.1022,
+    "mean_silhouette": 0.1859,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.95 sd vs the rest)",
+     "viirs_lit_mean (-0.76 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 131,
+    "share": 0.065,
+    "mean_silhouette": 0.125,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.03 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "spending_per_km2_log (-0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.6054,
+  "churn_vs_shipped_k3": 0.6399,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k9|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.15423610257784268,
+   "CH": 463.12067931833525,
+   "S_Dbw": 1.7339253736521805,
+   "AVI": 4.0929946600731935,
+   "AVU": 3.909020161464446,
+   "MQ": 0.6758178828605226
+  },
+  "pairs_considered": 36,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 319,
+    "share": 0.1582,
+    "mean_silhouette": 0.0265,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.93 sd vs the rest)",
+     "spending_per_km2_log (-0.34 sd vs the rest)",
+     "gls_fraction_crops (-0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 346,
+    "share": 0.1716,
+    "mean_silhouette": 0.0948,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.27 sd vs the rest)",
+     "gls_fraction_crops (+0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 285,
+    "share": 0.1414,
+    "mean_silhouette": 0.3773,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.76 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 196,
+    "share": 0.0972,
+    "mean_silhouette": 0.1134,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.40 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "spending_per_km2_log (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.118,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 267,
+    "share": 0.1324,
+    "mean_silhouette": 0.2384,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.75 sd vs the rest)",
+     "total_mean_rub (+0.68 sd vs the rest)",
+     "gls_fraction_urban (+0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 79,
+    "share": 0.0392,
+    "mean_silhouette": 0.1755,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.73 sd vs the rest)",
+     "total_mean_rub (+1.41 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.1408,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "gls_fraction_crops (+0.42 sd vs the rest)",
+     "viirs_lit_mean (-0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.143,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.96 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)",
+     "viirs_lit_mean (+0.09 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "gls_fraction_crops"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.5807,
+  "churn_vs_shipped_k3": 0.6334,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k10|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.18105230084870555,
+   "CH": 515.2103158746398,
+   "S_Dbw": 1.5429732875152373,
+   "AVI": 3.548881546311518,
+   "AVU": 4.209782188685373,
+   "MQ": 0.6973180648397771
+  },
+  "pairs_considered": 45,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 237,
+    "share": 0.1176,
+    "mean_silhouette": 0.2275,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.72 sd vs the rest)",
+     "total_mean_rub (+0.64 sd vs the rest)",
+     "gls_fraction_urban (+0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 151,
+    "share": 0.0749,
+    "mean_silhouette": 0.1046,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.85 sd vs the rest)",
+     "spending_per_km2_log (-0.40 sd vs the rest)",
+     "elevation_mean (+0.37 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 204,
+    "share": 0.1012,
+    "mean_silhouette": 0.1723,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.91 sd vs the rest)",
+     "viirs_lit_mean (-0.76 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 109,
+    "share": 0.0541,
+    "mean_silhouette": 0.1406,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.49 sd vs the rest)",
+     "total_mean_rub (+1.19 sd vs the rest)",
+     "spending_per_km2_log (-0.88 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 218,
+    "share": 0.1081,
+    "mean_silhouette": 0.2611,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.10 sd vs the rest)",
+     "total_mean_rub (+1.89 sd vs the rest)",
+     "gls_fraction_urban (+1.80 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 293,
+    "share": 0.1453,
+    "mean_silhouette": 0.1992,
+    "most_extreme_measures": [
+     "gls_fraction_crops (-0.46 sd vs the rest)",
+     "total_mean_rub (+0.45 sd vs the rest)",
+     "elevation_mean (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 184,
+    "share": 0.0913,
+    "mean_silhouette": 0.0925,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.64 sd vs the rest)",
+     "gls_fraction_crops (+0.54 sd vs the rest)",
+     "viirs_lit_mean (-0.34 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 196,
+    "share": 0.0972,
+    "mean_silhouette": 0.1822,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.13 sd vs the rest)",
+     "total_mean_rub (-0.61 sd vs the rest)",
+     "spending_per_km2_log (-0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 314,
+    "share": 0.1558,
+    "mean_silhouette": 0.1493,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.42 sd vs the rest)",
+     "total_mean_rub (-0.39 sd vs the rest)",
+     "gls_fraction_crops (+0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 110,
+    "share": 0.0546,
+    "mean_silhouette": 0.3457,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.25 sd vs the rest)",
+     "total_mean_rub (+2.62 sd vs the rest)",
+     "spending_per_km2_log (+2.60 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.5621,
+  "churn_vs_shipped_k3": 0.6076,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k10|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1550263009116825,
+   "CH": 438.27803510760674,
+   "S_Dbw": 1.7460436961829597,
+   "AVI": 4.199398400365824,
+   "AVU": 3.9160942705916764,
+   "MQ": 0.6751650468694596
+  },
+  "pairs_considered": 45,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 346,
+    "share": 0.1716,
+    "mean_silhouette": 0.0541,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.27 sd vs the rest)",
+     "gls_fraction_crops (+0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.1141,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 285,
+    "share": 0.1414,
+    "mean_silhouette": 0.3773,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.76 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 196,
+    "share": 0.0972,
+    "mean_silhouette": 0.0893,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.40 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "spending_per_km2_log (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 266,
+    "share": 0.1319,
+    "mean_silhouette": 0.1161,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.66 sd vs the rest)",
+     "spending_per_km2_log (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 267,
+    "share": 0.1324,
+    "mean_silhouette": 0.2319,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.75 sd vs the rest)",
+     "total_mean_rub (+0.68 sd vs the rest)",
+     "gls_fraction_urban (+0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 79,
+    "share": 0.0392,
+    "mean_silhouette": 0.1624,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.73 sd vs the rest)",
+     "total_mean_rub (+1.41 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.1321,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "gls_fraction_crops (+0.42 sd vs the rest)",
+     "viirs_lit_mean (-0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.1355,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.96 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)",
+     "viirs_lit_mean (+0.09 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 53,
+    "share": 0.0263,
+    "mean_silhouette": 0.0952,
+    "most_extreme_measures": [
+     "elevation_mean (+2.98 sd vs the rest)",
+     "viirs_lit_mean (-2.04 sd vs the rest)",
+     "gls_fraction_crops (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "elevation_mean",
+     "viirs_lit_mean"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.5622,
+  "churn_vs_shipped_k3": 0.6334,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k11|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.17856974563617575,
+   "CH": 490.9953325564413,
+   "S_Dbw": 1.4800241246955068,
+   "AVI": 3.493940234626375,
+   "AVU": 4.251602496925972,
+   "MQ": 0.6825322083729629
+  },
+  "pairs_considered": 55,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 6,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 240,
+    "share": 0.119,
+    "mean_silhouette": 0.2474,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.73 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)",
+     "gls_fraction_urban (+0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 234,
+    "share": 0.1161,
+    "mean_silhouette": 0.1728,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.56 sd vs the rest)",
+     "total_mean_rub (-0.56 sd vs the rest)",
+     "viirs_lit_mean (-0.48 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 101,
+    "share": 0.0501,
+    "mean_silhouette": 0.3186,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.27 sd vs the rest)",
+     "total_mean_rub (+2.68 sd vs the rest)",
+     "spending_per_km2_log (+2.61 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 216,
+    "share": 0.1071,
+    "mean_silhouette": 0.2996,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.22 sd vs the rest)",
+     "gls_fraction_urban (+2.05 sd vs the rest)",
+     "total_mean_rub (+1.92 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 165,
+    "share": 0.0818,
+    "mean_silhouette": 0.0855,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.66 sd vs the rest)",
+     "elevation_mean (+0.42 sd vs the rest)",
+     "spending_per_km2_log (-0.33 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.1874,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.95 sd vs the rest)",
+     "gls_fraction_crops (-0.55 sd vs the rest)",
+     "spending_per_km2_log (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 327,
+    "share": 0.1622,
+    "mean_silhouette": 0.1735,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.20 sd vs the rest)",
+     "spending_per_km2_log (-0.08 sd vs the rest)",
+     "gls_fraction_crops (+0.07 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 240,
+    "share": 0.119,
+    "mean_silhouette": 0.1262,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.01 sd vs the rest)",
+     "total_mean_rub (-0.69 sd vs the rest)",
+     "spending_per_km2_log (-0.18 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 177,
+    "share": 0.0878,
+    "mean_silhouette": 0.1015,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.86 sd vs the rest)",
+     "total_mean_rub (-0.42 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 99,
+    "share": 0.0491,
+    "mean_silhouette": 0.1445,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.49 sd vs the rest)",
+     "total_mean_rub (+1.10 sd vs the rest)",
+     "spending_per_km2_log (-0.89 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 60,
+    "share": 0.0298,
+    "mean_silhouette": 0.1568,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.00 sd vs the rest)",
+     "viirs_lit_mean (-1.05 sd vs the rest)",
+     "gls_fraction_bare (+0.33 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_bare"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.5345,
+  "churn_vs_shipped_k3": 0.6776,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k11|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1518631251381025,
+   "CH": 419.71350802695554,
+   "S_Dbw": 1.762655198845917,
+   "AVI": 4.080613237499198,
+   "AVU": 3.879849074360487,
+   "MQ": 0.6744738452410917
+  },
+  "pairs_considered": 55,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 2,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 285,
+    "share": 0.1414,
+    "mean_silhouette": 0.3773,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.76 sd vs the rest)",
+     "spending_per_km2_log (+2.48 sd vs the rest)",
+     "total_mean_rub (+2.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.0892,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.0488,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "total_mean_rub (-0.39 sd vs the rest)",
+     "gls_fraction_crops (+0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 196,
+    "share": 0.0972,
+    "mean_silhouette": 0.0807,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.40 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "spending_per_km2_log (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 266,
+    "share": 0.1319,
+    "mean_silhouette": 0.0717,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.66 sd vs the rest)",
+     "spending_per_km2_log (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 267,
+    "share": 0.1324,
+    "mean_silhouette": 0.23,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.75 sd vs the rest)",
+     "total_mean_rub (+0.68 sd vs the rest)",
+     "gls_fraction_urban (+0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 79,
+    "share": 0.0392,
+    "mean_silhouette": 0.1617,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.73 sd vs the rest)",
+     "total_mean_rub (+1.41 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.1065,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "gls_fraction_crops (+0.42 sd vs the rest)",
+     "viirs_lit_mean (-0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.1083,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.96 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)",
+     "viirs_lit_mean (+0.09 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 53,
+    "share": 0.0263,
+    "mean_silhouette": 0.095,
+    "most_extreme_measures": [
+     "elevation_mean (+2.98 sd vs the rest)",
+     "viirs_lit_mean (-2.04 sd vs the rest)",
+     "gls_fraction_crops (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "elevation_mean",
+     "viirs_lit_mean"
+    ]
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 209,
+    "share": 0.1037,
+    "mean_silhouette": 0.1635,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.18 sd vs the rest)",
+     "gls_fraction_crops (+0.13 sd vs the rest)",
+     "elevation_mean (+0.04 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.5156,
+  "churn_vs_shipped_k3": 0.6721,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k12|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.17824554587915353,
+   "CH": 471.3264591683117,
+   "S_Dbw": 1.488444191805049,
+   "AVI": 3.4891370371270667,
+   "AVU": 4.245493600602384,
+   "MQ": 0.6828521830436539
+  },
+  "pairs_considered": 66,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 4,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 226,
+    "share": 0.1121,
+    "mean_silhouette": 0.1175,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.01 sd vs the rest)",
+     "total_mean_rub (-0.68 sd vs the rest)",
+     "spending_per_km2_log (-0.18 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 219,
+    "share": 0.1086,
+    "mean_silhouette": 0.296,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.21 sd vs the rest)",
+     "gls_fraction_urban (+2.02 sd vs the rest)",
+     "total_mean_rub (+1.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 174,
+    "share": 0.0863,
+    "mean_silhouette": 0.1788,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.82 sd vs the rest)",
+     "gls_fraction_crops (-0.49 sd vs the rest)",
+     "spending_per_km2_log (+0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 187,
+    "share": 0.0928,
+    "mean_silhouette": 0.1845,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.57 sd vs the rest)",
+     "total_mean_rub (-0.58 sd vs the rest)",
+     "viirs_lit_mean (-0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 249,
+    "share": 0.1235,
+    "mean_silhouette": 0.1518,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "spending_per_km2_log (-0.31 sd vs the rest)",
+     "gls_fraction_crops (-0.25 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 101,
+    "share": 0.0501,
+    "mean_silhouette": 0.3231,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.27 sd vs the rest)",
+     "total_mean_rub (+2.68 sd vs the rest)",
+     "spending_per_km2_log (+2.61 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 163,
+    "share": 0.0809,
+    "mean_silhouette": 0.0902,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.89 sd vs the rest)",
+     "total_mean_rub (-0.41 sd vs the rest)",
+     "spending_per_km2_log (-0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 230,
+    "share": 0.1141,
+    "mean_silhouette": 0.246,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.61 sd vs the rest)",
+     "total_mean_rub (+0.59 sd vs the rest)",
+     "gls_fraction_urban (+0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 80,
+    "share": 0.0397,
+    "mean_silhouette": 0.1683,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.82 sd vs the rest)",
+     "total_mean_rub (+1.46 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 89,
+    "share": 0.0441,
+    "mean_silhouette": 0.0875,
+    "most_extreme_measures": [
+     "elevation_mean (+0.80 sd vs the rest)",
+     "viirs_lit_mean (-0.56 sd vs the rest)",
+     "total_mean_rub (-0.36 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 65,
+    "share": 0.0322,
+    "mean_silhouette": 0.1347,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.92 sd vs the rest)",
+     "viirs_lit_mean (-1.34 sd vs the rest)",
+     "gls_fraction_bare (+0.34 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 233,
+    "share": 0.1156,
+    "mean_silhouette": 0.1736,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.48 sd vs the rest)",
+     "viirs_lit_mean (-0.11 sd vs the rest)",
+     "total_mean_rub (-0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.527,
+  "churn_vs_shipped_k3": 0.687,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k12|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.13654299115235655,
+   "CH": 404.17409681240497,
+   "S_Dbw": 1.7284034797988554,
+   "AVI": 3.8193198832392325,
+   "AVU": 4.226787732696347,
+   "MQ": 0.6749654299330048
+  },
+  "pairs_considered": 66,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.089,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.89 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 196,
+    "share": 0.0972,
+    "mean_silhouette": 0.0807,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.40 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "spending_per_km2_log (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.0488,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "total_mean_rub (-0.39 sd vs the rest)",
+     "gls_fraction_crops (+0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.0893,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.96 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)",
+     "viirs_lit_mean (+0.09 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 266,
+    "share": 0.1319,
+    "mean_silhouette": 0.0717,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.66 sd vs the rest)",
+     "spending_per_km2_log (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 267,
+    "share": 0.1324,
+    "mean_silhouette": 0.1883,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.75 sd vs the rest)",
+     "total_mean_rub (+0.68 sd vs the rest)",
+     "gls_fraction_urban (+0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 79,
+    "share": 0.0392,
+    "mean_silhouette": 0.1617,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.73 sd vs the rest)",
+     "total_mean_rub (+1.41 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.1065,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "gls_fraction_crops (+0.42 sd vs the rest)",
+     "viirs_lit_mean (-0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 86,
+    "share": 0.0427,
+    "mean_silhouette": 0.3216,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.39 sd vs the rest)",
+     "total_mean_rub (+2.65 sd vs the rest)",
+     "spending_per_km2_log (+2.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 53,
+    "share": 0.0263,
+    "mean_silhouette": 0.095,
+    "most_extreme_measures": [
+     "elevation_mean (+2.98 sd vs the rest)",
+     "viirs_lit_mean (-2.04 sd vs the rest)",
+     "gls_fraction_crops (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "elevation_mean",
+     "viirs_lit_mean"
+    ]
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 209,
+    "share": 0.1037,
+    "mean_silhouette": 0.1635,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.18 sd vs the rest)",
+     "gls_fraction_crops (+0.13 sd vs the rest)",
+     "elevation_mean (+0.04 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 199,
+    "share": 0.0987,
+    "mean_silhouette": 0.321,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.34 sd vs the rest)",
+     "gls_fraction_urban (+2.30 sd vs the rest)",
+     "total_mean_rub (+1.98 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.5482,
+  "churn_vs_shipped_k3": 0.7148,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k13|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1848203309057958,
+   "CH": 456.05744632634793,
+   "S_Dbw": 1.492024653848352,
+   "AVI": 3.452166647289336,
+   "AVU": 4.442274885205857,
+   "MQ": 0.6822306360692616
+  },
+  "pairs_considered": 78,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 4,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.0934,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.59 sd vs the rest)",
+     "total_mean_rub (-0.50 sd vs the rest)",
+     "spending_per_km2_log (-0.13 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 231,
+    "share": 0.1146,
+    "mean_silhouette": 0.23,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.58 sd vs the rest)",
+     "total_mean_rub (+0.58 sd vs the rest)",
+     "gls_fraction_urban (+0.21 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 23,
+    "share": 0.0114,
+    "mean_silhouette": 0.3087,
+    "most_extreme_measures": [
+     "elevation_mean (+1.66 sd vs the rest)",
+     "gls_fraction_crops (+1.16 sd vs the rest)",
+     "gls_fraction_bare (+0.82 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_bare"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.1327,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.61 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "viirs_lit_mean (-0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 62,
+    "share": 0.0308,
+    "mean_silhouette": 0.0892,
+    "most_extreme_measures": [
+     "elevation_mean (+2.39 sd vs the rest)",
+     "viirs_lit_mean (-1.68 sd vs the rest)",
+     "gls_fraction_crops (-0.47 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 219,
+    "share": 0.1086,
+    "mean_silhouette": 0.297,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.20 sd vs the rest)",
+     "gls_fraction_urban (+2.02 sd vs the rest)",
+     "total_mean_rub (+1.90 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 261,
+    "share": 0.1295,
+    "mean_silhouette": 0.1704,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.39 sd vs the rest)",
+     "spending_per_km2_log (-0.27 sd vs the rest)",
+     "gls_fraction_crops (-0.22 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 83,
+    "share": 0.0412,
+    "mean_silhouette": 0.165,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.82 sd vs the rest)",
+     "total_mean_rub (+1.46 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.1641,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.23 sd vs the rest)",
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "spending_per_km2_log (-0.09 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 226,
+    "share": 0.1121,
+    "mean_silhouette": 0.1384,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.37 sd vs the rest)",
+     "total_mean_rub (-0.21 sd vs the rest)",
+     "viirs_lit_mean (-0.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 101,
+    "share": 0.0501,
+    "mean_silhouette": 0.3262,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.27 sd vs the rest)",
+     "total_mean_rub (+2.68 sd vs the rest)",
+     "spending_per_km2_log (+2.61 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 199,
+    "share": 0.0987,
+    "mean_silhouette": 0.1875,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.74 sd vs the rest)",
+     "gls_fraction_crops (-0.40 sd vs the rest)",
+     "spending_per_km2_log (+0.17 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "12": {
+    "cluster": 12,
+    "districts": 198,
+    "share": 0.0982,
+    "mean_silhouette": 0.1931,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.91 sd vs the rest)",
+     "viirs_lit_mean (-0.73 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.526,
+  "churn_vs_shipped_k3": 0.7029,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k13|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.14172444919267016,
+   "CH": 391.26355822917003,
+   "S_Dbw": 1.6709983141777005,
+   "AVI": 3.81500658198172,
+   "AVU": 4.41446979300867,
+   "MQ": 0.6730552521516868
+  },
+  "pairs_considered": 78,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 196,
+    "share": 0.0972,
+    "mean_silhouette": 0.0718,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.40 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "spending_per_km2_log (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 266,
+    "share": 0.1319,
+    "mean_silhouette": 0.0682,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.66 sd vs the rest)",
+     "spending_per_km2_log (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.043,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "total_mean_rub (-0.39 sd vs the rest)",
+     "gls_fraction_crops (+0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.0893,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.96 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)",
+     "viirs_lit_mean (+0.09 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.1629,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.99 sd vs the rest)",
+     "viirs_lit_mean (-0.73 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 267,
+    "share": 0.1324,
+    "mean_silhouette": 0.1868,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.75 sd vs the rest)",
+     "total_mean_rub (+0.68 sd vs the rest)",
+     "gls_fraction_urban (+0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 79,
+    "share": 0.0392,
+    "mean_silhouette": 0.1617,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.73 sd vs the rest)",
+     "total_mean_rub (+1.41 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.1031,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "gls_fraction_crops (+0.42 sd vs the rest)",
+     "viirs_lit_mean (-0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 86,
+    "share": 0.0427,
+    "mean_silhouette": 0.3216,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.39 sd vs the rest)",
+     "total_mean_rub (+2.65 sd vs the rest)",
+     "spending_per_km2_log (+2.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 53,
+    "share": 0.0263,
+    "mean_silhouette": 0.095,
+    "most_extreme_measures": [
+     "elevation_mean (+2.98 sd vs the rest)",
+     "viirs_lit_mean (-2.04 sd vs the rest)",
+     "gls_fraction_crops (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 209,
+    "share": 0.1037,
+    "mean_silhouette": 0.1564,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.18 sd vs the rest)",
+     "gls_fraction_crops (+0.13 sd vs the rest)",
+     "elevation_mean (+0.04 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 199,
+    "share": 0.0987,
+    "mean_silhouette": 0.321,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.34 sd vs the rest)",
+     "gls_fraction_urban (+2.30 sd vs the rest)",
+     "total_mean_rub (+1.98 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "12": {
+    "cluster": 12,
+    "districts": 21,
+    "share": 0.0104,
+    "mean_silhouette": 0.294,
+    "most_extreme_measures": [
+     "elevation_mean (+1.66 sd vs the rest)",
+     "gls_fraction_bare (+0.82 sd vs the rest)",
+     "spending_per_km2_log (+0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.5623,
+  "churn_vs_shipped_k3": 0.7148,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k14|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.17926000859535934,
+   "CH": 442.27508837607627,
+   "S_Dbw": 1.4948127442478814,
+   "AVI": 3.326212433516544,
+   "AVU": 4.252243065642752,
+   "MQ": 0.6897162081195186
+  },
+  "pairs_considered": 91,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 3,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 100,
+    "share": 0.0496,
+    "mean_silhouette": 0.3163,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.27 sd vs the rest)",
+     "total_mean_rub (+2.68 sd vs the rest)",
+     "spending_per_km2_log (+2.62 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 182,
+    "share": 0.0903,
+    "mean_silhouette": 0.1633,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.72 sd vs the rest)",
+     "gls_fraction_crops (-0.44 sd vs the rest)",
+     "spending_per_km2_log (-0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 111,
+    "share": 0.0551,
+    "mean_silhouette": 0.0776,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.59 sd vs the rest)",
+     "total_mean_rub (-0.41 sd vs the rest)",
+     "gls_fraction_crops (+0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 176,
+    "share": 0.0873,
+    "mean_silhouette": 0.1809,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.85 sd vs the rest)",
+     "gls_fraction_crops (-0.56 sd vs the rest)",
+     "spending_per_km2_log (+0.12 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 164,
+    "share": 0.0813,
+    "mean_silhouette": 0.1591,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.38 sd vs the rest)",
+     "total_mean_rub (-0.62 sd vs the rest)",
+     "spending_per_km2_log (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 183,
+    "share": 0.0908,
+    "mean_silhouette": 0.1577,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.33 sd vs the rest)",
+     "spending_per_km2_log (-0.16 sd vs the rest)",
+     "elevation_mean (+0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 182,
+    "share": 0.0903,
+    "mean_silhouette": 0.2017,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.77 sd vs the rest)",
+     "viirs_lit_mean (-0.62 sd vs the rest)",
+     "total_mean_rub (-0.56 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 195,
+    "share": 0.0967,
+    "mean_silhouette": 0.2444,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.76 sd vs the rest)",
+     "total_mean_rub (+0.67 sd vs the rest)",
+     "gls_fraction_urban (+0.52 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 207,
+    "share": 0.1027,
+    "mean_silhouette": 0.2945,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.25 sd vs the rest)",
+     "gls_fraction_urban (+2.15 sd vs the rest)",
+     "total_mean_rub (+1.93 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 53,
+    "share": 0.0263,
+    "mean_silhouette": 0.1499,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.05 sd vs the rest)",
+     "viirs_lit_mean (-1.12 sd vs the rest)",
+     "gls_fraction_bare (+0.34 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 130,
+    "share": 0.0645,
+    "mean_silhouette": 0.1101,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.65 sd vs the rest)",
+     "gls_fraction_crops (+0.53 sd vs the rest)",
+     "viirs_lit_mean (-0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 58,
+    "share": 0.0288,
+    "mean_silhouette": 0.0937,
+    "most_extreme_measures": [
+     "elevation_mean (+2.43 sd vs the rest)",
+     "viirs_lit_mean (-1.86 sd vs the rest)",
+     "gls_fraction_crops (-0.49 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "elevation_mean"
+    ]
+   },
+   "12": {
+    "cluster": 12,
+    "districts": 206,
+    "share": 0.1022,
+    "mean_silhouette": 0.1542,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.43 sd vs the rest)",
+     "viirs_lit_mean (-0.08 sd vs the rest)",
+     "spending_per_km2_log (+0.08 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "13": {
+    "cluster": 13,
+    "districts": 69,
+    "share": 0.0342,
+    "mean_silhouette": 0.1644,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+2.18 sd vs the rest)",
+     "total_mean_rub (+1.63 sd vs the rest)",
+     "spending_per_km2_log (-0.92 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.5615,
+  "churn_vs_shipped_k3": 0.7257,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "shipped|k14|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.14129166533524798,
+   "CH": 379.43469568211725,
+   "S_Dbw": 1.6558739751438338,
+   "AVI": 3.6661508255413344,
+   "AVU": 4.361630270895802,
+   "MQ": 0.6727951436418922
+  },
+  "pairs_considered": 91,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 266,
+    "share": 0.1319,
+    "mean_silhouette": 0.0575,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.66 sd vs the rest)",
+     "spending_per_km2_log (-0.28 sd vs the rest)",
+     "total_mean_rub (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.1292,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.99 sd vs the rest)",
+     "viirs_lit_mean (-0.73 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.0322,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "total_mean_rub (-0.39 sd vs the rest)",
+     "gls_fraction_crops (+0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.0893,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.96 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)",
+     "viirs_lit_mean (+0.09 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 53,
+    "share": 0.0263,
+    "mean_silhouette": 0.0785,
+    "most_extreme_measures": [
+     "elevation_mean (+2.98 sd vs the rest)",
+     "viirs_lit_mean (-2.04 sd vs the rest)",
+     "gls_fraction_crops (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 267,
+    "share": 0.1324,
+    "mean_silhouette": 0.1864,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+0.75 sd vs the rest)",
+     "total_mean_rub (+0.68 sd vs the rest)",
+     "gls_fraction_urban (+0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 79,
+    "share": 0.0392,
+    "mean_silhouette": 0.1617,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.73 sd vs the rest)",
+     "total_mean_rub (+1.41 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 173,
+    "share": 0.0858,
+    "mean_silhouette": 0.0551,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.63 sd vs the rest)",
+     "gls_fraction_crops (+0.42 sd vs the rest)",
+     "viirs_lit_mean (-0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 86,
+    "share": 0.0427,
+    "mean_silhouette": 0.3216,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.39 sd vs the rest)",
+     "total_mean_rub (+2.65 sd vs the rest)",
+     "spending_per_km2_log (+2.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 88,
+    "share": 0.0437,
+    "mean_silhouette": 0.1989,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.44 sd vs the rest)",
+     "total_mean_rub (-0.64 sd vs the rest)",
+     "elevation_mean (+0.06 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 209,
+    "share": 0.1037,
+    "mean_silhouette": 0.1473,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.18 sd vs the rest)",
+     "gls_fraction_crops (+0.13 sd vs the rest)",
+     "elevation_mean (+0.04 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 199,
+    "share": 0.0987,
+    "mean_silhouette": 0.321,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.34 sd vs the rest)",
+     "gls_fraction_urban (+2.30 sd vs the rest)",
+     "total_mean_rub (+1.98 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "12": {
+    "cluster": 12,
+    "districts": 21,
+    "share": 0.0104,
+    "mean_silhouette": 0.2887,
+    "most_extreme_measures": [
+     "elevation_mean (+1.66 sd vs the rest)",
+     "gls_fraction_bare (+0.82 sd vs the rest)",
+     "spending_per_km2_log (+0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "13": {
+    "cluster": 13,
+    "districts": 108,
+    "share": 0.0536,
+    "mean_silhouette": 0.1664,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.33 sd vs the rest)",
+     "total_mean_rub (-0.47 sd vs the rest)",
+     "spending_per_km2_log (-0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.5599,
+  "churn_vs_shipped_k3": 0.7178,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k4|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.26294484320005207,
+   "CH": 584.1446070132172,
+   "S_Dbw": 1.6245330343419317,
+   "AVI": 68.39214531625471,
+   "AVU": 12.758865469022744,
+   "MQ": 0.6920376725188909
+  },
+  "pairs_considered": 6,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 3,
+   "names": [
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "viirs_lit_mean"
+   ]
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 685,
+    "share": 0.3398,
+    "mean_silhouette": 0.2832,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.27 sd vs the rest)",
+     "total_mean_rub (-0.51 sd vs the rest)",
+     "burn_pct_of_territory (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "burn_pct_of_territory"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 485,
+    "share": 0.2406,
+    "mean_silhouette": 0.2849,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.94 sd vs the rest)",
+     "total_mean_rub (+1.88 sd vs the rest)",
+     "gls_fraction_urban (+1.77 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 621,
+    "share": 0.308,
+    "mean_silhouette": 0.27,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.48 sd vs the rest)",
+     "viirs_lit_mean (-0.40 sd vs the rest)",
+     "spending_per_km2_log (-0.22 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 225,
+    "share": 0.1116,
+    "mean_silhouette": 0.1478,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.49 sd vs the rest)",
+     "elevation_mean (+1.09 sd vs the rest)",
+     "spending_per_km2_log (-0.77 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "elevation_mean",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.9841,
+  "churn_vs_shipped_k3": 0.5253,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k4|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.25199799186528105,
+   "CH": 553.0183478536818,
+   "S_Dbw": 1.6405848606477522,
+   "AVI": 68.70167338013883,
+   "AVU": 12.777726585765913,
+   "MQ": 0.69592427598129
+  },
+  "pairs_considered": 6,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 2,
+   "names": [
+    "gls_fraction_urban",
+    "viirs_lit_mean"
+   ]
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 642,
+    "share": 0.3185,
+    "mean_silhouette": 0.2262,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.36 sd vs the rest)",
+     "total_mean_rub (-0.33 sd vs the rest)",
+     "gls_fraction_crops (-0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 708,
+    "share": 0.3512,
+    "mean_silhouette": 0.2696,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.19 sd vs the rest)",
+     "total_mean_rub (-0.47 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 472,
+    "share": 0.2341,
+    "mean_silhouette": 0.2981,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.00 sd vs the rest)",
+     "total_mean_rub (+1.81 sd vs the rest)",
+     "gls_fraction_urban (+1.80 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.1766,
+    "most_extreme_measures": [
+     "elevation_mean (+1.39 sd vs the rest)",
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "spending_per_km2_log (-0.76 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "elevation_mean",
+     "viirs_lit_mean",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.9842,
+  "churn_vs_shipped_k3": 0.5223,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k5|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.2523688151348009,
+   "CH": 499.6331033040814,
+   "S_Dbw": 1.7106413773132068,
+   "AVI": 66.07607074454106,
+   "AVU": 12.518010808385538,
+   "MQ": 0.7268141928447294
+  },
+  "pairs_considered": 10,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 1,
+   "names": [
+    "gls_fraction_urban"
+   ]
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 441,
+    "share": 0.2188,
+    "mean_silhouette": 0.2935,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.14 sd vs the rest)",
+     "gls_fraction_urban (+1.99 sd vs the rest)",
+     "total_mean_rub (+1.88 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 683,
+    "share": 0.3388,
+    "mean_silhouette": 0.2668,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.27 sd vs the rest)",
+     "total_mean_rub (-0.51 sd vs the rest)",
+     "burn_pct_of_territory (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub",
+     "burn_pct_of_territory"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 149,
+    "share": 0.0739,
+    "mean_silhouette": 0.1128,
+    "most_extreme_measures": [
+     "elevation_mean (+1.12 sd vs the rest)",
+     "gls_fraction_crops (-0.67 sd vs the rest)",
+     "total_mean_rub (+0.58 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 519,
+    "share": 0.2574,
+    "mean_silhouette": 0.2892,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.54 sd vs the rest)",
+     "viirs_lit_mean (-0.33 sd vs the rest)",
+     "gls_fraction_crops (+0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 224,
+    "share": 0.1111,
+    "mean_silhouette": 0.1523,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.50 sd vs the rest)",
+     "elevation_mean (+1.07 sd vs the rest)",
+     "spending_per_km2_log (-0.77 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.9142,
+  "churn_vs_shipped_k3": 0.5531,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k5|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.24671694847995257,
+   "CH": 480.93857230230594,
+   "S_Dbw": 1.720056361330775,
+   "AVI": 67.3406797151915,
+   "AVU": 12.390968334427168,
+   "MQ": 0.73131840759672
+  },
+  "pairs_considered": 10,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 2,
+   "names": [
+    "gls_fraction_urban",
+    "total_mean_rub"
+   ]
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 472,
+    "share": 0.2341,
+    "mean_silhouette": 0.2669,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+2.00 sd vs the rest)",
+     "total_mean_rub (+1.81 sd vs the rest)",
+     "gls_fraction_urban (+1.80 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "total_mean_rub",
+     "gls_fraction_urban"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 708,
+    "share": 0.3512,
+    "mean_silhouette": 0.2516,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.19 sd vs the rest)",
+     "total_mean_rub (-0.47 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 484,
+    "share": 0.2401,
+    "mean_silhouette": 0.313,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.52 sd vs the rest)",
+     "viirs_lit_mean (-0.43 sd vs the rest)",
+     "gls_fraction_crops (+0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "gls_fraction_crops"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.175,
+    "most_extreme_measures": [
+     "elevation_mean (+1.39 sd vs the rest)",
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "spending_per_km2_log (-0.76 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "spending_per_km2_log"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 158,
+    "share": 0.0784,
+    "mean_silhouette": 0.074,
+    "most_extreme_measures": [
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.67 sd vs the rest)",
+     "total_mean_rub (+0.62 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.9033,
+  "churn_vs_shipped_k3": 0.5585,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k6|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.19806656566775707,
+   "CH": 443.59585044172763,
+   "S_Dbw": 1.8890168081606635,
+   "AVI": 57.64387301051695,
+   "AVU": 12.497222405306145,
+   "MQ": 0.7389458000889364
+  },
+  "pairs_considered": 15,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 3,
+   "names": [
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ]
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 287,
+    "share": 0.1424,
+    "mean_silhouette": 0.0876,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.34 sd vs the rest)",
+     "gls_fraction_crops (-0.69 sd vs the rest)",
+     "spending_per_km2_log (-0.38 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 683,
+    "share": 0.3388,
+    "mean_silhouette": 0.2464,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.27 sd vs the rest)",
+     "total_mean_rub (-0.51 sd vs the rest)",
+     "burn_pct_of_territory (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "burn_pct_of_territory"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 330,
+    "share": 0.1637,
+    "mean_silhouette": 0.227,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.91 sd vs the rest)",
+     "total_mean_rub (-0.56 sd vs the rest)",
+     "viirs_lit_mean (-0.13 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 263,
+    "share": 0.1305,
+    "mean_silhouette": 0.1518,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.33 sd vs the rest)",
+     "gls_fraction_urban (+0.95 sd vs the rest)",
+     "total_mean_rub (+0.83 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 224,
+    "share": 0.1111,
+    "mean_silhouette": 0.1535,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.50 sd vs the rest)",
+     "elevation_mean (+1.07 sd vs the rest)",
+     "spending_per_km2_log (-0.77 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "elevation_mean",
+     "spending_per_km2_log"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 229,
+    "share": 0.1136,
+    "mean_silhouette": 0.2686,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.11 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.27 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7433,
+  "churn_vs_shipped_k3": 0.5992,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k6|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.21291863935938155,
+   "CH": 431.4469893151446,
+   "S_Dbw": 1.7724682476727722,
+   "AVI": 60.772107373042836,
+   "AVU": 12.763272190257675,
+   "MQ": 0.7516295619062728
+  },
+  "pairs_considered": 15,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 1,
+   "names": [
+    "gls_fraction_urban"
+   ]
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 708,
+    "share": 0.3512,
+    "mean_silhouette": 0.2435,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.19 sd vs the rest)",
+     "total_mean_rub (-0.47 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 158,
+    "share": 0.0784,
+    "mean_silhouette": 0.0528,
+    "most_extreme_measures": [
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.67 sd vs the rest)",
+     "total_mean_rub (+0.62 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 484,
+    "share": 0.2401,
+    "mean_silhouette": 0.2453,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.52 sd vs the rest)",
+     "viirs_lit_mean (-0.43 sd vs the rest)",
+     "gls_fraction_crops (+0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.175,
+    "most_extreme_measures": [
+     "elevation_mean (+1.39 sd vs the rest)",
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "spending_per_km2_log (-0.76 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "spending_per_km2_log"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1665,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7797,
+  "churn_vs_shipped_k3": 0.6057,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k7|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.18027593470029551,
+   "CH": 413.1842809149504,
+   "S_Dbw": 1.9350568703827518,
+   "AVI": 57.10355502853371,
+   "AVU": 12.690953799455949,
+   "MQ": 0.7651140368418816
+  },
+  "pairs_considered": 21,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 1,
+   "names": [
+    "gls_fraction_urban"
+   ]
+  },
+  "grab_bag_measures": 3,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 280,
+    "share": 0.1389,
+    "mean_silhouette": 0.1453,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.33 sd vs the rest)",
+     "gls_fraction_urban (+0.91 sd vs the rest)",
+     "total_mean_rub (+0.69 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 124,
+    "share": 0.0615,
+    "mean_silhouette": 0.1383,
+    "most_extreme_measures": [
+     "elevation_mean (+0.99 sd vs the rest)",
+     "gls_fraction_crops (-0.66 sd vs the rest)",
+     "spending_per_km2_log (-0.55 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 479,
+    "share": 0.2376,
+    "mean_silhouette": 0.2557,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.53 sd vs the rest)",
+     "viirs_lit_mean (-0.43 sd vs the rest)",
+     "gls_fraction_crops (+0.18 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 331,
+    "share": 0.1642,
+    "mean_silhouette": 0.1418,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.30 sd vs the rest)",
+     "burn_pct_of_territory (+0.15 sd vs the rest)",
+     "viirs_lit_mean (-0.12 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 226,
+    "share": 0.1121,
+    "mean_silhouette": 0.276,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.12 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.28 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 211,
+    "share": 0.1047,
+    "mean_silhouette": 0.1195,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.35 sd vs the rest)",
+     "elevation_mean (+1.11 sd vs the rest)",
+     "spending_per_km2_log (-0.79 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 365,
+    "share": 0.1811,
+    "mean_silhouette": 0.149,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.95 sd vs the rest)",
+     "total_mean_rub (-0.61 sd vs the rest)",
+     "spending_per_km2_log (-0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.8196,
+  "churn_vs_shipped_k3": 0.6364,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k7|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.16821246281473656,
+   "CH": 394.28160548986114,
+   "S_Dbw": 2.0248901444346186,
+   "AVI": 58.761164004993866,
+   "AVU": 12.547149975396922,
+   "MQ": 0.793652242942688
+  },
+  "pairs_considered": 21,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 1,
+   "names": [
+    "spending_per_km2_log"
+   ]
+  },
+  "grab_bag_measures": 3,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 343,
+    "share": 0.1701,
+    "mean_silhouette": 0.0879,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.36 sd vs the rest)",
+     "elevation_mean (+0.15 sd vs the rest)",
+     "total_mean_rub (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "elevation_mean"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 158,
+    "share": 0.0784,
+    "mean_silhouette": 0.0528,
+    "most_extreme_measures": [
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.67 sd vs the rest)",
+     "total_mean_rub (+0.62 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 484,
+    "share": 0.2401,
+    "mean_silhouette": 0.2452,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.52 sd vs the rest)",
+     "viirs_lit_mean (-0.43 sd vs the rest)",
+     "gls_fraction_crops (+0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.1481,
+    "most_extreme_measures": [
+     "elevation_mean (+1.39 sd vs the rest)",
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "spending_per_km2_log (-0.76 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "spending_per_km2_log"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1665,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 365,
+    "share": 0.1811,
+    "mean_silhouette": 0.16,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.77 sd vs the rest)",
+     "total_mean_rub (-0.64 sd vs the rest)",
+     "spending_per_km2_log (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.829,
+  "churn_vs_shipped_k3": 0.6305,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k8|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.16438599858162187,
+   "CH": 385.1757129387801,
+   "S_Dbw": 1.9375203089952273,
+   "AVI": 53.41202173762911,
+   "AVU": 12.432558077792057,
+   "MQ": 0.7785831222204669
+  },
+  "pairs_considered": 28,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 332,
+    "share": 0.1647,
+    "mean_silhouette": 0.1361,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.20 sd vs the rest)",
+     "viirs_lit_mean (-0.20 sd vs the rest)",
+     "burn_pct_of_territory (+0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 262,
+    "share": 0.13,
+    "mean_silhouette": 0.1522,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.39 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.79 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 204,
+    "share": 0.1012,
+    "mean_silhouette": 0.172,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.39 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)",
+     "gls_fraction_bare (+0.05 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 372,
+    "share": 0.1845,
+    "mean_silhouette": 0.1559,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.95 sd vs the rest)",
+     "total_mean_rub (-0.60 sd vs the rest)",
+     "spending_per_km2_log (-0.13 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 121,
+    "share": 0.06,
+    "mean_silhouette": 0.1038,
+    "most_extreme_measures": [
+     "elevation_mean (+0.99 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "gls_fraction_crops (-0.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 219,
+    "share": 0.1086,
+    "mean_silhouette": 0.2651,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.14 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 203,
+    "share": 0.1007,
+    "mean_silhouette": 0.1212,
+    "most_extreme_measures": [
+     "elevation_mean (+1.11 sd vs the rest)",
+     "viirs_lit_mean (-1.05 sd vs the rest)",
+     "spending_per_km2_log (-0.78 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 303,
+    "share": 0.1503,
+    "mean_silhouette": 0.2136,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.07 sd vs the rest)",
+     "total_mean_rub (-0.31 sd vs the rest)",
+     "gls_fraction_crops (-0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "gls_fraction_crops"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.8337,
+  "churn_vs_shipped_k3": 0.6696,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k8|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1729442483744878,
+   "CH": 363.72423007758044,
+   "S_Dbw": 1.903255526521011,
+   "AVI": 55.42356422079646,
+   "AVU": 12.324203910643462,
+   "MQ": 0.8040482999975936
+  },
+  "pairs_considered": 28,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 3,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 484,
+    "share": 0.2401,
+    "mean_silhouette": 0.2451,
+    "most_extreme_measures": [
+     "total_mean_rub (-0.52 sd vs the rest)",
+     "viirs_lit_mean (-0.43 sd vs the rest)",
+     "gls_fraction_crops (+0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 158,
+    "share": 0.0784,
+    "mean_silhouette": 0.0527,
+    "most_extreme_measures": [
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.67 sd vs the rest)",
+     "total_mean_rub (+0.62 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 365,
+    "share": 0.1811,
+    "mean_silhouette": 0.1321,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.77 sd vs the rest)",
+     "total_mean_rub (-0.64 sd vs the rest)",
+     "spending_per_km2_log (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.099,
+    "most_extreme_measures": [
+     "elevation_mean (+1.39 sd vs the rest)",
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "spending_per_km2_log (-0.76 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "spending_per_km2_log"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1665,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 224,
+    "share": 0.1111,
+    "mean_silhouette": 0.159,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "gls_fraction_crops (+0.19 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.2068,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.86 sd vs the rest)",
+     "spending_per_km2_log (+0.26 sd vs the rest)",
+     "total_mean_rub (+0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.862,
+  "churn_vs_shipped_k3": 0.6513,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k9|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.15964849908457157,
+   "CH": 361.34237264547687,
+   "S_Dbw": 1.9155654322046225,
+   "AVI": 51.48311471423696,
+   "AVU": 12.418962247663956,
+   "MQ": 0.7927756538743354
+  },
+  "pairs_considered": 36,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 1,
+   "names": [
+    "official_land_area_km2"
+   ]
+  },
+  "grab_bag_measures": 1,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 121,
+    "share": 0.06,
+    "mean_silhouette": 0.1024,
+    "most_extreme_measures": [
+     "elevation_mean (+0.99 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "gls_fraction_crops (-0.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 253,
+    "share": 0.1255,
+    "mean_silhouette": 0.1439,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.49 sd vs the rest)",
+     "spending_per_km2_log (+0.22 sd vs the rest)",
+     "total_mean_rub (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 297,
+    "share": 0.1473,
+    "mean_silhouette": 0.2164,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.07 sd vs the rest)",
+     "gls_fraction_crops (-0.30 sd vs the rest)",
+     "total_mean_rub (-0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 219,
+    "share": 0.1086,
+    "mean_silhouette": 0.2657,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.14 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 188,
+    "share": 0.0933,
+    "mean_silhouette": 0.1092,
+    "most_extreme_measures": [
+     "elevation_mean (+1.06 sd vs the rest)",
+     "viirs_lit_mean (-0.93 sd vs the rest)",
+     "spending_per_km2_log (-0.78 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 255,
+    "share": 0.1265,
+    "mean_silhouette": 0.1255,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.51 sd vs the rest)",
+     "spending_per_km2_log (-0.24 sd vs the rest)",
+     "burn_pct_of_territory (+0.17 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 209,
+    "share": 0.1037,
+    "mean_silhouette": 0.1669,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.38 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)",
+     "gls_fraction_bare (+0.04 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 211,
+    "share": 0.1047,
+    "mean_silhouette": 0.1453,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.79 sd vs the rest)",
+     "viirs_lit_mean (-0.69 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 263,
+    "share": 0.1305,
+    "mean_silhouette": 0.1525,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.39 sd vs the rest)",
+     "gls_fraction_urban (+1.02 sd vs the rest)",
+     "total_mean_rub (+0.79 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.8531,
+  "churn_vs_shipped_k3": 0.7292,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k9|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.14890472848693512,
+   "CH": 342.1557489233095,
+   "S_Dbw": 1.935627776244691,
+   "AVI": 52.49272716039288,
+   "AVU": 12.141792369202104,
+   "MQ": 0.8145536543146253
+  },
+  "pairs_considered": 36,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 158,
+    "share": 0.0784,
+    "mean_silhouette": 0.0169,
+    "most_extreme_measures": [
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.67 sd vs the rest)",
+     "total_mean_rub (+0.62 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.099,
+    "most_extreme_measures": [
+     "elevation_mean (+1.39 sd vs the rest)",
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "spending_per_km2_log (-0.76 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 365,
+    "share": 0.1811,
+    "mean_silhouette": 0.1321,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.77 sd vs the rest)",
+     "total_mean_rub (-0.64 sd vs the rest)",
+     "spending_per_km2_log (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 261,
+    "share": 0.1295,
+    "mean_silhouette": 0.1746,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.13 sd vs the rest)",
+     "gls_fraction_crops (-0.36 sd vs the rest)",
+     "total_mean_rub (-0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1462,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 224,
+    "share": 0.1111,
+    "mean_silhouette": 0.1583,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "gls_fraction_crops (+0.19 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.2068,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.86 sd vs the rest)",
+     "spending_per_km2_log (+0.26 sd vs the rest)",
+     "total_mean_rub (+0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 223,
+    "share": 0.1106,
+    "mean_silhouette": 0.164,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.13 sd vs the rest)",
+     "total_mean_rub (-0.57 sd vs the rest)",
+     "viirs_lit_mean (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.8557,
+  "churn_vs_shipped_k3": 0.6776,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k10|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.16407701164568284,
+   "CH": 334.184080948536,
+   "S_Dbw": 1.9338286895619392,
+   "AVI": 52.98476995767419,
+   "AVU": 12.876045598424255,
+   "MQ": 0.7787685097996806
+  },
+  "pairs_considered": 45,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 1,
+   "names": [
+    "spending_per_km2_log"
+   ]
+  },
+  "grab_bag_measures": 1,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 58,
+    "share": 0.0288,
+    "mean_silhouette": 0.1227,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+2.67 sd vs the rest)",
+     "total_mean_rub (+1.58 sd vs the rest)",
+     "spending_per_km2_log (-0.93 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 219,
+    "share": 0.1086,
+    "mean_silhouette": 0.2657,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.14 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 297,
+    "share": 0.1473,
+    "mean_silhouette": 0.2164,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.07 sd vs the rest)",
+     "gls_fraction_crops (-0.30 sd vs the rest)",
+     "total_mean_rub (-0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 264,
+    "share": 0.131,
+    "mean_silhouette": 0.1552,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.28 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)",
+     "viirs_lit_mean (-0.21 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 209,
+    "share": 0.1037,
+    "mean_silhouette": 0.1669,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.38 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)",
+     "gls_fraction_bare (+0.04 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 160,
+    "share": 0.0794,
+    "mean_silhouette": 0.1444,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.99 sd vs the rest)",
+     "elevation_mean (+1.16 sd vs the rest)",
+     "gls_fraction_crops (-0.64 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 163,
+    "share": 0.0809,
+    "mean_silhouette": 0.1354,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.47 sd vs the rest)",
+     "burn_pct_of_territory (+0.44 sd vs the rest)",
+     "total_mean_rub (-0.38 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "burn_pct_of_territory"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 263,
+    "share": 0.1305,
+    "mean_silhouette": 0.1525,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.39 sd vs the rest)",
+     "gls_fraction_urban (+1.02 sd vs the rest)",
+     "total_mean_rub (+0.79 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 262,
+    "share": 0.13,
+    "mean_silhouette": 0.1384,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.35 sd vs the rest)",
+     "spending_per_km2_log (+0.17 sd vs the rest)",
+     "total_mean_rub (+0.14 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 121,
+    "share": 0.06,
+    "mean_silhouette": 0.101,
+    "most_extreme_measures": [
+     "elevation_mean (+0.99 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "gls_fraction_crops (-0.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.776,
+  "churn_vs_shipped_k3": 0.7217,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k10|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.15585776945682467,
+   "CH": 319.360255011252,
+   "S_Dbw": 1.9284639288546623,
+   "AVI": 51.999084012775974,
+   "AVU": 12.344022414208808,
+   "MQ": 0.8125840602206975
+  },
+  "pairs_considered": 45,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 194,
+    "share": 0.0962,
+    "mean_silhouette": 0.0984,
+    "most_extreme_measures": [
+     "elevation_mean (+1.39 sd vs the rest)",
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "spending_per_km2_log (-0.76 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 365,
+    "share": 0.1811,
+    "mean_silhouette": 0.1321,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.77 sd vs the rest)",
+     "total_mean_rub (-0.64 sd vs the rest)",
+     "spending_per_km2_log (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 261,
+    "share": 0.1295,
+    "mean_silhouette": 0.1732,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.13 sd vs the rest)",
+     "gls_fraction_crops (-0.36 sd vs the rest)",
+     "total_mean_rub (-0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 58,
+    "share": 0.0288,
+    "mean_silhouette": 0.155,
+    "most_extreme_measures": [
+     "total_mean_rub (+1.43 sd vs the rest)",
+     "spending_per_km2_log (+0.92 sd vs the rest)",
+     "elevation_mean (+0.90 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1454,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 224,
+    "share": 0.1111,
+    "mean_silhouette": 0.1583,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "gls_fraction_crops (+0.19 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.205,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.86 sd vs the rest)",
+     "spending_per_km2_log (+0.26 sd vs the rest)",
+     "total_mean_rub (+0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 223,
+    "share": 0.1106,
+    "mean_silhouette": 0.164,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.13 sd vs the rest)",
+     "total_mean_rub (-0.57 sd vs the rest)",
+     "viirs_lit_mean (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 100,
+    "share": 0.0496,
+    "mean_silhouette": 0.0944,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.21 sd vs the rest)",
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7641,
+  "churn_vs_shipped_k3": 0.6776,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k11|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1679662903507022,
+   "CH": 315.44283997675586,
+   "S_Dbw": 1.8622271829864336,
+   "AVI": 49.227913471373746,
+   "AVU": 12.494180457939816,
+   "MQ": 0.7994395289840373
+  },
+  "pairs_considered": 55,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 1,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 56,
+    "share": 0.0278,
+    "mean_silhouette": 0.1549,
+    "most_extreme_measures": [
+     "total_mean_rub (+1.43 sd vs the rest)",
+     "spending_per_km2_log (+0.94 sd vs the rest)",
+     "elevation_mean (+0.90 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 124,
+    "share": 0.0615,
+    "mean_silhouette": 0.1813,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.93 sd vs the rest)",
+     "spending_per_km2_log (+0.27 sd vs the rest)",
+     "total_mean_rub (+0.25 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "spending_per_km2_log"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 304,
+    "share": 0.1508,
+    "mean_silhouette": 0.2102,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.05 sd vs the rest)",
+     "total_mean_rub (-0.30 sd vs the rest)",
+     "gls_fraction_crops (-0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 187,
+    "share": 0.0928,
+    "mean_silhouette": 0.1153,
+    "most_extreme_measures": [
+     "elevation_mean (+1.03 sd vs the rest)",
+     "viirs_lit_mean (-0.98 sd vs the rest)",
+     "spending_per_km2_log (-0.79 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 241,
+    "share": 0.1195,
+    "mean_silhouette": 0.1778,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.43 sd vs the rest)",
+     "gls_fraction_urban (+1.20 sd vs the rest)",
+     "total_mean_rub (+0.71 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 138,
+    "share": 0.0685,
+    "mean_silhouette": 0.1528,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.49 sd vs the rest)",
+     "burn_pct_of_territory (+0.43 sd vs the rest)",
+     "total_mean_rub (-0.36 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "burn_pct_of_territory"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 249,
+    "share": 0.1235,
+    "mean_silhouette": 0.1616,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.18 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)",
+     "viirs_lit_mean (-0.48 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 205,
+    "share": 0.1017,
+    "mean_silhouette": 0.1658,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.39 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)",
+     "gls_fraction_bare (+0.05 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 208,
+    "share": 0.1032,
+    "mean_silhouette": 0.1412,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.43 sd vs the rest)",
+     "elevation_mean (+0.13 sd vs the rest)",
+     "gls_fraction_crops (+0.12 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 206,
+    "share": 0.1022,
+    "mean_silhouette": 0.2485,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.18 sd vs the rest)",
+     "spending_per_km2_log (+2.59 sd vs the rest)",
+     "total_mean_rub (+2.33 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 98,
+    "share": 0.0486,
+    "mean_silhouette": 0.127,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "elevation_mean (+1.05 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7973,
+  "churn_vs_shipped_k3": 0.7307,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k11|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.15808186520167308,
+   "CH": 301.6593536029583,
+   "S_Dbw": 1.9550260368161214,
+   "AVI": 53.08865409629646,
+   "AVU": 12.815699604741829,
+   "MQ": 0.8093273667317828
+  },
+  "pairs_considered": 55,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 5,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 365,
+    "share": 0.1811,
+    "mean_silhouette": 0.1319,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.77 sd vs the rest)",
+     "total_mean_rub (-0.64 sd vs the rest)",
+     "spending_per_km2_log (-0.19 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 224,
+    "share": 0.1111,
+    "mean_silhouette": 0.1507,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "gls_fraction_crops (+0.19 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 261,
+    "share": 0.1295,
+    "mean_silhouette": 0.1732,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.13 sd vs the rest)",
+     "gls_fraction_crops (-0.36 sd vs the rest)",
+     "total_mean_rub (-0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 57,
+    "share": 0.0283,
+    "mean_silhouette": 0.1146,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+2.54 sd vs the rest)",
+     "total_mean_rub (+1.40 sd vs the rest)",
+     "spending_per_km2_log (-0.93 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "spending_per_km2_log"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1454,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.1456,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.83 sd vs the rest)",
+     "elevation_mean (+1.66 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.2047,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.86 sd vs the rest)",
+     "spending_per_km2_log (+0.26 sd vs the rest)",
+     "total_mean_rub (+0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 223,
+    "share": 0.1106,
+    "mean_silhouette": 0.164,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.13 sd vs the rest)",
+     "total_mean_rub (-0.57 sd vs the rest)",
+     "viirs_lit_mean (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 100,
+    "share": 0.0496,
+    "mean_silhouette": 0.0917,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.21 sd vs the rest)",
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 58,
+    "share": 0.0288,
+    "mean_silhouette": 0.155,
+    "most_extreme_measures": [
+     "total_mean_rub (+1.43 sd vs the rest)",
+     "spending_per_km2_log (+0.92 sd vs the rest)",
+     "elevation_mean (+0.90 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.8193,
+  "churn_vs_shipped_k3": 0.6806,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k12|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.15257112706822656,
+   "CH": 297.4816937546788,
+   "S_Dbw": 1.990612671167214,
+   "AVI": 49.63219376811805,
+   "AVU": 13.214831978080586,
+   "MQ": 0.7900583002982557
+  },
+  "pairs_considered": 66,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 1,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 301,
+    "share": 0.1493,
+    "mean_silhouette": 0.2178,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.09 sd vs the rest)",
+     "total_mean_rub (-0.31 sd vs the rest)",
+     "gls_fraction_crops (-0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 204,
+    "share": 0.1012,
+    "mean_silhouette": 0.1685,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.39 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)",
+     "gls_fraction_bare (+0.05 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 223,
+    "share": 0.1106,
+    "mean_silhouette": 0.1536,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.84 sd vs the rest)",
+     "total_mean_rub (-0.38 sd vs the rest)",
+     "spending_per_km2_log (+0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 142,
+    "share": 0.0704,
+    "mean_silhouette": 0.145,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.94 sd vs the rest)",
+     "elevation_mean (+1.39 sd vs the rest)",
+     "spending_per_km2_log (-0.64 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 236,
+    "share": 0.1171,
+    "mean_silhouette": 0.1359,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.32 sd vs the rest)",
+     "gls_fraction_urban (+0.93 sd vs the rest)",
+     "total_mean_rub (+0.87 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 121,
+    "share": 0.06,
+    "mean_silhouette": 0.0999,
+    "most_extreme_measures": [
+     "elevation_mean (+0.99 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "gls_fraction_crops (-0.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 124,
+    "share": 0.0615,
+    "mean_silhouette": 0.138,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.19 sd vs the rest)",
+     "viirs_lit_mean (-1.73 sd vs the rest)",
+     "total_mean_rub (-0.46 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 64,
+    "share": 0.0317,
+    "mean_silhouette": 0.0888,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+1.95 sd vs the rest)",
+     "total_mean_rub (+1.56 sd vs the rest)",
+     "spending_per_km2_log (-0.91 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 195,
+    "share": 0.0967,
+    "mean_silhouette": 0.1305,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.22 sd vs the rest)",
+     "gls_fraction_crops (+0.14 sd vs the rest)",
+     "elevation_mean (+0.12 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 159,
+    "share": 0.0789,
+    "mean_silhouette": 0.1584,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.48 sd vs the rest)",
+     "burn_pct_of_territory (+0.38 sd vs the rest)",
+     "total_mean_rub (-0.33 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "burn_pct_of_territory"
+    ]
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 91,
+    "share": 0.0451,
+    "mean_silhouette": 0.1263,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.42 sd vs the rest)",
+     "spending_per_km2_log (+2.66 sd vs the rest)",
+     "total_mean_rub (+2.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log"
+    ]
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 156,
+    "share": 0.0774,
+    "mean_silhouette": 0.2179,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.62 sd vs the rest)",
+     "spending_per_km2_log (+2.43 sd vs the rest)",
+     "total_mean_rub (+2.18 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7863,
+  "churn_vs_shipped_k3": 0.7708,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k12|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.14548069918537407,
+   "CH": 287.17489875033294,
+   "S_Dbw": 1.9944873009302553,
+   "AVI": 51.45490830064458,
+   "AVU": 12.722996951728408,
+   "MQ": 0.8122553957160369
+  },
+  "pairs_considered": 66,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 1,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 204,
+    "share": 0.1012,
+    "mean_silhouette": 0.0488,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.44 sd vs the rest)",
+     "total_mean_rub (-0.53 sd vs the rest)",
+     "spending_per_km2_log (-0.31 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "spending_per_km2_log"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 224,
+    "share": 0.1111,
+    "mean_silhouette": 0.0999,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "gls_fraction_crops (+0.19 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 261,
+    "share": 0.1295,
+    "mean_silhouette": 0.1732,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.13 sd vs the rest)",
+     "gls_fraction_crops (-0.36 sd vs the rest)",
+     "total_mean_rub (-0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 57,
+    "share": 0.0283,
+    "mean_silhouette": 0.1143,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+2.54 sd vs the rest)",
+     "total_mean_rub (+1.40 sd vs the rest)",
+     "spending_per_km2_log (-0.93 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "spending_per_km2_log"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1454,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.1422,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.83 sd vs the rest)",
+     "elevation_mean (+1.66 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.1406,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.86 sd vs the rest)",
+     "spending_per_km2_log (+0.26 sd vs the rest)",
+     "total_mean_rub (+0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 223,
+    "share": 0.1106,
+    "mean_silhouette": 0.164,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.13 sd vs the rest)",
+     "total_mean_rub (-0.57 sd vs the rest)",
+     "viirs_lit_mean (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 100,
+    "share": 0.0496,
+    "mean_silhouette": 0.0917,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.21 sd vs the rest)",
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 58,
+    "share": 0.0288,
+    "mean_silhouette": 0.155,
+    "most_extreme_measures": [
+     "total_mean_rub (+1.43 sd vs the rest)",
+     "spending_per_km2_log (+0.92 sd vs the rest)",
+     "elevation_mean (+0.90 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 161,
+    "share": 0.0799,
+    "mean_silhouette": 0.2065,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.93 sd vs the rest)",
+     "total_mean_rub (-0.50 sd vs the rest)",
+     "burn_pct_of_territory (+0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7579,
+  "churn_vs_shipped_k3": 0.7351,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k13|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.15319898644705046,
+   "CH": 285.5494498512784,
+   "S_Dbw": 1.9276036686420595,
+   "AVI": 47.63042095559389,
+   "AVU": 13.159806715268083,
+   "MQ": 0.8030550030495202
+  },
+  "pairs_considered": 78,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 1,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 296,
+    "share": 0.1468,
+    "mean_silhouette": 0.218,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.08 sd vs the rest)",
+     "gls_fraction_crops (-0.30 sd vs the rest)",
+     "total_mean_rub (-0.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.0933,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.19 sd vs the rest)",
+     "viirs_lit_mean (-1.76 sd vs the rest)",
+     "total_mean_rub (-0.46 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 157,
+    "share": 0.0779,
+    "mean_silhouette": 0.2304,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.84 sd vs the rest)",
+     "spending_per_km2_log (+2.45 sd vs the rest)",
+     "total_mean_rub (+2.22 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 176,
+    "share": 0.0873,
+    "mean_silhouette": 0.125,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.49 sd vs the rest)",
+     "elevation_mean (+0.14 sd vs the rest)",
+     "burn_pct_of_territory (+0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 243,
+    "share": 0.1205,
+    "mean_silhouette": 0.1272,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.33 sd vs the rest)",
+     "gls_fraction_urban (+0.94 sd vs the rest)",
+     "total_mean_rub (+0.79 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 159,
+    "share": 0.0789,
+    "mean_silhouette": 0.2169,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.86 sd vs the rest)",
+     "total_mean_rub (-0.50 sd vs the rest)",
+     "burn_pct_of_territory (+0.12 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 143,
+    "share": 0.0709,
+    "mean_silhouette": 0.1461,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.56 sd vs the rest)",
+     "burn_pct_of_territory (+0.39 sd vs the rest)",
+     "total_mean_rub (-0.37 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "burn_pct_of_territory"
+    ]
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 117,
+    "share": 0.058,
+    "mean_silhouette": 0.1383,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.83 sd vs the rest)",
+     "spending_per_km2_log (+0.28 sd vs the rest)",
+     "total_mean_rub (+0.26 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 208,
+    "share": 0.1032,
+    "mean_silhouette": 0.1662,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.38 sd vs the rest)",
+     "total_mean_rub (-0.55 sd vs the rest)",
+     "gls_fraction_bare (+0.04 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.1435,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.75 sd vs the rest)",
+     "elevation_mean (+1.33 sd vs the rest)",
+     "gls_fraction_crops (-0.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 84,
+    "share": 0.0417,
+    "mean_silhouette": 0.1351,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.34 sd vs the rest)",
+     "spending_per_km2_log (+2.66 sd vs the rest)",
+     "total_mean_rub (+2.20 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log"
+    ]
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 121,
+    "share": 0.06,
+    "mean_silhouette": 0.0991,
+    "most_extreme_measures": [
+     "elevation_mean (+0.99 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "gls_fraction_crops (-0.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "12": {
+    "cluster": 12,
+    "districts": 56,
+    "share": 0.0278,
+    "mean_silhouette": 0.1088,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+2.76 sd vs the rest)",
+     "total_mean_rub (+1.58 sd vs the rest)",
+     "spending_per_km2_log (-0.94 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "spending_per_km2_log"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.8025,
+  "churn_vs_shipped_k3": 0.7659,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k13|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.14761290638943134,
+   "CH": 274.3153329134803,
+   "S_Dbw": 1.9416672541690252,
+   "AVI": 49.25723839311782,
+   "AVU": 12.726000270660936,
+   "MQ": 0.8115519030209242
+  },
+  "pairs_considered": 78,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 1,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 224,
+    "share": 0.1111,
+    "mean_silhouette": 0.054,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.54 sd vs the rest)",
+     "gls_fraction_crops (+0.19 sd vs the rest)",
+     "spending_per_km2_log (-0.15 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.1328,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.83 sd vs the rest)",
+     "elevation_mean (+1.66 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 261,
+    "share": 0.1295,
+    "mean_silhouette": 0.1732,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.13 sd vs the rest)",
+     "gls_fraction_crops (-0.36 sd vs the rest)",
+     "total_mean_rub (-0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops",
+     "total_mean_rub"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 57,
+    "share": 0.0283,
+    "mean_silhouette": 0.1141,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+2.54 sd vs the rest)",
+     "total_mean_rub (+1.40 sd vs the rest)",
+     "spending_per_km2_log (-0.93 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "spending_per_km2_log"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1454,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban",
+     "total_mean_rub"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 121,
+    "share": 0.06,
+    "mean_silhouette": 0.0713,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.05 sd vs the rest)",
+     "viirs_lit_mean (-1.67 sd vs the rest)",
+     "total_mean_rub (-0.43 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.1292,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.86 sd vs the rest)",
+     "spending_per_km2_log (+0.26 sd vs the rest)",
+     "total_mean_rub (+0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 223,
+    "share": 0.1106,
+    "mean_silhouette": 0.1637,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.13 sd vs the rest)",
+     "total_mean_rub (-0.57 sd vs the rest)",
+     "viirs_lit_mean (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 100,
+    "share": 0.0496,
+    "mean_silhouette": 0.0917,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.21 sd vs the rest)",
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 58,
+    "share": 0.0288,
+    "mean_silhouette": 0.155,
+    "most_extreme_measures": [
+     "total_mean_rub (+1.43 sd vs the rest)",
+     "spending_per_km2_log (+0.92 sd vs the rest)",
+     "elevation_mean (+0.90 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 161,
+    "share": 0.0799,
+    "mean_silhouette": 0.1864,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.93 sd vs the rest)",
+     "total_mean_rub (-0.50 sd vs the rest)",
+     "burn_pct_of_territory (+0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "12": {
+    "cluster": 12,
+    "districts": 83,
+    "share": 0.0412,
+    "mean_silhouette": 0.2727,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.59 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)",
+     "spending_per_km2_log (-0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.7935,
+  "churn_vs_shipped_k3": 0.7351,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k14|kmeans": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1372382469301965,
+   "CH": 271.0495745451093,
+   "S_Dbw": 1.9694448470163581,
+   "AVI": 46.48198064559508,
+   "AVU": 13.178771010737151,
+   "MQ": 0.788017202344144
+  },
+  "pairs_considered": 91,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 4,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 120,
+    "share": 0.0595,
+    "mean_silhouette": 0.1003,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.19 sd vs the rest)",
+     "viirs_lit_mean (-1.73 sd vs the rest)",
+     "total_mean_rub (-0.46 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 195,
+    "share": 0.0967,
+    "mean_silhouette": 0.1453,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.42 sd vs the rest)",
+     "total_mean_rub (-0.56 sd vs the rest)",
+     "gls_fraction_bare (+0.04 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 88,
+    "share": 0.0437,
+    "mean_silhouette": 0.1243,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.41 sd vs the rest)",
+     "spending_per_km2_log (+2.67 sd vs the rest)",
+     "total_mean_rub (+2.21 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log"
+    ]
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 143,
+    "share": 0.0709,
+    "mean_silhouette": 0.1546,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.57 sd vs the rest)",
+     "burn_pct_of_territory (+0.39 sd vs the rest)",
+     "total_mean_rub (-0.37 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "burn_pct_of_territory"
+    ]
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 177,
+    "share": 0.0878,
+    "mean_silhouette": 0.1388,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.49 sd vs the rest)",
+     "elevation_mean (+0.13 sd vs the rest)",
+     "burn_pct_of_territory (+0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 169,
+    "share": 0.0838,
+    "mean_silhouette": 0.2003,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.06 sd vs the rest)",
+     "total_mean_rub (-0.52 sd vs the rest)",
+     "burn_pct_of_territory (+0.12 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 167,
+    "share": 0.0828,
+    "mean_silhouette": 0.137,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.33 sd vs the rest)",
+     "elevation_mean (-0.08 sd vs the rest)",
+     "spending_per_km2_log (+0.03 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 240,
+    "share": 0.119,
+    "mean_silhouette": 0.1179,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.34 sd vs the rest)",
+     "gls_fraction_urban (+0.99 sd vs the rest)",
+     "total_mean_rub (+0.80 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 149,
+    "share": 0.0739,
+    "mean_silhouette": 0.1247,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.79 sd vs the rest)",
+     "gls_fraction_crops (-0.42 sd vs the rest)",
+     "total_mean_rub (-0.42 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 153,
+    "share": 0.0759,
+    "mean_silhouette": 0.1463,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.67 sd vs the rest)",
+     "elevation_mean (+1.11 sd vs the rest)",
+     "spending_per_km2_log (-0.71 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 149,
+    "share": 0.0739,
+    "mean_silhouette": 0.2373,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+2.78 sd vs the rest)",
+     "spending_per_km2_log (+2.45 sd vs the rest)",
+     "total_mean_rub (+2.22 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log"
+    ]
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 106,
+    "share": 0.0526,
+    "mean_silhouette": 0.1275,
+    "most_extreme_measures": [
+     "total_mean_rub (+0.54 sd vs the rest)",
+     "gls_fraction_crops (+0.46 sd vs the rest)",
+     "spending_per_km2_log (+0.34 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "12": {
+    "cluster": 12,
+    "districts": 39,
+    "share": 0.0193,
+    "mean_silhouette": 0.1526,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+2.87 sd vs the rest)",
+     "total_mean_rub (+1.71 sd vs the rest)",
+     "gls_fraction_bare (+0.97 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "total_mean_rub",
+     "gls_fraction_bare"
+    ]
+   },
+   "13": {
+    "cluster": 13,
+    "districts": 121,
+    "share": 0.06,
+    "mean_silhouette": 0.0821,
+    "most_extreme_measures": [
+     "elevation_mean (+0.99 sd vs the rest)",
+     "viirs_lit_mean (-0.68 sd vs the rest)",
+     "gls_fraction_crops (-0.65 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   }
+  },
+  "stability_bootstrap_ari": 0.6992,
+  "churn_vs_shipped_k3": 0.7902,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ },
+ "with_land|k14|ward": {
+  "districts": 2016,
+  "indices": {
+   "SW": 0.1520126351912346,
+   "CH": 261.6600091478776,
+   "S_Dbw": 1.9208924794459177,
+   "AVI": 48.36250770026789,
+   "AVU": 12.653132573712059,
+   "MQ": 0.8148922943630516
+  },
+  "pairs_considered": 91,
+  "pairs_no_measure_can_tell_apart": [],
+  "measures_separating_every_pair": {
+   "count": 0,
+   "names": []
+  },
+  "grab_bag_measures": 1,
+  "per_cluster": {
+   "0": {
+    "cluster": 0,
+    "districts": 215,
+    "share": 0.1066,
+    "mean_silhouette": 0.269,
+    "most_extreme_measures": [
+     "gls_fraction_urban (+3.16 sd vs the rest)",
+     "spending_per_km2_log (+2.57 sd vs the rest)",
+     "total_mean_rub (+2.30 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_urban",
+     "spending_per_km2_log",
+     "total_mean_rub"
+    ]
+   },
+   "1": {
+    "cluster": 1,
+    "districts": 261,
+    "share": 0.1295,
+    "mean_silhouette": 0.1732,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.13 sd vs the rest)",
+     "gls_fraction_crops (-0.36 sd vs the rest)",
+     "total_mean_rub (-0.16 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "gls_fraction_crops"
+    ]
+   },
+   "2": {
+    "cluster": 2,
+    "districts": 137,
+    "share": 0.068,
+    "mean_silhouette": 0.1134,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.83 sd vs the rest)",
+     "elevation_mean (+1.66 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "3": {
+    "cluster": 3,
+    "districts": 223,
+    "share": 0.1106,
+    "mean_silhouette": 0.1637,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.13 sd vs the rest)",
+     "total_mean_rub (-0.57 sd vs the rest)",
+     "viirs_lit_mean (-0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "4": {
+    "cluster": 4,
+    "districts": 57,
+    "share": 0.0283,
+    "mean_silhouette": 0.1141,
+    "most_extreme_measures": [
+     "official_land_area_km2 (+2.54 sd vs the rest)",
+     "total_mean_rub (+1.40 sd vs the rest)",
+     "spending_per_km2_log (-0.93 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "official_land_area_km2",
+     "spending_per_km2_log"
+    ]
+   },
+   "5": {
+    "cluster": 5,
+    "districts": 257,
+    "share": 0.1275,
+    "mean_silhouette": 0.1454,
+    "most_extreme_measures": [
+     "spending_per_km2_log (+1.35 sd vs the rest)",
+     "gls_fraction_urban (+1.03 sd vs the rest)",
+     "total_mean_rub (+0.57 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log",
+     "gls_fraction_urban"
+    ]
+   },
+   "6": {
+    "cluster": 6,
+    "districts": 121,
+    "share": 0.06,
+    "mean_silhouette": 0.0713,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+2.05 sd vs the rest)",
+     "viirs_lit_mean (-1.67 sd vs the rest)",
+     "total_mean_rub (-0.43 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "7": {
+    "cluster": 7,
+    "districts": 119,
+    "share": 0.059,
+    "mean_silhouette": 0.1128,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.86 sd vs the rest)",
+     "spending_per_km2_log (+0.26 sd vs the rest)",
+     "total_mean_rub (+0.24 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "8": {
+    "cluster": 8,
+    "districts": 169,
+    "share": 0.0838,
+    "mean_silhouette": 0.1405,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-0.27 sd vs the rest)",
+     "gls_fraction_crops (+0.25 sd vs the rest)",
+     "elevation_mean (+0.10 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean"
+    ]
+   },
+   "9": {
+    "cluster": 9,
+    "districts": 100,
+    "share": 0.0496,
+    "mean_silhouette": 0.0917,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-1.21 sd vs the rest)",
+     "elevation_mean (+0.87 sd vs the rest)",
+     "gls_fraction_crops (-0.63 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "10": {
+    "cluster": 10,
+    "districts": 58,
+    "share": 0.0288,
+    "mean_silhouette": 0.155,
+    "most_extreme_measures": [
+     "total_mean_rub (+1.43 sd vs the rest)",
+     "spending_per_km2_log (+0.92 sd vs the rest)",
+     "elevation_mean (+0.90 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "spending_per_km2_log"
+    ]
+   },
+   "11": {
+    "cluster": 11,
+    "districts": 161,
+    "share": 0.0799,
+    "mean_silhouette": 0.1669,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+1.93 sd vs the rest)",
+     "total_mean_rub (-0.50 sd vs the rest)",
+     "burn_pct_of_territory (+0.11 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "12": {
+    "cluster": 12,
+    "districts": 83,
+    "share": 0.0412,
+    "mean_silhouette": 0.2649,
+    "most_extreme_measures": [
+     "gls_fraction_crops (+0.59 sd vs the rest)",
+     "total_mean_rub (-0.54 sd vs the rest)",
+     "spending_per_km2_log (-0.29 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": []
+   },
+   "13": {
+    "cluster": 13,
+    "districts": 55,
+    "share": 0.0273,
+    "mean_silhouette": 0.118,
+    "most_extreme_measures": [
+     "viirs_lit_mean (-2.94 sd vs the rest)",
+     "burn_pct_of_territory (+0.62 sd vs the rest)",
+     "total_mean_rub (+0.35 sd vs the rest)"
+    ],
+    "separates_it_from_every_other_cluster": [
+     "viirs_lit_mean",
+     "burn_pct_of_territory"
+    ]
+   }
+  },
+  "stability_bootstrap_ari": 0.7588,
+  "churn_vs_shipped_k3": 0.7421,
+  "resample_fraction": 0.8,
+  "resamples": 20
+ }
+}

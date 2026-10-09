@@ -1,0 +1,188 @@
+{
+ "generated_by": "scripts/measure_edge_influence.py",
+ "what_this_is": "Whether the edge rule changes the clustering: node features taken from the networks added to the attribute space, and each network's own community partition compared with the attribute clustering.",
+ "why_this_was_not_measured_before": "feature_space.parquet carries no edge-derived column, so the attribute clustering and the network were separate artifacts; the influence of the edge rule on clustering could not be read off the existing panel and had to be constructed.",
+ "edge_features_built": [
+  "edge_complementarity_exp_exports_to",
+  "edge_complementarity_exp_received_weight",
+  "edge_complementarity_exp_in_degree",
+  "edge_complementarity_power_exports_to",
+  "edge_complementarity_power_received_weight",
+  "edge_complementarity_power_in_degree",
+  "edge_complementarity_trunc_exports_to",
+  "edge_complementarity_trunc_received_weight",
+  "edge_complementarity_trunc_in_degree",
+  "edge_similarity_exports_to",
+  "edge_similarity_received_weight",
+  "edge_similarity_in_degree",
+  "edge_growth_correlation_exports_to",
+  "edge_growth_correlation_received_weight",
+  "edge_growth_correlation_in_degree",
+  "edge_lagged_leader_exports_to",
+  "edge_lagged_leader_received_weight",
+  "edge_lagged_leader_in_degree",
+  "edge_dynamic_alignment_exports_to",
+  "edge_dynamic_alignment_received_weight",
+  "edge_dynamic_alignment_in_degree"
+ ],
+ "base_measures": [
+  "total_per_official_km2",
+  "total_mean_rub",
+  "Продовольствие_share",
+  "Здоровье_share",
+  "Маркетплейсы_share",
+  "gls_fraction_crops",
+  "gls_fraction_grass",
+  "gls_fraction_urban",
+  "official_land_area_km2"
+ ],
+ "agreement": {
+  "ari_base_vs_with_edges": 0.1342,
+  "nmi_base_vs_with_edges": 0.1219,
+  "churn_pct": 81.69
+ },
+ "results": {
+  "attributes_only": {
+   "columns": [
+    "total_per_official_km2",
+    "total_mean_rub",
+    "Продовольствие_share",
+    "Здоровье_share",
+    "Маркетплейсы_share",
+    "gls_fraction_crops",
+    "gls_fraction_grass",
+    "gls_fraction_urban",
+    "official_land_area_km2"
+   ],
+   "cluster_sizes": {
+    "0": 1055,
+    "1": 580,
+    "2": 555
+   },
+   "measures_tested": [
+    "total_per_official_km2",
+    "total_mean_rub",
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "official_land_area_km2"
+   ],
+   "pairs_separated": 5,
+   "pairs_total": 15,
+   "measures_separated_for_every_pair": [
+    "total_per_official_km2",
+    "total_mean_rub",
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "official_land_area_km2"
+   ],
+   "grab_bag_flags": 1,
+   "metrics": {
+    "SW": 0.2722755620119451,
+    "CH": 944.4651046208389,
+    "S_Dbw": 1.4013200357188416,
+    "AVI": 5.097542840470511,
+    "AVU": 3.7916108209951545,
+    "k": 3,
+    "MQ": null
+   }
+  },
+  "attributes_plus_edges": {
+   "columns": [
+    "total_per_official_km2",
+    "total_mean_rub",
+    "Продовольствие_share",
+    "Здоровье_share",
+    "Маркетплейсы_share",
+    "gls_fraction_crops",
+    "gls_fraction_grass",
+    "gls_fraction_urban",
+    "official_land_area_km2",
+    "edge_complementarity_exp_exports_to",
+    "edge_complementarity_exp_received_weight",
+    "edge_complementarity_exp_in_degree",
+    "edge_complementarity_power_exports_to",
+    "edge_complementarity_power_received_weight",
+    "edge_complementarity_power_in_degree",
+    "edge_complementarity_trunc_exports_to",
+    "edge_complementarity_trunc_received_weight",
+    "edge_complementarity_trunc_in_degree",
+    "edge_similarity_exports_to",
+    "edge_similarity_received_weight",
+    "edge_similarity_in_degree",
+    "edge_growth_correlation_exports_to",
+    "edge_growth_correlation_received_weight",
+    "edge_growth_correlation_in_degree",
+    "edge_lagged_leader_exports_to",
+    "edge_lagged_leader_received_weight",
+    "edge_lagged_leader_in_degree",
+    "edge_dynamic_alignment_exports_to",
+    "edge_dynamic_alignment_received_weight",
+    "edge_dynamic_alignment_in_degree"
+   ],
+   "cluster_sizes": {
+    "0": 410,
+    "1": 1596,
+    "2": 184
+   },
+   "measures_tested": [
+    "total_per_official_km2",
+    "total_mean_rub",
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "official_land_area_km2"
+   ],
+   "pairs_separated": 0,
+   "pairs_total": 15,
+   "measures_separated_for_every_pair": [],
+   "grab_bag_flags": 2,
+   "metrics": {
+    "SW": 0.4478901019085317,
+    "CH": 1059.733685728629,
+    "S_Dbw": 1.0429971131677616,
+    "AVI": 82.23157699125044,
+    "AVU": 18.633283588109823,
+    "k": 3,
+    "MQ": null
+   }
+  }
+ },
+ "network_partitions": {
+  "complementarity_exp": {
+   "communities_found": 3,
+   "ari_vs_attribute_clustering": 0.0641,
+   "nmi_vs_attribute_clustering": 0.0343
+  },
+  "complementarity_power": {
+   "communities_found": 3,
+   "ari_vs_attribute_clustering": 0.0092,
+   "nmi_vs_attribute_clustering": 0.0112
+  },
+  "complementarity_trunc": {
+   "communities_found": 3,
+   "ari_vs_attribute_clustering": 0.0428,
+   "nmi_vs_attribute_clustering": 0.0471
+  },
+  "similarity": {
+   "communities_found": 3,
+   "ari_vs_attribute_clustering": 0.0023,
+   "nmi_vs_attribute_clustering": 0.0053
+  },
+  "growth_correlation": {
+   "communities_found": 3,
+   "ari_vs_attribute_clustering": 0.0055,
+   "nmi_vs_attribute_clustering": 0.0059
+  },
+  "lagged_leader": {
+   "communities_found": 3,
+   "ari_vs_attribute_clustering": 0.0148,
+   "nmi_vs_attribute_clustering": 0.021
+  },
+  "dynamic_alignment": {
+   "communities_found": 3,
+   "ari_vs_attribute_clustering": 0.0377,
+   "nmi_vs_attribute_clustering": 0.0492
+  }
+ },
+ "rule": "artifacts/validation/meaningfulness_rule.json",
+ "recipe": "k-means, seed 0, quantile-normalised input, k = 3, the shipped recipe"
+}

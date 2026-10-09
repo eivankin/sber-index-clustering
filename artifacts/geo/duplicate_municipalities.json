@@ -1,0 +1,844 @@
+{
+ "generated_by": "scripts/build_duplicate_territories.py",
+ "what_this_is": "Municipalities that appear twice under one name in one region, with how the copies differ: version windows, official area, overlap, and which copy carries spending data.",
+ "pair_rule": "одна и та же (название, регион) встречается в мастере чаще одного раза",
+ "resolution_rule": "в поиске и в списках похожих показывается одна запись на (название, регион); выбирается строка с данными о тратах, затем самое длинное окно версий,  затем большая официальная площадь, затем наименьший id",
+ "master": "data/processed/territory_master.parquet (build product, not tracked in git)",
+ "area_note": "площади берутся официальные, от Росстата; у копий одного места они совпадают, поэтому расхождение площадей считается по площади полигона OSM - именно оно порождает флаг area_suspect",
+ "total_rows": 2660,
+ "distinct_places": 2641,
+ "pairs": 18,
+ "extra_rows": 19,
+ "pairs_with_different_windows": 18,
+ "pairs_area_over_one_percent": 0,
+ "pairs_osm_area_over_one_percent": 14,
+ "pairs_overlapping_over_ninety": 18,
+ "pairs_iou_over_ninety": 8,
+ "overlap_note": "перекрытие считается двумя способами: доля меньшей копии, покрытой большей, и пересечение по объединению (IoU). Они отвечают на разные вопросы, и числа по ним не совпадают намеренно",
+ "pairs_one_row_with_spending": 16,
+ "pairs_without_spending": 2,
+ "cases": [
+  {
+   "name": "Боровский муниципальный район",
+   "region": "Калужская область",
+   "tids": [
+    1202,
+    2647
+   ],
+   "oktmo": [
+    "29606000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2019
+    },
+    {
+     "from": 2019,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    751.1460000000001,
+    751.1460000000001
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    1330.1,
+    1329.0
+   ],
+   "osm_area_difference_share": 0.0008,
+   "overlap_share": [
+    0.9999
+   ],
+   "iou": [
+    0.9991
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2647
+  },
+  {
+   "name": "Кусинский муниципальный район",
+   "region": "Челябинская область",
+   "tids": [
+    2306,
+    3012
+   ],
+   "oktmo": [
+    "75638000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2023
+    },
+    {
+     "from": 2023,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    1533.33,
+    1533.33
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    2696.3,
+    2696.1
+   ],
+   "osm_area_difference_share": 0.0001,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.9999
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 3012
+  },
+  {
+   "name": "Саратовский муниципальный район",
+   "region": "Саратовская область",
+   "tids": [
+    1946,
+    2878
+   ],
+   "oktmo": [
+    "63643000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2022
+    },
+    {
+     "from": 2022,
+     "to": 2023
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    null,
+    null
+   ],
+   "area_difference_share": null,
+   "osm_area_km2": [
+    3141.8,
+    1864.3
+   ],
+   "osm_area_difference_share": 0.6852,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.5934
+   ],
+   "with_spending": 0,
+   "has_spending": [
+    false,
+    false
+   ],
+   "only_one_row_has_spending": false,
+   "preferred_tid": 1946
+  },
+  {
+   "name": "городской округ Златоустовский",
+   "region": "Челябинская область",
+   "tids": [
+    2277,
+    3011
+   ],
+   "oktmo": [
+    "75712000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2023
+    },
+    {
+     "from": 2023,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    186.45,
+    186.45
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    3254.6,
+    3254.8
+   ],
+   "osm_area_difference_share": 0.0001,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.9999
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 3011
+  },
+  {
+   "name": "городской округ Лосино-Петровский",
+   "region": "Московская область",
+   "tids": [
+    1462,
+    2648
+   ],
+   "oktmo": [
+    "46742000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2019
+    },
+    {
+     "from": 2019,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    91.27,
+    91.27
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    16.3,
+    162.3
+   ],
+   "osm_area_difference_share": 8.9873,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.1001
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2648
+  },
+  {
+   "name": "городской округ Серпухов",
+   "region": "Московская область",
+   "tids": [
+    1479,
+    2644
+   ],
+   "oktmo": [
+    "46770000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2019
+    },
+    {
+     "from": 2019,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    1056.34,
+    1056.34
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    56.4,
+    1834.2
+   ],
+   "osm_area_difference_share": 31.5054,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.0308
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2644
+  },
+  {
+   "name": "городской округ Соликамский",
+   "region": "Пермский край",
+   "tids": [
+    732,
+    2620
+   ],
+   "oktmo": [
+    "57730000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2019
+    },
+    {
+     "from": 2019,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    null,
+    null
+   ],
+   "area_difference_share": null,
+   "osm_area_km2": [
+    285.1,
+    11177.1
+   ],
+   "osm_area_difference_share": 38.2078,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.0255
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2620
+  },
+  {
+   "name": "городской округ Химки",
+   "region": "Московская область",
+   "tids": [
+    1482,
+    3008
+   ],
+   "oktmo": [
+    "46783000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2023
+    },
+    {
+     "from": 2023,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    257.77,
+    257.77
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    195.7,
+    459.4
+   ],
+   "osm_area_difference_share": 1.3479,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.4259
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 3008
+  },
+  {
+   "name": "городской округ Шатура",
+   "region": "Московская область",
+   "tids": [
+    1485,
+    2813
+   ],
+   "oktmo": [
+    "46786000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2021
+    },
+    {
+     "from": 2021,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    2675.14,
+    2675.14
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    4644.1,
+    4706.0
+   ],
+   "osm_area_difference_share": 0.0133,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.9868
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2813
+  },
+  {
+   "name": "городской округ город Арзамас",
+   "region": "Нижегородская область",
+   "tids": [
+    1524,
+    3005
+   ],
+   "oktmo": [
+    "22703000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2023
+    },
+    {
+     "from": 2023,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    2052.433,
+    2052.433
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    73.4,
+    3610.7
+   ],
+   "osm_area_difference_share": 48.2009,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.0203
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 3005
+  },
+  {
+   "name": "городской округ город Губкинский",
+   "region": "Ямало-Ненецкий автономный округ",
+   "tids": [
+    2239,
+    2879
+   ],
+   "oktmo": [
+    "71952000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2022
+    },
+    {
+     "from": 2022,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    97.13799999999999,
+    97.13799999999999
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    268.7,
+    295.4
+   ],
+   "osm_area_difference_share": 0.0994,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.9096
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2879
+  },
+  {
+   "name": "городской округ город Лабытнанги",
+   "region": "Ямало-Ненецкий автономный округ",
+   "tids": [
+    2240,
+    2880
+   ],
+   "oktmo": [
+    "71953000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2022
+    },
+    {
+     "from": 2022,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    147.17,
+    147.17
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    344.0,
+    370.6
+   ],
+   "osm_area_difference_share": 0.0772,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.9284
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2880
+  },
+  {
+   "name": "городской округ город Обнинск",
+   "region": "Калужская область",
+   "tids": [
+    1199,
+    2646
+   ],
+   "oktmo": [
+    "29715000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2019
+    },
+    {
+     "from": 2019,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    55.028999999999996,
+    55.028999999999996
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    75.6,
+    76.7
+   ],
+   "osm_area_difference_share": 0.0141,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.9861
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2646
+  },
+  {
+   "name": "городской округ город Переславль-Залесский",
+   "region": "Ярославская область",
+   "tids": [
+    2319,
+    2619
+   ],
+   "oktmo": [
+    "78705000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2019
+    },
+    {
+     "from": 2019,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    3108.2,
+    3108.2
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    41.7,
+    5709.2
+   ],
+   "osm_area_difference_share": 135.8101,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.0073
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2619
+  },
+  {
+   "name": "городской округ город Саратов",
+   "region": "Саратовская область",
+   "tids": [
+    1911,
+    2877,
+    2887
+   ],
+   "oktmo": [
+    "63701000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2022
+    },
+    {
+     "from": 2022,
+     "to": 2023
+    },
+    {
+     "from": 2023,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    2344.75,
+    2344.75,
+    2344.75
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    648.2,
+    1925.6,
+    3789.9
+   ],
+   "osm_area_difference_share": 4.8471,
+   "overlap_share": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "iou": [
+    0.3366,
+    0.171,
+    0.5081
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2887
+  },
+  {
+   "name": "городской округ город Тамбов",
+   "region": "Тамбовская область",
+   "tids": [
+    2071,
+    3009
+   ],
+   "oktmo": [
+    "68701000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2023
+    },
+    {
+     "from": 2023,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    219.81,
+    219.81
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    177.5,
+    361.7
+   ],
+   "osm_area_difference_share": 1.0375,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.4907
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 3009
+  },
+  {
+   "name": "городской округ город-курорт Кисловодск",
+   "region": "Ставропольский край",
+   "tids": [
+    816,
+    2876
+   ],
+   "oktmo": [
+    "07715000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2022
+    },
+    {
+     "from": 2022,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    172.945,
+    172.945
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    148.7,
+    235.3
+   ],
+   "osm_area_difference_share": 0.583,
+   "overlap_share": [
+    0.9291
+   ],
+   "iou": [
+    0.5618
+   ],
+   "with_spending": 1,
+   "has_spending": [
+    false,
+    true
+   ],
+   "only_one_row_has_spending": true,
+   "preferred_tid": 2876
+  },
+  {
+   "name": "городской округ город-курорт Сочи",
+   "region": "Краснодарский край",
+   "tids": [
+    628,
+    2812
+   ],
+   "oktmo": [
+    "03726000"
+   ],
+   "version_windows": [
+    {
+     "from": 2018,
+     "to": 2021
+    },
+    {
+     "from": 2021,
+     "to": 9999
+    }
+   ],
+   "windows_differ": true,
+   "official_area_km2": [
+    14.19,
+    14.19
+   ],
+   "area_difference_share": 0.0,
+   "osm_area_km2": [
+    4869.3,
+    4850.1
+   ],
+   "osm_area_difference_share": 0.004,
+   "overlap_share": [
+    1.0
+   ],
+   "iou": [
+    0.9961
+   ],
+   "with_spending": 0,
+   "has_spending": [
+    false,
+    false
+   ],
+   "only_one_row_has_spending": false,
+   "preferred_tid": 2812
+  }
+ ]
+}

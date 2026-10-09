@@ -1,0 +1,124 @@
+{
+  "config": {
+    "seed": 0,
+    "knn_k": 10,
+    "k_values": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "shipped_method": "kmeans_k5",
+    "spaces": {
+      "approved": [
+        "dynamic_world_bare",
+        "dynamic_world_built",
+        "dynamic_world_crops",
+        "dynamic_world_grass",
+        "dynamic_world_trees",
+        "viirs_lit_mean",
+        "modis_ndvi_mean",
+        "elevation_mean",
+        "Продовольствие_share",
+        "Здоровье_share",
+        "Маркетплейсы_share",
+        "Общественное питание_share",
+        "Транспорт_share"
+      ],
+      "refusal_probe": [
+        "dynamic_world_built",
+        "gls_fraction_trees"
+      ],
+      "amount_comparison": [
+        "dynamic_world_bare",
+        "dynamic_world_built",
+        "dynamic_world_crops",
+        "dynamic_world_grass",
+        "dynamic_world_trees",
+        "viirs_lit_mean",
+        "modis_ndvi_mean",
+        "elevation_mean",
+        "Продовольствие_share",
+        "Здоровье_share",
+        "Маркетплейсы_share",
+        "Общественное питание_share",
+        "Транспорт_share",
+        "total_log_mean",
+        "total_mean_rub",
+        "spending_per_km2_log"
+      ]
+    },
+    "methods": {
+      "kmeans": {
+        "n_init": 10
+      },
+      "gaussian_mixture": {
+        "covariance_type": "full"
+      },
+      "ward": {
+        "linkage": "ward"
+      },
+      "average_linkage": {
+        "linkage": "average"
+      },
+      "complete_linkage": {
+        "linkage": "complete"
+      },
+      "spectral": {
+        "affinity": "knn"
+      },
+      "label_propagation": {
+        "sweeps": 40
+      },
+      "dbscan": {
+        "run": false
+      }
+    },
+    "normalization": {
+      "transformer": "quantile",
+      "output_distribution": "normal",
+      "n_quantiles": 1000
+    },
+    "reproduction": {
+      "tolerance": 0.02,
+      "rerun_command": ".venv/bin/python scripts/run_clustering.py"
+    }
+  },
+  "config_path": "configs/clustering.yaml",
+  "config_sha256": "5dbd3feb36839d01c93cadb2402ce3e639c6b5decac08606b0994d172bd4ab56",
+  "dbscan_note": "the config's dbscan run flag governs the per-k sweep only, where eps has no k to pair with; DBSCAN is still evaluated outside that sweep and reported as dbscan_auto, so run: false in the config is not a claim that DBSCAN was skipped",
+  "ks_used": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "knn_k": 10,
+  "seed": 0,
+  "skipped_methods": [
+    "dbscan",
+    "spectral"
+  ],
+  "groups": "levels+shares",
+  "space": "decision",
+  "columns_used": [
+    "dynamic_world_bare",
+    "dynamic_world_built",
+    "dynamic_world_crops",
+    "dynamic_world_grass",
+    "dynamic_world_trees",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean",
+    "Продовольствие_share",
+    "Здоровье_share",
+    "Маркетплейсы_share",
+    "Общественное питание_share",
+    "Транспорт_share"
+  ],
+  "feature_table": "feature_space.parquet"
+}

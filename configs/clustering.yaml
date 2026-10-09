@@ -1,0 +1,36 @@
+# Clustering configuration - the committed recipe behind artifacts/icvi/method_comparison.csv
+# Every method listed here is run with the fixed seed below, so the ICVI battery is reproducible.
+seed: 0
+knn_k: 10                    # graph sparsification used by spectral / graph-based methods
+k_values: [3, 4, 5, 6, 7, 8]
+shipped_method: kmeans_k5    # the partition every downstream artifact reads, named rather than inferred from
+                             # whichever row happens to come first in the assignments file
+spaces:
+  approved: [dynamic_world_bare, dynamic_world_built, dynamic_world_crops, dynamic_world_grass,
+             dynamic_world_trees, viirs_lit_mean, modis_ndvi_mean, elevation_mean,
+             Продовольствие_share, Здоровье_share, Маркетплейсы_share, Общественное питание_share,
+             Транспорт_share]
+  refusal_probe: [dynamic_world_built, gls_fraction_trees]   # gls_fraction_trees does not exist in the panel;
+                             # the column named in the refusal proof, kept so the refusal is testable and not a
+                             # claim. The real name is gls_fraction_tree, singular - this pair of names is the
+                             # defect the guard was built for.
+  amount_comparison: [dynamic_world_bare, dynamic_world_built, dynamic_world_crops, dynamic_world_grass,
+             dynamic_world_trees, viirs_lit_mean, modis_ndvi_mean, elevation_mean,
+             Продовольствие_share, Здоровье_share, Маркетплейсы_share, Общественное питание_share,
+             Транспорт_share, total_log_mean, total_mean_rub, spending_per_km2_log]
+methods:
+  kmeans:            {n_init: 10}
+  gaussian_mixture:  {covariance_type: full}
+  ward:              {linkage: ward}
+  average_linkage:   {linkage: average}
+  complete_linkage:  {linkage: complete}
+  spectral:          {affinity: knn}
+  label_propagation: {sweeps: 40}     # graph-based community partition, k comes out of the graph
+  dbscan:            {run: false}     # excluded from the k-sweep: eps has no k to pair with
+normalization:
+  transformer: quantile
+  output_distribution: normal
+  n_quantiles: 1000
+reproduction:
+  tolerance: 0.02            # a rerun must reproduce each ICVI value within this absolute tolerance
+  rerun_command: .venv/bin/python scripts/run_clustering.py

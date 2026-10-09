@@ -1,0 +1,1065 @@
+{
+  "generated_by": "scripts/validate_share_from_percentiles.py",
+  "what_this_is": "How far a seven-knot percentile curve can be from the true share of pixels above a light line, measured on windows where the full raster is cached.",
+  "knots": [
+    10,
+    25,
+    50,
+    75,
+    90,
+    95,
+    99
+  ],
+  "thresholds": [
+    0.5,
+    1.0,
+    2.0,
+    3.0,
+    5.0,
+    10.0,
+    20.0,
+    40.0,
+    80.0,
+    150.0
+  ],
+  "lines_below_the_first_knot": 13,
+  "measured_in_range": 47,
+  "worst_abs_error_pp": 24.146,
+  "verdict": "a seven-knot curve is not enough; more knots have to be stored",
+  "rows": [
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 0.5,
+      "exact_share_pct": 100.0,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 1.0,
+      "exact_share_pct": 100.0,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 2.0,
+      "exact_share_pct": 100.0,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 3.0,
+      "exact_share_pct": 98.93,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 5.0,
+      "exact_share_pct": 94.61,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 10.0,
+      "exact_share_pct": 84.24,
+      "curve_share_pct": 80.3,
+      "abs_error_pp": 3.941,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 20.0,
+      "exact_share_pct": 69.05,
+      "curve_share_pct": 54.57,
+      "abs_error_pp": 14.48,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 40.0,
+      "exact_share_pct": 49.56,
+      "curve_share_pct": 25.41,
+      "abs_error_pp": 24.146,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 80.0,
+      "exact_share_pct": 21.16,
+      "curve_share_pct": 12.98,
+      "abs_error_pp": 8.184,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2023,
+      "threshold": 150.0,
+      "exact_share_pct": 2.52,
+      "curve_share_pct": 2.44,
+      "abs_error_pp": 0.08,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 0.5,
+      "exact_share_pct": 100.0,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 1.0,
+      "exact_share_pct": 100.0,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 2.0,
+      "exact_share_pct": 99.94,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 3.0,
+      "exact_share_pct": 98.5,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 5.0,
+      "exact_share_pct": 95.15,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 10.0,
+      "exact_share_pct": 85.83,
+      "curve_share_pct": 78.78,
+      "abs_error_pp": 7.05,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 20.0,
+      "exact_share_pct": 72.0,
+      "curve_share_pct": 52.55,
+      "abs_error_pp": 19.452,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 40.0,
+      "exact_share_pct": 52.59,
+      "curve_share_pct": 71.76,
+      "abs_error_pp": 19.163,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 80.0,
+      "exact_share_pct": 28.31,
+      "curve_share_pct": 46.77,
+      "abs_error_pp": 18.458,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2518,
+      "year": 2024,
+      "threshold": 150.0,
+      "exact_share_pct": 3.9,
+      "curve_share_pct": 1.43,
+      "abs_error_pp": 2.472,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 0.5,
+      "exact_share_pct": 97.96,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 1.0,
+      "exact_share_pct": 1.9,
+      "curve_share_pct": 2.1,
+      "abs_error_pp": 0.202,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 2.0,
+      "exact_share_pct": 0.95,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.953,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 3.0,
+      "exact_share_pct": 0.62,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.624,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 5.0,
+      "exact_share_pct": 0.33,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.334,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 10.0,
+      "exact_share_pct": 0.01,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.015,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 20.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 40.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 80.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2023,
+      "threshold": 150.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 0.5,
+      "exact_share_pct": 100.0,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 1.0,
+      "exact_share_pct": 79.71,
+      "curve_share_pct": 85.87,
+      "abs_error_pp": 6.16,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 2.0,
+      "exact_share_pct": 1.24,
+      "curve_share_pct": 3.43,
+      "abs_error_pp": 2.198,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 3.0,
+      "exact_share_pct": 0.83,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.828,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 5.0,
+      "exact_share_pct": 0.43,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.429,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 10.0,
+      "exact_share_pct": 0.09,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.09,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 20.0,
+      "exact_share_pct": 0.01,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.01,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 40.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 80.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2208,
+      "year": 2024,
+      "threshold": 150.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 0.5,
+      "exact_share_pct": 49.12,
+      "curve_share_pct": 25.66,
+      "abs_error_pp": 23.464,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 1.0,
+      "exact_share_pct": 0.96,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.963,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 2.0,
+      "exact_share_pct": 0.28,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.279,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 3.0,
+      "exact_share_pct": 0.09,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.09,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 5.0,
+      "exact_share_pct": 0.02,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.025,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 10.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 20.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 40.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 80.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2023,
+      "threshold": 150.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 0.5,
+      "exact_share_pct": 98.94,
+      "curve_share_pct": null,
+      "abs_error_pp": null,
+      "outside_curve": true,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 1.0,
+      "exact_share_pct": 1.83,
+      "curve_share_pct": 1.94,
+      "abs_error_pp": 0.113,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 2.0,
+      "exact_share_pct": 0.43,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.429,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 3.0,
+      "exact_share_pct": 0.16,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.165,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 5.0,
+      "exact_share_pct": 0.03,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.03,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 10.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 20.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 40.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 80.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    },
+    {
+      "tid": 2000,
+      "year": 2024,
+      "threshold": 150.0,
+      "exact_share_pct": 0.0,
+      "curve_share_pct": 0.0,
+      "abs_error_pp": 0.0,
+      "knots": [
+        10,
+        25,
+        50,
+        75,
+        90,
+        95,
+        99
+      ]
+    }
+  ],
+  "cache_outside_the_repository": true
+}

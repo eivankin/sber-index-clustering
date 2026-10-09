@@ -1,0 +1,61 @@
+{
+  "total_seconds": 0.1,
+  "chunk_size": 100,
+  "territories_in_scope": 2660,
+  "jobs": {
+    "gls_lcz": {
+      "rows": 100,
+      "chunks": 1,
+      "failed_chunks": 0,
+      "cache_replays": 1,
+      "seconds": 0.1,
+      "provenance": "COPERNICUS/Landcover/100m/Proba-V-C3/Global | year=2019 | scale=100 m | reducer=frequencyHistogram | LCZ class shares",
+      "first_row": {
+        "tid": "462",
+        "gls_unclassified_pct": 0.0,
+        "gls_c114_pct": 13.7636,
+        "gls_c115_pct": 2.9213,
+        "gls_c116_pct": 1.358,
+        "gls_c124_pct": 0.0041,
+        "gls_c125_pct": 1.5137,
+        "gls_c126_pct": 4.2286,
+        "gls_c20_pct": 0.3908,
+        "gls_c30_pct": 21.2817,
+        "gls_c40_pct": 37.9124,
+        "gls_c50_pct": 14.9556,
+        "gls_c60_pct": 0.1978,
+        "gls_c80_pct": 0.2872,
+        "gls_c90_pct": 1.1852,
+        "gls_classified_px": 24581,
+        "gls_px_total": 24581,
+        "prov_gls_lcz": "COPERNICUS/Landcover/100m/Proba-V-C3/Global | year=2019 | scale=100 m | reducer=frequencyHistogram | LCZ class shares",
+        "gls_c111_pct": NaN,
+        "gls_c121_pct": NaN,
+        "gls_c100_pct": NaN,
+        "gls_c70_pct": NaN
+      },
+      "columns": [
+        "tid",
+        "gls_unclassified_pct",
+        "gls_c114_pct",
+        "gls_c115_pct",
+        "gls_c116_pct",
+        "gls_c124_pct",
+        "gls_c125_pct",
+        "gls_c126_pct",
+        "gls_c20_pct",
+        "gls_c30_pct",
+        "gls_c40_pct",
+        "gls_c50_pct",
+        "gls_c60_pct",
+        "gls_c80_pct"
+      ],
+      "coverage_of_rows_returned": 1.0
+    }
+  },
+  "layer_coverage": {
+    "gls_lcz": 1.0
+  },
+  "territories_with_4plus_nonnull_layers": 0,
+  "max_layers_per_territory": 1
+}

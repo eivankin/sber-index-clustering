@@ -1,0 +1,491 @@
+{
+ "generated_by": "scripts/test_combo_increment.py",
+ "what_this_is": "Per-boundary test of what appears when k rises by one in the land-plus-spending-shares space: separation inside the parent, materiality against the parent's own spread, algorithm reproduction, independence from administrative district type and from geography, and persistence across two years.",
+ "why_separation_is_measured_inside_the_parent": "A boundary divides one parent's districts. Judging it against every cluster would credit it with distances produced elsewhere in the partition.",
+ "administrative_check": "Municipal district type and status are register fields. A boundary aligned with them has rediscovered a classification rather than found an economic type.",
+ "alignment_note": "Where one arm has fewer clusters inside a parent than the other, unmatched labels are sent to their largest-overlap counterpart rather than left unmapped, so a shrink is reported as movement and not as a disappearance.",
+ "rule": {
+  "median_gap_in_parent_iqr_min": 0.5,
+  "kmeans_vs_ward_ari_within_parent_min": 0.5,
+  "ari_vs_municipal_district_type_max": 0.4,
+  "ari_vs_east_west_split_max": 0.4,
+  "year_ari_within_parent_min": 0.6
+ },
+ "duplicated_rows_removed_from_the_panel": 0,
+ "space": [
+  "gls_fraction_urban",
+  "gls_fraction_crops",
+  "gls_fraction_tree",
+  "viirs_lit_mean",
+  "modis_ndvi_mean",
+  "elevation_mean",
+  "Продовольствие_share",
+  "Здоровье_share",
+  "Маркетплейсы_share",
+  "Общественное питание_share",
+  "Транспорт_share"
+ ],
+ "external_measures": [
+  "Продовольствие_log_mean",
+  "Здоровье_log_mean",
+  "Маркетплейсы_log_mean",
+  "Общественное питание_log_mean",
+  "Транспорт_log_mean",
+  "total_mean_rub",
+  "total_log_mean"
+ ],
+ "results": {
+  "k4_to_k5|parent1": {
+   "children": {
+    "0": 23,
+    "1": 556,
+    "2": 54
+   },
+   "separating_measures_by_pair": {
+    "0-1": 6,
+    "0-2": 5,
+    "1-2": 3
+   },
+   "measures_separating_every_child_pair": [
+    "Маркетплейсы_log_mean",
+    "Транспорт_log_mean"
+   ],
+   "median_gap_in_parent_iqr": 0.5689,
+   "share_of_gaps_material": 0.5238,
+   "parent_districts": 633,
+   "ari_vs_municipal_district_type": 0.0219,
+   "ari_vs_municipal_district_status": 0.0027,
+   "ari_vs_east_west_split": 0.0059,
+   "ari_vs_distance_from_moscow_split": 0.0089,
+   "mean_distance_within_child_km": 12.3,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.621,
+   "year_churn_within_parent": 0.079,
+   "child_survival": {
+    "0": 0.0427,
+    "3": 0.842,
+    "4": 0.0363
+   },
+   "boundary_is_real": true
+  },
+  "k4_to_k5|parent2": {
+   "children": {
+    "0": 278,
+    "1": 439
+   },
+   "separating_measures_by_pair": {
+    "0-1": 7
+   },
+   "measures_separating_every_child_pair": [
+    "Продовольствие_log_mean",
+    "Здоровье_log_mean",
+    "Маркетплейсы_log_mean",
+    "Общественное питание_log_mean",
+    "Транспорт_log_mean",
+    "total_mean_rub",
+    "total_log_mean"
+   ],
+   "median_gap_in_parent_iqr": 0.6464,
+   "share_of_gaps_material": 0.7143,
+   "parent_districts": 717,
+   "ari_vs_municipal_district_type": 0.0083,
+   "ari_vs_municipal_district_status": 0.0032,
+   "ari_vs_east_west_split": 0.2582,
+   "ari_vs_distance_from_moscow_split": 0.2639,
+   "mean_distance_within_child_km": 20.5,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.5904,
+   "year_churn_within_parent": 0.113,
+   "child_survival": {
+    "0": 0.583,
+    "4": 0.3013
+   },
+   "boundary_is_real": false
+  },
+  "k5_to_k6|parent1": {
+   "children": {
+    "0": 232,
+    "1": 68,
+    "2": 1
+   },
+   "separating_measures_by_pair": {
+    "0-1": 2,
+    "0-2": 0,
+    "1-2": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.2885,
+   "share_of_gaps_material": 0.2857,
+   "parent_districts": 301,
+   "ari_vs_municipal_district_type": 0.0484,
+   "ari_vs_municipal_district_status": -0.0092,
+   "ari_vs_east_west_split": 0.065,
+   "ari_vs_distance_from_moscow_split": 0.0684,
+   "mean_distance_within_child_km": 35.5,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.3603,
+   "year_churn_within_parent": 0.2326,
+   "child_survival": {
+    "3": 0.711,
+    "5": 0.0266
+   },
+   "boundary_is_real": false
+  },
+  "k5_to_k6|parent2": {
+   "children": {
+    "0": 194,
+    "1": 1,
+    "2": 361
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0,
+    "0-2": 7,
+    "1-2": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.3732,
+   "share_of_gaps_material": 0.381,
+   "parent_districts": 556,
+   "ari_vs_municipal_district_type": 0.0392,
+   "ari_vs_municipal_district_status": 0.0187,
+   "ari_vs_east_west_split": 0.0252,
+   "ari_vs_distance_from_moscow_split": 0.0112,
+   "mean_distance_within_child_km": 12.2,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.0448,
+   "year_churn_within_parent": 0.3219,
+   "child_survival": {
+    "1": 0.6493,
+    "5": 0.0288
+   },
+   "boundary_is_real": false
+  },
+  "k5_to_k6|parent3": {
+   "children": {
+    "0": 7,
+    "1": 44,
+    "2": 439,
+    "3": 3
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0,
+    "0-2": 0,
+    "0-3": 0,
+    "1-2": 5,
+    "1-3": 0,
+    "2-3": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.6201,
+   "share_of_gaps_material": 0.5714,
+   "parent_districts": 493,
+   "ari_vs_municipal_district_type": 0.0142,
+   "ari_vs_municipal_district_status": 0.0287,
+   "ari_vs_east_west_split": -0.0002,
+   "ari_vs_distance_from_moscow_split": -0.0002,
+   "mean_distance_within_child_km": 10.2,
+   "kmeans_vs_ward_ari_within_parent": 0.9653,
+   "year_ari_within_parent": 0.0446,
+   "year_churn_within_parent": 0.1582,
+   "child_survival": {
+    "3": 0.0101,
+    "5": 0.8316
+   },
+   "boundary_is_real": false
+  },
+  "k6_to_k7|parent1": {
+   "children": {
+    "0": 74,
+    "1": 272
+   },
+   "separating_measures_by_pair": {
+    "0-1": 7
+   },
+   "measures_separating_every_child_pair": [
+    "Продовольствие_log_mean",
+    "Здоровье_log_mean",
+    "Маркетплейсы_log_mean",
+    "Общественное питание_log_mean",
+    "Транспорт_log_mean",
+    "total_mean_rub",
+    "total_log_mean"
+   ],
+   "median_gap_in_parent_iqr": 0.6073,
+   "share_of_gaps_material": 0.5714,
+   "parent_districts": 346,
+   "ari_vs_municipal_district_type": 0.0524,
+   "ari_vs_municipal_district_status": -0.0076,
+   "ari_vs_east_west_split": 0.0571,
+   "ari_vs_distance_from_moscow_split": 0.1621,
+   "mean_distance_within_child_km": 12.3,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.8587,
+   "year_churn_within_parent": 0.0318,
+   "child_survival": {
+    "1": 0.185,
+    "5": 0.7832
+   },
+   "boundary_is_real": true
+  },
+  "k6_to_k7|parent2": {
+   "children": {
+    "0": 2,
+    "1": 304
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.2609,
+   "share_of_gaps_material": 0.1429,
+   "parent_districts": 306,
+   "ari_vs_municipal_district_type": 0.0011,
+   "ari_vs_municipal_district_status": -0.01,
+   "ari_vs_east_west_split": 0.0001,
+   "ari_vs_distance_from_moscow_split": -0.0001,
+   "mean_distance_within_child_km": 14.9,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.1928,
+   "year_churn_within_parent": 0.0817,
+   "child_survival": {
+    "0": 0.9052
+   },
+   "boundary_is_real": false
+  },
+  "k6_to_k7|parent3": {
+   "children": {
+    "0": 1,
+    "1": 440
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.99,
+   "share_of_gaps_material": 0.7143,
+   "parent_districts": 441,
+   "ari_vs_municipal_district_type": -0.0023,
+   "ari_vs_municipal_district_status": 0.0,
+   "ari_vs_east_west_split": 0.0,
+   "ari_vs_distance_from_moscow_split": 0.0,
+   "mean_distance_within_child_km": 10.4,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.2899,
+   "year_churn_within_parent": 0.093,
+   "child_survival": {
+    "0": 0.0113,
+    "2": 0.8844
+   },
+   "boundary_is_real": false
+  },
+  "k6_to_k7|parent5": {
+   "children": {
+    "0": 290,
+    "1": 4,
+    "2": 26
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0,
+    "0-2": 6,
+    "1-2": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 1.2925,
+   "share_of_gaps_material": 0.7143,
+   "parent_districts": 320,
+   "ari_vs_municipal_district_type": 0.2191,
+   "ari_vs_municipal_district_status": 0.1383,
+   "ari_vs_east_west_split": 0.0071,
+   "ari_vs_distance_from_moscow_split": 0.0008,
+   "mean_distance_within_child_km": 5.1,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.5405,
+   "year_churn_within_parent": 0.0781,
+   "child_survival": {
+    "3": 0.8562,
+    "5": 0.0563
+   },
+   "boundary_is_real": false
+  },
+  "k7_to_k8|parent0": {
+   "children": {
+    "0": 2,
+    "1": 5,
+    "2": 235
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0,
+    "0-2": 0,
+    "1-2": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.3816,
+   "share_of_gaps_material": 0.1905,
+   "parent_districts": 242,
+   "ari_vs_municipal_district_type": -0.0089,
+   "ari_vs_municipal_district_status": -0.0127,
+   "ari_vs_east_west_split": 0.0001,
+   "ari_vs_distance_from_moscow_split": -0.0004,
+   "mean_distance_within_child_km": 38.8,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.323,
+   "year_churn_within_parent": 0.1901,
+   "child_survival": {
+    "1": 0.095,
+    "5": 0.7107
+   },
+   "boundary_is_real": false
+  },
+  "k7_to_k8|parent1": {
+   "children": {
+    "0": 167,
+    "1": 123
+   },
+   "separating_measures_by_pair": {
+    "0-1": 5
+   },
+   "measures_separating_every_child_pair": [
+    "Здоровье_log_mean",
+    "Маркетплейсы_log_mean",
+    "Общественное питание_log_mean",
+    "total_mean_rub",
+    "total_log_mean"
+   ],
+   "median_gap_in_parent_iqr": 0.3872,
+   "share_of_gaps_material": 0.2857,
+   "parent_districts": 290,
+   "ari_vs_municipal_district_type": 0.0208,
+   "ari_vs_municipal_district_status": -0.0157,
+   "ari_vs_east_west_split": 0.0425,
+   "ari_vs_distance_from_moscow_split": 0.0219,
+   "mean_distance_within_child_km": 4.5,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": -0.0019,
+   "year_churn_within_parent": 0.4241,
+   "child_survival": {
+    "3": 0.5759,
+    "6": 0.0
+   },
+   "boundary_is_real": false
+  },
+  "k7_to_k8|parent3": {
+   "children": {
+    "0": 7,
+    "1": 431,
+    "2": 2
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0,
+    "0-2": 0,
+    "1-2": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.2135,
+   "share_of_gaps_material": 0.3333,
+   "parent_districts": 440,
+   "ari_vs_municipal_district_type": -0.0108,
+   "ari_vs_municipal_district_status": 0.0,
+   "ari_vs_east_west_split": -0.0002,
+   "ari_vs_distance_from_moscow_split": 0.0002,
+   "mean_distance_within_child_km": 10.2,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.1112,
+   "year_churn_within_parent": 0.3273,
+   "child_survival": {
+    "1": 0.6318,
+    "4": 0.0386,
+    "5": 0.0023
+   },
+   "boundary_is_real": false
+  },
+  "k7_to_k8|parent4": {
+   "children": {
+    "0": 67,
+    "1": 6,
+    "2": 5
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0,
+    "0-2": 0,
+    "1-2": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.8537,
+   "share_of_gaps_material": 0.7143,
+   "parent_districts": 78,
+   "ari_vs_municipal_district_type": -0.0476,
+   "ari_vs_municipal_district_status": 0.1261,
+   "ari_vs_east_west_split": 0.002,
+   "ari_vs_distance_from_moscow_split": 0.002,
+   "mean_distance_within_child_km": 22.9,
+   "kmeans_vs_ward_ari_within_parent": 0.9734,
+   "year_ari_within_parent": 0.6361,
+   "year_churn_within_parent": 0.1282,
+   "child_survival": {
+    "0": 0.8077
+   },
+   "boundary_is_real": false
+  },
+  "k7_to_k8|parent5": {
+   "children": {
+    "0": 300,
+    "1": 3,
+    "2": 1
+   },
+   "separating_measures_by_pair": {
+    "0-1": 0,
+    "0-2": 0,
+    "1-2": 0
+   },
+   "measures_separating_every_child_pair": [],
+   "median_gap_in_parent_iqr": 0.4091,
+   "share_of_gaps_material": 0.381,
+   "parent_districts": 304,
+   "ari_vs_municipal_district_type": 0.0049,
+   "ari_vs_municipal_district_status": -0.0166,
+   "ari_vs_east_west_split": -0.0,
+   "ari_vs_distance_from_moscow_split": -0.0,
+   "mean_distance_within_child_km": 14.8,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.0973,
+   "year_churn_within_parent": 0.1842,
+   "child_survival": {
+    "4": 0.7993
+   },
+   "boundary_is_real": false
+  },
+  "k7_to_k8|parent6": {
+   "children": {
+    "0": 116,
+    "1": 182
+   },
+   "separating_measures_by_pair": {
+    "0-1": 6
+   },
+   "measures_separating_every_child_pair": [
+    "Продовольствие_log_mean",
+    "Здоровье_log_mean",
+    "Общественное питание_log_mean",
+    "Транспорт_log_mean",
+    "total_mean_rub",
+    "total_log_mean"
+   ],
+   "median_gap_in_parent_iqr": 0.8571,
+   "share_of_gaps_material": 0.8571,
+   "parent_districts": 298,
+   "ari_vs_municipal_district_type": 0.0833,
+   "ari_vs_municipal_district_status": 0.0783,
+   "ari_vs_east_west_split": -0.0025,
+   "ari_vs_distance_from_moscow_split": 0.0013,
+   "mean_distance_within_child_km": 9.4,
+   "kmeans_vs_ward_ari_within_parent": 1.0,
+   "year_ari_within_parent": 0.0429,
+   "year_churn_within_parent": 0.3356,
+   "child_survival": {
+    "2": 0.6376,
+    "3": 0.0268
+   },
+   "boundary_is_real": false
+  }
+ }
+}

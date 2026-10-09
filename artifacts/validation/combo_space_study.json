@@ -1,0 +1,1058 @@
+{
+ "generated_by": "scripts/study_combo_space.py",
+ "what_this_is": "Land features combined with spending composition but not spending size: candidate spaces, how much of the cluster split each family decides, and whether the resulting partitions survive a change of algorithm, resampling, and a material spending difference.",
+ "shares_carry_no_size": "A category share is a ratio to the territory's own total, so the 5 category shares encode the shape of the spending basket while leaving its size recoverable nowhere in the space. The panel carries 6 level columns, one of which is the total.",
+ "external_measures_are_levels_because": "With shares inside the space, the non-circular spending test has to use levels and the total rather than shares; density is excluded because official area appears in some candidate spaces and spending per square kilometre would then be a feature the partition already used.",
+ "rule": {
+  "every_cluster_nameable": true,
+  "at_least_one_external_spending_measure_separates_every_pair": true,
+  "kmeans_vs_ward_ari_min": 0.5,
+  "stability_min": 0.7,
+  "median_spending_gap_in_iqr_min": 0.5
+ },
+ "movement_rule": "Land is held fixed and only spending composition varies by year, so any measured movement comes from the spending shape rather than from the geography. The no-share arms are the control: they are the money-free design, and if their ARI is 1,0 they cannot move, which is why that design fails the requirement to track cluster change over time.",
+ "spaces": {
+  "combo_land6_shares5": [
+   "gls_fraction_urban",
+   "gls_fraction_crops",
+   "gls_fraction_tree",
+   "viirs_lit_mean",
+   "modis_ndvi_mean",
+   "elevation_mean",
+   "Продовольствие_share",
+   "Здоровье_share",
+   "Маркетплейсы_share",
+   "Общественное питание_share",
+   "Транспорт_share"
+  ],
+  "combo_land12_shares5": [
+   "gls_fraction_urban",
+   "gls_fraction_crops",
+   "gls_fraction_tree",
+   "viirs_lit_mean",
+   "modis_ndvi_mean",
+   "elevation_mean",
+   "hansen_window_forest_loss_pct",
+   "soil_organic_carbon_surface",
+   "dynamic_world_built",
+   "dynamic_world_crops",
+   "burn_pct_of_territory",
+   "official_land_area_km2",
+   "Продовольствие_share",
+   "Здоровье_share",
+   "Маркетплейсы_share",
+   "Общественное питание_share",
+   "Транспорт_share"
+  ],
+  "combo_land68_shares5": [
+   "burn_km2",
+   "burn_pct_of_territory",
+   "burn_px",
+   "dynamic_world_bare",
+   "dynamic_world_built",
+   "dynamic_world_crops",
+   "dynamic_world_grass",
+   "dynamic_world_trees",
+   "elevation_mean",
+   "gls_c111_pct",
+   "gls_c114_pct",
+   "gls_c115_pct",
+   "gls_c116_pct",
+   "gls_c124_pct",
+   "gls_c125_pct",
+   "gls_c126_pct",
+   "gls_c30_pct",
+   "gls_c40_pct",
+   "gls_c50_pct",
+   "gls_c80_pct",
+   "gls_c90_pct",
+   "gls_classified_px",
+   "gls_fraction_bare",
+   "gls_fraction_crops",
+   "gls_fraction_grass",
+   "gls_fraction_moss",
+   "gls_fraction_shrub",
+   "gls_fraction_snow",
+   "gls_fraction_tree",
+   "gls_fraction_urban",
+   "gls_fraction_water-permanent",
+   "gls_fraction_water-seasonal",
+   "gls_px_total",
+   "hansen_forest_gain_pct",
+   "hansen_tree_cover_2000_pct",
+   "hansen_window_forest_loss_pct",
+   "mcd_c14_pct",
+   "mcd_c15_pct",
+   "mcd_c21_pct",
+   "mcd_c22_pct",
+   "mcd_c31_pct",
+   "mcd_c3_pct",
+   "mcd_classified_px",
+   "mcd_px_total",
+   "modis_ndvi_mean",
+   "soil_organic_carbon_surface",
+   "viirs_average",
+   "viirs_average_masked",
+   "viirs_cf_cvg",
+   "viirs_lit_mean",
+   "viirs_maximum",
+   "viirs_median",
+   "viirs_minimum",
+   "wc_c10_pct",
+   "wc_c30_pct",
+   "wc_c40_pct",
+   "wc_c50_pct",
+   "wc_c60_pct",
+   "wc_c80_pct",
+   "wc_c90_pct",
+   "wc_classified_px",
+   "wc_px_total",
+   "worldclim_bio01",
+   "worldclim_bio04",
+   "worldclim_bio12",
+   "worldclim_bio15",
+   "worldclim_bio18",
+   "worldclim_bio19",
+   "Продовольствие_share",
+   "Здоровье_share",
+   "Маркетплейсы_share",
+   "Общественное питание_share",
+   "Транспорт_share"
+  ]
+ },
+ "land_pca_variance_explained": [
+  0.3289,
+  0.1786,
+  0.0963,
+  0.0723,
+  0.0395
+ ],
+ "results": {
+  "combo_land6_shares5|k2": {
+   "family_split_share": {
+    "land": 0.7007,
+    "spending_shape": 0.2993,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "2/2",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 1.0804,
+   "kmeans_vs_ward_ari": 1.0,
+   "stability_bootstrap_ari": 1.0,
+   "largest_cluster_share": 0.6696,
+   "smallest_cluster_districts": 666,
+   "candidate": true
+  },
+  "combo_land6_shares5|k3": {
+   "family_split_share": {
+    "land": 0.7217,
+    "spending_shape": 0.2783,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "3/3",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.9456,
+   "kmeans_vs_ward_ari": 0.6259,
+   "stability_bootstrap_ari": 0.9648,
+   "largest_cluster_share": 0.3557,
+   "smallest_cluster_districts": 633,
+   "candidate": true
+  },
+  "combo_land6_shares5|k4": {
+   "family_split_share": {
+    "land": 0.6894,
+    "spending_shape": 0.3106,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "4/4",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.7256,
+   "kmeans_vs_ward_ari": 0.5485,
+   "stability_bootstrap_ari": 0.943,
+   "largest_cluster_share": 0.3557,
+   "smallest_cluster_districts": 320,
+   "candidate": true
+  },
+  "combo_land6_shares5|k5": {
+   "family_split_share": {
+    "land": 0.6796,
+    "spending_shape": 0.3204,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "5/5",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6205,
+   "kmeans_vs_ward_ari": 0.5436,
+   "stability_bootstrap_ari": 0.8816,
+   "largest_cluster_share": 0.2758,
+   "smallest_cluster_districts": 301,
+   "candidate": true
+  },
+  "combo_land6_shares5|k6": {
+   "family_split_share": {
+    "land": 0.6659,
+    "spending_shape": 0.3341,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "6/6",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5624,
+   "kmeans_vs_ward_ari": 0.5975,
+   "stability_bootstrap_ari": 0.8,
+   "largest_cluster_share": 0.2188,
+   "smallest_cluster_districts": 239,
+   "candidate": true
+  },
+  "combo_land6_shares5|k7": {
+   "family_split_share": {
+    "land": 0.6666,
+    "spending_shape": 0.3334,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "7/7",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6119,
+   "kmeans_vs_ward_ari": 0.5591,
+   "stability_bootstrap_ari": 0.8329,
+   "largest_cluster_share": 0.2183,
+   "smallest_cluster_districts": 78,
+   "candidate": true
+  },
+  "combo_land6_shares5|k8": {
+   "family_split_share": {
+    "land": 0.6563,
+    "spending_shape": 0.3437,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "8/8",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6912,
+   "kmeans_vs_ward_ari": 0.5475,
+   "stability_bootstrap_ari": 0.7912,
+   "largest_cluster_share": 0.2163,
+   "smallest_cluster_districts": 67,
+   "candidate": true
+  },
+  "combo_land6_shares5|k9": {
+   "family_split_share": {
+    "land": 0.6549,
+    "spending_shape": 0.3451,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "9/9",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6718,
+   "kmeans_vs_ward_ari": 0.551,
+   "stability_bootstrap_ari": 0.6757,
+   "largest_cluster_share": 0.1771,
+   "smallest_cluster_districts": 64,
+   "candidate": false
+  },
+  "combo_land6_shares5|k10": {
+   "family_split_share": {
+    "land": 0.6491,
+    "spending_shape": 0.3509,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "10/10",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6205,
+   "kmeans_vs_ward_ari": 0.5348,
+   "stability_bootstrap_ari": 0.6806,
+   "largest_cluster_share": 0.1458,
+   "smallest_cluster_districts": 74,
+   "candidate": false
+  },
+  "combo_land12_shares5|k2": {
+   "family_split_share": {
+    "land": 0.7876,
+    "spending_shape": 0.2124,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "2/2",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 1.0848,
+   "kmeans_vs_ward_ari": 0.0834,
+   "stability_bootstrap_ari": 0.5777,
+   "largest_cluster_share": 0.6766,
+   "smallest_cluster_districts": 652,
+   "candidate": false
+  },
+  "combo_land12_shares5|k3": {
+   "family_split_share": {
+    "land": 0.8189,
+    "spending_shape": 0.1811,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "3/3",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.9372,
+   "kmeans_vs_ward_ari": 0.9891,
+   "stability_bootstrap_ari": 0.999,
+   "largest_cluster_share": 0.4484,
+   "smallest_cluster_districts": 520,
+   "candidate": true
+  },
+  "combo_land12_shares5|k4": {
+   "family_split_share": {
+    "land": 0.8402,
+    "spending_shape": 0.1598,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "4/4",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6252,
+   "kmeans_vs_ward_ari": 0.9909,
+   "stability_bootstrap_ari": 0.9866,
+   "largest_cluster_share": 0.377,
+   "smallest_cluster_districts": 147,
+   "candidate": true
+  },
+  "combo_land12_shares5|k5": {
+   "family_split_share": {
+    "land": 0.8341,
+    "spending_shape": 0.1659,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "5/5",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.8171,
+   "kmeans_vs_ward_ari": 0.995,
+   "stability_bootstrap_ari": 0.8605,
+   "largest_cluster_share": 0.377,
+   "smallest_cluster_districts": 110,
+   "candidate": true
+  },
+  "combo_land12_shares5|k6": {
+   "family_split_share": {
+    "land": 0.8384,
+    "spending_shape": 0.1616,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "6/6",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6871,
+   "kmeans_vs_ward_ari": 0.9199,
+   "stability_bootstrap_ari": 0.9839,
+   "largest_cluster_share": 0.2922,
+   "smallest_cluster_districts": 110,
+   "candidate": true
+  },
+  "combo_land12_shares5|k7": {
+   "family_split_share": {
+    "land": 0.838,
+    "spending_shape": 0.162,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "7/7",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6317,
+   "kmeans_vs_ward_ari": 0.8454,
+   "stability_bootstrap_ari": 0.9525,
+   "largest_cluster_share": 0.2034,
+   "smallest_cluster_districts": 109,
+   "candidate": true
+  },
+  "combo_land12_shares5|k8": {
+   "family_split_share": {
+    "land": 0.8501,
+    "spending_shape": 0.1499,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "8/8",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5962,
+   "kmeans_vs_ward_ari": 0.8131,
+   "stability_bootstrap_ari": 0.9079,
+   "largest_cluster_share": 0.2034,
+   "smallest_cluster_districts": 49,
+   "candidate": true
+  },
+  "combo_land12_shares5|k9": {
+   "family_split_share": {
+    "land": 0.8424,
+    "spending_shape": 0.1576,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "9/9",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6185,
+   "kmeans_vs_ward_ari": 0.7799,
+   "stability_bootstrap_ari": 0.8047,
+   "largest_cluster_share": 0.1766,
+   "smallest_cluster_districts": 49,
+   "candidate": true
+  },
+  "combo_land12_shares5|k10": {
+   "family_split_share": {
+    "land": 0.8398,
+    "spending_shape": 0.1602,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "10/10",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5757,
+   "kmeans_vs_ward_ari": 0.7474,
+   "stability_bootstrap_ari": 0.8154,
+   "largest_cluster_share": 0.1949,
+   "smallest_cluster_districts": 47,
+   "candidate": true
+  },
+  "combo_land68_shares5|k2": {
+   "family_split_share": {
+    "land": 0.9699,
+    "spending_shape": 0.0301,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "2/2",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.3052,
+   "kmeans_vs_ward_ari": 0.9744,
+   "stability_bootstrap_ari": 1.0,
+   "largest_cluster_share": 0.5501,
+   "smallest_cluster_districts": 907,
+   "candidate": false
+  },
+  "combo_land68_shares5|k3": {
+   "family_split_share": {
+    "land": 0.9429,
+    "spending_shape": 0.0571,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "3/3",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.9163,
+   "kmeans_vs_ward_ari": 0.914,
+   "stability_bootstrap_ari": 0.9943,
+   "largest_cluster_share": 0.4499,
+   "smallest_cluster_districts": 488,
+   "candidate": true
+  },
+  "combo_land68_shares5|k4": {
+   "family_split_share": {
+    "land": 0.9492,
+    "spending_shape": 0.0508,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "4/4",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5476,
+   "kmeans_vs_ward_ari": 0.8661,
+   "stability_bootstrap_ari": 0.9903,
+   "largest_cluster_share": 0.3383,
+   "smallest_cluster_districts": 225,
+   "candidate": true
+  },
+  "combo_land68_shares5|k5": {
+   "family_split_share": {
+    "land": 0.9519,
+    "spending_shape": 0.0481,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "5/5",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5538,
+   "kmeans_vs_ward_ari": 0.9129,
+   "stability_bootstrap_ari": 0.8952,
+   "largest_cluster_share": 0.3383,
+   "smallest_cluster_districts": 149,
+   "candidate": true
+  },
+  "combo_land68_shares5|k6": {
+   "family_split_share": {
+    "land": 0.9553,
+    "spending_shape": 0.0447,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "6/6",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5158,
+   "kmeans_vs_ward_ari": 0.7664,
+   "stability_bootstrap_ari": 0.7102,
+   "largest_cluster_share": 0.254,
+   "smallest_cluster_districts": 150,
+   "candidate": true
+  },
+  "combo_land68_shares5|k7": {
+   "family_split_share": {
+    "land": 0.9522,
+    "spending_shape": 0.0478,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "7/7",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5453,
+   "kmeans_vs_ward_ari": 0.5418,
+   "stability_bootstrap_ari": 0.7713,
+   "largest_cluster_share": 0.2391,
+   "smallest_cluster_districts": 122,
+   "candidate": true
+  },
+  "combo_land68_shares5|k8": {
+   "family_split_share": {
+    "land": 0.9527,
+    "spending_shape": 0.0473,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "8/8",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5019,
+   "kmeans_vs_ward_ari": 0.6545,
+   "stability_bootstrap_ari": 0.8619,
+   "largest_cluster_share": 0.1791,
+   "smallest_cluster_districts": 122,
+   "candidate": true
+  },
+  "combo_land68_shares5|k9": {
+   "family_split_share": {
+    "land": 0.9547,
+    "spending_shape": 0.0453,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "9/9",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.4663,
+   "kmeans_vs_ward_ari": 0.6852,
+   "stability_bootstrap_ari": 0.8635,
+   "largest_cluster_share": 0.1538,
+   "smallest_cluster_districts": 122,
+   "candidate": false
+  },
+  "combo_land68_shares5|k10": {
+   "family_split_share": {
+    "land": 0.9541,
+    "spending_shape": 0.0459,
+    "all_columns": 1.0
+   },
+   "clusters_nameable": "10/10",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.4758,
+   "kmeans_vs_ward_ari": 0.6681,
+   "stability_bootstrap_ari": 0.8119,
+   "largest_cluster_share": 0.1538,
+   "smallest_cluster_districts": 122,
+   "candidate": false
+  },
+  "combo_landPCA5_shares5": {
+   "k2": {
+    "family_split_share": {
+     "land": 0.9149,
+     "spending_shape": 0.0851,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "2/2",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.3052,
+    "kmeans_vs_ward_ari": 1.0,
+    "stability_bootstrap_ari": 1.0,
+    "candidate": false
+   },
+   "k3": {
+    "family_split_share": {
+     "land": 0.8342,
+     "spending_shape": 0.1658,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "3/3",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.9188,
+    "kmeans_vs_ward_ari": 0.939,
+    "stability_bootstrap_ari": 0.9958,
+    "candidate": true
+   },
+   "k4": {
+    "family_split_share": {
+     "land": 0.854,
+     "spending_shape": 0.146,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "4/4",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.5461,
+    "kmeans_vs_ward_ari": 0.9091,
+    "stability_bootstrap_ari": 0.9902,
+    "candidate": true
+   },
+   "k5": {
+    "family_split_share": {
+     "land": 0.8635,
+     "spending_shape": 0.1365,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "5/5",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.5461,
+    "kmeans_vs_ward_ari": 0.95,
+    "stability_bootstrap_ari": 0.9187,
+    "candidate": true
+   },
+   "k6": {
+    "family_split_share": {
+     "land": 0.8717,
+     "spending_shape": 0.1283,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "6/6",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.5092,
+    "kmeans_vs_ward_ari": 0.8716,
+    "stability_bootstrap_ari": 0.843,
+    "candidate": true
+   },
+   "k7": {
+    "family_split_share": {
+     "land": 0.8708,
+     "spending_shape": 0.1292,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "7/7",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.4748,
+    "kmeans_vs_ward_ari": 0.8458,
+    "stability_bootstrap_ari": 0.8726,
+    "candidate": false
+   },
+   "k8": {
+    "family_split_share": {
+     "land": 0.8601,
+     "spending_shape": 0.1399,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "8/8",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.5153,
+    "kmeans_vs_ward_ari": 0.792,
+    "stability_bootstrap_ari": 0.9417,
+    "candidate": true
+   },
+   "k9": {
+    "family_split_share": {
+     "land": 0.8608,
+     "spending_shape": 0.1392,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "9/9",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.5254,
+    "kmeans_vs_ward_ari": 0.7593,
+    "stability_bootstrap_ari": 0.9218,
+    "candidate": true
+   },
+   "k10": {
+    "family_split_share": {
+     "land": 0.858,
+     "spending_shape": 0.142,
+     "all_columns": 1.0
+    },
+    "clusters_nameable": "10/10",
+    "spending_measures_separating_every_pair": "7/7",
+    "spending_gap_median_in_iqr": 0.5161,
+    "kmeans_vs_ward_ari": 0.7336,
+    "stability_bootstrap_ari": 0.911,
+    "candidate": true
+   }
+  },
+  "movement": {
+   "combo_land6_shares5|k3": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.9677,
+    "churn_after_alignment": 0.0109,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land6_shares5|k4": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.9373,
+    "churn_after_alignment": 0.0283,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land6_shares5|k5": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.8178,
+    "churn_after_alignment": 0.0833,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land6_shares5|k6": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.654,
+    "churn_after_alignment": 0.2312,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land6_shares5|k7": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.8374,
+    "churn_after_alignment": 0.0714,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land12_shares5|k3": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.9988,
+    "churn_after_alignment": 0.0005,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land12_shares5|k4": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.9987,
+    "churn_after_alignment": 0.0005,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land12_shares5|k5": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.7491,
+    "churn_after_alignment": 0.2445,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land12_shares5|k6": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.9951,
+    "churn_after_alignment": 0.002,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "combo_land12_shares5|k7": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 0.9868,
+    "churn_after_alignment": 0.006,
+    "shares_in_space": true,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "money_free_land68_no_shares|k3": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "money_free_land68_no_shares|k4": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "money_free_land68_no_shares|k5": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "money_free_land68_no_shares|k6": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "money_free_land68_no_shares|k7": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "land6_no_shares|k3": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "land6_no_shares|k4": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "land6_no_shares|k5": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "land6_no_shares|k6": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   },
+   "land6_no_shares|k7": {
+    "districts": 2016,
+    "ari_2023_vs_2024": 1.0,
+    "churn_after_alignment": 0.0,
+    "shares_in_space": false,
+    "eligibility": {
+     "2023": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2125,
+      "minimum_months_required": 6
+     },
+     "2024": {
+      "months_in_year": 12,
+      "districts_with_enough_months": 2096,
+      "minimum_months_required": 6
+     }
+    },
+    "share_columns_missing_from_the_year_frame": [],
+    "transform": "quantile transform fitted on both years pooled, then applied per year"
+   }
+  }
+ }
+}

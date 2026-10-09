@@ -1,0 +1,340 @@
+{
+ "generated_by": "scripts/export_provenance_crops.py",
+ "what_this_is": "Real Dynamic World crops around three named districts, exported as GeoTIFFs from the annual 500 m asset and rendered to a class map from the observed class confidences.",
+ "rendering_rule": "each pixel takes the class with the highest observed confidence; colors are fixed per class",
+ "why_these_districts": "one per signature: most built-up, most burnt, most forested within their cluster",
+ "never_names_the_granting_project": true,
+ "cache_outside_repository": "gee-cache",
+ "records": [
+  {
+   "tid": 2518,
+   "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+   "cluster": 2,
+   "why_chosen": "the most built-up district of the urbanised cluster",
+   "lon": 37.6115560184182,
+   "lat": 55.797168256949256,
+   "signature": {
+    "dynamic_world_built": 0.6216
+   },
+   "asset_leaf": "dw_mean_2023_500m",
+   "asset_year": "2023",
+   "scale_m": 100,
+   "region_bbox": [
+    37.4869,
+    55.7166,
+    37.7369,
+    55.8766
+   ],
+   "kind": "real observation",
+   "cache_path": "gee-cache/crop_2518_2023_250x160_100m.tif",
+   "payload_sha256": "4faccadce5849d5df1c8c7c5e37328dc740495cf43490a3160db39a9389a7b92",
+   "response_bytes": 87308,
+   "content_type": "image/tiff",
+   "committed_file": "artifacts/landing/provenance/crop_2518_2023.png",
+   "committed_bytes": 4576,
+   "native_pixels": [
+    279,
+    179
+   ],
+   "display_upscale": 4,
+   "upscale_rule": "nearest neighbour, four times; no pixel is invented and nothing is interpolated",
+   "asset_root_source": "derived from SBER_GEE_ASSET, never hardcoded",
+   "bands_in_crop": [
+    "None",
+    "None",
+    "None",
+    "None",
+    "None"
+   ],
+   "mean_class_share_in_crop": {
+    "trees": 0.1157,
+    "grass": 0.0356,
+    "crops": 0.0386,
+    "built": 0.4956,
+    "bare": 0.0505
+   },
+   "classes": [
+    "trees",
+    "grass",
+    "crops",
+    "built",
+    "bare"
+   ]
+  },
+  {
+   "tid": 2518,
+   "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+   "cluster": 2,
+   "why_chosen": "the most built-up district of the urbanised cluster",
+   "lon": 37.6115560184182,
+   "lat": 55.797168256949256,
+   "signature": {
+    "dynamic_world_built": 0.6216
+   },
+   "asset_leaf": "dw_mean_2024_500m",
+   "asset_year": "2024",
+   "scale_m": 100,
+   "region_bbox": [
+    37.4869,
+    55.7166,
+    37.7369,
+    55.8766
+   ],
+   "kind": "real observation",
+   "cache_path": "gee-cache/crop_2518_2024_250x160_100m.tif",
+   "payload_sha256": "ad435839e63ac27861cafc97de6adfc0f7f678ee2defd22088f4a1a01cdb05cb",
+   "response_bytes": 88948,
+   "content_type": "image/tiff",
+   "committed_file": "artifacts/landing/provenance/crop_2518_2024.png",
+   "committed_bytes": 4563,
+   "native_pixels": [
+    279,
+    179
+   ],
+   "display_upscale": 4,
+   "upscale_rule": "nearest neighbour, four times; no pixel is invented and nothing is interpolated",
+   "asset_root_source": "derived from SBER_GEE_ASSET, never hardcoded",
+   "bands_in_crop": [
+    "None",
+    "None",
+    "None",
+    "None",
+    "None"
+   ],
+   "mean_class_share_in_crop": {
+    "trees": 0.1179,
+    "grass": 0.0355,
+    "crops": 0.0384,
+    "built": 0.469,
+    "bare": 0.0519
+   },
+   "classes": [
+    "trees",
+    "grass",
+    "crops",
+    "built",
+    "bare"
+   ]
+  },
+  {
+   "tid": 2208,
+   "district": "Сорокинский муниципальный район",
+   "cluster": 3,
+   "why_chosen": "the most burnt district of the fire-affected cluster",
+   "lon": 69.80664947700832,
+   "lat": 56.73211504562954,
+   "signature": {
+    "burn_pct_of_territory": 44.1492
+   },
+   "asset_leaf": "dw_mean_2023_500m",
+   "asset_year": "2023",
+   "scale_m": 500,
+   "region_bbox": [
+    69.2222,
+    56.395,
+    70.4472,
+    57.1401
+   ],
+   "kind": "real observation",
+   "cache_path": "gee-cache/crop_2208_2023_1225x745_500m.tif",
+   "payload_sha256": "a7c5aedb3cbbe9b1c50a148c9401cba9eef2508d24758a276a716112e7fd425f",
+   "response_bytes": 1313146,
+   "content_type": "image/tiff",
+   "committed_file": "artifacts/landing/provenance/crop_2208_2023.png",
+   "committed_bytes": 15092,
+   "native_pixels": [
+    274,
+    167
+   ],
+   "display_upscale": 4,
+   "upscale_rule": "nearest neighbour, four times; no pixel is invented and nothing is interpolated",
+   "asset_root_source": "derived from SBER_GEE_ASSET, never hardcoded",
+   "bands_in_crop": [
+    "None",
+    "None",
+    "None",
+    "None",
+    "None"
+   ],
+   "mean_class_share_in_crop": {
+    "trees": 0.2271,
+    "grass": 0.0798,
+    "crops": 0.0809,
+    "built": 0.039,
+    "bare": 0.0847
+   },
+   "classes": [
+    "trees",
+    "grass",
+    "crops",
+    "built",
+    "bare"
+   ]
+  },
+  {
+   "tid": 2208,
+   "district": "Сорокинский муниципальный район",
+   "cluster": 3,
+   "why_chosen": "the most burnt district of the fire-affected cluster",
+   "lon": 69.80664947700832,
+   "lat": 56.73211504562954,
+   "signature": {
+    "burn_pct_of_territory": 44.1492
+   },
+   "asset_leaf": "dw_mean_2024_500m",
+   "asset_year": "2024",
+   "scale_m": 500,
+   "region_bbox": [
+    69.2222,
+    56.395,
+    70.4472,
+    57.1401
+   ],
+   "kind": "real observation",
+   "cache_path": "gee-cache/crop_2208_2024_1225x745_500m.tif",
+   "payload_sha256": "214d6f8fbce55758a77e38085fe0d6672db50ce07ae74dcf23691bc72ce9ba39",
+   "response_bytes": 1288979,
+   "content_type": "image/tiff",
+   "committed_file": "artifacts/landing/provenance/crop_2208_2024.png",
+   "committed_bytes": 12756,
+   "native_pixels": [
+    274,
+    167
+   ],
+   "display_upscale": 4,
+   "upscale_rule": "nearest neighbour, four times; no pixel is invented and nothing is interpolated",
+   "asset_root_source": "derived from SBER_GEE_ASSET, never hardcoded",
+   "bands_in_crop": [
+    "None",
+    "None",
+    "None",
+    "None",
+    "None"
+   ],
+   "mean_class_share_in_crop": {
+    "trees": 0.2453,
+    "grass": 0.0781,
+    "crops": 0.0644,
+    "built": 0.0397,
+    "bare": 0.0808
+   },
+   "classes": [
+    "trees",
+    "grass",
+    "crops",
+    "built",
+    "bare"
+   ]
+  },
+  {
+   "tid": 2000,
+   "district": "городской округ город Нижний Тагил",
+   "cluster": 4,
+   "why_chosen": "the most forested district of the forest-interior cluster",
+   "lon": 59.30725686567537,
+   "lat": 57.76714185289151,
+   "signature": {
+    "dynamic_world_trees": 0.5143
+   },
+   "asset_leaf": "dw_mean_2023_500m",
+   "asset_year": "2023",
+   "scale_m": 500,
+   "region_bbox": [
+    58.4573,
+    57.2373,
+    60.4214,
+    58.3171
+   ],
+   "kind": "real observation",
+   "cache_path": "gee-cache/crop_2000_2023_1964x1080_500m.tif",
+   "payload_sha256": "e6f8b14b615bf2141ed3669a579f0a69530b7c3df3f50eaa716d88bb1ebc0a89",
+   "response_bytes": 3038907,
+   "content_type": "image/tiff",
+   "committed_file": "artifacts/landing/provenance/crop_2000_2023.png",
+   "committed_bytes": 16813,
+   "native_pixels": [
+    439,
+    242
+   ],
+   "display_upscale": 4,
+   "upscale_rule": "nearest neighbour, four times; no pixel is invented and nothing is interpolated",
+   "asset_root_source": "derived from SBER_GEE_ASSET, never hardcoded",
+   "bands_in_crop": [
+    "None",
+    "None",
+    "None",
+    "None",
+    "None"
+   ],
+   "mean_class_share_in_crop": {
+    "trees": 0.481,
+    "grass": 0.0487,
+    "crops": 0.0384,
+    "built": 0.0462,
+    "bare": 0.0499
+   },
+   "classes": [
+    "trees",
+    "grass",
+    "crops",
+    "built",
+    "bare"
+   ]
+  },
+  {
+   "tid": 2000,
+   "district": "городской округ город Нижний Тагил",
+   "cluster": 4,
+   "why_chosen": "the most forested district of the forest-interior cluster",
+   "lon": 59.30725686567537,
+   "lat": 57.76714185289151,
+   "signature": {
+    "dynamic_world_trees": 0.5143
+   },
+   "asset_leaf": "dw_mean_2024_500m",
+   "asset_year": "2024",
+   "scale_m": 500,
+   "region_bbox": [
+    58.4573,
+    57.2373,
+    60.4214,
+    58.3171
+   ],
+   "kind": "real observation",
+   "cache_path": "gee-cache/crop_2000_2024_1964x1080_500m.tif",
+   "payload_sha256": "fcd16139444946ad9fbd4910e59409cbb74eaa10c586997048f3c0184cdcf111",
+   "response_bytes": 3042616,
+   "content_type": "image/tiff",
+   "committed_file": "artifacts/landing/provenance/crop_2000_2024.png",
+   "committed_bytes": 15770,
+   "native_pixels": [
+    439,
+    242
+   ],
+   "display_upscale": 4,
+   "upscale_rule": "nearest neighbour, four times; no pixel is invented and nothing is interpolated",
+   "asset_root_source": "derived from SBER_GEE_ASSET, never hardcoded",
+   "bands_in_crop": [
+    "None",
+    "None",
+    "None",
+    "None",
+    "None"
+   ],
+   "mean_class_share_in_crop": {
+    "trees": 0.4244,
+    "grass": 0.0498,
+    "crops": 0.0381,
+    "built": 0.047,
+    "bare": 0.0534
+   },
+   "classes": [
+    "trees",
+    "grass",
+    "crops",
+    "built",
+    "bare"
+   ]
+  }
+ ]
+}

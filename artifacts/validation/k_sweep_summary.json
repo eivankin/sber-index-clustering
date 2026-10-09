@@ -1,0 +1,1041 @@
+{
+ "generated_by": "scripts/sweep_k_interpretability.py",
+ "what_this_is": "The metric battery and an interpretability test for every k from 2 to 8, on the attribute space the published partition used and on a second space that adds the land block.",
+ "space_shipped": "levels+shares",
+ "space_with_land": "levels+shares+land",
+ "measures": [
+  "gls_fraction_bare",
+  "gls_fraction_crops",
+  "gls_fraction_urban",
+  "viirs_lit_mean",
+  "elevation_mean",
+  "burn_pct_of_territory",
+  "total_mean_rub",
+  "spending_per_km2_log",
+  "official_land_area_km2"
+ ],
+ "bootstrap": 300,
+ "ci_pct": 5.0,
+ "grab_bag_rule": "the largest cluster's interquartile spread reaching 70% of the spread over all districts",
+ "rows": 52,
+ "rank_rule": "averaged rank over SW, CH, S_Dbw, AVI, AVU and MQ computed within each attribute space; S_Dbw and AVU are ranked so that lower is better, following the practice recorded in notes/competitor-k-2026.md on the internal branch, where the top-ranked entry ranks method by k over six ICVI indices",
+ "superseded": "These figures are taken on the panel after Hansen and SoilGrids were integrated: the feature space grew from 168 to 172 columns and gained a hansen block of 3 measures and a soil block of 1. The sweep taken before integration, recorded in docs/validation/k-choice.md as predating it, is kept rather than deleted, because a later number that differs is only interpretable against the earlier one - without it, saying the added layers changed the clustering would be an assertion with nothing to compare it to.",
+ "interpretability_verdicts": {
+  "shipped|k2|kmeans": {
+   "nameable": true,
+   "separated_measures": [
+    "gls_fraction_bare",
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "viirs_lit_mean",
+    "burn_pct_of_territory",
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.6186,
+   "labels": {
+    "0": "crops, burn_pct_of_territory, official_land_area_km2",
+    "1": "bare, urban, viirs_lit_mean"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k2|ward": {
+   "nameable": true,
+   "separated_measures": [
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "viirs_lit_mean",
+    "burn_pct_of_territory",
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.6091,
+   "labels": {
+    "0": "urban, viirs_lit_mean, total_mean_rub",
+    "1": "crops, burn_pct_of_territory, official_land_area_km2"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k3|kmeans": {
+   "nameable": true,
+   "separated_measures": [
+    "gls_fraction_urban",
+    "viirs_lit_mean",
+    "elevation_mean",
+    "total_mean_rub",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.4573,
+   "labels": {
+    "0": "elevation_mean, official_land_area_km2",
+    "1": "urban, viirs_lit_mean, total_mean_rub",
+    "2": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k3|ward": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_bare",
+    "gls_fraction_urban",
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.6091,
+   "labels": {
+    "0": "official_land_area_km2",
+    "1": "bare",
+    "2": "urban, total_mean_rub, spending_per_km2_log"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k4|kmeans": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_urban",
+    "viirs_lit_mean",
+    "total_mean_rub"
+   ],
+   "grab_bag_measures": 7,
+   "largest_cluster_share": 0.3115,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "urban, viirs_lit_mean, total_mean_rub"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k4|ward": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_urban",
+    "total_mean_rub",
+    "spending_per_km2_log"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.3413,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "urban, total_mean_rub, spending_per_km2_log",
+    "3": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k5|kmeans": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_crops",
+    "viirs_lit_mean",
+    "total_mean_rub",
+    "spending_per_km2_log"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.2808,
+   "labels": {
+    "0": "viirs_lit_mean, total_mean_rub, spending_per_km2_log",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "crops"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k5|ward": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_urban",
+    "total_mean_rub"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.3413,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "urban, total_mean_rub",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k6|kmeans": {
+   "nameable": false,
+   "separated_measures": [
+    "total_mean_rub"
+   ],
+   "grab_bag_measures": 7,
+   "largest_cluster_share": 0.25,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "total_mean_rub",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k6|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.2495,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k7|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.2098,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k7|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.2103,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k8|kmeans": {
+   "nameable": false,
+   "separated_measures": [
+    "total_mean_rub"
+   ],
+   "grab_bag_measures": 3,
+   "largest_cluster_share": 0.1538,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "total_mean_rub",
+    "7": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k8|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.2103,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k9|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1592,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k9|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1716,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k10|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1558,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k10|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1716,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k11|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.1622,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k11|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 2,
+   "largest_cluster_share": 0.1414,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k12|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 4,
+   "largest_cluster_share": 0.1235,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k12|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1324,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k13|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 4,
+   "largest_cluster_share": 0.1295,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme",
+    "12": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k13|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1324,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme",
+    "12": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k14|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 3,
+   "largest_cluster_share": 0.1027,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme",
+    "12": "no separated measure on which this cluster is extreme",
+    "13": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "shipped|k14|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1324,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme",
+    "12": "no separated measure on which this cluster is extreme",
+    "13": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k2|kmeans": {
+   "nameable": true,
+   "separated_measures": [
+    "gls_fraction_bare",
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "viirs_lit_mean",
+    "elevation_mean",
+    "burn_pct_of_territory",
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.5501,
+   "labels": {
+    "0": "urban, viirs_lit_mean, total_mean_rub",
+    "1": "bare, crops, elevation_mean"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k2|ward": {
+   "nameable": true,
+   "separated_measures": [
+    "gls_fraction_bare",
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "viirs_lit_mean",
+    "elevation_mean",
+    "burn_pct_of_territory",
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.5526,
+   "labels": {
+    "0": "urban, viirs_lit_mean, total_mean_rub",
+    "1": "bare, crops, elevation_mean"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k3|kmeans": {
+   "nameable": true,
+   "separated_measures": [
+    "gls_fraction_crops",
+    "viirs_lit_mean",
+    "elevation_mean",
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.4499,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "crops, elevation_mean, official_land_area_km2",
+    "2": "viirs_lit_mean, total_mean_rub, spending_per_km2_log"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k3|ward": {
+   "nameable": false,
+   "separated_measures": [
+    "viirs_lit_mean",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 6,
+   "largest_cluster_share": 0.4474,
+   "labels": {
+    "0": "official_land_area_km2",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "viirs_lit_mean, spending_per_km2_log"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k4|kmeans": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "viirs_lit_mean"
+   ],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.3398,
+   "labels": {
+    "0": "crops",
+    "1": "urban, viirs_lit_mean",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k4|ward": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_urban",
+    "viirs_lit_mean"
+   ],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.3512,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "urban, viirs_lit_mean",
+    "3": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k5|kmeans": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_urban"
+   ],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.3388,
+   "labels": {
+    "0": "urban",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k5|ward": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_urban",
+    "total_mean_rub"
+   ],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.3512,
+   "labels": {
+    "0": "urban, total_mean_rub",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k6|kmeans": {
+   "nameable": false,
+   "separated_measures": [
+    "total_mean_rub",
+    "spending_per_km2_log",
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.3388,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "official_land_area_km2",
+    "5": "total_mean_rub, spending_per_km2_log"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k6|ward": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_urban"
+   ],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.3512,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "urban",
+    "5": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k7|kmeans": {
+   "nameable": false,
+   "separated_measures": [
+    "gls_fraction_urban"
+   ],
+   "grab_bag_measures": 3,
+   "largest_cluster_share": 0.2376,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "urban",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k7|ward": {
+   "nameable": false,
+   "separated_measures": [
+    "spending_per_km2_log"
+   ],
+   "grab_bag_measures": 3,
+   "largest_cluster_share": 0.2401,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "spending_per_km2_log",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k8|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1845,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k8|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 3,
+   "largest_cluster_share": 0.2401,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k9|kmeans": {
+   "nameable": true,
+   "separated_measures": [
+    "official_land_area_km2"
+   ],
+   "grab_bag_measures": 1,
+   "largest_cluster_share": 0.1473,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "official_land_area_km2",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k9|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1811,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k10|kmeans": {
+   "nameable": true,
+   "separated_measures": [
+    "spending_per_km2_log"
+   ],
+   "grab_bag_measures": 1,
+   "largest_cluster_share": 0.1473,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "spending_per_km2_log",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k10|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1811,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k11|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 1,
+   "largest_cluster_share": 0.1508,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k11|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 5,
+   "largest_cluster_share": 0.1811,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k12|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 1,
+   "largest_cluster_share": 0.1493,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k12|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 1,
+   "largest_cluster_share": 0.1295,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k13|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 1,
+   "largest_cluster_share": 0.1468,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme",
+    "12": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k13|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 1,
+   "largest_cluster_share": 0.1295,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme",
+    "12": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k14|kmeans": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 4,
+   "largest_cluster_share": 0.119,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme",
+    "12": "no separated measure on which this cluster is extreme",
+    "13": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  },
+  "with_land|k14|ward": {
+   "nameable": false,
+   "separated_measures": [],
+   "grab_bag_measures": 1,
+   "largest_cluster_share": 0.1295,
+   "labels": {
+    "0": "no separated measure on which this cluster is extreme",
+    "1": "no separated measure on which this cluster is extreme",
+    "2": "no separated measure on which this cluster is extreme",
+    "3": "no separated measure on which this cluster is extreme",
+    "4": "no separated measure on which this cluster is extreme",
+    "5": "no separated measure on which this cluster is extreme",
+    "6": "no separated measure on which this cluster is extreme",
+    "7": "no separated measure on which this cluster is extreme",
+    "8": "no separated measure on which this cluster is extreme",
+    "9": "no separated measure on which this cluster is extreme",
+    "10": "no separated measure on which this cluster is extreme",
+    "11": "no separated measure on which this cluster is extreme",
+    "12": "no separated measure on which this cluster is extreme",
+    "13": "no separated measure on which this cluster is extreme"
+   },
+   "rule": "nameable when some measure separates every pair and the largest cluster is not a grab-bag on more measures than the ones that separate"
+  }
+ },
+ "best_by_rank": {
+  "k": 14
+ },
+ "best_by_silhouette": {
+  "k": 2,
+  "method": "kmeans",
+  "SW": 0.3473134301411508,
+  "separated_measures": 8
+ },
+ "best_by_separation": {
+  "k": 2,
+  "method": "kmeans",
+  "SW": 0.3473134301411508,
+  "separated_measures": 8
+ },
+ "published_k3": {
+  "k": 3,
+  "method": "kmeans",
+  "SW": 0.25037776569883924,
+  "separated_measures": 5,
+  "grab_bag_measures": 5,
+  "largest_cluster_share": 0.4573,
+  "ari_vs_published": 1.0
+ },
+ "do_the_two_agree": true,
+ "config_untouched": "configs/clustering.yaml still says k_values 3..8; changing the shipped recipe is a separate task that must name the measurement that justified it"
+}

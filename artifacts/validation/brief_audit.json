@@ -1,0 +1,403 @@
+{
+ "generated_by": "scripts/build_brief_audit.py",
+ "what_this_is": "One row per requirement, scoring criterion and deliverable of the clustering nomination, each carrying either an artifact path that exists or a sentence naming what is missing.",
+ "source": {
+  "url": "https://sber.ru/sberindex/konkurs_sberindex",
+  "read_on": "2026-10-08",
+  "nomination": "Кластеризация"
+ },
+ "deadline": {
+  "accepted_from": "2026-09-14",
+  "accepted_until": "2026-10-09",
+  "submission": "fill the form and attach links with view access"
+ },
+ "status_rule": "met requires at least one cited path that exists; partial and deferred_by_decision require a failure sentence naming the gap; a row with neither is refused, because silence would otherwise read as satisfaction",
+ "counts": {
+  "met": 11,
+  "partial": 4,
+  "deferred_by_decision": 4
+ },
+ "counts_by_kind": {
+  "requirement": {
+   "total": 7,
+   "met": 11,
+   "partial": 4,
+   "deferred_by_decision": 4
+  },
+  "source": {
+   "total": 2,
+   "met": 11,
+   "partial": 4,
+   "deferred_by_decision": 4
+  },
+  "criterion": {
+   "total": 7,
+   "met": 11,
+   "partial": 4,
+   "deferred_by_decision": 4
+  },
+  "deliverable": {
+   "total": 3,
+   "met": 11,
+   "partial": 4,
+   "deferred_by_decision": 4
+  }
+ },
+ "recheck_rule": "rows marked after_integration are provisional while the Earth Engine layers are being fetched and must be re-audited once the integrated panel exists",
+ "rows": [
+  {
+   "id": "attribute-space",
+   "kind": "requirement",
+   "status": "met",
+   "quoted_from_page": "сформировать пространство признаков (атрибутов), выбрав подходящие показатели из предложенных вариантов, и обосновать свой выбор",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/features/feature_space_report.json",
+    "docs/method/attribute-space.md",
+    "configs/panel.yaml"
+   ],
+   "evidence_cited": [
+    "artifacts/features/feature_space_report.json",
+    "docs/method/attribute-space.md",
+    "configs/panel.yaml"
+   ],
+   "failure": "",
+   "note": "The indicator set is being extended by the layers Earth Engine now answers for, so the justification has to be re-issued once those columns exist; the requirement itself is met.",
+   "recheck": "after_integration"
+  },
+  {
+   "id": "edge-rule-mathematical",
+   "kind": "requirement",
+   "status": "met",
+   "quoted_from_page": "математически определить правило, по которому между двумя муниципалитетами создаётся связь (ребро)",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "configs/edge_rules.yaml",
+    "artifacts/edges/edge_diagnostics.json",
+    "artifacts/edges/edge_rules_summary.csv",
+    "artifacts/edges/warping_family.json"
+   ],
+   "evidence_cited": [
+    "configs/edge_rules.yaml",
+    "artifacts/edges/edge_diagnostics.json",
+    "artifacts/edges/edge_rules_summary.csv",
+    "artifacts/edges/warping_family.json"
+   ],
+   "failure": "",
+   "note": "Seven families, each with a formula, a direction, guards and a sparsification rule. The brief's own suggestions are covered: distance between territories, correlation between monthly series, cosine similarity of spending vectors, lagged correlation and warping with an offset chosen by the data.",
+   "recheck": null
+  },
+  {
+   "id": "edge-influence",
+   "kind": "requirement",
+   "status": "partial",
+   "quoted_from_page": "обосновать выбранный способ построения рёбер и объяснить, какое влияние он оказывает на структуру сети и результаты кластеризации",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/edges/edge_rules_summary.csv",
+    "artifacts/edges/warping_family.json"
+   ],
+   "evidence_cited": [
+    "artifacts/edges/edge_rules_summary.csv",
+    "artifacts/edges/warping_family.json"
+   ],
+   "failure": "The influence on network structure is measured - reciprocity, clustering coefficient, degree gini, top-1% adjacency, label-propagation modularity, dense versus kNN component counts - but the influence on the clustering result is not. No artifact yet compares cluster quality or interpretability with and without edge-derived features, which is the second half of this requirement. Task: edge-influence-on-clustering.",
+   "note": "",
+   "recheck": null
+  },
+  {
+   "id": "temporal-approach",
+   "kind": "requirement",
+   "status": "met",
+   "quoted_from_page": "предложить математический подход для отслеживания изменений кластеров во времени",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/dynamics/dynamics_summary.json",
+    "artifacts/dynamics/monthly_clusters.json",
+    "artifacts/dynamics/assignments_kmeans.parquet",
+    "docs/method/temporal-dynamics.md"
+   ],
+   "evidence_cited": [
+    "artifacts/dynamics/dynamics_summary.json",
+    "artifacts/dynamics/monthly_clusters.json",
+    "artifacts/dynamics/assignments_kmeans.parquet",
+    "docs/method/temporal-dynamics.md"
+   ],
+   "failure": "",
+   "note": "Monthly re-clustering with label churn and agreement against the aggregate partition, plus a maximal-overlap alignment for moving labels. The cadence of the inputs says spending updates monthly, so a monthly reading of the clusters is the one the data supports.",
+   "recheck": null
+  },
+  {
+   "id": "cluster-quality-meaning",
+   "kind": "requirement",
+   "status": "partial",
+   "quoted_from_page": "оценить качество полученных кластеров, дать им содержательную интерпретацию и обосновать их экономическую осмысленность",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/icvi/method_comparison.csv",
+    "artifacts/interpretation/cluster_fingerprints.csv",
+    "artifacts/interpretation/cluster_names.json",
+    "artifacts/validation/k_sweep_summary.json",
+    "artifacts/validation/meaningfulness_rule.json"
+   ],
+   "evidence_cited": [
+    "artifacts/icvi/method_comparison.csv",
+    "artifacts/interpretation/cluster_fingerprints.csv",
+    "artifacts/interpretation/cluster_names.json",
+    "artifacts/validation/k_sweep_summary.json",
+    "artifacts/validation/meaningfulness_rule.json"
+   ],
+   "failure": "Quality indices and a naming attempt exist, and a decision rule for \"meaningfully different\" was fixed before the experiments ran. What is missing is the verdict itself: whether the clusters can be named and defended rather than described as a list of unrelated characteristics, and whether the chosen k is the one the evidence supports. Tasks: sweep-k-interpretability, recluster-at-vintages.",
+   "note": "",
+   "recheck": null
+  },
+  {
+   "id": "source-glad-tree-cover",
+   "kind": "source",
+   "status": "deferred_by_decision",
+   "quoted_from_page": "Допускается интеграция ... любых надёжных и публично доступных источников информации (the brief permits extra sources; this one was named by us, not by the page)",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [],
+   "evidence_cited": [],
+   "failure": "Dropped by the user's decision on 2026-10-08, not by failure of the source. Every identifier tried for it returns \"not found\": UMD/GLAD_/TREECOVER/CIRCUITRY/2020v1 and UMD/gladsat-foundation-data-v1, measured in artifacts/geo/asset_id_probe.json under the newly registered project. No requirement of the clustering nomination depends on it, so further identifier hunting was judged not worth the quota.",
+   "note": "",
+   "recheck": "never"
+  },
+  {
+   "id": "source-intact-forest-landscapes",
+   "kind": "source",
+   "status": "deferred_by_decision",
+   "quoted_from_page": "Допускается интеграция ... любых надёжных и публично доступных источников информации (named by us, not by the page)",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [],
+   "evidence_cited": [],
+   "failure": "Dropped by the user's decision on 2026-10-08. GLAD/IFL/2021 and UMD/ifl_2021 both return \"not found\" under the registered project, measured in artifacts/geo/asset_id_probe.json. Nothing in the nomination requires intact-forest boundaries, and the land-production story is carried by cropland, grass and forest shares from classified land cover.",
+   "note": "The task page sharpens this requirement: the clusters must be interpreted as real types of local economies, not merely as groups that differ statistically. That is what the interpretability verdict in the k sweep has to answer, and it is why a cluster that cannot be named is reported as unnamed rather than being given a label drawn from whichever characteristics happen to differ.",
+   "recheck": "never"
+  },
+  {
+   "id": "criterion-methodology-explanation",
+   "kind": "criterion",
+   "status": "met",
+   "quoted_from_page": "Простое и понятное объяснение разработанной методологии — 15%",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "README.md",
+    "docs/method/master-table-and-geometry.md",
+    "docs/method/covariates.md",
+    "docs/method/edge-rules.md"
+   ],
+   "evidence_cited": [
+    "README.md",
+    "docs/method/master-table-and-geometry.md",
+    "docs/method/covariates.md",
+    "docs/method/edge-rules.md"
+   ],
+   "failure": "",
+   "note": "",
+   "recheck": null
+  },
+  {
+   "id": "criterion-network-attribute-structure",
+   "kind": "criterion",
+   "status": "met",
+   "quoted_from_page": "Описание того, как строится сетевая и атрибутивная структура, — 15%",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "docs/method/edge-rules.md",
+    "docs/method/attribute-space.md",
+    "artifacts/edges/edge_diagnostics.json"
+   ],
+   "evidence_cited": [
+    "docs/method/edge-rules.md",
+    "docs/method/attribute-space.md",
+    "artifacts/edges/edge_diagnostics.json"
+   ],
+   "failure": "",
+   "note": "The listed options are all present in some form. Dynamic Time Warping was the one missing and was added on 2026-10-08 as dynamic_alignment.",
+   "recheck": null
+  },
+  {
+   "id": "criterion-temporal-approach",
+   "kind": "criterion",
+   "status": "met",
+   "quoted_from_page": "математический подход к отслеживанию изменений кластеров во времени — 15% (the task page lists this as a scored criterion; the summary on the contest page lists \"Сравнение методов — 15%\" in the third slot instead. Both are carried, because the two lists differ and neither can be assumed to supersede the other.)",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/dynamics/dynamics_summary.json",
+    "artifacts/dynamics/monthly_clusters.json",
+    "artifacts/dynamics/drift_kmeans.csv",
+    "docs/method/temporal-dynamics.md"
+   ],
+   "evidence_cited": [
+    "artifacts/dynamics/dynamics_summary.json",
+    "artifacts/dynamics/monthly_clusters.json",
+    "artifacts/dynamics/drift_kmeans.csv",
+    "docs/method/temporal-dynamics.md"
+   ],
+   "failure": "",
+   "note": "The same artifact serves this criterion and the fourth listed requirement. Monthly re-clustering, label churn, agreement with the aggregate partition and a maximal-overlap alignment for moving labels are all measured rather than described.",
+   "recheck": null
+  },
+  {
+   "id": "criterion-method-comparison",
+   "kind": "criterion",
+   "status": "partial",
+   "quoted_from_page": "Сравнение методов — 15%",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/icvi/method_comparison.csv"
+   ],
+   "evidence_cited": [
+    "artifacts/icvi/method_comparison.csv"
+   ],
+   "failure": "The comparison covers k-means and Ward against the same index battery. The top-ranked competitor runs seven methods across an eleven-value k range, so a two-method comparison is thin against the criterion's own wording. Recorded as a named gap rather than presented as sufficient.",
+   "note": "",
+   "recheck": null
+  },
+  {
+   "id": "criterion-icvi-battery",
+   "kind": "criterion",
+   "status": "met",
+   "quoted_from_page": "Применение ICVI: SW, CH, S_Dbw, AVI, AVU, MQ — 15%",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/icvi/method_comparison.csv",
+    "src/sberindex/icvi.py"
+   ],
+   "evidence_cited": [
+    "artifacts/icvi/method_comparison.csv",
+    "src/sberindex/icvi.py"
+   ],
+   "failure": "",
+   "note": "All six named indices are computed; the attribute-based ones on the feature matrix and the graph-based ones on the adjacency matrix. This was checked by reading the artifact's columns rather than by trusting the docstring.",
+   "recheck": null
+  },
+  {
+   "id": "criterion-interpretation-reproducibility",
+   "kind": "criterion",
+   "status": "partial",
+   "quoted_from_page": "Интерпретация результатов, ясность, воспроизводимость и обоснованность выводов — 30%",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/MANIFEST.sha256",
+    "artifacts/interpretation/cluster_profile.csv",
+    "artifacts/validation/input_cadence.json"
+   ],
+   "evidence_cited": [
+    "artifacts/MANIFEST.sha256",
+    "artifacts/interpretation/cluster_profile.csv",
+    "artifacts/validation/input_cadence.json"
+   ],
+   "failure": "Reproducibility is measured - a manifest with byte-level verification and a model build that was shown to reproduce the committed artifacts. Interpretation and justification are what this goal exists to settle, so the row stays partial until the k sweep, the vintage comparison and the imputation test are measured.",
+   "note": "",
+   "recheck": null
+  },
+  {
+   "id": "criterion-innovative-visualization",
+   "kind": "criterion",
+   "status": "deferred_by_decision",
+   "quoted_from_page": "Предложение инновационной визуализации — 10%",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [],
+   "evidence_cited": [],
+   "failure": "Out of scope for this goal by the user's decision: submission preparation, including visualization and any landing or presentation, moves to a separate goal that replaces the dropped frontend one. Recorded as deferred rather than unmet, so the score risk is visible instead of silent.",
+   "note": "",
+   "recheck": null
+  },
+  {
+   "id": "deliverable-code-configs-instructions",
+   "kind": "deliverable",
+   "status": "met",
+   "quoted_from_page": "Чистый, хорошо документированный код: репозиторий GitHub; конфигурационные файлы (YAML/JSON) для настройки гиперпараметров; инструкцию по запуску проекта",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "README.md",
+    "run_all.sh",
+    "configs/clustering.yaml",
+    "configs/edge_rules.yaml",
+    "configs/panel.yaml",
+    "configs/dynamics.yaml"
+   ],
+   "evidence_cited": [
+    "README.md",
+    "run_all.sh",
+    "configs/clustering.yaml",
+    "configs/edge_rules.yaml",
+    "configs/panel.yaml",
+    "configs/dynamics.yaml"
+   ],
+   "failure": "",
+   "note": "",
+   "recheck": null
+  },
+  {
+   "id": "deliverable-methodology-report-ru",
+   "kind": "deliverable",
+   "status": "met",
+   "quoted_from_page": "Краткий методологический отчёт, написанный на русском языке",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "docs/report/methodology-ru.md"
+   ],
+   "evidence_cited": [
+    "docs/report/methodology-ru.md"
+   ],
+   "failure": "",
+   "note": "It exists and is in Russian. It will not describe the integrated Earth Engine layers until they are built, and it must not claim otherwise; the update belongs to the submission goal.",
+   "recheck": "after_integration"
+  },
+  {
+   "id": "deliverable-presentation",
+   "kind": "deliverable",
+   "status": "deferred_by_decision",
+   "quoted_from_page": "Презентацию в формате pdf или интерактивного лендинга с экономической интерпретацией результатов и визуализацией итогов",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [],
+   "evidence_cited": [],
+   "failure": "Deferred to the separate submission goal by the user's decision. A print/export view exists at web/presentation/export.html but nothing is rendered from it in this goal.",
+   "note": "",
+   "recheck": null
+  },
+  {
+   "id": "mandatory-sberindex-dataset",
+   "kind": "requirement",
+   "status": "met",
+   "quoted_from_page": "Обязательным условием является использование минимум одного датасета СберИндекса",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "artifacts/landing/map_timeline.json",
+    "docs/method/attribute-space.md"
+   ],
+   "evidence_cited": [
+    "artifacts/landing/map_timeline.json",
+    "docs/method/attribute-space.md"
+   ],
+   "failure": "",
+   "note": "Municipal consumer spending by category, monthly 2023-01 to 2024-12, is the core input, alongside the municipality reference with Oktmo identifiers.",
+   "recheck": null
+  },
+  {
+   "id": "allowed-extra-sources",
+   "kind": "requirement",
+   "status": "met",
+   "quoted_from_page": "Допускается интеграция новостных источников, климатических и погодных данных, других экономических индикаторов или любых надёжных и публично доступных источников информации",
+   "source": "https://sber.ru/sberindex/konkurs_sberindex (2026-10-08)",
+   "evidence_existing": [
+    "configs/gee_sources.yaml",
+    "configs/fallback_sources.yaml",
+    "artifacts/geo/covariates_diagnostics.json",
+    "artifacts/geo/added_layers_measures.json"
+   ],
+   "evidence_cited": [
+    "configs/gee_sources.yaml",
+    "configs/fallback_sources.yaml",
+    "artifacts/geo/covariates_diagnostics.json",
+    "artifacts/geo/added_layers_measures.json"
+   ],
+   "failure": "",
+   "note": "Remote sensing, official Rosstat statistics and OpenStreetMap geometry are integrated. GDELT news is named but not wired, and two sources - GLAD tree cover and Intact Forest Landscapes - are dropped by the user's decision rather than by failure.",
+   "recheck": "after_integration"
+  }
+ ]
+}

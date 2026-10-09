@@ -1,0 +1,55 @@
+{
+ "2023": {
+  "asset_id": "projects/<redacted-project>/assets/dw_mean_2023_500m",
+  "state": "COMPLETED",
+  "scale_m": 500,
+  "level": "annual",
+  "error_code": null,
+  "description": "dw_mean_2023_500m",
+  "bands": [
+   "trees",
+   "grass",
+   "crops",
+   "built",
+   "bare"
+  ],
+  "verified_value": {
+   "bare": 0.05170719145745453,
+   "built": 0.6296432584834596,
+   "crops": 0.03225534961610618,
+   "grass": 0.03001163427769724,
+   "trees": 0.03293778317876988
+  },
+  "usable": true,
+  "verified_numeric": 5
+ },
+ "2024": {
+  "asset_id": "projects/<redacted-project>/assets/dw_mean_2024_500m",
+  "state": "COMPLETED",
+  "scale_m": 500,
+  "level": "annual",
+  "error_code": null,
+  "description": "dw_mean_2024_500m",
+  "bands": [
+   "trees",
+   "grass",
+   "crops",
+   "built",
+   "bare"
+  ],
+  "verified_value": {
+   "bare": 0.05930437863383803,
+   "built": 0.5902414349763985,
+   "crops": 0.03241645751310693,
+   "grass": 0.02940825878402158,
+   "trees": 0.034164855714827295
+  },
+  "usable": true,
+  "verified_numeric": 5
+ },
+ "_": {
+  "wait_seconds": 3392.6,
+  "poll_seconds": 15,
+  "note": "A batch export runs server-side and outlives this process; the asset it writes is what makes later reductions cheap. Waiting here is bounded, and a task still QUEUED or RUNNING is reported as such rather than assumed complete."
+ }
+}

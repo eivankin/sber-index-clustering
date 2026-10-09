@@ -1,0 +1,32 @@
+{
+ "generated_by": "scripts/corroborate_transitions_hansen.py",
+ "what_this_is": "Each of the 546 spending-composition transitions decided against physical measurement: corroborated, refuted or unresolvable, with the band and value named.",
+ "correction": "these are spending-composition transitions, not land-cover transitions as some notes and the goal objective's wording call them; the physical evidence sought is land cover and forest change, but the thing that changed is who buys what",
+ "hypotheses": {
+  "Продовольствие up": "crops positive",
+  "Продовольствие down": "crops not_positive",
+  "Маркетплейсы up": "built positive",
+  "Маркетплейсы down": "built not_positive"
+ },
+ "thresholds": {
+  "measurable_class_change_points": 0.01,
+  "forest_loss_in_window_pct": 0.5,
+  "lossyear_years_in_window": [
+   23,
+   24
+  ]
+ },
+ "counts": {
+  "corroborated": 8,
+  "refuted": 1,
+  "unresolvable": 537
+ },
+ "total": 546,
+ "still_pending": 537,
+ "coverage_of_added_layers": 0.9738,
+ "dw_columns_found": {
+  "2023": 5,
+  "2024": 5
+ },
+ "rows_artifact": "artifacts/dynamics/transition_corroboration_rows.csv"
+}

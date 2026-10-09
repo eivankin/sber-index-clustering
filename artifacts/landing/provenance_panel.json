@@ -1,0 +1,673 @@
+{
+ "generated_by": "scripts/build_provenance_panel.py",
+ "what_this_is": "Cards for the layers that arrived, with their licence, citation, resolution and the denominator their shares use, plus the sources named in the brief that did not arrive, recorded in the words the registry recorded them.",
+ "layers": [
+  {
+   "key": "elevation",
+   "asset": "USGS/SRTMGL1_003",
+   "kind": "image",
+   "year": null,
+   "scale_m": 30,
+   "reducer": "mean",
+   "denominator": "",
+   "license": "public domain (USGS/NASA SRTM)",
+   "citation": "NASA SRTM / DEPLR, \"SRTM Digital Elevation Data Version 1\"",
+   "coverage": 0.9256,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 173.4,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.elevation"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "elevation_mean",
+    "value": 155.33934638541635,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.elevation.first_row.elevation_mean"
+   },
+   "spread": {
+    "n": 2014,
+    "min": -28.4132,
+    "median": 163.5828,
+    "max": 2461.4428,
+    "rule": "min/median/max по округам с ненулевым значением столбца elevation_mean"
+   }
+  },
+  {
+   "key": "gls_fraction",
+   "asset": "COPERNICUS/Landcover/100m/Proba-V-C3/Global",
+   "kind": "collection",
+   "year": 2019,
+   "scale_m": 100,
+   "reducer": "mean",
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "same as gls_lcz",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 418.3,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.gls_fraction"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "gls_fraction_bare",
+    "value": 0.5464200381933653,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.gls_fraction.first_row.gls_fraction_bare"
+   },
+   "spread": {
+    "n": 2190,
+    "min": 0.0,
+    "median": 0.0482,
+    "max": 14.3317,
+    "rule": "min/median/max по округам с ненулевым значением столбца gls_fraction_bare"
+   }
+  },
+  {
+   "key": "gls_lcz",
+   "asset": "COPERNICUS/Landcover/100m/Proba-V-C3/Global",
+   "kind": "collection",
+   "year": 2019,
+   "scale_m": 100,
+   "reducer": "frequencyHistogram",
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "VITO / EOC, \"Copernicus Global Land Service: Land Cover 100m, collection 3, epoch 2015-2019\", https://doi.org/10.5281/zenodo.3939050",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 269.7,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.gls_lcz"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "gls_unclassified_pct",
+    "value": 0.0,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.gls_lcz.first_row.gls_unclassified_pct"
+   },
+   "spread": {
+    "n": 2190,
+    "min": 0.0,
+    "median": 0.0,
+    "max": 4.2522,
+    "rule": "min/median/max по округам с ненулевым значением столбца gls_unclassified_pct"
+   }
+  },
+  {
+   "key": "modis_burn",
+   "asset": "MODIS/061/MCD64A1",
+   "kind": "collection",
+   "year": 2023,
+   "scale_m": 500,
+   "reducer": "sum",
+   "denominator": "",
+   "license": "NASA open data (acknowledge LP DAAC)",
+   "citation": "NASA/LP DAAC, \"MODIS/Terra+Aqua Burned Area Monthly L3 Global 500 m SIN Grid V061\"",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 209.9,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.modis_burn"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "burn_px",
+    "value": 0.0,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.modis_burn.first_row.burn_px"
+   },
+   "spread": {
+    "n": 2190,
+    "min": 0.0,
+    "median": 0.0,
+    "max": 41265.0,
+    "rule": "min/median/max по округам с ненулевым значением столбца burn_px"
+   }
+  },
+  {
+   "key": "modis_lcc",
+   "asset": "MODIS/061/MCD12Q1",
+   "kind": "collection",
+   "year": 2023,
+   "scale_m": 500,
+   "reducer": "frequencyHistogram",
+   "denominator": "",
+   "license": "NASA open data (acknowledge LP DAAC)",
+   "citation": "NASA/LP DAAC, \"MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500 m SIN Grid V061\"",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 182.6,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.modis_lcc"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "mcd_unclassified_pct",
+    "value": 0.0,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.modis_lcc.first_row.mcd_unclassified_pct"
+   },
+   "spread": {
+    "n": 2190,
+    "min": 0.0,
+    "median": 0.0,
+    "max": 0.0,
+    "rule": "min/median/max по округам с ненулевым значением столбца mcd_unclassified_pct"
+   }
+  },
+  {
+   "key": "modis_ndvi",
+   "asset": "MODIS/061/MOD13Q1",
+   "kind": "collection",
+   "year": 2023,
+   "scale_m": 250,
+   "reducer": "mean of the monthly mean",
+   "denominator": "",
+   "license": "NASA open data (acknowledge LP DAAC)",
+   "citation": "NASA/LP DAAC, \"MODIS/Terra Vegetation Indices 16-Day L3 Global 250 m SIN Grid V061\"",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 542.5,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.modis_ndvi"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "modis_ndvi_mean",
+    "value": 0.5250321842804334,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.modis_ndvi.first_row.modis_ndvi_mean"
+   },
+   "spread": {
+    "n": 2190,
+    "min": 0.145,
+    "median": 0.5917,
+    "max": 0.778,
+    "rule": "min/median/max по округам с ненулевым значением столбца modis_ndvi_mean"
+   }
+  },
+  {
+   "key": "viirs",
+   "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+   "kind": "collection",
+   "year": 2023,
+   "scale_m": 464,
+   "reducer": "mean",
+   "denominator": "",
+   "license": "public domain (U.S. federal data, NOAA)",
+   "citation": "NOAA / NASA JPSS, \"VIIRS Day/Night Band Annual Composites V22\", https://eogdata.mines.edu/products/vnl/ (source product; access via Google Earth Engine)",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 213.5,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.viirs"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "viirs_average",
+    "value": 23.84702447736884,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.viirs.first_row.viirs_average"
+   },
+   "spread": {
+    "n": 2190,
+    "min": 0.389,
+    "median": 0.7979,
+    "max": 332.0768,
+    "rule": "min/median/max по округам с ненулевым значением столбца viirs_average"
+   }
+  },
+  {
+   "key": "viirs_lit",
+   "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+   "kind": "collection",
+   "year": 2023,
+   "scale_m": 464,
+   "reducer": "mean of binary indicator",
+   "denominator": "",
+   "license": "public domain (U.S. federal data, NOAA)",
+   "citation": "same as viirs",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 171.6,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.viirs_lit"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "viirs_lit_mean",
+    "value": 1.0,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.viirs_lit.first_row.viirs_lit_mean"
+   },
+   "spread": {
+    "n": 2190,
+    "min": 0.0034,
+    "median": 0.9808,
+    "max": 1.0,
+    "rule": "min/median/max по округам с ненулевым значением столбца viirs_lit_mean"
+   }
+  },
+  {
+   "key": "worldclim",
+   "asset": "WORLDCLIM/V1/BIO",
+   "kind": "image",
+   "year": null,
+   "scale_m": 1000,
+   "reducer": "mean",
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "Fick & Cruickshank (2017), \"WorldClim 2: new 1-km spatial grids of climate\", Int. J. Climatol.",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 187.0,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.worldclim"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "worldclim_bio01",
+    "value": 6.723014947194871,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.worldclim.first_row.worldclim_bio01"
+   },
+   "spread": {
+    "n": 2190,
+    "min": -17.872,
+    "median": 3.528,
+    "max": 12.6328,
+    "rule": "min/median/max по округам с ненулевым значением столбца worldclim_bio01"
+   }
+  },
+  {
+   "key": "worldcover",
+   "asset": "ESA/WorldCover/v200/2021",
+   "kind": "image",
+   "year": 2021,
+   "scale_m": 10,
+   "reducer": "frequencyHistogram",
+   "denominator": "classified pixels only (unclassified share reported per territory)",
+   "license": "CC BY 4.0",
+   "citation": "EU-Copernicus Global Land Service, \"ESA WorldCover 10 m 2021 v200\", https://doi.org/10.5281/zenodo.5571941",
+   "coverage": 1.0,
+   "run": {
+    "kind": "gee",
+    "rows": 2660,
+    "chunks": 10,
+    "failed_chunks": 0,
+    "seconds": 276.0,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.worldcover"
+   },
+   "sample": {
+    "tid": "931",
+    "column": "wc_unclassified_pct",
+    "value": 0.0,
+    "artifact": "artifacts/geo/covariates_diagnostics.json",
+    "field": "jobs.worldcover.first_row.wc_unclassified_pct"
+   },
+   "spread": {
+    "n": 2190,
+    "min": 0.0,
+    "median": 0.0,
+    "max": 0.0,
+    "rule": "min/median/max по округам с ненулевым значением столбца wc_unclassified_pct"
+   }
+  }
+ ],
+ "layer_artifact": "configs/gee_sources.yaml",
+ "coverage_artifact": "artifacts/geo/covariates_diagnostics.json",
+ "coverage_field": "layer_coverage",
+ "substitutes": [
+  {
+   "key": "dem",
+   "product": "Copernicus DEM GLO-30 (Digital Surface Model, 1 arc-second COG tiles)",
+   "resolution_m": 30,
+   "denominator": "",
+   "license": "Copernicus DEM - made available by Airbus Defence and Space under a free-of-charge licence for the Copernicus programme; see https://dataspace.copernicus.eu",
+   "citation": "Copernicus Global Digital Elevation Model, GLO-30, European Union / Copernicus",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'dem'"
+   }
+  },
+  {
+   "key": "gls_change",
+   "product": "GLS-LC100 collection 3 epoch 2015-2019 change-confidence band (same Zenodo record)",
+   "resolution_m": 100,
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "same as gls_lc",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'gls_change'"
+   }
+  },
+  {
+   "key": "gls_forest_type",
+   "product": "GLS-LC100 Forest Type layer (broadleaved / needleleaved / mixed / unknown)",
+   "resolution_m": 100,
+   "denominator": "classified pixels only; gls_forest_unclassified_pct reported per territory",
+   "license": "CC BY 4.0",
+   "citation": "same as gls_lc",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'gls_forest_type'"
+   }
+  },
+  {
+   "key": "gls_lc",
+   "product": "Copernicus Global Land Service - Land Cover 100m, collection 3, epoch 2015-2019",
+   "resolution_m": 100,
+   "denominator": "classified pixels only; gls_unclassified_pct reported per territory",
+   "license": "CC BY 4.0",
+   "citation": "VITO / EOC, \"Copernicus Global Land Service: Land Cover 100m collection 3\", https://doi.org/10.5281/zenodo.3939050",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'gls_lc'"
+   }
+  },
+  {
+   "key": "gls_urban",
+   "product": "GLS-LC100 Built-Up cover fraction layer (same record)",
+   "resolution_m": 100,
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "same as gls_lc",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'gls_urban'"
+   }
+  },
+  {
+   "key": "gls_water",
+   "product": "GLS-LC100 Permanent Water cover fraction layer (same record)",
+   "resolution_m": 100,
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "same as gls_lc",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'gls_water'"
+   }
+  },
+  {
+   "key": "rosstat_budget_own_share",
+   "product": "",
+   "resolution_m": null,
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "Rosstat, Federal State Statistics Service: Compilation of indicators of municipalities (BD PMO), collection 118, version v20250918, distributed through the catalogue \"If to be exact\" (tochno-st-catalog) on storage.yandexcloud.net",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'rosstat_budget_own_share'"
+   }
+  },
+  {
+   "key": "rosstat_headcount",
+   "product": "",
+   "resolution_m": null,
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "Rosstat, Federal State Statistics Service: Compilation of indicators of municipalities (BD PMO), collection 118, version v20250918, distributed through the catalogue \"If to be exact\" (tochno-st-catalog) on storage.yandexcloud.net",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'rosstat_headcount'"
+   }
+  },
+  {
+   "key": "rosstat_population",
+   "product": "",
+   "resolution_m": null,
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "Rosstat, Federal State Statistics Service: Compilation of indicators of municipalities (BD PMO), collection 118, version v20250918, distributed through the catalogue \"If to be exact\" (tochno-st-catalog) on storage.yandexcloud.net",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'rosstat_population'"
+   }
+  },
+  {
+   "key": "rosstat_roads_good_share",
+   "product": "",
+   "resolution_m": null,
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "Rosstat, Federal State Statistics Service: Compilation of indicators of municipalities (BD PMO), collection 118, version v20250918, distributed through the catalogue \"If to be exact\" (tochno-st-catalog) on storage.yandexcloud.net",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'rosstat_roads_good_share'"
+   }
+  },
+  {
+   "key": "rosstat_wage",
+   "product": "",
+   "resolution_m": null,
+   "denominator": "",
+   "license": "CC BY 4.0",
+   "citation": "Rosstat, Federal State Statistics Service: Compilation of indicators of municipalities (BD PMO), collection 118, version v20250918, distributed through the catalogue \"If to be exact\" (tochno-st-catalog) on storage.yandexcloud.net",
+   "coverage": null,
+   "run": {
+    "kind": "no-auth fallback",
+    "seconds": 245.1,
+    "territories": 2660,
+    "artifact": "artifacts/geo/fallback_diagnostics.json"
+   },
+   "sample": {
+    "reason": "ни один столбец панели признаков не начинается с 'rosstat_wage'"
+   }
+  }
+ ],
+ "substitute_artifact": "configs/fallback_sources.yaml",
+ "sberindex": {
+  "license": "CC BY-SA 4.0 (SberIndex, see data/raw/sber_hackathon/Данные_СберИндекс_лицензия.pdf)",
+  "artifact": "configs/panel.yaml",
+  "field": "panel.license"
+ },
+ "socio": {
+  "artifact": "artifacts/geo/socio_covariates_report.json",
+  "rows": 2607,
+  "territories": 2607,
+  "coverage": {
+   "population": 0.9835,
+   "wage": 0.9935,
+   "headcount": 0.9935,
+   "budget_own_share_pct": 0.9102,
+   "roads_local_share_pct": 0.87
+  },
+  "license": "CC BY 4.0 (BD PMO via the 'If to be exact' catalogue)",
+  "citation": "Rosstat, Federal State Statistics Service, Compilation of indicators of municipalities (BD PMO), collection 118, version v20250918, via the 'If to be exact' catalogue, CC BY 4.0",
+  "join_key": "oktmo_stable (8 digits, zero padded)",
+  "note": "a territory absent from the official file stays NaN; the feature builder applies the same 50% coverage gate used for the land block"
+ },
+ "change": {
+  "artifact": "artifacts/geo/change_covariates_report.json",
+  "rows": 2660,
+  "columns": 7,
+  "coverage": {
+   "chg_noinfo_pct": 2658,
+   "chg_change_high_confidence_pct": 974,
+   "chg_change_low_confidence_pct": 974,
+   "chg_no_change_pct": 974
+  },
+  "band_years": "2000-2015",
+  "role": "prior evidence only, not corroboration",
+  "license": "CC BY 4.0",
+  "citation": "same as gls_lc"
+ },
+ "gee_run": {
+  "artifact": "artifacts/geo/covariates_diagnostics.json",
+  "territories_in_scope": 2660,
+  "territories_with_4plus_nonnull_layers": 2660,
+  "max_layers_per_territory": 10,
+  "chunk_size": 400,
+  "total_seconds": 2644.5
+ },
+ "failures": [
+  "Measured on 2026-10-08 as a collection under the correct catalog name GOOGLE/DYNAMICWORLD/V1: it answers. 78 images fall inside 2023-01-01..2024-12-31 overlapping a point in Moscow, ten bands (water, trees, grass, flooded_vegetation, crops, shrub_and_scrub, built, bare, snow_and_ice, label), and a real class-confidence read at that point returns built 0.0931, bare 0.0638, crops 0.0408; a point in Kaliningrad returns no data. See artifacts/geo/dynamic_world_probe.json. It is still not built into a covariate layer, so the requirement stays unmet - reaching a collection is not the same as having used it. The role it was named for - land cover changing inside the observation window rather than a single snapshot - is still carried by GLC-LC100 monthly 2019, MODIS MCD12Q1 class shares and MCD64A1 burn dates, all on disk with per-row provenance. Recorded separately because the first probe here asked for NASA/DYNAMICWORLD/V1, an identifier invented in this repository rather than taken from the catalog, and reported that name's \"asset not found\" as a fact about our access and about Earth Engine being unreachable in general; both conclusions were wrong and are withdrawn.",
+  "ISRIC/soilgrids does not resolve; the catalog name ISRIC/SoilGrids250m/v2_0 does, measured 2026-10-08 in artifacts/geo/asset_id_probe.json. The property behind its val_* bands is not named by the collection's metadata and is identified by value range as organic carbon concentration.",
+  "Hansen/GFSID2017 and UMD/hansen-global-tree-cover do not resolve; UMD/hansen/global_forest_change_2025_v1_13 does, measured the same day, with treecover2000, loss, gain and lossyear. UMD/GLAD_/TREECOVER/CIRCUITRY/2020v1 and UMD/gladsat-foundation-data-v1 still do not, and GLAD/IFL/2021 and UMD/ifl_2021 still do not - those two families were dropped by the entrant's decision on 2026-10-08, not by a source failure.",
+  "WORLDCLIM/V1/MONTHLY/PRECIP (asset not found; WORLDCLIM/V1/BIO is an Image and works)"
+ ],
+ "failure_total": 8,
+ "failure_artifact": "configs/gee_sources.yaml",
+ "failure_field": "not_available_in_this_project",
+ "blocked": [
+  "VIIRS DNB annual composites: eogdata.mines.edu redirects to eogauth.mines.edu (Keycloak login); AWS noaa-jpss carries only raw SDR granules and BHP fire products, no cloud-free DNB composites. Substitute in this stack: GLS built-up fraction as the demand-density proxy.",
+  "Hansen Global Forest Change: reachable anonymously through the GCS JSON API (bucket earthenginepartners-hansen, prefix Annual_Layers_2015_2024/TCH/<year>/), but the tiles are 10x10 degrees at ~84 MB median, so covering Russia needs ~7 GB for a single year. Deferred; forest share comes from GLS-LC100 classes and ESA WorldCover tree classes instead.",
+  "WorldClim: biogeo.ucdavis.edu / data.worldclim.org are not resolvable from this host. Available through Earth Engine (WORLDCLIM/V1/BIO, an Image, 19 bands) - used in the GEE pipeline.",
+  "SoilGrids: neither the Earth Engine asset (ISRIC/soilgrids, ISRIC/soigrid) nor the WCS endpoint (maps.isric.org map paths rejected by msLoadMap) is reachable here; per-tile files are browsable at files.isric.org/soilgrids/latest/data but 1129 tiles per layer is too much for the deadline."
+ ],
+ "blocked_artifact": "configs/fallback_sources.yaml",
+ "blocked_field": "unavailable_without_credentials",
+ "unobtained": [
+  {
+   "name": "Dynamic World V1",
+   "text": "Measured on 2026-10-08 as a collection under the correct catalog name GOOGLE/DYNAMICWORLD/V1: it answers. 78 images fall inside 2023-01-01..2024-12-31 overlapping a point in Moscow, ten bands (water, trees, grass, flooded_vegetation, crops, shrub_and_scrub, built, bare, snow_and_ice, label), and a real class-confidence read at that point returns built 0.0931, bare 0.0638, crops 0.0408; a point in Kaliningrad returns no data. See artifacts/geo/dynamic_world_probe.json. It is still not built into a covariate layer, so the requirement stays unmet - reaching a collection is not the same as having used it. The role it was named for - land cover changing inside the observation window rather than a single snapshot - is still carried by GLC-LC100 monthly 2019, MODIS MCD12Q1 class shares and MCD64A1 burn dates, all on disk with per-row provenance. Recorded separately because the first probe here asked for NASA/DYNAMICWORLD/V1, an identifier invented in this repository rather than taken from the catalog, and reported that name's \"asset not found\" as a fact about our access and about Earth Engine being unreachable in general; both conclusions were wrong and are withdrawn.",
+   "artifact": "configs/gee_sources.yaml",
+   "field": "not_available_in_this_project[0]",
+   "instead": "WorldCover 10 м и доли GLC-LC100; знаменатель — только классифицированные пиксели"
+  },
+  {
+   "name": "Hansen Global Forest Change / GLAD",
+   "text": "Hansen/GFSID2017 and UMD/hansen-global-tree-cover do not resolve; UMD/hansen/global_forest_change_2025_v1_13 does, measured the same day, with treecover2000, loss, gain and lossyear. UMD/GLAD_/TREECOVER/CIRCUITRY/2020v1 and UMD/gladsat-foundation-data-v1 still do not, and GLAD/IFL/2021 and UMD/ifl_2021 still do not - those two families were dropped by the entrant's decision on 2026-10-08, not by a source failure.",
+   "artifact": "configs/gee_sources.yaml",
+   "field": "not_available_in_this_project[2]",
+   "instead": "физического подтверждения потери земли нет: плитки потерь и прироста не получены"
+  },
+  {
+   "name": "SoilGrids",
+   "text": "ISRIC/soilgrids does not resolve; the catalog name ISRIC/SoilGrids250m/v2_0 does, measured 2026-10-08 in artifacts/geo/asset_id_probe.json. The property behind its val_* bands is not named by the collection's metadata and is identified by value range as organic carbon concentration.",
+   "artifact": "configs/gee_sources.yaml",
+   "field": "not_available_in_this_project[1]",
+   "instead": "почвенных слоёв в панели нет вовсе"
+  },
+  {
+   "name": "EOG VIIRS DNB (сводные годовые композиты)",
+   "text": "VIIRS DNB annual composites: eogdata.mines.edu redirects to eogauth.mines.edu (Keycloak login); AWS noaa-jpss carries only raw SDR granules and BHP fire products, no cloud-free DNB composites. Substitute in this stack: GLS built-up fraction as the demand-density proxy.",
+   "artifact": "configs/fallback_sources.yaml",
+   "field": "unavailable_without_credentials[0]",
+   "instead": "NOAA/VIIRS/DNB/ANNUAL_V22 через Earth Engine; застроенность — GLS artificial"
+  },
+  {
+   "name": "Copernicus DEM",
+   "text": "Copernicus DEM: ряд 80° с.ш. отсутствует (404), а наши полигоны доходят туда только из-за",
+   "artifact": "docs/report/methodology-ru.md",
+   "field": "строка, упоминающая Copernicus DEM",
+   "instead": "USGS/SRTMGL1_003, 30 м"
+  },
+  {
+   "name": "tochno.st (первоисточник Росстата)",
+   "text": "сайт отвечает то 200, то таймаутом. Поэтому файлы взяты с зеркала `tochno-st-catalog` на",
+   "artifact": "docs/report/methodology-ru.md",
+   "field": "строка, упоминающая tochno.st",
+   "instead": "зеркало tochno-st-catalog; контрольные суммы архивов проверены"
+  }
+ ],
+ "unobtained_total": 6,
+ "unobtained_rule": "тексты берутся дословно из реестров и из методики; сборщик падает, если записанной строки в названом файле нет",
+ "rules": [
+  "land-cover shares use classified-pixel-only denominators",
+  "per-km² densities use official Rosstat land area, never raw OSM municipal polygon area",
+  "a named source owes either a measurement or a recorded failure"
+ ],
+ "registry_verified_by": "scripts/check_sources_registry.py"
+}

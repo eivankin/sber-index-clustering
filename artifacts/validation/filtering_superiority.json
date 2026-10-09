@@ -1,0 +1,45 @@
+{
+ "generated_by": "scripts/measure_space_decisions.py",
+ "what_this_is": "The filtered attribute space against taking every indicator the panel carries, at the shipped k, compared on stability, agreement between algorithms, nameability, pair distinguishability, material spending difference and redundancy between columns.",
+ "unfiltered_means": "every usable indicator column, including geometry-defect ratios and raw polygon area",
+ "shipped_k": 5,
+ "comparison": {
+  "filtered": {
+   "clusters": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "smallest_cluster_districts": 283,
+   "kmeans_vs_ward_ari": 0.6621,
+   "stability_bootstrap_ari": 0.8874,
+   "spending_measures_separating_every_pair": "7/7",
+   "pairs_no_measure_can_tell_apart": 0,
+   "clusters_nameable_by_spending": "5/5",
+   "spending_gap_median_in_iqr": 0.6355,
+   "columns": 13,
+   "mean_abs_correlation": 0.1369
+  },
+  "unfiltered": {
+   "clusters": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "smallest_cluster_districts": 172,
+   "kmeans_vs_ward_ari": 0.7383,
+   "stability_bootstrap_ari": 0.9112,
+   "spending_measures_separating_every_pair": "0/0",
+   "pairs_no_measure_can_tell_apart": 10,
+   "clusters_nameable_by_spending": "0/5",
+   "spending_gap_median_in_iqr": null,
+   "columns": 155,
+   "mean_abs_correlation": 0.0877
+  },
+  "verdict": "filtered is not better on stability"
+ }
+}

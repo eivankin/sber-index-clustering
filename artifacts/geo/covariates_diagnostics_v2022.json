@@ -1,0 +1,180 @@
+{
+  "total_seconds": 1212.8,
+  "chunk_size": 100,
+  "territories_in_scope": 2660,
+  "jobs": {
+    "viirs": {
+      "rows": 2660,
+      "chunks": 32,
+      "failed_chunks": 0,
+      "cache_replays": 0,
+      "seconds": 129.3,
+      "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2022 | scale=464 m | reducer=mean | annual DNB statistics",
+      "first_row": {
+        "tid": "955",
+        "viirs_average": 2.277809940699762,
+        "viirs_average_masked": 2.1670017005546254,
+        "viirs_cf_cvg": 112.12504640678858,
+        "viirs_maximum": 8.713937253656137,
+        "viirs_median": 2.0593381053101028,
+        "viirs_minimum": 1.0914604966211845,
+        "viirs_osm_ref": "2790349",
+        "viirs_osm_vers": "2020-01-02T08:17:28Z",
+        "viirs_yr_from": 2018.0,
+        "viirs_yr_to": 2020.0,
+        "prov_viirs": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2022 | scale=464 m | reducer=mean | annual DNB statistics"
+      },
+      "columns": [
+        "tid",
+        "viirs_average",
+        "viirs_average_masked",
+        "viirs_cf_cvg",
+        "viirs_maximum",
+        "viirs_median",
+        "viirs_minimum",
+        "viirs_osm_ref",
+        "viirs_osm_vers",
+        "viirs_yr_from",
+        "viirs_yr_to",
+        "prov_viirs"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "viirs_lit": {
+      "rows": 2660,
+      "chunks": 32,
+      "failed_chunks": 0,
+      "cache_replays": 0,
+      "seconds": 87.1,
+      "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2022 | scale=464 m | reducer=mean(binary) | fraction of lit pixels (>=0.5 nW/cm2/sr)",
+      "first_row": {
+        "tid": "955",
+        "viirs_lit_mean": 0.8259347653142398,
+        "viirs_lit_osm_ref": "2790349",
+        "viirs_lit_osm_vers": "2020-01-02T08:17:28Z",
+        "viirs_lit_yr_from": 2018.0,
+        "viirs_lit_yr_to": 2020.0,
+        "prov_viirs_lit": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2022 | scale=464 m | reducer=mean(binary) | fraction of lit pixels (>=0.5 nW/cm2/sr)"
+      },
+      "columns": [
+        "tid",
+        "viirs_lit_mean",
+        "viirs_lit_osm_ref",
+        "viirs_lit_osm_vers",
+        "viirs_lit_yr_from",
+        "viirs_lit_yr_to",
+        "prov_viirs_lit"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "modis_lcc": {
+      "rows": 2445,
+      "chunks": 32,
+      "failed_chunks": 3,
+      "cache_replays": 0,
+      "seconds": 82.4,
+      "provenance": "MODIS/061/MCD12Q1 | year=2022 | scale=500 m | reducer=frequencyHistogram | IGBP class shares",
+      "first_row": {
+        "tid": "955",
+        "mcd_unclassified_pct": 0.0,
+        "mcd_c15_pct": 6.2823,
+        "mcd_c21_pct": 20.3415,
+        "mcd_c22_pct": 28.663,
+        "mcd_c31_pct": 44.7132,
+        "mcd_classified_px": 154,
+        "mcd_px_total": 154,
+        "prov_modis_lcc": "MODIS/061/MCD12Q1 | year=2022 | scale=500 m | reducer=frequencyHistogram | IGBP class shares",
+        "mcd_c11_pct": NaN,
+        "mcd_c14_pct": NaN,
+        "mcd_c3_pct": NaN,
+        "mcd_c32_pct": NaN,
+        "mcd_c1_pct": NaN,
+        "mcd_c13_pct": NaN,
+        "mcd_c16_pct": NaN,
+        "mcd_c41_pct": NaN,
+        "mcd_c42_pct": NaN,
+        "mcd_c12_pct": NaN,
+        "mcd_c2_pct": NaN,
+        "mcd_c43_pct": NaN
+      },
+      "columns": [
+        "tid",
+        "mcd_unclassified_pct",
+        "mcd_c15_pct",
+        "mcd_c21_pct",
+        "mcd_c22_pct",
+        "mcd_c31_pct",
+        "mcd_classified_px",
+        "mcd_px_total",
+        "prov_modis_lcc",
+        "mcd_c11_pct",
+        "mcd_c14_pct",
+        "mcd_c3_pct",
+        "mcd_c32_pct",
+        "mcd_c1_pct"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "modis_burn": {
+      "rows": 2660,
+      "chunks": 32,
+      "failed_chunks": 0,
+      "cache_replays": 0,
+      "seconds": 129.2,
+      "provenance": "MODIS/061/MCD64A1 | year=2022 | scale=500 m | reducer=frequencyHistogram(binary) | binary burned-at-least-once flag over an unmasked constant",
+      "first_row": {
+        "tid": "955",
+        "burn_px": 0,
+        "unburn_px": 254,
+        "burn_pct_of_territory": 0.0,
+        "burn_km2": 0.0,
+        "prov_modis_burn": "MODIS/061/MCD64A1 | year=2022 | scale=500 m | reducer=frequencyHistogram(binary) | binary burned-at-least-once flag over an unmasked constant"
+      },
+      "columns": [
+        "tid",
+        "burn_px",
+        "unburn_px",
+        "burn_pct_of_territory",
+        "burn_km2",
+        "prov_modis_burn"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "modis_ndvi": {
+      "rows": 2660,
+      "chunks": 32,
+      "failed_chunks": 0,
+      "cache_replays": 1,
+      "seconds": 784.7,
+      "provenance": "MODIS/061/MOD13Q1 | year=2022 | scale=250 m | reducer=mean | QA-filtered mean NDVI",
+      "first_row": {
+        "tid": "955",
+        "modis_ndvi_mean": 0.5441473507488619,
+        "modis_ndvi_osm_ref": "2790349",
+        "modis_ndvi_osm_vers": "2020-01-02T08:17:28Z",
+        "modis_ndvi_yr_from": 0.2018,
+        "modis_ndvi_yr_to": 0.202,
+        "prov_modis_ndvi": "MODIS/061/MOD13Q1 | year=2022 | scale=250 m | reducer=mean | QA-filtered mean NDVI"
+      },
+      "columns": [
+        "tid",
+        "modis_ndvi_mean",
+        "modis_ndvi_osm_ref",
+        "modis_ndvi_osm_vers",
+        "modis_ndvi_yr_from",
+        "modis_ndvi_yr_to",
+        "prov_modis_ndvi"
+      ],
+      "coverage_of_rows_returned": 1.0
+    }
+  },
+  "layer_coverage": {
+    "viirs": 1.0,
+    "viirs_lit": 1.0,
+    "modis_lcc": 1.0,
+    "modis_burn": 1.0,
+    "modis_ndvi": 1.0
+  },
+  "territories_with_4plus_nonnull_layers": 2660,
+  "max_layers_per_territory": 5
+}

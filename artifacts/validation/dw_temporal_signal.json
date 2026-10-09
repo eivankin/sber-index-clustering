@@ -1,0 +1,152 @@
+{
+ "generated_by": "scripts/measure_dw_temporal.py",
+ "what_this_is": "Dynamic World kept as two yearly composites rather than one averaged value: the size of the land-cover change between years, its agreement with the land-cover source already in the space, and whether it can move a clustering partition without any spending in the space.",
+ "years_found_in_the_added_table": [
+  "2023",
+  "2024"
+ ],
+ "coverage_by_year_and_class": {
+  "2023": {
+   "bare": 1.0,
+   "built": 1.0,
+   "crops": 1.0,
+   "grass": 1.0,
+   "trees": 1.0
+  },
+  "2024": {
+   "bare": 1.0,
+   "built": 1.0,
+   "crops": 1.0,
+   "grass": 1.0,
+   "trees": 1.0
+  }
+ },
+ "change_statistics": {
+  "bare": {
+   "mean_signed_change_pp": -0.1063,
+   "mean_absolute_change_pp": 0.4951,
+   "districts_above_one_point": 204,
+   "share_above_one_point": 0.1012,
+   "districts_above_three_points": 18
+  },
+  "built": {
+   "mean_signed_change_pp": 0.1185,
+   "mean_absolute_change_pp": 0.6956,
+   "districts_above_one_point": 326,
+   "share_above_one_point": 0.1617,
+   "districts_above_three_points": 138
+  },
+  "crops": {
+   "mean_signed_change_pp": -0.4575,
+   "mean_absolute_change_pp": 1.0819,
+   "districts_above_one_point": 667,
+   "share_above_one_point": 0.3309,
+   "districts_above_three_points": 230
+  },
+  "grass": {
+   "mean_signed_change_pp": -0.0456,
+   "mean_absolute_change_pp": 0.7391,
+   "districts_above_one_point": 540,
+   "share_above_one_point": 0.2679,
+   "districts_above_three_points": 41
+  },
+  "trees": {
+   "mean_signed_change_pp": 0.8632,
+   "mean_absolute_change_pp": 3.0764,
+   "districts_above_one_point": 1458,
+   "share_above_one_point": 0.7232,
+   "districts_above_three_points": 774
+  }
+ },
+ "agreement_with_the_other_land_cover_source": {
+  "bare": {
+   "compared_against": "gls_fraction_bare",
+   "spearman": 0.2985,
+   "complete_rows": 2016
+  },
+  "built": {
+   "compared_against": "gls_fraction_urban",
+   "spearman": 0.9501,
+   "complete_rows": 2016
+  },
+  "crops": {
+   "compared_against": "gls_fraction_crops",
+   "spearman": 0.8981,
+   "complete_rows": 2016
+  },
+  "grass": {
+   "compared_against": "gls_fraction_grass",
+   "spearman": 0.7678,
+   "complete_rows": 2016
+  },
+  "trees": {
+   "compared_against": "gls_fraction_tree",
+   "spearman": 0.9169,
+   "complete_rows": 2016
+  }
+ },
+ "panel_collapses_the_two_years": {
+  "bare": 0.0649,
+  "built": 0.1014,
+  "crops": 0.1068,
+  "grass": 0.0789,
+  "trees": 0.2374
+ },
+ "movement": {
+  "all_land_frozen_including_dw|k4": {
+   "ari_2023_vs_2024": 1.0,
+   "churn_after_alignment": 0.0,
+   "districts": 2016,
+   "moves": false
+  },
+  "all_land_frozen_including_dw|k5": {
+   "ari_2023_vs_2024": 1.0,
+   "churn_after_alignment": 0.0,
+   "districts": 2016,
+   "moves": false
+  },
+  "all_land_frozen_including_dw|k7": {
+   "ari_2023_vs_2024": 1.0,
+   "churn_after_alignment": 0.0,
+   "districts": 2016,
+   "moves": false
+  },
+  "all_land_with_dw_from_that_year|k4": {
+   "ari_2023_vs_2024": 0.9989,
+   "churn_after_alignment": 0.0005,
+   "districts": 2016,
+   "moves": false
+  },
+  "all_land_with_dw_from_that_year|k5": {
+   "ari_2023_vs_2024": 0.8499,
+   "churn_after_alignment": 0.1136,
+   "districts": 2016,
+   "moves": true
+  },
+  "all_land_with_dw_from_that_year|k7": {
+   "ari_2023_vs_2024": 0.8608,
+   "churn_after_alignment": 0.0675,
+   "districts": 2016,
+   "moves": true
+  },
+  "dw_classes_only_from_that_year|k4": {
+   "ari_2023_vs_2024": 0.8163,
+   "churn_after_alignment": 0.0799,
+   "districts": 2016,
+   "moves": true
+  },
+  "dw_classes_only_from_that_year|k5": {
+   "ari_2023_vs_2024": 0.649,
+   "churn_after_alignment": 0.1533,
+   "districts": 2016,
+   "moves": true
+  },
+  "dw_classes_only_from_that_year|k7": {
+   "ari_2023_vs_2024": 0.6209,
+   "churn_after_alignment": 0.1811,
+   "districts": 2016,
+   "moves": true
+  }
+ },
+ "movement_rule": "a partition is treated as moving when churn is at least 0.05"
+}

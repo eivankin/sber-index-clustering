@@ -1,0 +1,19 @@
+{
+ "features": 2660,
+ "measured": 2016,
+ "unmeasured": 644,
+ "geometry_file": "web/map/map_geom.js",
+ "geometry_file_bytes": 5026549,
+ "quantisation_m": 0.01,
+ "generalisation": "per territory by official land area: 0.0003 deg at most 2000 km2, 0.0015 deg at most 20000 km2, 0.006 deg at most 200000 km2, 0.02 deg beyond",
+ "dateline_rings_moved": 5,
+ "dateline_territories": 4,
+ "opening_view": {
+  "lat": 69.8723,
+  "lng": 105.3309,
+  "zoom": 3,
+  "lon_span_deg": 171.384,
+  "reference_viewport": "1280x800"
+ },
+ "source": "territory_master.parquet + cluster_assignments.parquet (kmeans_k5)"
+}

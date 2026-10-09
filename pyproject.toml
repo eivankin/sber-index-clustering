@@ -1,0 +1,58 @@
+[project]
+name = "sber-index"
+version = "0.1.0"
+description = "SberIndex online contest 2026: municipality economic types from spending + geospatial evidence"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "pyarrow>=17",
+  "geopandas>=1.0",
+  "pyogrio>=0.9",
+  "shapely>=2.0",
+  "pyproj>=3.6",
+  "rasterio>=1.3",
+  "rasterstats>=0.19",
+  "duckdb>=1.0",
+  "earthengine-api>=1.3",
+  "requests>=2.31",
+  "PyYAML>=6.0",
+  "openpyxl>=3.1",
+  "scikit-learn>=1.4",
+  "scipy>=1.11",
+  "matplotlib>=3.8",
+  "tqdm>=4.66",
+]
+
+[tool.uv]
+package = false
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["data", "logs", ".pi"]
+
+[tool.ruff.lint]
+# A pragmatic rule set, chosen deliberately rather than inherited.
+# BLE001 stays ignored: catching broad Exception is the documented policy for network and IO
+# flakiness in this project (a CDN hiccup must not end a covariate run), so the rule would fight
+# the design instead of improving it. PLW1510 is satisfied at the call site in check_all.py.
+# C901 stays ignored too: the checker and report scripts have long main() bodies on purpose, and
+# splitting them into helpers would hide the order of checks a reviewer needs to follow.
+select = ["E", "F", "W", "C", "I", "UP", "B", "SIM", "C4", "EXE"]
+ignore = ["BLE001", "E501", "B905", "SIM105", "C408", "C901"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/probe*.py" = ["E402"]
+"scripts/check_*.py" = ["S101"]
+# The covariate builders must install DNS resolution and set SBER_* overrides before they touch
+# config or Earth Engine, so their imports are deliberately not at the top of the file.
+"scripts/build_covariates_*.py" = ["E402"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["sberindex"]

@@ -1,0 +1,300 @@
+{
+ "generated_by": "scripts/build_input_cadence.py",
+ "what_this_is": "How often each input to the clustering updates, and what proves it: a sentence on the provider's own page, a field in a committed artifact, or a measurement made against Earth Engine. Rows with no proof say they have no proof.",
+ "rule": "интервал не принимается, пока не названо, чем он доказан",
+ "inputs_read": [
+  "configs/gee_sources.yaml",
+  "artifacts/validation/gee_access.json",
+  "artifacts/landing/map_timeline.json",
+  "artifacts/geo/geometry_diagnostics.json",
+  "artifacts/geo/duplicate_municipalities.json",
+  "artifacts/geo/socio_covariates_report.json",
+  "artifacts/geo/change_covariates_report.json",
+  "configs/fallback_sources.yaml"
+ ],
+ "provider_pages": {
+  "worldcover": {
+   "url": "https://land.copernicus.eu/global/worldcover",
+   "outcome": "HTTP 200, redirected to https://land.copernicus.eu/en/global",
+   "quote": "The website of the Copernicus Land Monitoring Service has undergone a restructuring. Please update your bookmarks.",
+   "states": null
+  },
+  "gls_lcz": {
+   "url": "https://land.copernicus.eu/global/products/lc",
+   "outcome": "HTTP 200, redirected to https://land.copernicus.eu/en/products/global-dynamic-land-cover",
+   "quote": "The Global Dynamic Land Cover product, with specific regard to the 100 m datasets covering the years 2015-2019, offers annual global land cover maps and cover fraction layers, providing a detailed view of land cover at three classification levels.",
+   "also": "Built upon the Global Dynamic Land Cover dataset, the Copernicus Global Land Cover and Tropical Forest Mapping and Monitoring Service (LCFM) not only extends the time series of the 100 m Copernicus Global Land Cover layers (2015-2019), but also enhances the existing service by delivering a high-resolution (10 m), dynamic global land cover service (2020-2026). The 10 m Global Land Cover Map (LCM) for 2020 and the 10 m Pan-Tropical Tree Cover Density (TCD) for 2020 are already available.",
+   "states": "annual"
+  },
+  "worldclim": {
+   "url": "https://www.worldclim.org/data/worldclim21.html",
+   "outcome": "HTTP 200",
+   "quote": "This is WorldClim version 2.1 climate data for 1970-2000. This version was released in January 2020.",
+   "also": "This version supersedes version 1.4, which is still available.",
+   "states": "static"
+  },
+  "viirs": {
+   "url": "https://eogdata.mines.edu/products/vnl/",
+   "outcome": "HTTP 200",
+   "quote": "A new consistently processed time series of annual global VIIRS nighttime lights has been produced from monthly cloud-free average radiance grids spanning 2012* to 2020.",
+   "also": "* The latest update is VNL v2.2.",
+   "states": "annual"
+  },
+  "hansen": {
+   "url": "https://earthenginepartners.appspot.com/science-2013-global-forest",
+   "outcome": "HTTP 200, extractable content was only the page title",
+   "quote": "Global Forest Change | Google Crisis Map",
+   "states": null
+  },
+  "copernicus_dem": {
+   "url": "https://land.copernicus.eu/en/products/digital-elevation-model/copernicus-dem-glo-30",
+   "outcome": "HTTP 404",
+   "quote": null,
+   "states": null
+  },
+  "lpdaac": {
+   "url": "https://lpdaac.usgs.gov/products/mcd64a2v061/ (and mcd12a1v061, mcd43a4v061, srtmgl1v003)",
+   "outcome": "HTTP 403 on all four pages",
+   "quote": null,
+   "states": null
+  },
+  "rosstat_sdds": {
+   "url": "https://eng.rosstat.gov.ru/folder/256019",
+   "outcome": "HTTP 200, read in this session",
+   "quote": "Average monthly accrued wages of employees in the economy - Rubles - July/26 - 109 524 - previous period 114 743.",
+   "also": "Population - Million people - 01.01.2025 - 146,1.",
+   "states": "monthly for wages, annual for population"
+  }
+ },
+ "rows": [
+  {
+   "input": "worldcover",
+   "used": "year 2021 · 10 m · image",
+   "interval": "not proven by anything within reach",
+   "proof_kind": "no proof",
+   "proof": "https://land.copernicus.eu/global/worldcover - HTTP 200, redirected to https://land.copernicus.eu/en/global",
+   "other_year_available": "none inside this asset",
+   "caveat": ""
+  },
+  {
+   "input": "gls_lcz",
+   "used": "year 2019 · 100 m · collection",
+   "interval": "annual",
+   "proof_kind": "provider page",
+   "proof": "https://land.copernicus.eu/global/products/lc - HTTP 200, redirected to https://land.copernicus.eu/en/products/global-dynamic-land-cover - \"The Global Dynamic Land Cover product, with specific regard to the 100 m datasets covering the years 2015-2019, offers annual global land cover maps and cover fraction layers, providing a detailed view of land cover at three classification levels.\"",
+   "other_year_available": "a year other than the one used exists",
+   "caveat": ""
+  },
+  {
+   "input": "gls_fraction",
+   "used": "year 2019 · 100 m · collection",
+   "interval": "annual",
+   "proof_kind": "provider page",
+   "proof": "https://land.copernicus.eu/global/products/lc - HTTP 200, redirected to https://land.copernicus.eu/en/products/global-dynamic-land-cover - \"The Global Dynamic Land Cover product, with specific regard to the 100 m datasets covering the years 2015-2019, offers annual global land cover maps and cover fraction layers, providing a detailed view of land cover at three classification levels.\"",
+   "other_year_available": "a year other than the one used exists",
+   "caveat": ""
+  },
+  {
+   "input": "viirs",
+   "used": "year 2023 · 464 m · collection",
+   "interval": "annual",
+   "proof_kind": "provider page",
+   "proof": "https://eogdata.mines.edu/products/vnl/ - HTTP 200 - \"A new consistently processed time series of annual global VIIRS nighttime lights has been produced from monthly cloud-free average radiance grids spanning 2012* to 2020.\"",
+   "other_year_available": "a year other than the one used exists",
+   "caveat": ""
+  },
+  {
+   "input": "viirs_lit",
+   "used": "year 2023 · 464 m · collection",
+   "interval": "annual coverage measured in Earth Engine: the collection holds images in the year before the one used; publication cadence not stated by the provider page",
+   "proof_kind": "Earth Engine measurement",
+   "proof": "artifacts/validation/gee_access.json, layers.viirs_lit - images in the named year: 1; in the year before: 1",
+   "other_year_available": "a year other than the one used exists",
+   "caveat": ""
+  },
+  {
+   "input": "modis_lcc",
+   "used": "year 2023 · 500 m · collection",
+   "interval": "annual coverage measured in Earth Engine: the collection holds images in the year before the one used; publication cadence not stated by the provider page",
+   "proof_kind": "Earth Engine measurement",
+   "proof": "artifacts/validation/gee_access.json, layers.modis_lcc - images in the named year: 1; in the year before: 1",
+   "other_year_available": "a year other than the one used exists",
+   "caveat": "the collection we read is a different product id than the one the provider page names"
+  },
+  {
+   "input": "modis_burn",
+   "used": "year 2023 · 500 m · collection",
+   "interval": "annual coverage measured in Earth Engine: the collection holds images in the year before the one used; publication cadence not stated by the provider page",
+   "proof_kind": "Earth Engine measurement",
+   "proof": "artifacts/validation/gee_access.json, layers.modis_burn - images in the named year: 12; in the year before: 12",
+   "other_year_available": "a year other than the one used exists",
+   "caveat": "the collection we read is a different product id than the one the provider page names"
+  },
+  {
+   "input": "modis_ndvi",
+   "used": "year 2023 · 250 m · collection",
+   "interval": "annual coverage measured in Earth Engine: the collection holds images in the year before the one used; publication cadence not stated by the provider page",
+   "proof_kind": "Earth Engine measurement",
+   "proof": "artifacts/validation/gee_access.json, layers.modis_ndvi - images in the named year: 23; in the year before: 23",
+   "other_year_available": "a year other than the one used exists",
+   "caveat": "the collection we read is a different product id than the one the provider page names"
+  },
+  {
+   "input": "worldclim",
+   "used": "year None · 1000 m · image",
+   "interval": "static",
+   "proof_kind": "provider page",
+   "proof": "https://www.worldclim.org/data/worldclim21.html - HTTP 200 - \"This is WorldClim version 2.1 climate data for 1970-2000. This version was released in January 2020.\"",
+   "other_year_available": "none inside this asset",
+   "caveat": ""
+  },
+  {
+   "input": "elevation",
+   "used": "year None · 30 m · image",
+   "interval": "not proven by anything within reach",
+   "proof_kind": "no proof",
+   "proof": "https://lpdaac.usgs.gov/products/mcd64a2v061/ (and mcd12a1v061, mcd43a4v061, srtmgl1v003) - HTTP 403 on all four pages",
+   "other_year_available": "none inside this asset",
+   "caveat": ""
+  },
+  {
+   "input": "sberindex_spending",
+   "used": "24 months, 2023-01 to 2024-12",
+   "interval": "monthly",
+   "proof_kind": "committed artifact field",
+   "proof": "artifacts/landing/map_timeline.json, months - consecutive month labels from 2023-01 to 2024-12",
+   "other_year_available": "the window can be moved inside the 24 months we hold",
+   "caveat": "the provider's own page was not read for this row"
+  },
+  {
+   "input": "sberindex_oktmo_crosswalk",
+   "used": "the crosswalk the master joins on",
+   "interval": "not proven by anything within reach",
+   "proof_kind": "no proof",
+   "proof": "no provider page read; no committed field states an interval",
+   "other_year_available": "unknown",
+   "caveat": "a change here would move which territory a spending row attaches to"
+  },
+  {
+   "input": "rosstat_population",
+   "used": "indicator Y48112027, collection 118 version v20250918",
+   "interval": "annual, as of 1 January",
+   "proof_kind": "registry field + provider page",
+   "proof": "configs/fallback_sources.yaml, rosstat_population.official_name = 'Численность населения на 1 января текущего года'; artifacts/geo/socio_covariates_report.json, indicator_period_rule = 'full-year rows when the file has them, otherwise the label it uses most'",
+   "other_year_available": "another collection version of the same indicator exists only if the catalogue publishes one",
+   "caveat": "the catalogue snapshot date is not an update interval"
+  },
+  {
+   "input": "rosstat_wage",
+   "used": "indicator Y48423007, collection 118 version v20250918",
+   "interval": "monthly figures, published in annual compilations",
+   "proof_kind": "registry field + provider page",
+   "proof": "configs/fallback_sources.yaml, rosstat_wage.official_name = 'Среднемесячная начисленная заработная плата работников по видам экономической деятельности'; artifacts/geo/socio_covariates_report.json, indicator_period_rule = 'full-year rows when the file has them, otherwise the label it uses most'",
+   "other_year_available": "another collection version of the same indicator exists only if the catalogue publishes one",
+   "caveat": "the catalogue snapshot date is not an update interval"
+  },
+  {
+   "input": "rosstat_headcount",
+   "used": "indicator Y48423005, collection 118 version v20250918",
+   "interval": "monthly figures, published in annual compilations",
+   "proof_kind": "registry field + provider page",
+   "proof": "configs/fallback_sources.yaml, rosstat_headcount.official_name = 'Среднесписочная численность работников по видам экономической деятельности'; artifacts/geo/socio_covariates_report.json, indicator_period_rule = 'full-year rows when the file has them, otherwise the label it uses most'",
+   "other_year_available": "another collection version of the same indicator exists only if the catalogue publishes one",
+   "caveat": "the catalogue snapshot date is not an update interval"
+  },
+  {
+   "input": "rosstat_budget_own_share",
+   "used": "indicator Y48013015, collection 118 version v20250918",
+   "interval": "period stated nowhere in the registry; rows are taken as full-year when the file has them",
+   "proof_kind": "committed artifact field",
+   "proof": "configs/fallback_sources.yaml, rosstat_budget_own_share.official_name = 'Доля налоговых и неналоговых доходов местного бюджета'; artifacts/geo/socio_covariates_report.json, indicator_period_rule = 'full-year rows when the file has them, otherwise the label it uses most'",
+   "other_year_available": "another collection version of the same indicator exists only if the catalogue publishes one",
+   "caveat": "the catalogue snapshot date is not an update interval"
+  },
+  {
+   "input": "rosstat_roads_good_share",
+   "used": "indicator Y48106005, collection 118 version v20250918",
+   "interval": "period stated nowhere in the registry; rows are taken as full-year when the file has them",
+   "proof_kind": "committed artifact field",
+   "proof": "configs/fallback_sources.yaml, rosstat_roads_good_share.official_name = 'Доля протяженности автомобильных дорог общего пользования местного значения, не отвечающая нормативным требованиям'; artifacts/geo/socio_covariates_report.json, indicator_period_rule = 'full-year rows when the file has them, otherwise the label it uses most'",
+   "other_year_available": "another collection version of the same indicator exists only if the catalogue publishes one",
+   "caveat": "the catalogue snapshot date is not an update interval"
+  },
+  {
+   "input": "rosstat_official_land_area",
+   "used": "indicator Y48006001; years actually used: 2023 for 2438 territories, a tail of 11 other years back to 2006",
+   "interval": "annual per municipality, the most recent year prevailing",
+   "proof_kind": "committed artifact field",
+   "proof": "artifacts/geo/geometry_diagnostics.json, rostat.area_year_used = {\"2023\": 2438, \"2022\": 146, \"2007\": 8, \"2015\": 7, \"2009\": 4, \"2012\": 3, \"2006\": 2, \"2008\": 2, \"2014\": 2, \"2017\": 2, \"201",
+   "other_year_available": "older years are present in the file we hold, so a different area year can be used",
+   "caveat": "the tail of old years is itself a finding: some municipalities carry area figures from 2006-2018"
+  },
+  {
+   "input": "osm_municipal_outlines",
+   "used": "geometry of 2 660 territories",
+   "interval": "continuous - the same place is redrawn between version windows",
+   "proof_kind": "committed artifact field",
+   "proof": "artifacts/geo/duplicate_municipalities.json, cases[].version_windows - e.g. Химки: [{\"from\": 2018, \"to\": 2023}, {\"from\": 2023, \"to\": 9999}]",
+   "other_year_available": "an older or newer outline exists in OSM history, but fetching history was not attempted",
+   "caveat": "18 places arrive under one name twice; the extra copies are what this row is about"
+  },
+  {
+   "input": "copernicus_gls_lc100_change_bands",
+   "used": "band years 2000-2015",
+   "interval": "annual layers over that span",
+   "proof_kind": "committed artifact field",
+   "proof": "artifacts/geo/change_covariates_report.json, band_years = '2000-2015'; provider statement for the collection: The Global Dynamic Land Cover product, with specific regard to the 100 m dataset",
+   "other_year_available": "a different band year inside 2000-2015 can be used; nothing inside the 2023-2024 spending window exists in this collection",
+   "caveat": "prior evidence only, not corroboration"
+  },
+  {
+   "input": "dynamic_world",
+   "used": "named in the brief; not obtained",
+   "interval": "not proven by anything within reach",
+   "proof_kind": "recorded failure",
+   "proof": "asset not found for the account that was probing it",
+   "other_year_available": "unknown",
+   "caveat": "asset not found for the account that was probing it"
+  },
+  {
+   "input": "hansen_loss_gain",
+   "used": "named in the brief; not obtained",
+   "interval": "not proven by anything within reach",
+   "proof_kind": "no proof",
+   "proof": "no access to the assets; the public mirror was reached but only for tree cover, and the provider page did not state a cadence",
+   "other_year_available": "unknown",
+   "caveat": "no access to the assets; the public mirror was reached but only for tree cover, and the provider page did not state a cadence"
+  },
+  {
+   "input": "soilgrids",
+   "used": "named in the brief; not obtained",
+   "interval": "not proven by anything within reach",
+   "proof_kind": "recorded failure",
+   "proof": "asset not found; the WCS endpoint rejects the map paths",
+   "other_year_available": "unknown",
+   "caveat": "asset not found; the WCS endpoint rejects the map paths"
+  },
+  {
+   "input": "eog_vnl_annual_composites",
+   "used": "named in the brief; not obtained",
+   "interval": "annual",
+   "proof_kind": "recorded failure",
+   "proof": "the public host redirects to a login portal; the annual time series is stated on the product page for 2012-2020",
+   "other_year_available": "unknown",
+   "caveat": "the public host redirects to a login portal; the annual time series is stated on the product page for 2012-2020"
+  },
+  {
+   "input": "tochno_st_primary_portal",
+   "used": "named in the brief; not obtained",
+   "interval": "not proven by anything within reach",
+   "proof_kind": "recorded failure",
+   "proof": "the site answers 200 or times out; consent gates the download index",
+   "other_year_available": "unknown",
+   "caveat": "the site answers 200 or times out; consent gates the download index"
+  }
+ ],
+ "rows_total": 25,
+ "rows_with_proof": 21,
+ "rows_without_proof": 4,
+ "earth_engine_probe": "artifacts/validation/gee_access.json (level-strategy-312806)"
+}

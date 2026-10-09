@@ -1,0 +1,350 @@
+{
+  "generated_by": "scripts/build_cadence_families.py",
+  "what_this_is": "Grouped cadence for the inputs the shipped clustering reads: each input names a family, a refresh lane, and whether that lane is proven by something we read.",
+  "source_artifact": "artifacts/validation/cadence_scope.json",
+  "approved_space_columns": [
+    "dynamic_world_bare",
+    "dynamic_world_built",
+    "dynamic_world_crops",
+    "dynamic_world_grass",
+    "dynamic_world_trees",
+    "viirs_lit_mean",
+    "modis_ndvi_mean",
+    "elevation_mean",
+    "Продовольствие_share",
+    "Здоровье_share",
+    "Маркетплейсы_share",
+    "Общественное питание_share",
+    "Транспорт_share"
+  ],
+  "lanes": [
+    "статично",
+    "раз в год",
+    "раз в месяц",
+    "не доказано"
+  ],
+  "families": [
+    {
+      "label": "траты",
+      "members": [
+        {
+          "layer": "sberindex_spending",
+          "label": "траты по категориям",
+          "status": "refreshable",
+          "lane": "раз в месяц",
+          "lane_is_proven": true,
+          "proof": "доказано записью в артефакте",
+          "proof_style": "artifact",
+          "space_columns": [
+            "Продовольствие_share",
+            "Здоровье_share",
+            "Маркетплейсы_share",
+            "Общественное питание_share",
+            "Транспорт_share"
+          ],
+          "in_space": true,
+          "used_frequency": "раз в месяц",
+          "possible_frequency": "раз в месяц",
+          "recommended_frequency": "раз в месяц",
+          "used_resolution": "по муниципалитету",
+          "possible_resolution": "по муниципалитету",
+          "recommended_resolution": "по муниципалитету",
+          "basis": "SberIndex публикует помесячные ряды по каждому муниципальному образованию; чаще уже не бывает",
+          "last_update": "2024-12",
+          "last_update_basis": "последний месяц ряда, на котором собран ответ"
+        }
+      ],
+      "columns_in_space": [
+        "Здоровье_share",
+        "Маркетплейсы_share",
+        "Общественное питание_share",
+        "Продовольствие_share",
+        "Транспорт_share"
+      ],
+      "static_count": 0,
+      "refreshable_count": 1,
+      "unproven_count": 0
+    },
+    {
+      "label": "земля",
+      "members": [
+        {
+          "layer": "worldcover",
+          "label": "карта земли",
+          "status": "static",
+          "lane": "не доказано",
+          "lane_is_proven": false,
+          "proof": "не доказано",
+          "proof_style": "none",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "2021 год · издание v200",
+          "last_update_basis": "поле реестра: image"
+        },
+        {
+          "layer": "gls_lcz",
+          "label": "городские контуры",
+          "status": "static",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "прочитано на странице набора",
+          "proof_style": "page",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "2019 год",
+          "last_update_basis": "поле реестра: collection"
+        },
+        {
+          "layer": "gls_fraction",
+          "label": "доли классов",
+          "status": "static",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "прочитано на странице набора",
+          "proof_style": "page",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "2019 год",
+          "last_update_basis": "поле реестра: collection"
+        },
+        {
+          "layer": "dynamic_world",
+          "label": "земля по классам",
+          "status": "refreshable",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "доказано записью в артефакте",
+          "proof_style": "artifact",
+          "space_columns": [
+            "dynamic_world_bare",
+            "dynamic_world_built",
+            "dynamic_world_crops",
+            "dynamic_world_grass",
+            "dynamic_world_trees"
+          ],
+          "in_space": true,
+          "used_frequency": "раз в год",
+          "possible_frequency": "раз в неделю",
+          "recommended_frequency": "раз в год",
+          "used_resolution": "500 м на пиксель",
+          "possible_resolution": "10 м на пиксель",
+          "recommended_resolution": "500 м на пиксель",
+          "basis": "Dynamic World - слой близкий к реальному времени, построенный по Sentinel-2; чаще можно обращаться раз в неделю",
+          "last_update": "2026-10-09",
+          "last_update_basis": "период записи GOOGLE/DYNAMICWORLD/V1 в каталоге Earth Engine"
+        },
+        {
+          "layer": "modis_lcc",
+          "label": "классификация земли",
+          "status": "refreshable",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "доказано измерением по снимкам",
+          "proof_style": "measured",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "2023 год",
+          "last_update_basis": "поле реестра: collection"
+        }
+      ],
+      "columns_in_space": [
+        "dynamic_world_bare",
+        "dynamic_world_built",
+        "dynamic_world_crops",
+        "dynamic_world_grass",
+        "dynamic_world_trees"
+      ],
+      "static_count": 3,
+      "refreshable_count": 2,
+      "unproven_count": 1
+    },
+    {
+      "label": "свет и зелень",
+      "members": [
+        {
+          "layer": "modis_ndvi",
+          "label": "вегетация MODIS",
+          "status": "refreshable",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "доказано измерением по снимкам",
+          "proof_style": "measured",
+          "space_columns": [
+            "modis_ndvi_mean"
+          ],
+          "in_space": true,
+          "used_frequency": "раз в год",
+          "possible_frequency": "раз в 16 дней",
+          "recommended_frequency": "раз в год",
+          "used_resolution": "250 м на пиксель",
+          "possible_resolution": "250 м на пиксель",
+          "recommended_resolution": "250 м на пиксель",
+          "basis": "MODIS MOD13Q1 возвращается каждые 16 дней; в пространство входит годовая величина",
+          "last_update": "2026-09-14",
+          "last_update_basis": "период MODIS/061/MOD13Q1 в каталоге Earth Engine"
+        },
+        {
+          "layer": "modis_burn",
+          "label": "гарь MODIS",
+          "status": "refreshable",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "доказано измерением по снимкам",
+          "proof_style": "measured",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "2023 год",
+          "last_update_basis": "поле реестра: collection"
+        },
+        {
+          "layer": "viirs_lit",
+          "label": "ночное свечение",
+          "status": "refreshable",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "доказано измерением по снимкам",
+          "proof_style": "measured",
+          "space_columns": [
+            "viirs_lit_mean"
+          ],
+          "in_space": true,
+          "used_frequency": "раз в год",
+          "possible_frequency": "раз в месяц",
+          "recommended_frequency": "раз в год",
+          "used_resolution": "около 750 м на пиксель",
+          "possible_resolution": "около 750 м на пиксель",
+          "recommended_resolution": "около 750 м на пиксель",
+          "basis": "VIIRS DNB существует и помесячно (VCMCFG), и годовым слоем (VNL); порог 0,5 заморожен записанным решением",
+          "last_update": "2025-01-01 годовой · 2026-08-01 помесячный",
+          "last_update_basis": "период NOAA/VIIRS/DNB в каталоге Earth Engine"
+        },
+        {
+          "layer": "viirs",
+          "label": "сырые ночные огни",
+          "status": "refreshable",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "прочитано на странице набора",
+          "proof_style": "page",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "2023 год",
+          "last_update_basis": "поле реестра: collection"
+        }
+      ],
+      "columns_in_space": [
+        "modis_ndvi_mean",
+        "viirs_lit_mean"
+      ],
+      "static_count": 0,
+      "refreshable_count": 4,
+      "unproven_count": 0
+    },
+    {
+      "label": "рельеф и климат",
+      "members": [
+        {
+          "layer": "elevation",
+          "label": "высота местности",
+          "status": "static",
+          "lane": "не доказано",
+          "lane_is_proven": false,
+          "proof": "не доказано",
+          "proof_style": "none",
+          "space_columns": [
+            "elevation_mean"
+          ],
+          "in_space": true,
+          "used_frequency": "статично",
+          "possible_frequency": "не пересчитывается",
+          "recommended_frequency": "статично",
+          "used_resolution": "30 м на пиксель",
+          "possible_resolution": "30 м на пиксель",
+          "recommended_resolution": "30 м на пиксель",
+          "basis": "съёмка SRTM/COPERNICUS GLO30; высота места не дрейфует из года в год",
+          "last_update": "съёмка 2000/2015",
+          "last_update_basis": "SRTMGL1_003 и COPERNICUS/DEM/GLO30"
+        },
+        {
+          "layer": "worldclim",
+          "label": "климатические нормы",
+          "status": "static",
+          "lane": "статично",
+          "lane_is_proven": true,
+          "proof": "прочитано на странице набора",
+          "proof_style": "page",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "нормы 1979–2013",
+          "last_update_basis": "WORLDCLIM/V1/BIO, период нормальный"
+        }
+      ],
+      "columns_in_space": [
+        "elevation_mean"
+      ],
+      "static_count": 2,
+      "refreshable_count": 0,
+      "unproven_count": 1
+    },
+    {
+      "label": "площадь и границы",
+      "members": [
+        {
+          "layer": "rosstat_official_land_area",
+          "label": "площадь из реестра",
+          "status": "refreshable",
+          "lane": "раз в год",
+          "lane_is_proven": true,
+          "proof": "доказано записью в артефакте",
+          "proof_style": "artifact",
+          "space_columns": [],
+          "in_space": false
+        }
+      ],
+      "columns_in_space": [],
+      "static_count": 0,
+      "refreshable_count": 1,
+      "unproven_count": 0
+    },
+    {
+      "label": "справочные наборы",
+      "members": [
+        {
+          "layer": "soilgrids",
+          "label": "влага в почве",
+          "status": "static",
+          "lane": "не доказано",
+          "lane_is_proven": false,
+          "proof": "не доказано",
+          "proof_style": "none",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "издание v2_0",
+          "last_update_basis": "asset id ISRIC/SoilGrids250m/v2_0"
+        },
+        {
+          "layer": "hansen",
+          "label": "потеря леса",
+          "status": "refreshable",
+          "lane": "не доказано",
+          "lane_is_proven": false,
+          "proof": "не доказано",
+          "proof_style": "none",
+          "space_columns": [],
+          "in_space": false,
+          "last_update": "издание v1_13, потери до 2025 года",
+          "last_update_basis": "asset id UMD/hansen/global_forest_change_2025_v1_13"
+        }
+      ],
+      "columns_in_space": [],
+      "static_count": 1,
+      "refreshable_count": 1,
+      "unproven_count": 2
+    }
+  ],
+  "honesty": {
+    "inputs_without_a_proven_lane": 4,
+    "why_they_still_appear": "их место на шкале не доказано прочитанным источником, поэтому они стоят в отдельной полосе, а не под «раз в год»",
+    "no_finer_frequency_claim": "почастотнее или поквартально мы не мерили и не утверждаем"
+  }
+}

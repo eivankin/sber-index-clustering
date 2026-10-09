@@ -1,0 +1,25 @@
+{
+  "covariate_source": "covariates_gee.parquet + covariates_change.parquet",
+  "transitions": 546,
+  "verdicts": {
+    "corroborated": 303,
+    "land_stable": 243
+  },
+  "within_window_signals": [
+    "burn_pct_of_territory",
+    "burn_km2"
+  ],
+  "prior_only_signals": [
+    "chg_px_total",
+    "chg_noinfo_pct",
+    "chg_change_high_confidence_pct",
+    "chg_change_low_confidence_pct",
+    "chg_no_change_pct",
+    "chg_valid_px"
+  ],
+  "limitation": "GLC-LC100 change-confidence describes 2000-2015, before the 2023-2024 spending window, so it is never used as corroboration; only within-window signals (burn, Hansen loss/gain year) can corroborate a transition.",
+  "coverage_of_within_window": {
+    "burn_pct_of_territory": 1.0,
+    "burn_km2": 1.0
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "total_seconds": 2644.5,
+  "chunk_size": 400,
+  "territories_in_scope": 2660,
+  "jobs": {
+    "worldcover": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 276.0,
+      "provenance": "ESA/WorldCover/v200/2021 | year=2021 | scale=100 m | reducer=frequencyHistogram | 13-class shares over classified pixels",
+      "first_row": {
+        "tid": "931",
+        "wc_unclassified_pct": 0.0,
+        "wc_c10_pct": 35.1277,
+        "wc_c30_pct": 21.8964,
+        "wc_c40_pct": 4.1452,
+        "wc_c50_pct": 33.6402,
+        "wc_c60_pct": 0.8464,
+        "wc_c80_pct": 2.6551,
+        "wc_c90_pct": 1.689,
+        "wc_classified_px": 25228,
+        "wc_px_total": 25228,
+        "prov_worldcover": "ESA/WorldCover/v200/2021 | year=2021 | scale=100 m | reducer=frequencyHistogram | 13-class shares over classified pixels",
+        "wc_c20_pct": NaN,
+        "wc_c100_pct": NaN,
+        "wc_c70_pct": NaN
+      },
+      "columns": [
+        "tid",
+        "wc_unclassified_pct",
+        "wc_c10_pct",
+        "wc_c30_pct",
+        "wc_c40_pct",
+        "wc_c50_pct",
+        "wc_c60_pct",
+        "wc_c80_pct",
+        "wc_c90_pct",
+        "wc_classified_px",
+        "wc_px_total",
+        "prov_worldcover",
+        "wc_c20_pct",
+        "wc_c100_pct"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "gls_lcz": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 269.7,
+      "provenance": "COPERNICUS/Landcover/100m/Proba-V-C3/Global | year=2019 | scale=300 m | reducer=frequencyHistogram | LCZ class shares",
+      "first_row": {
+        "tid": "931",
+        "gls_unclassified_pct": 0.0,
+        "gls_c111_pct": 3.6843,
+        "gls_c114_pct": 2.5252,
+        "gls_c115_pct": 5.3528,
+        "gls_c116_pct": 0.0019,
+        "gls_c121_pct": 0.0453,
+        "gls_c125_pct": 4.3016,
+        "gls_c126_pct": 3.9281,
+        "gls_c30_pct": 5.8447,
+        "gls_c40_pct": 22.2283,
+        "gls_c50_pct": 48.6194,
+        "gls_c80_pct": 1.587,
+        "gls_c90_pct": 1.8816,
+        "gls_classified_px": 4415,
+        "gls_px_total": 4415,
+        "prov_gls_lcz": "COPERNICUS/Landcover/100m/Proba-V-C3/Global | year=2019 | scale=300 m | reducer=frequencyHistogram | LCZ class shares",
+        "gls_c124_pct": NaN,
+        "gls_c60_pct": NaN,
+        "gls_c20_pct": NaN,
+        "gls_c113_pct": NaN,
+        "gls_c123_pct": NaN,
+        "gls_c100_pct": NaN,
+        "gls_c70_pct": NaN,
+        "gls_c200_pct": NaN
+      },
+      "columns": [
+        "tid",
+        "gls_unclassified_pct",
+        "gls_c111_pct",
+        "gls_c114_pct",
+        "gls_c115_pct",
+        "gls_c116_pct",
+        "gls_c121_pct",
+        "gls_c125_pct",
+        "gls_c126_pct",
+        "gls_c30_pct",
+        "gls_c40_pct",
+        "gls_c50_pct",
+        "gls_c80_pct",
+        "gls_c90_pct"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "gls_fraction": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 418.3,
+      "provenance": "COPERNICUS/Landcover/100m/Proba-V-C3/Global | year=2019 | scale=300 m | reducer=mean | cover fractions (0-100)",
+      "first_row": {
+        "tid": "931",
+        "gls_fraction_bare": 0.5464200381933653,
+        "gls_fraction_crops": 14.088008171603684,
+        "gls_fraction_grass": 16.89768796909003,
+        "gls_fraction_moss": 0.0,
+        "gls_fraction_shrub": 2.011744015632633,
+        "gls_fraction_snow": 0.0,
+        "gls_fraction_tree": 15.740639516809534,
+        "gls_fraction_urban": 49.57333570191413,
+        "gls_fraction_water-permanent": 1.6555518053026606,
+        "gls_fraction_water-seasonal": 0.6805737886929875,
+        "prov_gls_fraction": "COPERNICUS/Landcover/100m/Proba-V-C3/Global | year=2019 | scale=300 m | reducer=mean | cover fractions (0-100)"
+      },
+      "columns": [
+        "tid",
+        "gls_fraction_bare",
+        "gls_fraction_crops",
+        "gls_fraction_grass",
+        "gls_fraction_moss",
+        "gls_fraction_shrub",
+        "gls_fraction_snow",
+        "gls_fraction_tree",
+        "gls_fraction_urban",
+        "gls_fraction_water-permanent",
+        "gls_fraction_water-seasonal",
+        "prov_gls_fraction"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "viirs": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 213.5,
+      "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean | annual DNB statistics",
+      "first_row": {
+        "tid": "931",
+        "viirs_average": 23.84702447736884,
+        "viirs_average_masked": 23.842369027549022,
+        "viirs_cf_cvg": 110.19881431789804,
+        "viirs_maximum": 69.84418855183733,
+        "viirs_median": 22.668542292335246,
+        "viirs_minimum": 15.383309034661572,
+        "prov_viirs": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean | annual DNB statistics"
+      },
+      "columns": [
+        "tid",
+        "viirs_average",
+        "viirs_average_masked",
+        "viirs_cf_cvg",
+        "viirs_maximum",
+        "viirs_median",
+        "viirs_minimum",
+        "prov_viirs"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "viirs_lit": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 171.6,
+      "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean(binary) | fraction of lit pixels (>=0.5 nW/cm2/sr)",
+      "first_row": {
+        "tid": "931",
+        "viirs_lit_mean": 1.0,
+        "prov_viirs_lit": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2023 | scale=464 m | reducer=mean(binary) | fraction of lit pixels (>=0.5 nW/cm2/sr)"
+      },
+      "columns": [
+        "tid",
+        "viirs_lit_mean",
+        "prov_viirs_lit"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "modis_lcc": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 182.6,
+      "provenance": "MODIS/061/MCD12Q1 | year=2023 | scale=500 m | reducer=frequencyHistogram | IGBP class shares",
+      "first_row": {
+        "tid": "931",
+        "mcd_unclassified_pct": 0.0,
+        "mcd_c14_pct": 0.1559,
+        "mcd_c15_pct": 3.5116,
+        "mcd_c22_pct": 69.7825,
+        "mcd_c31_pct": 24.9853,
+        "mcd_c32_pct": 1.5647,
+        "mcd_classified_px": 639,
+        "mcd_px_total": 639,
+        "prov_modis_lcc": "MODIS/061/MCD12Q1 | year=2023 | scale=500 m | reducer=frequencyHistogram | IGBP class shares",
+        "mcd_c1_pct": NaN,
+        "mcd_c3_pct": NaN,
+        "mcd_c11_pct": NaN,
+        "mcd_c21_pct": NaN,
+        "mcd_c13_pct": NaN,
+        "mcd_c42_pct": NaN,
+        "mcd_c43_pct": NaN,
+        "mcd_c16_pct": NaN,
+        "mcd_c2_pct": NaN,
+        "mcd_c41_pct": NaN,
+        "mcd_c12_pct": NaN
+      },
+      "columns": [
+        "tid",
+        "mcd_unclassified_pct",
+        "mcd_c14_pct",
+        "mcd_c15_pct",
+        "mcd_c22_pct",
+        "mcd_c31_pct",
+        "mcd_c32_pct",
+        "mcd_classified_px",
+        "mcd_px_total",
+        "prov_modis_lcc",
+        "mcd_c1_pct",
+        "mcd_c3_pct",
+        "mcd_c11_pct",
+        "mcd_c21_pct"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "modis_burn": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 209.9,
+      "provenance": "MODIS/061/MCD64A1 | year=2023 | scale=500 m | reducer=frequencyHistogram(binary) | binary burned-at-least-once flag over an unmasked constant",
+      "first_row": {
+        "tid": "931",
+        "burn_px": 0,
+        "unburn_px": 1008,
+        "burn_pct_of_territory": 0.0,
+        "burn_km2": 0.0,
+        "prov_modis_burn": "MODIS/061/MCD64A1 | year=2023 | scale=500 m | reducer=frequencyHistogram(binary) | binary burned-at-least-once flag over an unmasked constant"
+      },
+      "columns": [
+        "tid",
+        "burn_px",
+        "unburn_px",
+        "burn_pct_of_territory",
+        "burn_km2",
+        "prov_modis_burn"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "modis_ndvi": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 542.5,
+      "provenance": "MODIS/061/MOD13Q1 | year=2023 | scale=250 m | reducer=mean | QA-filtered mean NDVI",
+      "first_row": {
+        "tid": "931",
+        "modis_ndvi_mean": 0.5250321842804334,
+        "prov_modis_ndvi": "MODIS/061/MOD13Q1 | year=2023 | scale=250 m | reducer=mean | QA-filtered mean NDVI"
+      },
+      "columns": [
+        "tid",
+        "modis_ndvi_mean",
+        "prov_modis_ndvi"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "worldclim": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 187.0,
+      "provenance": "WORLDCLIM/V1/BIO | year=None | scale=1000 m | reducer=mean | bioclimatic means",
+      "first_row": {
+        "tid": "931",
+        "worldclim_bio01": 6.723014947194871,
+        "worldclim_bio04": 1000.7432488762381,
+        "worldclim_bio12": 577.2630612974975,
+        "worldclim_bio15": 22.99695145661268,
+        "worldclim_bio18": 191.0649837462865,
+        "worldclim_bio19": 126.63213724666754,
+        "prov_worldclim": "WORLDCLIM/V1/BIO | year=None | scale=1000 m | reducer=mean | bioclimatic means"
+      },
+      "columns": [
+        "tid",
+        "worldclim_bio01",
+        "worldclim_bio04",
+        "worldclim_bio12",
+        "worldclim_bio15",
+        "worldclim_bio18",
+        "worldclim_bio19",
+        "prov_worldclim"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "elevation": {
+      "rows": 2660,
+      "chunks": 10,
+      "failed_chunks": 0,
+      "seconds": 173.4,
+      "provenance": "USGS/SRTMGL1_003 | year=None | scale=250 m | reducer=mean | mean elevation",
+      "first_row": {
+        "tid": "931",
+        "elevation_mean": 155.33934638541635,
+        "prov_elevation": "USGS/SRTMGL1_003 | year=None | scale=250 m | reducer=mean | mean elevation"
+      },
+      "columns": [
+        "tid",
+        "elevation_mean",
+        "prov_elevation"
+      ],
+      "coverage_of_rows_returned": 0.9256
+    }
+  },
+  "layer_coverage": {
+    "worldcover": 1.0,
+    "gls_lcz": 1.0,
+    "gls_fraction": 1.0,
+    "viirs": 1.0,
+    "viirs_lit": 1.0,
+    "modis_lcc": 1.0,
+    "modis_burn": 1.0,
+    "modis_ndvi": 1.0,
+    "worldclim": 1.0,
+    "elevation": 0.9256
+  },
+  "territories_with_4plus_nonnull_layers": 2660,
+  "max_layers_per_territory": 10
+}

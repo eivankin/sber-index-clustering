@@ -1,0 +1,67 @@
+{
+  "total_seconds": 989.8,
+  "chunk_size": 100,
+  "territories_in_scope": 2660,
+  "jobs": {
+    "viirs_lit": {
+      "rows": 2660,
+      "chunks": 32,
+      "failed_chunks": 0,
+      "cache_replays": 0,
+      "seconds": 201.9,
+      "provenance": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2024 | scale=464 m | reducer=mean(binary) | fraction of lit pixels (>=0.5 nW/cm2/sr)",
+      "first_row": {
+        "tid": "955",
+        "viirs_lit_mean": 1.0,
+        "viirs_lit_osm_ref": "2790349",
+        "viirs_lit_osm_vers": "2020-01-02T08:17:28Z",
+        "viirs_lit_yr_from": 2018.0,
+        "viirs_lit_yr_to": 2020.0,
+        "prov_viirs_lit": "NOAA/VIIRS/DNB/ANNUAL_V22 | year=2024 | scale=464 m | reducer=mean(binary) | fraction of lit pixels (>=0.5 nW/cm2/sr)"
+      },
+      "columns": [
+        "tid",
+        "viirs_lit_mean",
+        "viirs_lit_osm_ref",
+        "viirs_lit_osm_vers",
+        "viirs_lit_yr_from",
+        "viirs_lit_yr_to",
+        "prov_viirs_lit"
+      ],
+      "coverage_of_rows_returned": 1.0
+    },
+    "modis_ndvi": {
+      "rows": 2660,
+      "chunks": 32,
+      "failed_chunks": 0,
+      "cache_replays": 0,
+      "seconds": 787.9,
+      "provenance": "MODIS/061/MOD13Q1 | year=2024 | scale=250 m | reducer=mean | QA-filtered mean NDVI",
+      "first_row": {
+        "tid": "955",
+        "modis_ndvi_mean": 0.5957745431748908,
+        "modis_ndvi_osm_ref": "2790349",
+        "modis_ndvi_osm_vers": "2020-01-02T08:17:28Z",
+        "modis_ndvi_yr_from": 0.2018,
+        "modis_ndvi_yr_to": 0.202,
+        "prov_modis_ndvi": "MODIS/061/MOD13Q1 | year=2024 | scale=250 m | reducer=mean | QA-filtered mean NDVI"
+      },
+      "columns": [
+        "tid",
+        "modis_ndvi_mean",
+        "modis_ndvi_osm_ref",
+        "modis_ndvi_osm_vers",
+        "modis_ndvi_yr_from",
+        "modis_ndvi_yr_to",
+        "prov_modis_ndvi"
+      ],
+      "coverage_of_rows_returned": 1.0
+    }
+  },
+  "layer_coverage": {
+    "viirs_lit": 1.0,
+    "modis_ndvi": 1.0
+  },
+  "territories_with_4plus_nonnull_layers": 0,
+  "max_layers_per_territory": 2
+}

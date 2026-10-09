@@ -1,0 +1,217 @@
+{
+ "generated_by": "scripts/measure_dw_substitution.py",
+ "what_this_is": "Substituting Dynamic World for the single-vintage PROBA-V land-cover fractions: whether the typology survives the swap, and whether land cover alone can refresh the partition without new spending data.",
+ "why_the_transform_is_pooled": "Fitting the quantile transform per year would remap unchanging columns and report that remapping as cluster movement. It is fitted once across both years and applied to each year separately.",
+ "movement": {
+  "dw_refreshed|k4": {
+   "ari_2023_vs_2024": 0.9516,
+   "churn_after_alignment": 0.0184,
+   "districts": 2016,
+   "only_source_that_changed": "land cover and spending composition"
+  },
+  "dw_refreshed|k5": {
+   "ari_2023_vs_2024": 0.8991,
+   "churn_after_alignment": 0.0432,
+   "districts": 2016,
+   "only_source_that_changed": "land cover and spending composition"
+  },
+  "dw_refreshed|k7": {
+   "ari_2023_vs_2024": 0.6504,
+   "churn_after_alignment": 0.1791,
+   "districts": 2016,
+   "only_source_that_changed": "land cover and spending composition"
+  },
+  "dw_frozen|k4": {
+   "ari_2023_vs_2024": 0.9804,
+   "churn_after_alignment": 0.0069,
+   "districts": 2016,
+   "only_source_that_changed": "spending composition only"
+  },
+  "dw_frozen|k5": {
+   "ari_2023_vs_2024": 0.8741,
+   "churn_after_alignment": 0.058,
+   "districts": 2016,
+   "only_source_that_changed": "spending composition only"
+  },
+  "dw_frozen|k7": {
+   "ari_2023_vs_2024": 0.7145,
+   "churn_after_alignment": 0.1359,
+   "districts": 2016,
+   "only_source_that_changed": "spending composition only"
+  },
+  "dw_only|k4": {
+   "ari_2023_vs_2024": 0.8163,
+   "churn_after_alignment": 0.0799,
+   "districts": 2016,
+   "only_source_that_changed": "land cover only"
+  },
+  "dw_only|k5": {
+   "ari_2023_vs_2024": 0.649,
+   "churn_after_alignment": 0.1533,
+   "districts": 2016,
+   "only_source_that_changed": "land cover only"
+  },
+  "dw_only|k7": {
+   "ari_2023_vs_2024": 0.6209,
+   "churn_after_alignment": 0.1811,
+   "districts": 2016,
+   "only_source_that_changed": "land cover only"
+  },
+  "gls_refreshed|k4": {
+   "ari_2023_vs_2024": 0.9373,
+   "churn_after_alignment": 0.0283,
+   "districts": 2016,
+   "only_source_that_changed": "spending composition only, land frozen"
+  },
+  "gls_refreshed|k5": {
+   "ari_2023_vs_2024": 0.8178,
+   "churn_after_alignment": 0.0833,
+   "districts": 2016,
+   "only_source_that_changed": "spending composition only, land frozen"
+  },
+  "gls_refreshed|k7": {
+   "ari_2023_vs_2024": 0.8374,
+   "churn_after_alignment": 0.0714,
+   "districts": 2016,
+   "only_source_that_changed": "spending composition only, land frozen"
+  }
+ },
+ "cross_section_rule": {
+  "nameable_by_spending": true,
+  "spending_separates_every_pair": true,
+  "kmeans_vs_ward_ari_min": 0.5,
+  "stability_min": 0.7,
+  "median_spending_gap_in_iqr_min": 0.5
+ },
+ "cross_section": {
+  "k2": {
+   "family_split_share": {
+    "land": 0.7241,
+    "spending_shape": 0.2759,
+    "all_columns": 1.0
+   },
+   "clusters_nameable_by_spending": "2/2",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 1.0804,
+   "kmeans_vs_ward_ari": 1.0,
+   "stability_bootstrap_ari": 1.0,
+   "largest_cluster_share": 0.6696,
+   "smallest_cluster_districts": 666,
+   "candidate": true
+  },
+  "k3": {
+   "family_split_share": {
+    "land": 0.7623,
+    "spending_shape": 0.2377,
+    "all_columns": 1.0
+   },
+   "clusters_nameable_by_spending": "3/3",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.982,
+   "kmeans_vs_ward_ari": 0.8521,
+   "stability_bootstrap_ari": 0.9837,
+   "largest_cluster_share": 0.3542,
+   "smallest_cluster_districts": 636,
+   "candidate": true
+  },
+  "k4": {
+   "family_split_share": {
+    "land": 0.7316,
+    "spending_shape": 0.2684,
+    "all_columns": 1.0
+   },
+   "clusters_nameable_by_spending": "4/4",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.7429,
+   "kmeans_vs_ward_ari": 0.774,
+   "stability_bootstrap_ari": 0.9766,
+   "largest_cluster_share": 0.3537,
+   "smallest_cluster_districts": 292,
+   "candidate": true
+  },
+  "k5": {
+   "family_split_share": {
+    "land": 0.7135,
+    "spending_shape": 0.2865,
+    "all_columns": 1.0
+   },
+   "clusters_nameable_by_spending": "5/5",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6355,
+   "kmeans_vs_ward_ari": 0.6621,
+   "stability_bootstrap_ari": 0.8874,
+   "largest_cluster_share": 0.2733,
+   "smallest_cluster_districts": 283,
+   "candidate": true
+  },
+  "k6": {
+   "family_split_share": {
+    "land": 0.7049,
+    "spending_shape": 0.2951,
+    "all_columns": 1.0
+   },
+   "clusters_nameable_by_spending": "6/6",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.5743,
+   "kmeans_vs_ward_ari": 0.5578,
+   "stability_bootstrap_ari": 0.7728,
+   "largest_cluster_share": 0.2545,
+   "smallest_cluster_districts": 178,
+   "candidate": true
+  },
+  "k7": {
+   "family_split_share": {
+    "land": 0.7049,
+    "spending_shape": 0.2951,
+    "all_columns": 1.0
+   },
+   "clusters_nameable_by_spending": "7/7",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.626,
+   "kmeans_vs_ward_ari": 0.566,
+   "stability_bootstrap_ari": 0.7049,
+   "largest_cluster_share": 0.2282,
+   "smallest_cluster_districts": 158,
+   "candidate": true
+  },
+  "k8": {
+   "family_split_share": {
+    "land": 0.7071,
+    "spending_shape": 0.2929,
+    "all_columns": 1.0
+   },
+   "clusters_nameable_by_spending": "8/8",
+   "spending_measures_separating_every_pair": "7/7",
+   "spending_gap_median_in_iqr": 0.6744,
+   "kmeans_vs_ward_ari": 0.5424,
+   "stability_bootstrap_ari": 0.6888,
+   "largest_cluster_share": 0.2401,
+   "smallest_cluster_districts": 50,
+   "candidate": false
+  }
+ },
+ "dw_combo_columns": [
+  "dynamic_world_bare",
+  "dynamic_world_built",
+  "dynamic_world_crops",
+  "dynamic_world_grass",
+  "dynamic_world_trees",
+  "viirs_lit_mean",
+  "modis_ndvi_mean",
+  "elevation_mean",
+  "Продовольствие_share",
+  "Здоровье_share",
+  "Маркетплейсы_share",
+  "Общественное питание_share",
+  "Транспорт_share"
+ ],
+ "incumbent_gls_trio": [
+  "gls_fraction_urban",
+  "gls_fraction_crops",
+  "gls_fraction_tree"
+ ],
+ "years": [
+  "2023",
+  "2024"
+ ]
+}

@@ -1,0 +1,331 @@
+{
+  "active_nodes": 2660,
+  "stored_distance_pairs": 6607176,
+  "complete_graph_pairs": 7072940,
+  "demand_source": "market_access / 1000 (SberIndex)",
+  "supply_source": "v1 land-cover production potential from covariates_gee.parquet (gls_fraction_crops, gls_fraction_grass, gls_fraction_tree, gls_unclassified_pct)",
+  "supply_median": 1.0,
+  "supply_p90": 1.896945039990555,
+  "complementarity_exp": {
+    "params": {
+      "tau": 600.0
+    },
+    "dense": {
+      "nodes": 2660,
+      "edges": 3303587,
+      "density": 0.934148,
+      "mean_degree": 2483.9,
+      "median_degree": 2570,
+      "max_degree": 2570,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 6607176,
+      "total_weight": 369881.306
+    },
+    "clique_hub10": {
+      "reciprocity": 0.3594,
+      "clustering_coefficient": 0.0046,
+      "degree_gini": 0.3565,
+      "top1pct_degree_share": 0.172,
+      "lp_communities": 147,
+      "lp_modularity": 0.7602
+    },
+    "knn10": {
+      "nodes": 2660,
+      "edges": 21090,
+      "density": 0.005964,
+      "mean_degree": 15.857,
+      "median_degree": 11,
+      "max_degree": 508,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 25710,
+      "total_weight": 8859.583
+    },
+    "knn25": {
+      "nodes": 2660,
+      "edges": 49646,
+      "density": 0.014038,
+      "mean_degree": 37.328,
+      "median_degree": 29,
+      "max_degree": 606,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 64275,
+      "total_weight": 20234.097
+    }
+  },
+  "complementarity_power": {
+    "params": {
+      "alpha": 1.0
+    },
+    "dense": {
+      "nodes": 2660,
+      "edges": 3303587,
+      "density": 0.934148,
+      "mean_degree": 2483.9,
+      "median_degree": 2570,
+      "max_degree": 2570,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 6607176,
+      "total_weight": 2789.537
+    },
+    "clique_hub10": {
+      "reciprocity": 0.7038,
+      "clustering_coefficient": 0.0203,
+      "degree_gini": 0.1685,
+      "top1pct_degree_share": 0.0468,
+      "lp_communities": 231,
+      "lp_modularity": 0.7371
+    },
+    "knn10": {
+      "nodes": 2660,
+      "edges": 16663,
+      "density": 0.004712,
+      "mean_degree": 12.529,
+      "median_degree": 12,
+      "max_degree": 281,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 25710,
+      "total_weight": 208.447
+    },
+    "knn25": {
+      "nodes": 2660,
+      "edges": 42244,
+      "density": 0.011945,
+      "mean_degree": 31.762,
+      "median_degree": 30,
+      "max_degree": 471,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 64275,
+      "total_weight": 366.305
+    }
+  },
+  "complementarity_trunc": {
+    "params": {
+      "tau": 1500.0
+    },
+    "dense": {
+      "nodes": 2660,
+      "edges": 1352888,
+      "density": 0.382553,
+      "mean_degree": 1017.209,
+      "median_degree": 1153,
+      "max_degree": 1825,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 6607176,
+      "total_weight": 501284.762
+    },
+    "clique_hub10": {
+      "reciprocity": 0.1601,
+      "clustering_coefficient": 0.002,
+      "degree_gini": 0.448,
+      "top1pct_degree_share": 0.2571,
+      "lp_communities": 118,
+      "lp_modularity": 0.7099
+    },
+    "knn10": {
+      "nodes": 2660,
+      "edges": 23597,
+      "density": 0.006672,
+      "mean_degree": 17.742,
+      "median_degree": 10,
+      "max_degree": 845,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 25651,
+      "total_weight": 10782.111
+    },
+    "knn25": {
+      "nodes": 2660,
+      "edges": 54441,
+      "density": 0.015394,
+      "mean_degree": 40.933,
+      "median_degree": 27,
+      "max_degree": 895,
+      "isolated": 89,
+      "weak_components": 90,
+      "largest_component_share": 0.9665,
+      "out_nnz": 63848,
+      "total_weight": 24677.919
+    }
+  },
+  "similarity": {
+    "params": {
+      "h_median_distance": 3.8803,
+      "n_features": 11,
+      "territories": 2190
+    },
+    "dense": {
+      "nodes": 2190,
+      "edges": 2396955,
+      "density": 1.0,
+      "mean_degree": 2189.0,
+      "median_degree": 2189,
+      "max_degree": 2189,
+      "isolated": 0,
+      "weak_components": 1,
+      "largest_component_share": 1.0,
+      "out_nnz": 4793910,
+      "total_weight": 1805884.929
+    },
+    "clique_hub10": {
+      "reciprocity": 1.0,
+      "clustering_coefficient": 0.0247,
+      "degree_gini": 0.1144,
+      "top1pct_degree_share": 0.0171,
+      "lp_communities": 103,
+      "lp_modularity": 0.5996
+    },
+    "knn10": {
+      "nodes": 2190,
+      "edges": 15029,
+      "density": 0.00627,
+      "mean_degree": 13.725,
+      "median_degree": 13,
+      "max_degree": 25,
+      "isolated": 0,
+      "weak_components": 1,
+      "largest_component_share": 1.0,
+      "out_nnz": 30058,
+      "total_weight": 23471.75
+    },
+    "knn25": {
+      "nodes": 2190,
+      "edges": 37424,
+      "density": 0.015613,
+      "mean_degree": 34.177,
+      "median_degree": 33,
+      "max_degree": 60,
+      "isolated": 0,
+      "weak_components": 1,
+      "largest_component_share": 1.0,
+      "out_nnz": 74848,
+      "total_weight": 55712.684
+    }
+  },
+  "growth_correlation": {
+    "params": {
+      "signal": "month-over-month log growth of the monthly total, Pearson over 23 diffs",
+      "territories_with_all_months": 2016,
+      "damping": "exp(-d/600.0) on the stored road distance",
+      "negative_correlations": "clipped to 0.0",
+      "direction": "undirected"
+    },
+    "dense": {
+      "nodes": 2660,
+      "edges": 2006940,
+      "density": 0.567498,
+      "mean_degree": 1508.977,
+      "median_degree": 2003,
+      "max_degree": 2003,
+      "isolated": 654,
+      "weak_components": 656,
+      "largest_component_share": 0.7534,
+      "out_nnz": 4013880,
+      "total_weight": 1138609.132
+    },
+    "clique_hub10": {
+      "reciprocity": 1.0,
+      "clustering_coefficient": 0.0259,
+      "degree_gini": 0.34,
+      "top1pct_degree_share": 0.025,
+      "lp_communities": 766,
+      "lp_modularity": 0.7412
+    },
+    "knn10": {
+      "nodes": 2660,
+      "edges": 13153,
+      "density": 0.003719,
+      "mean_degree": 9.889,
+      "median_degree": 11,
+      "max_degree": 30,
+      "isolated": 654,
+      "weak_components": 656,
+      "largest_component_share": 0.7534,
+      "out_nnz": 26306,
+      "total_weight": 42958.117
+    },
+    "knn25": {
+      "nodes": 2660,
+      "edges": 32259,
+      "density": 0.009122,
+      "mean_degree": 24.255,
+      "median_degree": 28,
+      "max_degree": 78,
+      "isolated": 654,
+      "weak_components": 656,
+      "largest_component_share": 0.7534,
+      "out_nnz": 64518,
+      "total_weight": 96068.477
+    }
+  },
+  "lagged_leader": {
+    "params": {
+      "signal": "cosine between the 2023 category-share vector of i and the 2024 vector of j, 6 categories",
+      "territories_with_all_months": 2016,
+      "damping": "exp(-d/600.0) on the stored road distance",
+      "negative_correlations": "clipped to 0.0",
+      "direction": "both orientations kept with their own weight"
+    },
+    "dense": {
+      "nodes": 2660,
+      "edges": 1112257,
+      "density": 0.314511,
+      "mean_degree": 836.283,
+      "median_degree": 1080,
+      "max_degree": 1825,
+      "isolated": 654,
+      "weak_components": 656,
+      "largest_component_share": 0.7534,
+      "out_nnz": 4013880,
+      "total_weight": 405100.4
+    },
+    "clique_hub10": {
+      "reciprocity": 0.5953,
+      "clustering_coefficient": 0.0239,
+      "degree_gini": 0.3436,
+      "top1pct_degree_share": 0.0255,
+      "lp_communities": 743,
+      "lp_modularity": 0.724
+    },
+    "knn10": {
+      "nodes": 2660,
+      "edges": 14076,
+      "density": 0.00398,
+      "mean_degree": 10.583,
+      "median_degree": 12,
+      "max_degree": 32,
+      "isolated": 654,
+      "weak_components": 656,
+      "largest_component_share": 0.7534,
+      "out_nnz": 20042,
+      "total_weight": 26852.168
+    },
+    "knn25": {
+      "nodes": 2660,
+      "edges": 34047,
+      "density": 0.009627,
+      "mean_degree": 25.599,
+      "median_degree": 30,
+      "max_degree": 70,
+      "isolated": 654,
+      "weak_components": 656,
+      "largest_component_share": 0.7534,
+      "out_nnz": 50102,
+      "total_weight": 58368.955
+    }
+  }
+}

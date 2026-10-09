@@ -1,0 +1,22 @@
+{
+  "rows": 2660,
+  "columns": [
+    "tid",
+    "chg_px_total",
+    "chg_noinfo_pct",
+    "chg_change_high_confidence_pct",
+    "chg_change_low_confidence_pct",
+    "chg_no_change_pct",
+    "chg_valid_px"
+  ],
+  "coverage": {
+    "chg_noinfo_pct": 2658,
+    "chg_change_high_confidence_pct": 974,
+    "chg_change_low_confidence_pct": 974,
+    "chg_no_change_pct": 974
+  },
+  "band_years": "2000-2015",
+  "role": "prior evidence only, not corroboration",
+  "license": "CC BY 4.0",
+  "citation": "same as gls_lc"
+}

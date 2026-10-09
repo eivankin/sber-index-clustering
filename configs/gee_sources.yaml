@@ -1,0 +1,135 @@
+# Registry of Earth Engine layers used for per-territory land covariates.
+# Asset ids were resolved by scripts/probe_gee.py / scripts/probe_gee2.py (image vs collection).
+# Licenses are recorded so the submission can cite each layer correctly.
+
+worldcover:
+  asset: ESA/WorldCover/v200/2021
+  kind: image
+  band: Map
+  year: 2021
+  scale_m: 10
+  reducer: frequencyHistogram
+  denominator: classified pixels only (unclassified share reported per territory)
+  license: CC BY 4.0
+  citation: >-
+    EU-Copernicus Global Land Service, "ESA WorldCover 10 m 2021 v200",
+    https://doi.org/10.5281/zenodo.5571941
+
+gls_lcz:
+  asset: COPERNICUS/Landcover/100m/Proba-V-C3/Global
+  kind: collection
+  band: LSM
+  year: 2019
+  epoch: 2015-2019
+  scale_m: 100
+  reducer: frequencyHistogram
+  license: CC BY 4.0
+  citation: >-
+    VITO / EOC, "Copernicus Global Land Service: Land Cover 100m, collection 3, epoch 2015-2019",
+    https://doi.org/10.5281/zenodo.3939050
+
+gls_fraction:
+  asset: COPERNICUS/Landcover/100m/Proba-V-C3/Global
+  kind: collection
+  band: tree_fraction, builtup_fraction, bare_fraction, shrub_fraction, ndices_fraction, snow_fraction
+  year: 2019
+  scale_m: 100
+  reducer: mean
+  license: CC BY 4.0
+  citation: same as gls_lcz
+
+viirs:
+  asset: NOAA/VIIRS/DNB/ANNUAL_V22
+  kind: collection
+  band: average, average_masked, cf_cvg, maximum, median, minimum
+  year: 2023
+  scale_m: 464
+  reducer: mean
+  license: public domain (U.S. federal data, NOAA)
+  citation: >-
+    NOAA / NASA JPSS, "VIIRS Day/Night Band Annual Composites V22",
+    https://eogdata.mines.edu/products/vnl/ (source product; access via Google Earth Engine)
+
+viirs_lit:
+  asset: NOAA/VIIRS/DNB/ANNUAL_V22
+  kind: collection
+  band: "average >= 0.5 nW/cm2/sr (binary)"
+  year: 2023
+  scale_m: 464
+  reducer: mean of binary indicator
+  note: fraction of lit pixels; the demand side of the complementarity edge rule
+  license: public domain (U.S. federal data, NOAA)
+  citation: same as viirs
+
+modis_lcc:
+  asset: MODIS/061/MCD12Q1
+  kind: collection
+  band: LC_Prop1 (IGBP)
+  year: 2023
+  scale_m: 500
+  reducer: frequencyHistogram
+  license: NASA open data (acknowledge LP DAAC)
+  citation: 'NASA/LP DAAC, "MODIS/Terra+Aqua Land Cover Type Yearly L3 Global 500 m SIN Grid V061"'
+
+modis_burn:
+  asset: MODIS/061/MCD64A1
+  kind: collection
+  band: burned_area (12 monthly composites summed)
+  year: 2023
+  scale_m: 500
+  reducer: sum
+  license: NASA open data (acknowledge LP DAAC)
+  citation: 'NASA/LP DAAC, "MODIS/Terra+Aqua Burned Area Monthly L3 Global 500 m SIN Grid V061"'
+
+modis_ndvi:
+  asset: MODIS/061/MOD13Q1
+  kind: collection
+  band: NDVI, self-masked via the VI quality band
+  year: 2023
+  scale_m: 250
+  reducer: mean of the monthly mean
+  license: NASA open data (acknowledge LP DAAC)
+  citation: 'NASA/LP DAAC, "MODIS/Terra Vegetation Indices 16-Day L3 Global 250 m SIN Grid V061"'
+
+worldclim:
+  asset: WORLDCLIM/V1/BIO
+  kind: image
+  band: bio01, bio04, bio12, bio15, bio18, bio19
+  year: null
+  scale_m: 1000
+  reducer: mean
+  license: CC BY 4.0
+  citation: 'Fick & Cruickshank (2017), "WorldClim 2: new 1-km spatial grids of climate", Int. J. Climatol.'
+
+elevation:
+  asset: USGS/SRTMGL1_003
+  kind: image
+  band: elevation
+  year: null
+  scale_m: 30
+  reducer: mean
+  license: public domain (USGS/NASA SRTM)
+  citation: 'NASA SRTM / DEPLR, "SRTM Digital Elevation Data Version 1"'
+
+not_available_in_this_project:
+  - >-
+    Measured on 2026-10-08 as a collection under the correct catalog name GOOGLE/DYNAMICWORLD/V1: it
+    answers. 78 images fall inside 2023-01-01..2024-12-31 overlapping a point in Moscow, ten bands
+    (water, trees, grass, flooded_vegetation, crops, shrub_and_scrub, built, bare, snow_and_ice, label),
+    and a real class-confidence read at that point returns built 0.0931, bare 0.0638, crops 0.0408; a
+    point in Kaliningrad returns no data. See artifacts/geo/dynamic_world_probe.json. It is still not
+    built into a covariate layer, so the requirement stays unmet - reaching a collection is not the same
+    as having used it. The role it was named for - land cover changing inside the observation window
+    rather than a single snapshot - is still carried by GLC-LC100 monthly 2019, MODIS MCD12Q1 class
+    shares and MCD64A1 burn dates, all on disk with per-row provenance. Recorded separately because the
+    first probe here asked for NASA/DYNAMICWORLD/V1, an identifier invented in this repository rather
+    than taken from the catalog, and reported that name's "asset not found" as a fact about our access
+    and about Earth Engine being unreachable in general; both conclusions were wrong and are withdrawn.
+  - ISRIC/soilgrids does not resolve; the catalog name ISRIC/SoilGrids250m/v2_0 does, measured 2026-10-08
+    in artifacts/geo/asset_id_probe.json. The property behind its val_* bands is not named by the collection's
+    metadata and is identified by value range as organic carbon concentration.
+  - Hansen/GFSID2017 and UMD/hansen-global-tree-cover do not resolve; UMD/hansen/global_forest_change_2025_v1_13
+    does, measured the same day, with treecover2000, loss, gain and lossyear. UMD/GLAD_/TREECOVER/CIRCUITRY/2020v1
+    and UMD/gladsat-foundation-data-v1 still do not, and GLAD/IFL/2021 and UMD/ifl_2021 still do not - those
+    two families were dropped by the entrant's decision on 2026-10-08, not by a source failure.
+  - WORLDCLIM/V1/MONTHLY/PRECIP (asset not found; WORLDCLIM/V1/BIO is an Image and works)

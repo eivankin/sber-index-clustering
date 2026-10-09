@@ -1,0 +1,183 @@
+{
+ "generated_by": "scripts/impute_missing_spending.py",
+ "what_this_is": "Whether the districts with no spending row can be given one from their geography, and what that does to coverage, to agreement between partitions, and to the meaning of the clusters.",
+ "population_note": "644 districts are outside the partition, but only 470 of them have no spending row; 174 have spending and failed the coverage gate. This imputes the districts whose spending column is empty, which is the honest target.",
+ "fate_of_the_174": "The 174 districts that have spending rows but did not clear the panel coverage gate are NOT filled by this test and are NOT given a cluster: they already report spending, so inventing a value for them would replace measured data with an estimate. They remain without a cluster, and the map says so with a distinct phrase from the 470 that have no spending row at all. Splitting the two is the correction that was made to the public claim which had them as one group of 644.",
+ "timestamp_availability_note": "Older timestamps cannot be recovered for the 470 districts that have no spending row, because no row exists to read a date from - the series is absent, not merely old. Any statement about how these districts changed over time would therefore be a statement about the imputed value and not about the district, which is why the dynamics track does not use them and why this note is written here instead of left implied.",
+ "counts_from": "artifacts/landing/territory_measures.json.counts",
+ "methods": {
+  "neighbours": "средневзвешенное по пяти ближайшим округам в географии, вес — обратная расстояние до них",
+  "stratum": "медиана округов с данными в той же децили застроенности и том же классе официальной площади"
+ },
+ "feature_space": [
+  "gls_fraction_bare",
+  "gls_fraction_crops",
+  "gls_fraction_urban",
+  "viirs_lit_mean",
+  "elevation_mean",
+  "burn_pct_of_territory",
+  "official_land_area_km2",
+  "spending_density",
+  "spending_total"
+ ],
+ "rule_applied": "artifacts/validation/meaningfulness_rule.json",
+ "baseline_ari_vs_shipped_note": "baseline here is the same nine-measure space without imputation",
+ "results": {
+  "neighbours": {
+   "coverage": {
+    "districts_clustered_before": 2016,
+    "districts_clustered_after": 3,
+    "districts_with_a_value": 2660,
+    "imputed_now_filled": 470,
+    "still_missing": 0
+   },
+   "agreement": {
+    "ari_vs_baseline": 0.9988,
+    "nmi_vs_baseline": 0.9973,
+    "restricted_ari_observed_only": 1.0,
+    "churn_observed_pct": 0.0
+   },
+   "geography_match_share": 0.2468,
+   "geography_match_chance_level": 0.3333,
+   "geography_match_below_chance": true,
+   "imputed_in_densest_cluster_share": 0.2468,
+   "densest_cluster_built_up_median": 38.7884,
+   "profile_test": {
+    "spending_density": {
+     "clusters_with_intervals": 3,
+     "pairs_separated": 3,
+     "pairs_total": 3
+    },
+    "gls_fraction_urban": {
+     "clusters_with_intervals": 3,
+     "pairs_separated": 2,
+     "pairs_total": 3
+    },
+    "gls_fraction_crops": {
+     "clusters_with_intervals": 3,
+     "pairs_separated": 3,
+     "pairs_total": 3
+    },
+    "viirs_lit_mean": {
+     "clusters_with_intervals": 3,
+     "pairs_separated": 3,
+     "pairs_total": 3
+    }
+   },
+   "agreement_vs_shipped": {
+    "ari": 0.167,
+    "overlap": 2016,
+    "note": "the shipped partition was built on levels+shares, not on the nine fingerprint measures used here, so this agreement crosses spaces and is labelled as such"
+   },
+   "verdict": {
+    "moved_by_agreement": false,
+    "moved_by_churn": false,
+    "pairs_separated": {
+     "spending_density": 3,
+     "gls_fraction_urban": 2,
+     "gls_fraction_crops": 3,
+     "viirs_lit_mean": 3
+    },
+    "pairs_total": {
+     "spending_density": 3,
+     "gls_fraction_urban": 3,
+     "gls_fraction_crops": 3,
+     "viirs_lit_mean": 3
+    },
+    "answer": "the partition held",
+    "rule": "agreement below 0.8 or churn at or above 10.0 percent"
+   },
+   "cluster_sizes": {
+    "0": 668,
+    "1": 1202,
+    "2": 790
+   }
+  },
+  "stratum": {
+   "coverage": {
+    "districts_clustered_before": 2016,
+    "districts_clustered_after": 3,
+    "districts_with_a_value": 2660,
+    "imputed_now_filled": 410,
+    "still_missing": 60
+   },
+   "agreement": {
+    "ari_vs_baseline": 0.9988,
+    "nmi_vs_baseline": 0.9973,
+    "restricted_ari_observed_only": 1.0,
+    "churn_observed_pct": 0.0
+   },
+   "geography_match_share": 0.2244,
+   "geography_match_chance_level": 0.3333,
+   "geography_match_below_chance": true,
+   "imputed_in_densest_cluster_share": 0.2244,
+   "densest_cluster_built_up_median": 38.7884,
+   "profile_test": {
+    "spending_density": {
+     "clusters_with_intervals": 3,
+     "pairs_separated": 3,
+     "pairs_total": 3
+    },
+    "gls_fraction_urban": {
+     "clusters_with_intervals": 3,
+     "pairs_separated": 2,
+     "pairs_total": 3
+    },
+    "gls_fraction_crops": {
+     "clusters_with_intervals": 3,
+     "pairs_separated": 3,
+     "pairs_total": 3
+    },
+    "viirs_lit_mean": {
+     "clusters_with_intervals": 3,
+     "pairs_separated": 3,
+     "pairs_total": 3
+    }
+   },
+   "agreement_vs_shipped": {
+    "ari": 0.167,
+    "overlap": 2016,
+    "note": "the shipped partition was built on levels+shares, not on the nine fingerprint measures used here, so this agreement crosses spaces and is labelled as such"
+   },
+   "verdict": {
+    "moved_by_agreement": false,
+    "moved_by_churn": false,
+    "pairs_separated": {
+     "spending_density": 3,
+     "gls_fraction_urban": 2,
+     "gls_fraction_crops": 3,
+     "viirs_lit_mean": 3
+    },
+    "pairs_total": {
+     "spending_density": 3,
+     "gls_fraction_urban": 3,
+     "gls_fraction_crops": 3,
+     "viirs_lit_mean": 3
+    },
+    "answer": "the partition held",
+    "rule": "agreement below 0.8 or churn at or above 10.0 percent"
+   },
+   "cluster_sizes": {
+    "0": 668,
+    "1": 790,
+    "2": 1202
+   }
+  }
+ },
+ "geography_candidates": {
+  "asked_for": [
+   "hansen_window_loss_pct",
+   "soil_carbon_surface",
+   "hansen_canopy_treecover2000",
+   "hansen_canopy_gain"
+  ],
+  "present_in_panel": [
+   "hansen_window_loss_pct",
+   "soil_carbon_surface",
+   "hansen_canopy_treecover2000",
+   "hansen_canopy_gain"
+  ],
+  "absent": [],
+  "note": "Neighbour matching and stratum medians use whichever of these the panel actually holds. A name that is absent is listed here rather than allowed to vanish, because a misspelled column and a genuinely missing layer look identical from outside and only one of them is ours to fix."
+ }
+}

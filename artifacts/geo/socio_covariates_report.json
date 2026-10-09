@@ -1,0 +1,29 @@
+{
+ "rows": 2607,
+ "territories": 2607,
+ "coverage": {
+  "population": 0.9835,
+  "wage": 0.9935,
+  "headcount": 0.9935,
+  "budget_own_share_pct": 0.9102,
+  "roads_local_share_pct": 0.87
+ },
+ "join_key": "oktmo_stable (8 digits, zero padded)",
+ "mun_levels_kept": [
+  "Муниципальное образование верхнего уровня",
+  "Муниципальное образование нижнего уровня"
+ ],
+ "indicator_period_rule": "full-year rows when the file has them, otherwise the label it uses most",
+ "population_period": "На 1 января (the only label the population file carries)",
+ "wage_note": "wage is reported per OKVED2 sector; the territory value is the headcount-weighted mean over sectors, so a municipality reporting wages only for some sectors gets a partial-sector value rather than a fabricated one",
+ "license": "CC BY 4.0 (BD PMO via the 'If to be exact' catalogue)",
+ "citation": "Rosstat, Federal State Statistics Service, Compilation of indicators of municipalities (BD PMO), collection 118, version v20250918, via the 'If to be exact' catalogue, CC BY 4.0",
+ "rules": {
+  "population": "last value per OKTMO",
+  "wage": "headcount-weighted mean over OKVED2 sections",
+  "headcount": "sum over OKVED2 sections",
+  "budget_own_share_pct": "last value per OKTMO",
+  "roads_local_share_pct": "last value per OKTMO"
+ },
+ "note": "a territory absent from the official file stays NaN; the feature builder applies the same 50% coverage gate used for the land block"
+}

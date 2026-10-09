@@ -1,0 +1,358 @@
+{
+  "generated_by": "scripts/export_source_crops.py",
+  "rule": "no crop ships without a legend that says what a pixel means in that source",
+  "sources": {
+    "viirs": {
+      "label": "ночные огни",
+      "meaning": "сколько света видно сверху ночью: чем ярче, тем больше освещённых объектов",
+      "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+      "band": "average",
+      "scale_min": 0.4073,
+      "scale_max": 641.6032,
+      "shared_scale": {
+        "low": 0.1,
+        "high": 3000.0,
+        "mode": "log"
+      },
+      "coverage_mean": 1.0,
+      "ramp_colors": null,
+      "reading_direction": "от почти тёмного к яркому: ступени 1, 3 и 10 единиц яркости",
+      "classes": [
+        {
+          "label": "света почти нет",
+          "short": "тёмное",
+          "color": [
+            16,
+            18,
+            26
+          ],
+          "edge_below": 1.0
+        },
+        {
+          "label": "слабое свечение: отдельные объекты",
+          "short": "слабое",
+          "color": [
+            74,
+            58,
+            32
+          ],
+          "edge_below": 3.0
+        },
+        {
+          "label": "видно поселение",
+          "short": "поселение",
+          "color": [
+            176,
+            120,
+            48
+          ],
+          "edge_below": 10.0
+        },
+        {
+          "label": "город: яркое плотное свечение",
+          "short": "город",
+          "color": [
+            246,
+            224,
+            150
+          ],
+          "edge_below": null
+        }
+      ],
+      "step_edges": [
+        1.0,
+        3.0,
+        10.0
+      ],
+      "threshold": 0.5,
+      "lit_share_mean_pct": 90.55
+    },
+    "ndvi": {
+      "label": "зелёность",
+      "meaning": "индекс зелёности MODIS: чем выше, тем активнее фотосинтез на этом пикселе",
+      "asset": "MODIS/061/MOD13Q1",
+      "band": "NDVI",
+      "scale_min": -726.45,
+      "scale_max": 6854.6957,
+      "shared_scale": {
+        "low": 0.0,
+        "high": 8000.0,
+        "mode": "linear"
+      },
+      "coverage_mean": 1.0,
+      "ramp_colors": [
+        [
+          0.0,
+          [
+            138,
+            122,
+            94
+          ]
+        ],
+        [
+          0.45,
+          [
+            169,
+            181,
+            127
+          ]
+        ],
+        [
+          1.0,
+          [
+            46,
+            93,
+            58
+          ]
+        ]
+      ],
+      "reading_direction": "от низкого значения к высокому",
+      "steps": [
+        {
+          "label": "почти без растительности",
+          "short": "без растительности",
+          "edge_below": 1000.0
+        },
+        {
+          "label": "растительность слабая",
+          "short": "слабая",
+          "edge_below": 3000.0
+        },
+        {
+          "label": "растительность активная",
+          "short": "активная",
+          "edge_below": null
+        }
+      ]
+    },
+    "terrain": {
+      "label": "высота местности",
+      "meaning": "высота над уровнем моря, метры",
+      "asset": "USGS/SRTMGL1_003",
+      "band": "elevation",
+      "scale_min": 60.0,
+      "scale_max": 738.0,
+      "shared_scale": {
+        "low": 0.0,
+        "high": 600.0,
+        "mode": "linear"
+      },
+      "coverage_mean": 1.0,
+      "ramp_colors": [
+        [
+          0.0,
+          [
+            95,
+            122,
+            85
+          ]
+        ],
+        [
+          0.55,
+          [
+            168,
+            148,
+            104
+          ]
+        ],
+        [
+          1.0,
+          [
+            232,
+            227,
+            216
+          ]
+        ]
+      ],
+      "reading_direction": "от самой низкой точки этого окна к возвышенности"
+    },
+    "hansen": {
+      "label": "потеря леса",
+      "meaning": "год, когда лес на этом пикселе был потерян; серый - потери не было",
+      "asset": "UMD/hansen/global_forest_change_2025_v1_13",
+      "band": "lossyear",
+      "scale_min": 1.0,
+      "scale_max": 25.0,
+      "shared_scale": null,
+      "coverage_mean": 0.143,
+      "ramp_colors": [
+        [
+          120,
+          124,
+          118
+        ],
+        [
+          198,
+          178,
+          120
+        ],
+        [
+          138,
+          68,
+          60
+        ]
+      ],
+      "reading_direction": "серый - пикселя данных нет",
+      "classes": [
+        {
+          "label": "нет потерь леса",
+          "color": [
+            120,
+            124,
+            118
+          ]
+        },
+        {
+          "label": "2001 год",
+          "color": [
+            198,
+            178,
+            120
+          ]
+        },
+        {
+          "label": "2006 год",
+          "color": [
+            184,
+            154,
+            106
+          ]
+        },
+        {
+          "label": "2012 год",
+          "color": [
+            169,
+            125,
+            91
+          ]
+        },
+        {
+          "label": "2018 год",
+          "color": [
+            153,
+            96,
+            75
+          ]
+        },
+        {
+          "label": "2024 год",
+          "color": [
+            138,
+            68,
+            60
+          ]
+        }
+      ]
+    },
+    "soil": {
+      "label": "влага в почве",
+      "meaning": "содержание органического углерода в слое 15-30 см, тёмнее - больше",
+      "asset": "ISRIC/SoilGrids250m/v2_0",
+      "band": "val_15_30cm_mean",
+      "scale_min": 93.0,
+      "scale_max": 279.8706,
+      "shared_scale": null,
+      "coverage_mean": 0.7015,
+      "ramp_colors": [
+        [
+          0.0,
+          [
+            217,
+            205,
+            180
+          ]
+        ],
+        [
+          0.5,
+          [
+            138,
+            107,
+            69
+          ]
+        ],
+        [
+          1.0,
+          [
+            59,
+            42,
+            28
+          ]
+        ]
+      ],
+      "reading_direction": "от низкого значения к высокому"
+    },
+    "dynamic_world": {
+      "label": "земля по классам",
+      "meaning": "каждый пиксель - класс земли с наибольшей уверенностью",
+      "classes": [
+        {
+          "label": "деревья",
+          "color": [
+            46,
+            93,
+            58
+          ]
+        },
+        {
+          "label": "травы",
+          "color": [
+            127,
+            168,
+            96
+          ]
+        },
+        {
+          "label": "пашня",
+          "color": [
+            201,
+            162,
+            39
+          ]
+        },
+        {
+          "label": "застройка",
+          "color": [
+            176,
+            65,
+            62
+          ]
+        },
+        {
+          "label": "открытая земля",
+          "color": [
+            184,
+            160,
+            122
+          ]
+        }
+      ]
+    }
+  },
+  "scale_per_source": {
+    "hansen": {
+      "min": 1.0,
+      "max": 25.0,
+      "valid_share_mean": 0.143
+    },
+    "ndvi": {
+      "min": -726.45,
+      "max": 6854.6957,
+      "valid_share_mean": 1.0
+    },
+    "soil": {
+      "min": 93.0,
+      "max": 279.8706,
+      "valid_share_mean": 0.7015
+    },
+    "terrain": {
+      "min": 60.0,
+      "max": 738.0,
+      "valid_share_mean": 1.0
+    },
+    "viirs": {
+      "min": 0.4073,
+      "max": 641.6032,
+      "valid_share_mean": 1.0
+    }
+  }
+}

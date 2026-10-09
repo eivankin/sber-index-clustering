@@ -1,0 +1,26 @@
+{
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "script"
+  },
+  "globals": {
+    "L": "readonly"
+  },
+  "rules": {
+    "no-undef": "error",
+    "no-redeclare": "error",
+    "no-dupe-keys": "error",
+    "no-dupe-args": "error",
+    "no-dupe-class-members": "error",
+    "no-obj-calls": "error",
+    "no-sparse-arrays": "error",
+    "no-unreachable": "error",
+    "no-cond-assign": "error",
+    "no-unused-vars": "warn",
+    "no-empty": "warn"
+  }
+}

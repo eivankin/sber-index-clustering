@@ -1,0 +1,54 @@
+{
+  "n_territories": 2660,
+  "coverage": {
+    "geo": 2660,
+    "consumption": 2190,
+    "connection": 2574,
+    "market_access": 2571,
+    "highway_nodes": 2573,
+    "railway_nodes": 1627
+  },
+  "gaps": {
+    "G_minus_C": 470,
+    "C_minus_G": 0,
+    "K_minus_C": 401,
+    "C_minus_K": 17,
+    "M_minus_C": 401,
+    "C_minus_M": 20,
+    "core_C_K_M_G": 2170
+  },
+  "geometry": {
+    "invalid": 0,
+    "multi_part": 191,
+    "sum_polygons_km2": 40001827.79380042,
+    "union_km2": 39432101.33262708
+  },
+  "sea_overlap_km2": {
+    "kara_laptev": 4789810.832606008,
+    "black_caspian": 663649.3185714972,
+    "north_of_78N": 940549.9984843357
+  },
+  "rostat": {
+    "rostat_status": "obtained",
+    "rows_in_indicator": 380377,
+    "top_level_municipalities": 2617,
+    "matched_territories": 2426,
+    "match_rate": 0.912,
+    "area_year_used": {
+      "2023": 2438,
+      "2022": 146,
+      "2007": 8,
+      "2015": 7,
+      "2009": 4,
+      "2012": 3,
+      "2006": 2,
+      "2008": 2,
+      "2014": 2,
+      "2017": 2,
+      "2018": 2,
+      "2021": 1
+    },
+    "unmatched_territories": 234,
+    "fallback_for_unmatched": "classified-pixel denominators for shares; subject official area as the density proxy"
+  }
+}

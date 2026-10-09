@@ -1,0 +1,46 @@
+{
+  "layer": "dynamic_world",
+  "asset": "GOOGLE/DYNAMICWORLD/V1",
+  "citation": "Dynamic World v1.0 land-cover classification (Google)",
+  "licence": "CC BY 4.0",
+  "licence_attempts": {
+    "read_from": "https://developers.google.com/earth-engine/datasets/catalog/GOOGLE_DYNAMICWORLD_V1",
+    "read_on": "2026-10-08",
+    "outcome": "HTTP 200, page states CC-BY 4.0"
+  },
+  "coverage_threshold": 0.5,
+  "coverage": {
+    "measured_over": "panel rows",
+    "columns": [
+      "dw_bare@2023",
+      "dw_built@2023",
+      "dw_crops@2023",
+      "dw_grass@2023",
+      "dw_trees@2023",
+      "dw_bare@2024",
+      "dw_built@2024",
+      "dw_crops@2024",
+      "dw_grass@2024",
+      "dw_trees@2024"
+    ],
+    "max_coverage": 0.0
+  },
+  "job": {
+    "rows": 5320.0,
+    "chunks": 26.0,
+    "failed_chunks": 0.0,
+    "seconds": 29.6,
+    "asset": "GOOGLE/DYNAMICWORLD/V1",
+    "cache_dir": "gee-cache",
+    "output_path": [],
+    "scale_m": "500",
+    "jobs": [
+      "dw_annual_2023",
+      "dw_annual_2024"
+    ]
+  },
+  "derived_columns_in_panel": [],
+  "geometry_source": null,
+  "errors": {},
+  "error_rule": "a chunk or period Earth Engine refused is counted here with its error type and message; the run continues past it, so coverage below the threshold may reflect a recorded refusal rather than a missing layer"
+}

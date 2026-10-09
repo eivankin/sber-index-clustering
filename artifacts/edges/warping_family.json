@@ -1,0 +1,95 @@
+{
+ "generated_by": "scripts/build_edge_warping.py",
+ "family": "dynamic_alignment",
+ "params": {
+  "signal": "z-scored log monthly spending total, 24 months of the observation window",
+  "lag_window": "-3 to 3 months",
+  "candidate_pairs": "the 50 nearest territories by stored road distance, symmetrized",
+  "distance_damping": "exp(-d/600) on the stored road distance",
+  "weight": "exp(-warping_distance / h) * exp(-d/tau), h = median warping distance",
+  "h_median_warping": 0.2623,
+  "missing_months": "left missing; a pair is scored only on months both territories have",
+  "minimum_common_months": 12,
+  "direction": "undirected weight, directed lead carried by the winning offset",
+  "sparsification": "per-source top-k outgoing edges, k = 10 and 25"
+ },
+ "dense": {
+  "nodes": 2660,
+  "edges": 57676,
+  "density": 0.016309,
+  "mean_degree": 43.365,
+  "median_degree": 50,
+  "max_degree": 132,
+  "isolated": 606,
+  "weak_components": 607,
+  "largest_component_share": 0.7722,
+  "out_nnz": 115352,
+  "total_weight": 34053.763
+ },
+ "clique_hub10": {
+  "reciprocity": 0.5225,
+  "clustering_coefficient": 0.0219,
+  "degree_gini": 0.3547,
+  "top1pct_degree_share": 0.028,
+  "lp_communities": 687,
+  "lp_modularity": 0.7213
+ },
+ "knn10": {
+  "nodes": 2660,
+  "edges": 15136,
+  "density": 0.00428,
+  "mean_degree": 11.38,
+  "median_degree": 12,
+  "max_degree": 37,
+  "isolated": 606,
+  "weak_components": 607,
+  "largest_component_share": 0.7722,
+  "out_nnz": 20488,
+  "total_weight": 8437.65
+ },
+ "knn25": {
+  "nodes": 2660,
+  "edges": 34761,
+  "density": 0.009829,
+  "mean_degree": 26.136,
+  "median_degree": 29,
+  "max_degree": 88,
+  "isolated": 606,
+  "weak_components": 607,
+  "largest_component_share": 0.7722,
+  "out_nnz": 50976,
+  "total_weight": 18321.415
+ },
+ "lead_lag": {
+  "pairs_scored": 115352,
+  "share_with_nonzero_offset": 0.0101,
+  "mean_offset_months": 0.0,
+  "offset_distribution": {
+   "-3": 410,
+   "-2": 33,
+   "-1": 139,
+   "0": 114188,
+   "1": 139,
+   "2": 33,
+   "3": 410
+  },
+  "leaders": [
+   "1471",
+   "1487",
+   "3010",
+   "1882",
+   "2394"
+  ],
+  "leaders_note": "a territory counts as a leader on the pairs where it is the earlier one, so the count is over pairs and not over lag values"
+ },
+ "warping_validation": {
+  "sampled_pairs": 400,
+  "territories_with_every_month": 2016,
+  "spearman_r": 0.9702,
+  "spearman_p": 4.1957416276757657e-247,
+  "median_absolute_difference": 0.0201,
+  "note": "the bounded-lag form is not the same metric as full warping; the rank agreement is reported so the shortcut can be judged rather than trusted"
+ },
+ "edge_file": "data/processed/edges_warping.parquet",
+ "edges_at_knn10": 20488
+}

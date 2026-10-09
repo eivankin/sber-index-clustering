@@ -1,0 +1,154 @@
+{
+  "common_territories": 2016,
+  "features": 11,
+  "k": 3,
+  "config": {
+    "seed": 0,
+    "k_for_stability": 3,
+    "min_months_per_period": 12,
+    "transitions": {
+      "delta_threshold": 0.05,
+      "persist_months": 3,
+      "min_months_total": 20,
+      "strength_bands": {
+        "strong": 6,
+        "moderate": 4,
+        "thin": 3
+      }
+    }
+  },
+  "kmeans": {
+    "n": 2016,
+    "k_2023": 3,
+    "k_2024": 3,
+    "stability_F_ii": 0.2649,
+    "adjusted_rand": 0.0147,
+    "normalized_mutual_info": 0.0097,
+    "matched_pairs": [
+      [
+        0,
+        1,
+        0.3427753934191703
+      ],
+      [
+        2,
+        0,
+        0.2390647046966337
+      ],
+      [
+        1,
+        2,
+        0.1702016234616392
+      ]
+    ],
+    "matched_mass": 0.4231,
+    "max_jaccard": 0.3428,
+    "drift": [
+      {
+        "c2023": 0,
+        "c2024": 1,
+        "jaccard": 0.3428,
+        "drift_norm": 0.7264,
+        "n_2023": 917,
+        "n_2024": 975
+      },
+      {
+        "c2023": 2,
+        "c2024": 0,
+        "jaccard": 0.2391,
+        "drift_norm": 2.8108,
+        "n_2023": 690,
+        "n_2024": 549
+      },
+      {
+        "c2023": 1,
+        "c2024": 2,
+        "jaccard": 0.1702,
+        "drift_norm": 2.1361,
+        "n_2023": 409,
+        "n_2024": 492
+      }
+    ]
+  },
+  "ward": {
+    "n": 2016,
+    "k_2023": 3,
+    "k_2024": 3,
+    "stability_F_ii": 0.3442,
+    "adjusted_rand": 0.0136,
+    "normalized_mutual_info": 0.0122,
+    "matched_pairs": [
+      [
+        0,
+        2,
+        0.32290436835891384
+      ],
+      [
+        1,
+        1,
+        0.24819027921406409
+      ],
+      [
+        2,
+        0,
+        0.1720984759671747
+      ]
+    ],
+    "matched_mass": 0.4122,
+    "max_jaccard": 0.3228,
+    "drift": [
+      {
+        "c2023": 0,
+        "c2024": 2,
+        "jaccard": 0.3229,
+        "drift_norm": 1.0035,
+        "n_2023": 1075,
+        "n_2024": 732
+      },
+      {
+        "c2023": 1,
+        "c2024": 1,
+        "jaccard": 0.2482,
+        "drift_norm": 2.6671,
+        "n_2023": 586,
+        "n_2024": 631
+      },
+      {
+        "c2023": 2,
+        "c2024": 0,
+        "jaccard": 0.1721,
+        "drift_norm": 1.686,
+        "n_2023": 355,
+        "n_2024": 653
+      }
+    ]
+  },
+  "transitions": {
+    "rows": 546,
+    "by_category": {
+      "Маркетплейсы": 523,
+      "Продовольствие": 23
+    },
+    "by_strength": {
+      "strong": 546
+    },
+    "by_verdict": {
+      "pending_physical_evidence": 546
+    },
+    "mean_delta_by_category": {
+      "Маркетплейсы": 0.0603,
+      "Продовольствие": -0.0475
+    },
+    "thresholds": {
+      "delta_threshold": 0.05,
+      "persist_months": 3,
+      "min_months_total": 20,
+      "strength_bands": {
+        "strong": 6,
+        "moderate": 4,
+        "thin": 3
+      }
+    },
+    "persistence_rule": "|delta| >= threshold AND the share deviates from the 2023 baseline with the same sign for >= persist_months taken consecutively from the end of 2024"
+  }
+}

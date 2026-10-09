@@ -1,0 +1,52 @@
+{
+ "generated_by": "hand-written before any re-vintaged re-clustering was run",
+ "what_this_is": "The decision rule for whether a re-clustered answer has moved, fixed before the results existed, so a weak result cannot be renamed into an acceptable one afterwards.",
+ "prose": "docs/validation/meaningfulness-rule.md is the argument; this file is only the thresholds scripts must read rather than restate.",
+ "chosen_rule": "composite: agreement threshold, label churn, or economic-profile shift beyond uncertainty; all three numbers are reported whatever the verdict",
+ "decision_carried_by": ["agreement", "profile"],
+ "reported_but_not_decisive": ["churn"],
+ "agreement": {
+  "metric": "adjusted_rand",
+  "threshold": 0.8,
+  "direction": "below means moved",
+  "over_intervals": "minimum",
+  "reported_alongside": "normalized_mutual_info"
+ },
+ "churn": {
+  "threshold_pct": 10.0,
+  "basis": "share of municipalities carrying a different label",
+  "before_measuring": "partitions are aligned by maximal overlap so a relabel is not mistaken for a move"
+ },
+ "profile": {
+  "measures": [
+   "median_spending_per_official_km2",
+   "open_land_share",
+   "built_up_share",
+   "market_access"
+  ],
+  "uncertainty": "bootstrap over districts resampled within the cluster",
+  "verdict": "outside the interval means the profile moved"
+ },
+ "reporting": "every number names the artifact and field it came from; absence is written as absence",
+ "change_policy": "these thresholds may not be changed after results exist except with a stated reason, a change the user asks for, and the old value kept in the prose file",
+ "measured_before_this_rule": {
+  "monthly_spending_only": {
+   "artifact": "artifacts/dynamics/monthly_clusters.json",
+   "field": "summary",
+   "mean_ari_vs_published": 0.9263,
+   "first_month_ari": 0.7713,
+   "last_month_ari": 1.0,
+   "mean_churn_pct": 0.99,
+   "max_churn_territories": 44
+  },
+  "year_window_full_panel": {
+   "artifact": "artifacts/dynamics/dynamics_summary.json",
+   "field": "kmeans.adjusted_rand",
+   "kmeans_ari": 0.0147,
+   "kmeans_nmi": 0.0097,
+   "ward_ari": 0.0136,
+   "ward_nmi": 0.0122
+  },
+  "note": "the two answer different questions: one varied only the month of spending with every other input held still, the other varied the year of the whole feature window. Only the second is the question the brief asks."
+ }
+}

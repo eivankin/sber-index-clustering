@@ -1,0 +1,98 @@
+{
+ "generated_by": "scripts/compare_dw_resolutions.py",
+ "what_this_is": "Monthly, quarterly and annual aggregation of the same Dynamic World collection, derived the same way per district and compared on coverage, information added, and whether clusters keep separating economic contrasts.",
+ "question_tested": "whether matching the monthly frequency of the spending data is the right choice, rather than assuming it is",
+ "classes": [
+  "built",
+  "crops",
+  "trees",
+  "grass",
+  "bare"
+ ],
+ "base_measures": [
+  "total_per_official_km2",
+  "total_mean_rub",
+  "gls_fraction_crops",
+  "gls_fraction_urban",
+  "gls_fraction_grass",
+  "official_land_area_km2",
+  "viirs_lit_mean"
+ ],
+ "coverage_gate": 0.5,
+ "rule": "artifacts/validation/meaningfulness_rule.json",
+ "results": {
+  "monthly": {
+   "status": "not fetched",
+   "period_columns": 0,
+   "reason": "monthly and quarterly were not fetched: annual was taken first, and a denser resolution is paid for only if annual proves too coarse for the measurements that need within-window land-cover change"
+  },
+  "quarterly": {
+   "status": "not fetched",
+   "period_columns": 0,
+   "reason": "monthly and quarterly were not fetched: annual was taken first, and a denser resolution is paid for only if annual proves too coarse for the measurements that need within-window land-cover change"
+  },
+  "annual": {
+   "status": "measured",
+   "period_columns": 10,
+   "periods": [
+    "2023",
+    "2024"
+   ],
+   "coverage": {
+    "built": 1.0,
+    "crops": 1.0,
+    "trees": 1.0,
+    "grass": 1.0,
+    "bare": 1.0
+   },
+   "coverage_mean_share": 1.0,
+   "variance_added_mean": 0.008916,
+   "strongest_redundancy": {
+    "built": {
+     "against": "gls_fraction_urban",
+     "abs_spearman": 0.9395
+    },
+    "crops": {
+     "against": "gls_fraction_crops",
+     "abs_spearman": 0.8906
+    },
+    "trees": {
+     "against": "gls_fraction_grass",
+     "abs_spearman": 0.3488
+    },
+    "grass": {
+     "against": "gls_fraction_grass",
+     "abs_spearman": 0.7584
+    },
+    "bare": {
+     "against": "gls_fraction_grass",
+     "abs_spearman": 0.7076
+    }
+   },
+   "pairs_separated": 6,
+   "pairs_total": 21,
+   "measures_separated": [
+    "total_per_official_km2",
+    "total_mean_rub",
+    "gls_fraction_crops",
+    "gls_fraction_urban",
+    "official_land_area_km2",
+    "viirs_lit_mean"
+   ],
+   "cluster_sizes": {
+    "0": 1064,
+    "1": 715,
+    "2": 881
+   }
+  }
+ },
+ "choice": "annual",
+ "choice_basis": "most measures separated for every pair of clusters among the resolutions passing the coverage gate; ties are broken by coverage, and the numbers behind the choice are in results",
+ "dropped_reason": "monthly and quarterly were not fetched: annual was taken first, and a denser resolution is paid for only if annual proves too coarse for the measurements that need within-window land-cover change",
+ "cache_at_decision": {
+  "responses": 742,
+  "bytes": 2353292,
+  "directory": "gee-cache",
+  "inside_the_repository": false
+ }
+}

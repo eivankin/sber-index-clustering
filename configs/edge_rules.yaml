@@ -1,0 +1,121 @@
+# Edge construction rules (the mathematical core of the entry).
+# Numbers below were produced by scripts/build_edges.py on 2026-10-06 and are reproducible.
+
+rule:
+  family: complementarity            # ours
+  formula: "w_ij = f(d_ij) * supply_i * demand_j, for i != j"
+  direction: "i -> j only: producer i towards consumer j; never symmetrized"
+  distance: "SberIndex OSM road-distance matrix (data/raw/sber_hackathon/connection.parquet, type=highway)"
+  absent_pairs: "pairs with no stored road distance produce no edge; zero distance is dropped"
+  supply:
+    version_v0: "supply_i = 1 (neutral) while land covariates are unavailable"
+    version_v1: "supply_i = land-use production potential from per-territory land-cover shares (GEE WorldCover / GLC-LC100): crops + grazing + forest fractions, normalized to 0..1"
+  demand:
+    version_v0: "demand_j = market_access / 1000 (SberIndex index, 2571 territories filled)"
+    version_v1: "demand_j = market_access/1000 combined with the spending-composition vector (retail, health, marketplace shares)"
+
+kernels:
+  exp:   {formula: "exp(-d/tau)", tau_km: 600}
+  power: {formula: "1/(1+d)^alpha", alpha: 1.0}
+  trunc: {formula: "max(0, 1 - d/tau)", tau_km: 1500}
+
+comparison_family:
+  family: similarity                 # what every 2026 competitor does
+  formula: "w_ij = exp(-||z_i - z_j|| / h), h = median pairwise distance in the standardized spending attribute space"
+  features: "11 columns: 6 log1p level means + 5 category shares"
+  territories: 2190
+  h: 3.8803
+
+sparsification:
+  method: "per-source top-k outgoing edges (kNN by weight); similarity variant symmetrized after top-k"
+  k_tested: [10, 25]
+  chosen_k: 10
+  justification: >-
+    The complete complementarity graph already contains 3,303,587 edges at density 0.934 - every
+    territory is linked to almost every other, so a partition of it carries no structural
+    information beyond "everyone trades with everyone". Keeping only the ten strongest destinations
+    per producer preserves the meaning of the edge rule (a municipality exports to the few places
+    it can actually reach cheaply) while cutting 99.4% of the edges. The measured structural effect
+    is reported below: the number of weak components and the size of the largest component do not
+    change, so the sparsification removes redundant edges rather than destroying connectivity.
+
+measured_structural_effect:
+  complementarity_exp:
+    dense:   {edges: 3303587, density: 0.934148, mean_degree: 2483.9, components: 90, largest_component_share: 0.9665, isolated: 89}
+    knn10:   {edges: 21090, density: 0.005964, mean_degree: 15.857, components: 90, largest_component_share: 0.9665, isolated: 89}
+    knn25:   {edges: 49646, density: 0.014038, mean_degree: 37.328, components: 90, largest_component_share: 0.9665, isolated: 89}
+  complementarity_trunc_1500km:
+    dense:   {edges: 1352888, density: 0.382553, mean_degree: 1017.209, components: 90, largest_component_share: 0.9665, isolated: 89}
+    knn10:   {edges: 23597, density: 0.006672, mean_degree: 17.742, components: 90, largest_component_share: 0.9665, isolated: 89}
+  similarity:
+    dense:   {edges: 2396955, density: 1.0, mean_degree: 2189.0, components: 1, largest_component_share: 1.0, isolated: 0}
+    knn10:   {edges: 15029, density: 0.00627, mean_degree: 13.725, components: 1, largest_component_share: 1.0, isolated: 0}
+
+# hub-catchment vs similarity-clique, measured on the knn-10 graph of each family (2026-10-06,
+# rebuilt with src/sberindex/edges.clique_hub and re-verified by scripts/check_edges.py, 56/56).
+# reciprocity = share of directed edges answered in reverse; clustering_coefficient = closed triangles
+# over connected triples; degree_gini and top1pct_degree_share measure how much adjacency a few nodes
+# hold; lp_communities/lp_modularity come from seeded label propagation.
+measured_hub_clique_effect:
+  complementarity_exp:   {reciprocity: 0.3594, clustering_coefficient: 0.0046, degree_gini: 0.3565, top1pct_degree_share: 0.172,  lp_communities: 147, lp_modularity: 0.7602}
+  complementarity_power: {reciprocity: 0.7038, clustering_coefficient: 0.0203, degree_gini: 0.1685, top1pct_degree_share: 0.0468, lp_communities: 231, lp_modularity: 0.7371}
+  complementarity_trunc: {reciprocity: 0.1601, clustering_coefficient: 0.0020, degree_gini: 0.4480, top1pct_degree_share: 0.2571, lp_communities: 118, lp_modularity: 0.7099}
+  similarity:            {reciprocity: 1.0000, clustering_coefficient: 0.0247, degree_gini: 0.1144, top1pct_degree_share: 0.0171, lp_communities: 103, lp_modularity: 0.5996}
+reading: >-
+  The similarity baseline is perfectly reciprocal (1.0), the least concentrated (Gini 0.114, top 1% of
+  nodes hold 1.7% of adjacency) and the least modular - the signature of a symmetric clique-like graph
+  built by comparing feature vectors. The complementarity families are one-directional (reciprocity
+  0.16-0.70), far more concentrated (Gini up to 0.448, top 1% holds 25.7% of adjacency under the
+  truncated kernel) and more modular (Q up to 0.76) - the signature of hubs acting as supply catchments
+  feeding many consumers. The contrast is measured, not asserted.
+  note: "89 isolated nodes are territories without a stored road distance - the same 86+3 gap recorded in artifacts/gaps/, not an artefact of sparsification."
+
+# Two further families, added because the static feature space cannot express time at all:
+# they read the monthly series and the year-by-year alignment of category shares.
+temporal_families:
+  growth_correlation:
+    formula: "w_ij = corr(growth_i, growth_j) * exp(-d_ij/tau), growth = month-over-month log change of total spending"
+    direction: "undirected, correlation is symmetric by construction"
+    guards: "negative correlations are clipped to zero, because a negative weight would invert the network semantics of 'these places move together'"
+    tau_km: 600
+    months: "2023-01 .. 2024-12 monthly totals from data/processed/spending_long.parquet"
+  lagged_leader:
+    formula: "w_ij = cos(catshare_i(2023), catshare_j(2024)) * exp(-d_ij/tau); the reverse orientation is kept as its own weight"
+    direction: "directed both ways, so a follower edge and a leader edge are distinguishable"
+    guards: "cosine clipped to non-negative; self-pairs removed"
+    tau_km: 600
+    why: "tests whether a territory's spending composition today resembles what its neighbour looked like a year earlier, which is the transmission question the static similarity rule cannot ask"
+
+# A third temporal family, added because the brief names dynamic time warping by name and the two
+# above only correlate growth or compare composition at one fixed one-year offset. Nothing here aligns
+# two paths at an offset the data chooses.
+warping_family:
+  dynamic_alignment:
+    formula: >-
+      w_ij = exp(-D_ij/h) * exp(-d_ij/tau); D_ij is the mean absolute difference between the two
+      z-scored log monthly totals over the months both territories actually have, minimised over
+      offsets from -3 to +3 months; h is the median warping distance over scored pairs
+    direction: "weight is symmetric; the winning offset carries who leads and who follows"
+    candidates: "the 50 nearest territories by stored road distance, symmetrized and deduplicated"
+    guards: "pairs with fewer than 12 months in common produce no edge; missing months are never filled"
+    h_median_warping: 0.2623
+    tau_km: 600
+    sparsification: "per-source top-k outgoing edges, k = 10 and 25"
+    measured: "artifacts/edges/warping_family.json"
+    validation: >-
+      the bounded-lag form was compared against full dynamic-programming warping with a band of 3 on
+      400 pairs whose every month is observed: Spearman rho 0.9702. The shortcut is justified by that
+      agreement, not by assertion.
+    finding: >-
+      the winning offset is zero for 99.0% of scored pairs and the mean offset is 0.0 months, so within
+      a three-month band monthly spending paths align contemporaneously. Leadership is rare, and this
+      family is reported for that fact rather than for a leader story the measurement does not support.
+
+rule_families_counted:
+  - complementarity_exp
+  - complementarity_power
+  - complementarity_trunc
+  - similarity
+  - growth_correlation
+  - lagged_leader
+  - dynamic_alignment

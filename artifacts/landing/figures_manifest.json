@@ -1,0 +1,82 @@
+{
+  "generated_by": "scripts/build_landing_figures.py",
+  "count": 15,
+  "reproducible": "byte-identical across two consecutive runs",
+  "figures": [
+    {
+      "file": "artifacts/figures/cluster_profiles.png",
+      "bytes": 53604,
+      "sha256": "a74953de3b76a95ddca21450953650a0b2dabd432d7e0795d9c7582cf91e4579"
+    },
+    {
+      "file": "artifacts/figures/clusters_default.png",
+      "bytes": 84593,
+      "sha256": "8672e298eab8c066bcc428f8a01f536149650a9818f83e64c3173516a5190d79"
+    },
+    {
+      "file": "artifacts/figures/clusters_land.png",
+      "bytes": 78571,
+      "sha256": "fed5f70610eb96190e2a36610b31423ab9458a5348a8c98964ad2e1f49131f89"
+    },
+    {
+      "file": "artifacts/figures/gap_typing.png",
+      "bytes": 58070,
+      "sha256": "5d3872b6f443bc2ed571022cca682ca1637e4fdff26986cf48a3b1438035660d"
+    },
+    {
+      "file": "artifacts/figures/geometry_headline.png",
+      "bytes": 41093,
+      "sha256": "92e7d374678b259dc19ad30c02da703fb9f1b650f6b3b423d9b4533eb722b1f3"
+    },
+    {
+      "file": "artifacts/figures/geometry_inflation.png",
+      "bytes": 93310,
+      "sha256": "dace54008bb7298abe045830b44682cfb41c59e1c18d3a6c65694262553f91f0"
+    },
+    {
+      "file": "artifacts/figures/geometry_sea.png",
+      "bytes": 46927,
+      "sha256": "d959648326aed24f06918e35432215b8bd6697cbf19832cbcbdf28548fd90663"
+    },
+    {
+      "file": "artifacts/figures/icvi_spaces.png",
+      "bytes": 43666,
+      "sha256": "44964ebd7b8b45390ebfc3d1dfd6a7d0a1ba077497a9d917027986695d4e1c5b"
+    },
+    {
+      "file": "artifacts/figures/network_complementarity_exp.png",
+      "bytes": 111464,
+      "sha256": "bf919de7bffceb9f9cf24aba2c802a02cfaf6e1d807802004634c9470e17557b"
+    },
+    {
+      "file": "artifacts/figures/network_complementarity_power.png",
+      "bytes": 120400,
+      "sha256": "1e30af68be622033175cb0d3aec3fbb4505d11a262bdb0996bebb799a4429192"
+    },
+    {
+      "file": "artifacts/figures/network_complementarity_trunc.png",
+      "bytes": 109729,
+      "sha256": "463f88f68925082d72d99ac1056176620754775edb9933bb05eb021d937135dd"
+    },
+    {
+      "file": "artifacts/figures/network_growth_correlation.png",
+      "bytes": 108446,
+      "sha256": "ba7c8bc04e581cdf5b2e6a279a45619e3f94cf4949b54b70fe7f0729a09a3b0f"
+    },
+    {
+      "file": "artifacts/figures/network_lagged_leader.png",
+      "bytes": 107221,
+      "sha256": "52bfd08eac830986aceeb2f1c8ab8abb12b6819a0cdf62f8cbabe4404b1a8d23"
+    },
+    {
+      "file": "artifacts/figures/network_similarity.png",
+      "bytes": 104760,
+      "sha256": "1b7f8537f393b1b4be0f778a54798742bde150e7947796a5660f60b98402c171"
+    },
+    {
+      "file": "artifacts/figures/transitions.png",
+      "bytes": 32843,
+      "sha256": "7f0ea9f8b48772f5db2fcd36f5de8f29c622e0dace3d3e5ecbd18714b7efde72"
+    }
+  ]
+}

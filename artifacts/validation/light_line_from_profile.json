@@ -1,0 +1,97 @@
+{
+  "what": "a light line per year, and whether shares above it can be recovered from nine stored knots",
+  "method": "the line is the median of district medians of that year; shares are read off six ladder lines plus p10, p50 and p90 by monotone interpolation",
+  "light_lines": {
+    "2023": 0.5941010904240251,
+    "2024": 0.6546308983226085
+  },
+  "knots_stored": 9,
+  "probes": [
+    {
+      "year": 2023,
+      "tid": 2000,
+      "label": "Нижний Тагил",
+      "line": 0.5941,
+      "district_p50": 0.5703,
+      "estimated_share_pct": 14.52,
+      "exact_share_pct": 4.7,
+      "abs_error_pp": 9.82,
+      "truth_source": "crop_2000_viirs_2023_80x50.tif"
+    },
+    {
+      "year": 2023,
+      "tid": 2208,
+      "label": "Сорокинский",
+      "line": 0.5941,
+      "district_p50": 0.5387,
+      "estimated_share_pct": 12.53,
+      "exact_share_pct": 12.96,
+      "abs_error_pp": 0.43,
+      "truth_source": "crop_2208_viirs_2023_80x50.tif"
+    },
+    {
+      "year": 2023,
+      "tid": 2518,
+      "label": "Марьина роща",
+      "line": 0.5941,
+      "district_p50": 108.419,
+      "estimated_share_pct": 100.0,
+      "exact_share_pct": 100.0,
+      "abs_error_pp": 0.0,
+      "truth_source": "crop_2518_viirs_2023_80x50.tif"
+    },
+    {
+      "year": 2024,
+      "tid": 2000,
+      "label": "Нижний Тагил",
+      "line": 0.6546,
+      "district_p50": 0.7596,
+      "estimated_share_pct": 100.0,
+      "exact_share_pct": 76.51,
+      "abs_error_pp": 23.49,
+      "truth_source": "crop_2000_viirs_2024_80x50.tif"
+    },
+    {
+      "year": 2024,
+      "tid": 2208,
+      "label": "Сорокинский",
+      "line": 0.6546,
+      "district_p50": 1.0596,
+      "estimated_share_pct": 100.0,
+      "exact_share_pct": 100.0,
+      "abs_error_pp": 0.0,
+      "truth_source": "crop_2208_viirs_2024_80x50.tif"
+    },
+    {
+      "year": 2024,
+      "tid": 2518,
+      "label": "Марьина роща",
+      "line": 0.6546,
+      "district_p50": 125.6965,
+      "estimated_share_pct": 100.0,
+      "exact_share_pct": 100.0,
+      "abs_error_pp": 0.0,
+      "truth_source": "crop_2518_viirs_2024_80x50.tif"
+    }
+  ],
+  "measured": {
+    "compared": 6,
+    "worst_abs_error_pp": 23.49,
+    "mean_abs_error_pp": 5.62
+  },
+  "rejection_of_seven_knots": {
+    "knots": [
+      10,
+      25,
+      50,
+      75,
+      90,
+      95,
+      99
+    ],
+    "measured_in_range": 47,
+    "worst_abs_error_pp": 24.146,
+    "verdict": "a seven-knot curve is not enough; more knots have to be stored"
+  },
+  "caveat": "the line is proposed, not shipped; changing a shipped column needs a written k decision"
+}

@@ -1,0 +1,56 @@
+# --- large / raw data (never committed) ---
+data/
+*.gpkg
+*.shp
+*.dbf
+*.shx
+*.prj
+*.rar
+*.zip
+*.tif
+*.tiff
+*.nc
+*.npz
+*.h5
+*.hdf5
+*.geoparquet
+
+# --- python ---
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# --- agent / harness local state ---
+.pi/
+.orchestrator/
+
+# --- secrets ---
+*.pem
+*.p12
+*service_account*.json
+*google-auth*.json
+.env
+.env.local
+credentials.json
+secrets.toml
+
+# --- editor / os ---
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# --- working notes that must never reach main ---
+STATUS.md
+BLOCKERS.md
+NOTES.md
+tmp/
+logs/
+*.log
+
+# --- internal research notes (meta branch only) ---
+notes/

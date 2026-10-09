@@ -1,0 +1,87 @@
+# Vocabulary for interpretable cluster names.
+#
+# This file is the only source of wording for cluster names. The generator reads it together
+# with the fingerprint artifacts; nothing about a name is typed by hand anywhere else, and a
+# check rejects any rendered cluster label that does not resolve to the generated artifact.
+# Each measure maps to the phrase used when that measure is unusually LOW or unusually HIGH
+# for a cluster, relative to the other clusters' own medians - the count of clusters comes
+# from the shipped partition, so the wording is not written for one particular k. Russian
+# wording serves the Russian surfaces, English wording remains for internal comparison, so no
+# language is left to describe a cluster with a bare number.
+#
+# The keys name measures the shipped clustering actually reads: Dynamic World classes and the
+# night-light, vegetation and relief layers beside them. The PROBA-V fractions that used to be
+# here are gone because the attribute space no longer uses them - a name citing a source the
+# partition was not built from would be decoration, not evidence.
+#
+# land_inflation_ratio was also a naming measure and has been removed deliberately. It is a
+# geometry defect indicator: how much a municipality's OSM polygon exceeds the union of the
+# subject's territory. Letting it name a cluster published a data-quality problem as an
+# economic characteristic of a place, which is the opposite of what a name is for.
+
+measures:
+  dynamic_world_built:
+    low: "мало застроенной земли"
+    high: "много застроенной земли"
+    en_low: "little built-up land"
+    en_high: "much built-up land"
+  dynamic_world_crops:
+    low: "мало пашни"
+    high: "много пашни"
+    en_low: "little cropland"
+    en_high: "much cropland"
+  dynamic_world_trees:
+    low: "мало лесов"
+    high: "много лесов"
+    en_low: "little forest"
+    en_high: "much forest"
+  dynamic_world_grass:
+    low: "мало лугов и пастбищ"
+    high: "много лугов и пастбищ"
+    en_low: "little grassland"
+    en_high: "much grassland"
+  dynamic_world_bare:
+    low: "мало открытых грунтов"
+    high: "много открытых грунтов"
+    en_low: "little bare ground"
+    en_high: "much bare ground"
+  viirs_lit_mean:
+    low: "тусклые ночные огни"
+    high: "яркие ночные огни"
+    en_low: "dim night lights"
+    en_high: "bright night lights"
+  modis_ndvi_mean:
+    low: "слабая вегетация"
+    high: "густая вегетация"
+    en_low: "sparse vegetation"
+    en_high: "dense vegetation"
+  elevation_mean:
+    low: "равнина"
+    high: "возвышенность"
+    en_low: "low relief"
+    en_high: "high relief"
+  spending_per_km2_log:
+    low: "низкие траты на километр"
+    high: "высокие траты на километр"
+    en_low: "low spend per kilometre"
+    en_high: "high spend per kilometre"
+  official_land_area_km2:
+    low: "компактная территория"
+    high: "огромная территория"
+    en_low: "compact territory"
+    en_high: "vast territory"
+  burn_pct_of_territory:
+    low: "мало выгоревших земель"
+    high: "много выгоревших земель"
+    en_low: "little burnt land"
+    en_high: "much burnt land"
+  hansen_window_forest_loss_pct:
+    low: "мало потерянного леса"
+    high: "много потерянного леса"
+    en_low: "little forest loss"
+    en_high: "much forest loss"
+  soil_organic_carbon_surface:
+    low: "бедные почвы"
+    high: "плодородные почвы"
+    en_low: "poor soils"
+    en_high: "fertile soils"

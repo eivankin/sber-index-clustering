@@ -1,0 +1,86 @@
+{
+  "generated_by": "scripts/build_source_pipeline.py",
+  "rule": "steps are read from configs/gee_sources.yaml, the approved k decision and the added-layer measures; nothing is typed by hand",
+  "sources": {
+    "dynamic_world": {
+      "steps": [
+        "шаг съёмки 500 м на пиксель",
+        "окно усредняется до 500 м и получает один класс на пиксель",
+        "год наблюдения: 2023 и 2024",
+        "входит в пространство кластеризации: 5 колонки"
+      ],
+      "in_space": true,
+      "matched_columns": [
+        "dynamic_world_bare",
+        "dynamic_world_built",
+        "dynamic_world_crops",
+        "dynamic_world_grass",
+        "dynamic_world_trees"
+      ],
+      "registry_entry": null,
+      "label": "земля по классам"
+    },
+    "viirs": {
+      "steps": [
+        "шаг съёмки 464 м на пиксель",
+        "среднее по пикселям внутри района",
+        "год наблюдения: 2023",
+        "входит в пространство кластеризации: 1 колонка"
+      ],
+      "in_space": true,
+      "matched_columns": [
+        "viirs_lit_mean"
+      ],
+      "registry_entry": "viirs",
+      "label": "ночные огни"
+    },
+    "ndvi": {
+      "steps": [
+        "шаг съёмки 250 м на пиксель",
+        "среднее по месяцам, затем по году",
+        "год наблюдения: 2023",
+        "входит в пространство кластеризации: 1 колонка"
+      ],
+      "in_space": true,
+      "matched_columns": [
+        "modis_ndvi_mean"
+      ],
+      "registry_entry": "modis_ndvi",
+      "label": "зелёность"
+    },
+    "terrain": {
+      "steps": [
+        "шаг съёмки 30 м на пиксель",
+        "среднее по пикселям внутри района",
+        "входит в пространство кластеризации: 1 колонка"
+      ],
+      "in_space": true,
+      "matched_columns": [
+        "elevation_mean"
+      ],
+      "registry_entry": "elevation",
+      "label": "высота местности"
+    },
+    "hansen": {
+      "steps": [
+        "шаг съёмки 500 м на пиксель",
+        "не входит в пространство кластеризации"
+      ],
+      "in_space": false,
+      "matched_columns": [],
+      "registry_entry": null,
+      "label": "потеря леса"
+    },
+    "soil": {
+      "steps": [
+        "шаг съёмки 500 м на пиксель",
+        "не входит в пространство кластеризации"
+      ],
+      "in_space": false,
+      "matched_columns": [],
+      "registry_entry": null,
+      "label": "влага в почве"
+    }
+  },
+  "space_column_count": 13
+}

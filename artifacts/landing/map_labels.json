@@ -1,0 +1,4730 @@
+{
+ "generated_by": "scripts/build_map_labels.py",
+ "provenance": {
+  "master": "data/processed/territory_master.parquet",
+  "regions_cross_checked_with": "artifacts/geo/region_inflation.csv",
+  "display_geometry": "web/map/map_geom.js",
+  "territories_in_master": 2660
+ },
+ "regions": [
+  {
+   "name": "Алтайский край",
+   "lng": 83.7241,
+   "lat": 51.23714,
+   "minzoom": 4,
+   "n_territories": 69,
+   "area_km2": 169750.83,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Амурская область",
+   "lng": 127.81439,
+   "lat": 53.27639,
+   "minzoom": 4,
+   "n_territories": 29,
+   "area_km2": 392429.87,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Архангельская область",
+   "lng": 55.78298,
+   "lat": 73.70839,
+   "minzoom": 4,
+   "n_territories": 26,
+   "area_km2": 455180.33,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Астраханская область",
+   "lng": 47.20298,
+   "lat": 47.17655,
+   "minzoom": 5,
+   "n_territories": 13,
+   "area_km2": 63715.04,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Белгородская область",
+   "lng": 37.50737,
+   "lat": 50.66206,
+   "minzoom": 5,
+   "n_territories": 22,
+   "area_km2": 30638.9,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Брянская область",
+   "lng": 33.26992,
+   "lat": 52.85038,
+   "minzoom": 5,
+   "n_territories": 35,
+   "area_km2": 40319.93,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Владимирская область",
+   "lng": 40.70574,
+   "lat": 55.97736,
+   "minzoom": 5,
+   "n_territories": 21,
+   "area_km2": 32173.34,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Волгоградская область",
+   "lng": 46.24122,
+   "lat": 49.46593,
+   "minzoom": 4,
+   "n_territories": 38,
+   "area_km2": 112623.52,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Вологодская область",
+   "lng": 40.57064,
+   "lat": 59.94202,
+   "minzoom": 4,
+   "n_territories": 28,
+   "area_km2": 141734.16,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Воронежская область",
+   "lng": 39.66277,
+   "lat": 50.11864,
+   "minzoom": 5,
+   "n_territories": 34,
+   "area_km2": 52103.48,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Еврейская автономная область",
+   "lng": 131.9424,
+   "lat": 48.94938,
+   "minzoom": 5,
+   "n_territories": 6,
+   "area_km2": 36256.71,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Забайкальский край",
+   "lng": 116.30378,
+   "lat": 54.06555,
+   "minzoom": 4,
+   "n_territories": 35,
+   "area_km2": 498421.79,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ивановская область",
+   "lng": 41.54339,
+   "lat": 56.98236,
+   "minzoom": 5,
+   "n_territories": 27,
+   "area_km2": 21142.64,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Иркутская область",
+   "lng": 105.90015,
+   "lat": 56.97307,
+   "minzoom": 3,
+   "n_territories": 42,
+   "area_km2": 825170.56,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Кабардино-Балкарская Республика",
+   "lng": 43.40835,
+   "lat": 43.49375,
+   "minzoom": 6,
+   "n_territories": 13,
+   "area_km2": 12469.6,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Калининградская область",
+   "lng": 20.56446,
+   "lat": 54.98646,
+   "minzoom": 6,
+   "n_territories": 22,
+   "area_km2": 15200.37,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Калужская область",
+   "lng": 35.46896,
+   "lat": 54.38902,
+   "minzoom": 5,
+   "n_territories": 28,
+   "area_km2": 30614.65,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Камчатский край",
+   "lng": 158.63391,
+   "lat": 57.91134,
+   "minzoom": 3,
+   "n_territories": 14,
+   "area_km2": 631279.17,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Карачаево-Черкесская Республика",
+   "lng": 41.81031,
+   "lat": 43.55616,
+   "minzoom": 6,
+   "n_territories": 12,
+   "area_km2": 14405.31,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Кемеровская область",
+   "lng": 87.64914,
+   "lat": 53.86293,
+   "minzoom": 5,
+   "n_territories": 35,
+   "area_km2": 98366.2,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Кировская область",
+   "lng": 52.65295,
+   "lat": 59.71712,
+   "minzoom": 4,
+   "n_territories": 45,
+   "area_km2": 120652.47,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Костромская область",
+   "lng": 43.88998,
+   "lat": 58.38893,
+   "minzoom": 5,
+   "n_territories": 31,
+   "area_km2": 75271.82,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Краснодарский край",
+   "lng": 39.41393,
+   "lat": 45.32022,
+   "minzoom": 5,
+   "n_territories": 46,
+   "area_km2": 75370.22,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Красноярский край",
+   "lng": 95.60714,
+   "lat": 66.55336,
+   "minzoom": 3,
+   "n_territories": 61,
+   "area_km2": 2368135.67,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Курганская область",
+   "lng": 64.81237,
+   "lat": 55.44072,
+   "minzoom": 5,
+   "n_territories": 26,
+   "area_km2": 71487.59,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Курская область",
+   "lng": 36.10504,
+   "lat": 51.67816,
+   "minzoom": 5,
+   "n_territories": 33,
+   "area_km2": 29999.39,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ленинградская область",
+   "lng": 31.25076,
+   "lat": 59.98568,
+   "minzoom": 5,
+   "n_territories": 18,
+   "area_km2": 95576.04,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Липецкая область",
+   "lng": 39.09784,
+   "lat": 52.64418,
+   "minzoom": 5,
+   "n_territories": 20,
+   "area_km2": 28022.11,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Магаданская область",
+   "lng": 160.01609,
+   "lat": 63.01117,
+   "minzoom": 4,
+   "n_territories": 9,
+   "area_km2": 462514.71,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Москва",
+   "lng": 37.36352,
+   "lat": 55.55992,
+   "minzoom": 7,
+   "n_territories": 146,
+   "area_km2": 2573.68,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Московская область",
+   "lng": 37.84255,
+   "lat": 55.63521,
+   "minzoom": 5,
+   "n_territories": 78,
+   "area_km2": 62877.12,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Мурманская область",
+   "lng": 37.74525,
+   "lat": 67.69575,
+   "minzoom": 4,
+   "n_territories": 17,
+   "area_km2": 144770.14,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ненецкий автономный округ",
+   "lng": 53.72842,
+   "lat": 68.10769,
+   "minzoom": 4,
+   "n_territories": 2,
+   "area_km2": 176810.63,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Нижегородская область",
+   "lng": 44.50549,
+   "lat": 56.97608,
+   "minzoom": 5,
+   "n_territories": 53,
+   "area_km2": 82445.28,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Новгородская область",
+   "lng": 32.39423,
+   "lat": 58.27191,
+   "minzoom": 5,
+   "n_territories": 22,
+   "area_km2": 57964.74,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Новосибирская область",
+   "lng": 78.81743,
+   "lat": 56.43361,
+   "minzoom": 4,
+   "n_territories": 35,
+   "area_km2": 177817.49,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Омская область",
+   "lng": 74.82759,
+   "lat": 57.53987,
+   "minzoom": 4,
+   "n_territories": 33,
+   "area_km2": 141156.94,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Оренбургская область",
+   "lng": 55.73879,
+   "lat": 51.94362,
+   "minzoom": 4,
+   "n_territories": 42,
+   "area_km2": 135957.48,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Орловская область",
+   "lng": 37.37446,
+   "lat": 52.41089,
+   "minzoom": 5,
+   "n_territories": 27,
+   "area_km2": 24695.22,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Пензенская область",
+   "lng": 44.63426,
+   "lat": 53.17887,
+   "minzoom": 5,
+   "n_territories": 30,
+   "area_km2": 43352.4,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Пермский край",
+   "lng": 56.4842,
+   "lat": 59.16541,
+   "minzoom": 4,
+   "n_territories": 53,
+   "area_km2": 285603.37,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Приморский край",
+   "lng": 134.70861,
+   "lat": 45.14417,
+   "minzoom": 4,
+   "n_territories": 34,
+   "area_km2": 163095.51,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Псковская область",
+   "lng": 30.0401,
+   "lat": 57.02127,
+   "minzoom": 5,
+   "n_territories": 26,
+   "area_km2": 63265.08,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Адыгея",
+   "lng": 39.99603,
+   "lat": 44.5953,
+   "minzoom": 6,
+   "n_territories": 9,
+   "area_km2": 7797.04,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Алтай",
+   "lng": 87.0161,
+   "lat": 50.72755,
+   "minzoom": 5,
+   "n_territories": 11,
+   "area_km2": 93087.5,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Башкортостан",
+   "lng": 56.53397,
+   "lat": 54.23698,
+   "minzoom": 4,
+   "n_territories": 63,
+   "area_km2": 142946.72,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Бурятия",
+   "lng": 108.48553,
+   "lat": 53.5002,
+   "minzoom": 4,
+   "n_territories": 23,
+   "area_km2": 228158.42,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Дагестан",
+   "lng": 46.18542,
+   "lat": 44.40314,
+   "minzoom": 5,
+   "n_territories": 51,
+   "area_km2": 49004.18,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Ингушетия",
+   "lng": 44.84052,
+   "lat": 43.17467,
+   "minzoom": 7,
+   "n_territories": 9,
+   "area_km2": 2556.91,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Калмыкия",
+   "lng": 45.32023,
+   "lat": 46.39962,
+   "minzoom": 5,
+   "n_territories": 14,
+   "area_km2": 74752.31,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Карелия",
+   "lng": 33.1674,
+   "lat": 63.52671,
+   "minzoom": 4,
+   "n_territories": 18,
+   "area_km2": 162136.0,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Коми",
+   "lng": 55.51846,
+   "lat": 64.32998,
+   "minzoom": 3,
+   "n_territories": 20,
+   "area_km2": 543107.13,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Крым",
+   "lng": 34.37031,
+   "lat": 45.33036,
+   "minzoom": 5,
+   "n_territories": 25,
+   "area_km2": 26104.79,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Марий Эл",
+   "lng": 47.82283,
+   "lat": 56.58097,
+   "minzoom": 5,
+   "n_territories": 17,
+   "area_km2": 26015.3,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Мордовия",
+   "lng": 44.44944,
+   "lat": 54.35862,
+   "minzoom": 5,
+   "n_territories": 23,
+   "area_km2": 26127.37,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Саха (Якутия)",
+   "lng": 129.75641,
+   "lat": 65.55104,
+   "minzoom": 3,
+   "n_territories": 36,
+   "area_km2": 3087667.49,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Северная Осетия — Алания",
+   "lng": 44.2616,
+   "lat": 43.09064,
+   "minzoom": 6,
+   "n_territories": 9,
+   "area_km2": 7987.44,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Татарстан",
+   "lng": 50.92003,
+   "lat": 55.34579,
+   "minzoom": 5,
+   "n_territories": 45,
+   "area_km2": 67882.12,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Тыва",
+   "lng": 96.95586,
+   "lat": 52.66442,
+   "minzoom": 4,
+   "n_territories": 19,
+   "area_km2": 168618.33,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Республика Хакасия",
+   "lng": 89.88903,
+   "lat": 53.37139,
+   "minzoom": 5,
+   "n_territories": 13,
+   "area_km2": 61568.88,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ростовская область",
+   "lng": 41.31434,
+   "lat": 47.72292,
+   "minzoom": 4,
+   "n_territories": 55,
+   "area_km2": 100958.5,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Рязанская область",
+   "lng": 40.72857,
+   "lat": 54.32617,
+   "minzoom": 5,
+   "n_territories": 30,
+   "area_km2": 42704.14,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Самарская область",
+   "lng": 50.45908,
+   "lat": 53.26755,
+   "minzoom": 5,
+   "n_territories": 37,
+   "area_km2": 53598.33,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Санкт-Петербург",
+   "lng": 30.46001,
+   "lat": 59.75897,
+   "minzoom": 7,
+   "n_territories": 111,
+   "area_km2": 1440.54,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Саратовская область",
+   "lng": 48.9357,
+   "lat": 51.17496,
+   "minzoom": 4,
+   "n_territories": 45,
+   "area_km2": 110688.37,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Сахалинская область",
+   "lng": 155.82373,
+   "lat": 50.46483,
+   "minzoom": 4,
+   "n_territories": 18,
+   "area_km2": 305862.7,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Свердловская область",
+   "lng": 60.53666,
+   "lat": 61.01342,
+   "minzoom": 4,
+   "n_territories": 73,
+   "area_km2": 348945.63,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Севастополь",
+   "lng": 33.61298,
+   "lat": 44.57906,
+   "minzoom": 8,
+   "n_territories": 10,
+   "area_km2": 885.28,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Смоленская область",
+   "lng": 32.9988,
+   "lat": 54.95731,
+   "minzoom": 5,
+   "n_territories": 27,
+   "area_km2": 86407.97,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ставропольский край",
+   "lng": 45.08608,
+   "lat": 45.02246,
+   "minzoom": 5,
+   "n_territories": 35,
+   "area_km2": 69081.01,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Тамбовская область",
+   "lng": 41.55761,
+   "lat": 52.68379,
+   "minzoom": 5,
+   "n_territories": 32,
+   "area_km2": 38977.1,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Тверская область",
+   "lng": 34.71039,
+   "lat": 57.10884,
+   "minzoom": 5,
+   "n_territories": 46,
+   "area_km2": 98788.0,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Томская область",
+   "lng": 78.68193,
+   "lat": 59.09524,
+   "minzoom": 4,
+   "n_territories": 20,
+   "area_km2": 314408.94,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Тульская область",
+   "lng": 37.57378,
+   "lat": 53.88389,
+   "minzoom": 5,
+   "n_territories": 26,
+   "area_km2": 25927.8,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Тюменская область",
+   "lng": 70.44724,
+   "lat": 58.99279,
+   "minzoom": 4,
+   "n_territories": 26,
+   "area_km2": 165615.03,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Удмуртская Республика",
+   "lng": 52.79898,
+   "lat": 57.15608,
+   "minzoom": 5,
+   "n_territories": 30,
+   "area_km2": 42081.21,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ульяновская область",
+   "lng": 47.9285,
+   "lat": 53.87634,
+   "minzoom": 5,
+   "n_territories": 24,
+   "area_km2": 36577.63,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Хабаровский край",
+   "lng": 137.33925,
+   "lat": 54.38401,
+   "minzoom": 3,
+   "n_territories": 19,
+   "area_km2": 789943.02,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ханты-Мансийский автономный округ — Югра",
+   "lng": 80.26771,
+   "lat": 61.41621,
+   "minzoom": 3,
+   "n_territories": 22,
+   "area_km2": 535501.62,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Челябинская область",
+   "lng": 59.56394,
+   "lat": 55.96697,
+   "minzoom": 5,
+   "n_territories": 45,
+   "area_km2": 94564.49,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Чеченская Республика",
+   "lng": 45.73437,
+   "lat": 43.29898,
+   "minzoom": 6,
+   "n_territories": 17,
+   "area_km2": 16171.03,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Чувашская Республика",
+   "lng": 47.08601,
+   "lat": 55.48717,
+   "minzoom": 6,
+   "n_territories": 26,
+   "area_km2": 18345.79,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Чукотский автономный округ",
+   "lng": 172.6763,
+   "lat": 64.88659,
+   "minzoom": 3,
+   "n_territories": 7,
+   "area_km2": 723436.81,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ямало-Ненецкий автономный округ",
+   "lng": 77.70795,
+   "lat": 65.11426,
+   "minzoom": 3,
+   "n_territories": 17,
+   "area_km2": 1122256.64,
+   "candidate_landed": false,
+   "in_inflation_table": true
+  },
+  {
+   "name": "Ярославская область",
+   "lng": 39.0705,
+   "lat": 57.64889,
+   "minzoom": 5,
+   "n_territories": 21,
+   "area_km2": 44913.48,
+   "candidate_landed": true,
+   "in_inflation_table": true
+  }
+ ],
+ "places": [
+  {
+   "name": "городской округ ЗАТО Светлый",
+   "short": "ЗАТО Светлый",
+   "lng": 45.62576,
+   "lat": 51.67876,
+   "minzoom": 10,
+   "tid": 1914,
+   "region": "Саратовская область",
+   "area_km2": 3.49
+  },
+  {
+   "name": "городской округ Власиха",
+   "short": "Власиха",
+   "lng": 37.1892,
+   "lat": 55.68247,
+   "minzoom": 10,
+   "tid": 1441,
+   "region": "Московская область",
+   "area_km2": 4.39
+  },
+  {
+   "name": "городской округ Звёздный городок",
+   "short": "Звёздный городок",
+   "lng": 38.11431,
+   "lat": 55.87721,
+   "minzoom": 10,
+   "tid": 1451,
+   "region": "Московская область",
+   "area_km2": 5.49
+  },
+  {
+   "name": "городской округ Молодёжный",
+   "short": "Молодёжный",
+   "lng": 36.80373,
+   "lat": 55.3279,
+   "minzoom": 10,
+   "tid": 1466,
+   "region": "Московская область",
+   "area_km2": 5.92
+  },
+  {
+   "name": "городской округ ЗАТО Сибирский",
+   "short": "ЗАТО Сибирский",
+   "lng": 83.81559,
+   "lat": 53.56116,
+   "minzoom": 10,
+   "tid": 513,
+   "region": "Алтайский край",
+   "area_km2": 6.08
+  },
+  {
+   "name": "городской округ ЗАТО Первомайский",
+   "short": "ЗАТО Первомайский",
+   "lng": 49.2842,
+   "lat": 59.07126,
+   "minzoom": 10,
+   "tid": 1263,
+   "region": "Кировская область",
+   "area_km2": 6.11
+  },
+  {
+   "name": "городской округ ЗАТО поселок Горный",
+   "short": "ЗАТО поселок Горный",
+   "lng": 113.03681,
+   "lat": 51.55158,
+   "minzoom": 10,
+   "tid": 575,
+   "region": "Забайкальский край",
+   "area_km2": 6.27
+  },
+  {
+   "name": "городской округ ЗАТО поселок Солнечный",
+   "short": "ЗАТО поселок Солнечный",
+   "lng": 89.82647,
+   "lat": 55.27903,
+   "minzoom": 10,
+   "tid": 682,
+   "region": "Красноярский край",
+   "area_km2": 6.28
+  },
+  {
+   "name": "внутригородская территория города федерального значения городской округ Щербинка",
+   "short": "внутригородская территория города федерального значения городской округ Щербинка",
+   "lng": 37.56049,
+   "lat": 55.50474,
+   "minzoom": 10,
+   "tid": 2588,
+   "region": "Москва",
+   "area_km2": 7.62
+  },
+  {
+   "name": "городской округ Пионерский",
+   "short": "Пионерский",
+   "lng": 20.22566,
+   "lat": 54.94511,
+   "minzoom": 10,
+   "tid": 1179,
+   "region": "Калининградская область",
+   "area_km2": 8.27
+  },
+  {
+   "name": "городской округ ЗАТО Солнечный",
+   "short": "ЗАТО Солнечный",
+   "lng": 33.0659,
+   "lat": 57.20355,
+   "minzoom": 10,
+   "tid": 2107,
+   "region": "Тверская область",
+   "area_km2": 8.61
+  },
+  {
+   "name": "городской округ Реутов",
+   "short": "Реутов",
+   "lng": 37.86546,
+   "lat": 55.76322,
+   "minzoom": 10,
+   "tid": 1475,
+   "region": "Московская область",
+   "area_km2": 8.88
+  },
+  {
+   "name": "городской округ Фрязино",
+   "short": "Фрязино",
+   "lng": 38.041,
+   "lat": 55.95899,
+   "minzoom": 10,
+   "tid": 1481,
+   "region": "Московская область",
+   "area_km2": 9.18
+  },
+  {
+   "name": "городской округ город Шиханы",
+   "short": "Шиханы",
+   "lng": 47.21238,
+   "lat": 52.12417,
+   "minzoom": 10,
+   "tid": 1912,
+   "region": "Саратовская область",
+   "area_km2": 9.84
+  },
+  {
+   "name": "городской округ поселок Уральский",
+   "short": "поселок Уральский",
+   "lng": 61.09227,
+   "lat": 56.68091,
+   "minzoom": 10,
+   "tid": 2014,
+   "region": "Свердловская область",
+   "area_km2": 10.01
+  },
+  {
+   "name": "городской округ Локомотивный",
+   "short": "Локомотивный",
+   "lng": 60.57388,
+   "lat": 53.02997,
+   "minzoom": 10,
+   "tid": 2290,
+   "region": "Челябинская область",
+   "area_km2": 10.34
+  },
+  {
+   "name": "городской округ ЗАТО поселок Комаровский",
+   "short": "ЗАТО поселок Комаровский",
+   "lng": 59.84826,
+   "lat": 51.03779,
+   "minzoom": 10,
+   "tid": 1677,
+   "region": "Оренбургская область",
+   "area_km2": 10.35
+  },
+  {
+   "name": "городской округ город Дагестанские Огни",
+   "short": "Дагестанские Огни",
+   "lng": 48.1882,
+   "lat": 42.11978,
+   "minzoom": 10,
+   "tid": 109,
+   "region": "Республика Дагестан",
+   "area_km2": 10.77
+  },
+  {
+   "name": "городской округ город Кирсанов",
+   "short": "Кирсанов",
+   "lng": 42.73015,
+   "lat": 52.65092,
+   "minzoom": 10,
+   "tid": 2072,
+   "region": "Тамбовская область",
+   "area_km2": 10.9
+  },
+  {
+   "name": "городской округ рабочий поселок Новогуровский",
+   "short": "рабочий поселок Новогуровский",
+   "lng": 37.33761,
+   "lat": 54.47179,
+   "minzoom": 10,
+   "tid": 2166,
+   "region": "Тульская область",
+   "area_km2": 12.0
+  },
+  {
+   "name": "городской округ Кохма",
+   "short": "Кохма",
+   "lng": 41.10055,
+   "lat": 56.93084,
+   "minzoom": 10,
+   "tid": 1110,
+   "region": "Ивановская область",
+   "area_km2": 12.61
+  },
+  {
+   "name": "городской округ город Магас",
+   "short": "Магас",
+   "lng": 44.81693,
+   "lat": 43.17025,
+   "minzoom": 10,
+   "tid": 158,
+   "region": "Республика Ингушетия",
+   "area_km2": 12.63
+  },
+  {
+   "name": "городской округ Пущино",
+   "short": "Пущино",
+   "lng": 37.62236,
+   "lat": 54.82818,
+   "minzoom": 10,
+   "tid": 1474,
+   "region": "Московская область",
+   "area_km2": 13.28
+  },
+  {
+   "name": "городской округ город Шумерля",
+   "short": "Шумерля",
+   "lng": 46.42597,
+   "lat": 55.4864,
+   "minzoom": 10,
+   "tid": 482,
+   "region": "Чувашская Республика",
+   "area_km2": 13.28
+  },
+  {
+   "name": "городской округ Краснознаменск",
+   "short": "Краснознаменск",
+   "lng": 37.05604,
+   "lat": 55.59226,
+   "minzoom": 10,
+   "tid": 1460,
+   "region": "Московская область",
+   "area_km2": 13.32
+  },
+  {
+   "name": "городской округ город Козьмодемьянск",
+   "short": "Козьмодемьянск",
+   "lng": 46.5555,
+   "lat": 56.32508,
+   "minzoom": 10,
+   "tid": 271,
+   "region": "Республика Марий Эл",
+   "area_km2": 13.41
+  },
+  {
+   "name": "городской округ город-курорт Сочи",
+   "short": "город-курорт Сочи",
+   "lng": 39.94778,
+   "lat": 43.75668,
+   "minzoom": 10,
+   "tid": 628,
+   "region": "Краснодарский край",
+   "area_km2": 14.19
+  },
+  {
+   "name": "городской округ город-курорт Сочи",
+   "short": "город-курорт Сочи",
+   "lng": 39.88033,
+   "lat": 43.76127,
+   "minzoom": 10,
+   "tid": 2812,
+   "region": "Краснодарский край",
+   "area_km2": 14.19
+  },
+  {
+   "name": "городской округ Котельники",
+   "short": "Котельники",
+   "lng": 37.86569,
+   "lat": 55.65949,
+   "minzoom": 10,
+   "tid": 1457,
+   "region": "Московская область",
+   "area_km2": 14.24
+  },
+  {
+   "name": "городской округ Дзержинский",
+   "short": "Дзержинский",
+   "lng": 37.83835,
+   "lat": 55.62254,
+   "minzoom": 10,
+   "tid": 1443,
+   "region": "Московская область",
+   "area_km2": 15.66
+  },
+  {
+   "name": "городской округ Восход",
+   "short": "Восход",
+   "lng": 36.46524,
+   "lat": 55.95065,
+   "minzoom": 10,
+   "tid": 1442,
+   "region": "Московская область",
+   "area_km2": 16.15
+  },
+  {
+   "name": "внутригородская территория города федерального значения городской округ Троицк",
+   "short": "внутригородская территория города федерального значения городской округ Троицк",
+   "lng": 37.29803,
+   "lat": 55.47941,
+   "minzoom": 10,
+   "tid": 2587,
+   "region": "Москва",
+   "area_km2": 16.33
+  },
+  {
+   "name": "городской округ Лыткарино",
+   "short": "Лыткарино",
+   "lng": 37.90238,
+   "lat": 55.57814,
+   "minzoom": 10,
+   "tid": 1464,
+   "region": "Московская область",
+   "area_km2": 17.29
+  },
+  {
+   "name": "городской округ город Галич",
+   "short": "Галич",
+   "lng": 42.34934,
+   "lat": 58.37721,
+   "minzoom": 10,
+   "tid": 1306,
+   "region": "Костромская область",
+   "area_km2": 17.78
+  },
+  {
+   "name": "городской округ город Моршанск",
+   "short": "Моршанск",
+   "lng": 41.79966,
+   "lat": 53.44001,
+   "minzoom": 10,
+   "tid": 2075,
+   "region": "Тамбовская область",
+   "area_km2": 18.67
+  },
+  {
+   "name": "городской округ город Канаш",
+   "short": "Канаш",
+   "lng": 47.49863,
+   "lat": 55.51482,
+   "minzoom": 10,
+   "tid": 480,
+   "region": "Чувашская Республика",
+   "area_km2": 18.71
+  },
+  {
+   "name": "городской округ Сириус",
+   "short": "Сириус",
+   "lng": 39.96542,
+   "lat": 43.40671,
+   "minzoom": 10,
+   "tid": 2748,
+   "region": "Краснодарский край",
+   "area_km2": 19.23
+  },
+  {
+   "name": "городской округ рабочий поселок Кольцово",
+   "short": "рабочий поселок Кольцово",
+   "lng": 83.19039,
+   "lat": 54.92161,
+   "minzoom": 10,
+   "tid": 1601,
+   "region": "Новосибирская область",
+   "area_km2": 19.36
+  },
+  {
+   "name": "городской округ Янтарный",
+   "short": "Янтарный",
+   "lng": 19.94927,
+   "lat": 54.87922,
+   "minzoom": 10,
+   "tid": 1182,
+   "region": "Калининградская область",
+   "area_km2": 19.43
+  },
+  {
+   "name": "городской округ город Котовск",
+   "short": "Котовск",
+   "lng": 41.49287,
+   "lat": 52.58841,
+   "minzoom": 10,
+   "tid": 2073,
+   "region": "Тамбовская область",
+   "area_km2": 20.06
+  },
+  {
+   "name": "городской округ поселок Михайловский",
+   "short": "поселок Михайловский",
+   "lng": 48.59154,
+   "lat": 51.78329,
+   "minzoom": 10,
+   "tid": 1913,
+   "region": "Саратовская область",
+   "area_km2": 20.37
+  },
+  {
+   "name": "городской округ Тейково",
+   "short": "Тейково",
+   "lng": 40.54141,
+   "lat": 56.85478,
+   "minzoom": 10,
+   "tid": 1111,
+   "region": "Ивановская область",
+   "area_km2": 20.76
+  },
+  {
+   "name": "городской округ город Мценск",
+   "short": "Мценск",
+   "lng": 36.56916,
+   "lat": 53.28197,
+   "minzoom": 10,
+   "tid": 1709,
+   "region": "Орловская область",
+   "area_km2": 20.81
+  },
+  {
+   "name": "городской округ город Буй",
+   "short": "Буй",
+   "lng": 41.51839,
+   "lat": 58.47707,
+   "minzoom": 10,
+   "tid": 1304,
+   "region": "Костромская область",
+   "area_km2": 21.19
+  },
+  {
+   "name": "городской округ город Буйнакск",
+   "short": "Буйнакск",
+   "lng": 47.11103,
+   "lat": 42.81881,
+   "minzoom": 10,
+   "tid": 108,
+   "region": "Республика Дагестан",
+   "area_km2": 21.84
+  },
+  {
+   "name": "городской округ город Обь",
+   "short": "Обь",
+   "lng": 82.6666,
+   "lat": 55.00091,
+   "minzoom": 10,
+   "tid": 1600,
+   "region": "Новосибирская область",
+   "area_km2": 21.95
+  },
+  {
+   "name": "городской округ город Щигры",
+   "short": "Щигры",
+   "lng": 36.89211,
+   "lat": 51.87875,
+   "minzoom": 10,
+   "tid": 1363,
+   "region": "Курская область",
+   "area_km2": 22.08
+  },
+  {
+   "name": "городской округ Бронницы",
+   "short": "Бронницы",
+   "lng": 38.25413,
+   "lat": 55.41774,
+   "minzoom": 10,
+   "tid": 1440,
+   "region": "Московская область",
+   "area_km2": 22.16
+  },
+  {
+   "name": "городской округ Красноперекопск",
+   "short": "Красноперекопск",
+   "lng": 33.81688,
+   "lat": 45.95701,
+   "minzoom": 10,
+   "tid": 250,
+   "region": "Республика Крым",
+   "area_km2": 22.42
+  },
+  {
+   "name": "городской округ город Уварово",
+   "short": "Уварово",
+   "lng": 42.26542,
+   "lat": 51.98077,
+   "minzoom": 10,
+   "tid": 2077,
+   "region": "Тамбовская область",
+   "area_km2": 22.78
+  },
+  {
+   "name": "городской округ Октябрьск",
+   "short": "Октябрьск",
+   "lng": 48.74652,
+   "lat": 53.18055,
+   "minzoom": 10,
+   "tid": 1878,
+   "region": "Самарская область",
+   "area_km2": 22.92
+  },
+  {
+   "name": "городской округ город Кизилюрт",
+   "short": "Кизилюрт",
+   "lng": 46.83726,
+   "lat": 43.18499,
+   "minzoom": 10,
+   "tid": 113,
+   "region": "Республика Дагестан",
+   "area_km2": 23.7
+  },
+  {
+   "name": "городской округ город Сасово",
+   "short": "Сасово",
+   "lng": 41.91169,
+   "lat": 54.35083,
+   "minzoom": 10,
+   "tid": 1847,
+   "region": "Рязанская область",
+   "area_km2": 24.04
+  },
+  {
+   "name": "городской округ город Фокино",
+   "short": "Фокино",
+   "lng": 34.40867,
+   "lat": 53.44157,
+   "minzoom": 10,
+   "tid": 957,
+   "region": "Брянская область",
+   "area_km2": 24.41
+  },
+  {
+   "name": "городской округ Джанкой",
+   "short": "Джанкой",
+   "lng": 34.38912,
+   "lat": 45.71108,
+   "minzoom": 10,
+   "tid": 247,
+   "region": "Республика Крым",
+   "area_km2": 24.96
+  },
+  {
+   "name": "городской округ город Избербаш",
+   "short": "Избербаш",
+   "lng": 47.87812,
+   "lat": 42.56234,
+   "minzoom": 10,
+   "tid": 111,
+   "region": "Республика Дагестан",
+   "area_km2": 25.51
+  },
+  {
+   "name": "городской округ Ивантеевка",
+   "short": "Ивантеевка",
+   "lng": 37.9209,
+   "lat": 55.97433,
+   "minzoom": 10,
+   "tid": 1452,
+   "region": "Московская область",
+   "area_km2": 26.08
+  },
+  {
+   "name": "городской округ Славный",
+   "short": "Славный",
+   "lng": 36.51387,
+   "lat": 53.53549,
+   "minzoom": 10,
+   "tid": 2170,
+   "region": "Тульская область",
+   "area_km2": 26.23
+  },
+  {
+   "name": "городской округ Протвино",
+   "short": "Протвино",
+   "lng": 37.21476,
+   "lat": 54.88044,
+   "minzoom": 10,
+   "tid": 1473,
+   "region": "Московская область",
+   "area_km2": 26.69
+  },
+  {
+   "name": "городской округ город Сосновоборск",
+   "short": "Сосновоборск",
+   "lng": 93.35957,
+   "lat": 56.12718,
+   "minzoom": 10,
+   "tid": 679,
+   "region": "Красноярский край",
+   "area_km2": 26.71
+  },
+  {
+   "name": "городской округ поселок Кедровый",
+   "short": "поселок Кедровый",
+   "lng": 92.30423,
+   "lat": 56.24719,
+   "minzoom": 10,
+   "tid": 681,
+   "region": "Красноярский край",
+   "area_km2": 27.55
+  },
+  {
+   "name": "городской округ ЗАТО город Заречный",
+   "short": "ЗАТО город Заречный",
+   "lng": 45.17847,
+   "lat": 53.17916,
+   "minzoom": 10,
+   "tid": 1736,
+   "region": "Пензенская область",
+   "area_km2": 27.61
+  },
+  {
+   "name": "городской округ Ладушкинский",
+   "short": "Ладушкинский",
+   "lng": 20.18673,
+   "lat": 54.58052,
+   "minzoom": 10,
+   "tid": 1177,
+   "region": "Калининградская область",
+   "area_km2": 28.18
+  },
+  {
+   "name": "городской округ город Вятские Поляны",
+   "short": "Вятские Поляны",
+   "lng": 51.05628,
+   "lat": 56.23959,
+   "minzoom": 10,
+   "tid": 1259,
+   "region": "Кировская область",
+   "area_km2": 28.34
+  },
+  {
+   "name": "городской округ Саки",
+   "short": "Саки",
+   "lng": 33.57059,
+   "lat": 45.12325,
+   "minzoom": 10,
+   "tid": 251,
+   "region": "Республика Крым",
+   "area_km2": 28.77
+  },
+  {
+   "name": "городской округ Рефтинский",
+   "short": "Рефтинский",
+   "lng": 61.66401,
+   "lat": 57.08278,
+   "minzoom": 10,
+   "tid": 1976,
+   "region": "Свердловская область",
+   "area_km2": 28.78
+  },
+  {
+   "name": "городской округ город Волжск",
+   "short": "Волжск",
+   "lng": 48.34629,
+   "lat": 55.88184,
+   "minzoom": 10,
+   "tid": 270,
+   "region": "Республика Марий Эл",
+   "area_km2": 28.99
+  },
+  {
+   "name": "городской округ город Котельнич",
+   "short": "Котельнич",
+   "lng": 48.32692,
+   "lat": 58.29798,
+   "minzoom": 10,
+   "tid": 1261,
+   "region": "Кировская область",
+   "area_km2": 29.24
+  },
+  {
+   "name": "городской округ Арамильский",
+   "short": "Арамильский",
+   "lng": 60.8699,
+   "lat": 56.69053,
+   "minzoom": 10,
+   "tid": 2033,
+   "region": "Свердловская область",
+   "area_km2": 30.07
+  },
+  {
+   "name": "городской округ Лобня",
+   "short": "Лобня",
+   "lng": 37.46122,
+   "lat": 56.03378,
+   "minzoom": 10,
+   "tid": 1461,
+   "region": "Московская область",
+   "area_km2": 30.19
+  },
+  {
+   "name": "городской округ Долгопрудный",
+   "short": "Долгопрудный",
+   "lng": 37.50484,
+   "lat": 55.94661,
+   "minzoom": 10,
+   "tid": 1444,
+   "region": "Московская область",
+   "area_km2": 30.52
+  },
+  {
+   "name": "городской округ город Можга",
+   "short": "Можга",
+   "lng": 52.23553,
+   "lat": 56.45595,
+   "minzoom": 10,
+   "tid": 421,
+   "region": "Удмуртская Республика",
+   "area_km2": 30.64
+  },
+  {
+   "name": "городской округ город Скопин",
+   "short": "Скопин",
+   "lng": 39.54072,
+   "lat": 53.7815,
+   "minzoom": 10,
+   "tid": 1848,
+   "region": "Рязанская область",
+   "area_km2": 30.87
+  },
+  {
+   "name": "городской округ город Шарыпово",
+   "short": "Шарыпово",
+   "lng": 89.17205,
+   "lat": 55.49939,
+   "minzoom": 10,
+   "tid": 680,
+   "region": "Красноярский край",
+   "area_km2": 30.94
+  },
+  {
+   "name": "городской округ Жатай",
+   "short": "Жатай",
+   "lng": 129.83437,
+   "lat": 62.16115,
+   "minzoom": 10,
+   "tid": 310,
+   "region": "Республика Саха (Якутия)",
+   "area_km2": 31.04
+  },
+  {
+   "name": "городской округ город Зверево",
+   "short": "Зверево",
+   "lng": 40.15783,
+   "lat": 48.03913,
+   "minzoom": 10,
+   "tid": 1796,
+   "region": "Ростовская область",
+   "area_km2": 31.21
+  },
+  {
+   "name": "городской округ город Лермонтов",
+   "short": "Лермонтов",
+   "lng": 43.00597,
+   "lat": 44.09814,
+   "minzoom": 10,
+   "tid": 818,
+   "region": "Ставропольский край",
+   "area_km2": 31.42
+  },
+  {
+   "name": "городской округ Карачаевский",
+   "short": "Карачаевский",
+   "lng": 42.13768,
+   "lat": 43.57574,
+   "minzoom": 10,
+   "tid": 195,
+   "region": "Карачаево-Черкесская Республика",
+   "area_km2": 31.56
+  },
+  {
+   "name": "городской округ город Касимов",
+   "short": "Касимов",
+   "lng": 41.38457,
+   "lat": 54.94086,
+   "minzoom": 10,
+   "tid": 1846,
+   "region": "Рязанская область",
+   "area_km2": 31.6
+  },
+  {
+   "name": "городской округ город Ливны",
+   "short": "Ливны",
+   "lng": 37.60361,
+   "lat": 52.42861,
+   "minzoom": 10,
+   "tid": 1708,
+   "region": "Орловская область",
+   "area_km2": 32.1
+  },
+  {
+   "name": "городской округ город Кизляр",
+   "short": "Кизляр",
+   "lng": 46.69094,
+   "lat": 43.90037,
+   "minzoom": 10,
+   "tid": 114,
+   "region": "Республика Дагестан",
+   "area_km2": 32.31
+  },
+  {
+   "name": "городской округ Вичуга",
+   "short": "Вичуга",
+   "lng": 41.91328,
+   "lat": 57.2044,
+   "minzoom": 10,
+   "tid": 1108,
+   "region": "Ивановская область",
+   "area_km2": 32.45
+  },
+  {
+   "name": "городской округ город Каспийск",
+   "short": "Каспийск",
+   "lng": 47.61675,
+   "lat": 42.88535,
+   "minzoom": 10,
+   "tid": 112,
+   "region": "Республика Дагестан",
+   "area_km2": 32.94
+  },
+  {
+   "name": "городской округ город Сельцо",
+   "short": "Сельцо",
+   "lng": 34.10188,
+   "lat": 53.4019,
+   "minzoom": 10,
+   "tid": 956,
+   "region": "Брянская область",
+   "area_km2": 33.08
+  },
+  {
+   "name": "городской округ Светлогорский",
+   "short": "Светлогорский",
+   "lng": 20.13987,
+   "lat": 54.93861,
+   "minzoom": 10,
+   "tid": 1190,
+   "region": "Калининградская область",
+   "area_km2": 33.16
+  },
+  {
+   "name": "городской округ Шуя",
+   "short": "Шуя",
+   "lng": 41.37974,
+   "lat": 56.85628,
+   "minzoom": 10,
+   "tid": 1112,
+   "region": "Ивановская область",
+   "area_km2": 33.29
+  },
+  {
+   "name": "городской округ город Адыгейск",
+   "short": "Адыгейск",
+   "lng": 39.21333,
+   "lat": 44.86557,
+   "minzoom": 10,
+   "tid": 2,
+   "region": "Республика Адыгея",
+   "area_km2": 33.35
+  },
+  {
+   "name": "городской округ город Волгореченск",
+   "short": "Волгореченск",
+   "lng": 41.15647,
+   "lat": 57.44413,
+   "minzoom": 10,
+   "tid": 1305,
+   "region": "Костромская область",
+   "area_km2": 33.47
+  },
+  {
+   "name": "городской округ город Дербент",
+   "short": "Дербент",
+   "lng": 48.28567,
+   "lat": 42.07194,
+   "minzoom": 10,
+   "tid": 110,
+   "region": "Республика Дагестан",
+   "area_km2": 33.54
+  },
+  {
+   "name": "городской округ город Гуково",
+   "short": "Гуково",
+   "lng": 39.94868,
+   "lat": 48.04603,
+   "minzoom": 10,
+   "tid": 1794,
+   "region": "Ростовская область",
+   "area_km2": 34.32
+  },
+  {
+   "name": "городской округ Прохладный",
+   "short": "Прохладный",
+   "lng": 44.04878,
+   "lat": 43.7521,
+   "minzoom": 10,
+   "tid": 169,
+   "region": "Кабардино-Балкарская Республика",
+   "area_km2": 35.01
+  },
+  {
+   "name": "городской округ город Бородино",
+   "short": "Бородино",
+   "lng": 94.91636,
+   "lat": 55.89838,
+   "minzoom": 10,
+   "tid": 669,
+   "region": "Красноярский край",
+   "area_km2": 35.17
+  },
+  {
+   "name": "городской округ город Рассказово",
+   "short": "Рассказово",
+   "lng": 41.8947,
+   "lat": 52.66579,
+   "minzoom": 10,
+   "tid": 2076,
+   "region": "Тамбовская область",
+   "area_km2": 35.47
+  },
+  {
+   "name": "городской округ город Льгов",
+   "short": "Льгов",
+   "lng": 35.26116,
+   "lat": 51.65979,
+   "minzoom": 10,
+   "tid": 1362,
+   "region": "Курская область",
+   "area_km2": 37.47
+  },
+  {
+   "name": "городской округ город Хасавюрт",
+   "short": "Хасавюрт",
+   "lng": 46.59455,
+   "lat": 43.24578,
+   "minzoom": 10,
+   "tid": 115,
+   "region": "Республика Дагестан",
+   "area_km2": 38.48
+  },
+  {
+   "name": "городской округ город Свирск",
+   "short": "Свирск",
+   "lng": 103.35628,
+   "lat": 53.05187,
+   "minzoom": 10,
+   "tid": 1143,
+   "region": "Иркутская область",
+   "area_km2": 38.62
+  },
+  {
+   "name": "городской округ город Стародуб",
+   "short": "Стародуб",
+   "lng": 32.75766,
+   "lat": 52.57722,
+   "minzoom": 10,
+   "tid": 958,
+   "region": "Брянская область",
+   "area_km2": 39.24
+  },
+  {
+   "name": "городской округ город Урюпинск",
+   "short": "Урюпинск",
+   "lng": 42.0288,
+   "lat": 50.7903,
+   "minzoom": 10,
+   "tid": 1011,
+   "region": "Волгоградская область",
+   "area_km2": 39.32
+  },
+  {
+   "name": "городской округ Арсеньевский",
+   "short": "Арсеньевский",
+   "lng": 133.27296,
+   "lat": 44.14489,
+   "minzoom": 10,
+   "tid": 776,
+   "region": "Приморский край",
+   "area_km2": 39.37
+  },
+  {
+   "name": "городской округ Павловский Посад",
+   "short": "Павловский Посад",
+   "lng": 38.66571,
+   "lat": 55.79791,
+   "minzoom": 10,
+   "tid": 1471,
+   "region": "Московская область",
+   "area_km2": 39.81
+  },
+  {
+   "name": "городской округ Павлово-Посадский",
+   "short": "Павлово-Посадский",
+   "lng": 38.66571,
+   "lat": 55.79791,
+   "minzoom": 10,
+   "tid": 3014,
+   "region": "Московская область",
+   "area_km2": 39.81
+  },
+  {
+   "name": "городской округ Костомукшский",
+   "short": "Костомукшский",
+   "lng": 30.53245,
+   "lat": 64.72885,
+   "minzoom": 10,
+   "tid": 207,
+   "region": "Республика Карелия",
+   "area_km2": 40.46
+  },
+  {
+   "name": "городской округ город Зея",
+   "short": "Зея",
+   "lng": 127.24753,
+   "lat": 53.73006,
+   "minzoom": 10,
+   "tid": 863,
+   "region": "Амурская область",
+   "area_km2": 40.5
+  },
+  {
+   "name": "городской округ город Новодвинск",
+   "short": "Новодвинск",
+   "lng": 40.79947,
+   "lat": 64.41333,
+   "minzoom": 10,
+   "tid": 895,
+   "region": "Архангельская область",
+   "area_km2": 40.97
+  },
+  {
+   "name": "городской округ город Алатырь",
+   "short": "Алатырь",
+   "lng": 46.56275,
+   "lat": 54.84583,
+   "minzoom": 10,
+   "tid": 479,
+   "region": "Чувашская Республика",
+   "area_km2": 41.68
+  },
+  {
+   "name": "городской округ город Гусь-Хрустальный",
+   "short": "Гусь-Хрустальный",
+   "lng": 40.66708,
+   "lat": 55.61721,
+   "minzoom": 10,
+   "tid": 987,
+   "region": "Владимирская область",
+   "area_km2": 42.03
+  },
+  {
+   "name": "городской округ город Кузнецк",
+   "short": "Кузнецк",
+   "lng": 46.59348,
+   "lat": 53.11947,
+   "minzoom": 10,
+   "tid": 1735,
+   "region": "Пензенская область",
+   "area_km2": 42.21
+  },
+  {
+   "name": "городской округ город Десногорск",
+   "short": "Десногорск",
+   "lng": 33.30892,
+   "lat": 54.16781,
+   "minzoom": 10,
+   "tid": 2045,
+   "region": "Смоленская область",
+   "area_km2": 42.89
+  },
+  {
+   "name": "городской округ Спасск-Дальний",
+   "short": "Спасск-Дальний",
+   "lng": 132.83557,
+   "lat": 44.59789,
+   "minzoom": 10,
+   "tid": 784,
+   "region": "Приморский край",
+   "area_km2": 43.37
+  },
+  {
+   "name": "городской округ Советский",
+   "short": "Советский",
+   "lng": 21.86244,
+   "lat": 55.0803,
+   "minzoom": 10,
+   "tid": 1181,
+   "region": "Калининградская область",
+   "area_km2": 43.75
+  },
+  {
+   "name": "городской округ город Мантурово",
+   "short": "Мантурово",
+   "lng": 44.75753,
+   "lat": 58.32675,
+   "minzoom": 10,
+   "tid": 1307,
+   "region": "Костромская область",
+   "area_km2": 43.87
+  },
+  {
+   "name": "городской округ город Алейск",
+   "short": "Алейск",
+   "lng": 82.78222,
+   "lat": 52.49906,
+   "minzoom": 10,
+   "tid": 505,
+   "region": "Алтайский край",
+   "area_km2": 43.87
+  },
+  {
+   "name": "городской округ город Шарья",
+   "short": "Шарья",
+   "lng": 45.47932,
+   "lat": 58.37859,
+   "minzoom": 10,
+   "tid": 1308,
+   "region": "Костромская область",
+   "area_km2": 44.3
+  },
+  {
+   "name": "городской округ город Нарьян-Мар",
+   "short": "Нарьян-Мар",
+   "lng": 53.04281,
+   "lat": 67.63804,
+   "minzoom": 10,
+   "tid": 916,
+   "region": "Ненецкий автономный округ",
+   "area_km2": 45.13
+  },
+  {
+   "name": "городской округ город Покачи",
+   "short": "Покачи",
+   "lng": 75.36701,
+   "lat": 61.7194,
+   "minzoom": 10,
+   "tid": 2223,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 45.15
+  },
+  {
+   "name": "городской округ город Великие Луки",
+   "short": "Великие Луки",
+   "lng": 30.5508,
+   "lat": 56.33207,
+   "minzoom": 10,
+   "tid": 1765,
+   "region": "Псковская область",
+   "area_km2": 46.73
+  },
+  {
+   "name": "городской округ Жуковский",
+   "short": "Жуковский",
+   "lng": 38.1168,
+   "lat": 55.56917,
+   "minzoom": 10,
+   "tid": 1448,
+   "region": "Московская область",
+   "area_km2": 47.24
+  },
+  {
+   "name": "городской округ Верхнее Дуброво",
+   "short": "Верхнее Дуброво",
+   "lng": 61.11395,
+   "lat": 56.80607,
+   "minzoom": 10,
+   "tid": 2020,
+   "region": "Свердловская область",
+   "area_km2": 47.26
+  },
+  {
+   "name": "городской округ Кинешма",
+   "short": "Кинешма",
+   "lng": 42.15796,
+   "lat": 57.44131,
+   "minzoom": 10,
+   "tid": 1109,
+   "region": "Ивановская область",
+   "area_km2": 48.9
+  },
+  {
+   "name": "городской округ город Слободской",
+   "short": "Слободской",
+   "lng": 50.20772,
+   "lat": 58.71203,
+   "minzoom": 10,
+   "tid": 1262,
+   "region": "Кировская область",
+   "area_km2": 49.05
+  },
+  {
+   "name": "городской округ Верх-Нейвинский",
+   "short": "Верх-Нейвинский",
+   "lng": 60.19236,
+   "lat": 57.2802,
+   "minzoom": 10,
+   "tid": 2026,
+   "region": "Свердловская область",
+   "area_km2": 49.26
+  },
+  {
+   "name": "городской округ Полысаевский",
+   "short": "Полысаевский",
+   "lng": 86.27117,
+   "lat": 54.57059,
+   "minzoom": 10,
+   "tid": 1235,
+   "region": "Кемеровская область",
+   "area_km2": 49.29
+  },
+  {
+   "name": "городской округ город Яровое",
+   "short": "Яровое",
+   "lng": 78.53625,
+   "lat": 52.91264,
+   "minzoom": 10,
+   "tid": 512,
+   "region": "Алтайский край",
+   "area_km2": 49.3
+  },
+  {
+   "name": "городской округ город-курорт Ессентуки",
+   "short": "город-курорт Ессентуки",
+   "lng": 42.85076,
+   "lat": 44.03757,
+   "minzoom": 10,
+   "tid": 812,
+   "region": "Ставропольский край",
+   "area_km2": 49.73
+  },
+  {
+   "name": "городской округ город Шимановск",
+   "short": "Шимановск",
+   "lng": 127.70098,
+   "lat": 52.00503,
+   "minzoom": 10,
+   "tid": 867,
+   "region": "Амурская область",
+   "area_km2": 49.91
+  },
+  {
+   "name": "городской округ город Коряжма",
+   "short": "Коряжма",
+   "lng": 47.10022,
+   "lat": 61.28845,
+   "minzoom": 10,
+   "tid": 891,
+   "region": "Архангельская область",
+   "area_km2": 50.11
+  },
+  {
+   "name": "городской округ город Новочебоксарск",
+   "short": "Новочебоксарск",
+   "lng": 47.51815,
+   "lat": 56.09863,
+   "minzoom": 10,
+   "tid": 481,
+   "region": "Чувашская Республика",
+   "area_km2": 51.14
+  },
+  {
+   "name": "городской округ город Ялуторовск",
+   "short": "Ялуторовск",
+   "lng": 66.29688,
+   "lat": 56.64897,
+   "minzoom": 10,
+   "tid": 2194,
+   "region": "Тюменская область",
+   "area_km2": 52.17
+  },
+  {
+   "name": "городской округ Зима",
+   "short": "Зима",
+   "lng": 102.04363,
+   "lat": 53.90741,
+   "minzoom": 10,
+   "tid": 1137,
+   "region": "Иркутская область",
+   "area_km2": 52.85
+  },
+  {
+   "name": "городской округ город Кирово-Чепецк",
+   "short": "Кирово-Чепецк",
+   "lng": 50.00324,
+   "lat": 58.53823,
+   "minzoom": 10,
+   "tid": 1260,
+   "region": "Кировская область",
+   "area_km2": 53.36
+  },
+  {
+   "name": "городской округ Отрадный",
+   "short": "Отрадный",
+   "lng": 51.34298,
+   "lat": 53.37924,
+   "minzoom": 10,
+   "tid": 1879,
+   "region": "Самарская область",
+   "area_km2": 53.51
+  },
+  {
+   "name": "городской округ город Ак-Довурак",
+   "short": "Ак-Довурак",
+   "lng": 90.59932,
+   "lat": 51.18398,
+   "minzoom": 10,
+   "tid": 400,
+   "region": "Республика Тыва",
+   "area_km2": 53.68
+  },
+  {
+   "name": "городской округ Камышловский",
+   "short": "Камышловский",
+   "lng": 62.73152,
+   "lat": 56.83807,
+   "minzoom": 10,
+   "tid": 1987,
+   "region": "Свердловская область",
+   "area_km2": 54.19
+  },
+  {
+   "name": "городской округ город Обнинск",
+   "short": "Обнинск",
+   "lng": 36.60927,
+   "lat": 55.09992,
+   "minzoom": 10,
+   "tid": 1199,
+   "region": "Калужская область",
+   "area_km2": 55.03
+  },
+  {
+   "name": "городской округ город Обнинск",
+   "short": "Обнинск",
+   "lng": 36.60927,
+   "lat": 55.09992,
+   "minzoom": 10,
+   "tid": 2646,
+   "region": "Калужская область",
+   "area_km2": 55.03
+  },
+  {
+   "name": "городской округ Королёв",
+   "short": "Королёв",
+   "lng": 37.84617,
+   "lat": 55.91296,
+   "minzoom": 10,
+   "tid": 1456,
+   "region": "Московская область",
+   "area_km2": 55.47
+  },
+  {
+   "name": "городской округ город Курчатов",
+   "short": "Курчатов",
+   "lng": 35.66066,
+   "lat": 51.6751,
+   "minzoom": 10,
+   "tid": 1361,
+   "region": "Курская область",
+   "area_km2": 56.45
+  },
+  {
+   "name": "городской округ город Ирбит",
+   "short": "Ирбит",
+   "lng": 63.02932,
+   "lat": 57.64624,
+   "minzoom": 10,
+   "tid": 1985,
+   "region": "Свердловская область",
+   "area_km2": 57.44
+  },
+  {
+   "name": "городской округ город Фролово",
+   "short": "Фролово",
+   "lng": 43.66499,
+   "lat": 49.76533,
+   "minzoom": 10,
+   "tid": 1012,
+   "region": "Волгоградская область",
+   "area_km2": 58.25
+  },
+  {
+   "name": "городской округ город Лангепас",
+   "short": "Лангепас",
+   "lng": 75.16479,
+   "lat": 61.25923,
+   "minzoom": 10,
+   "tid": 2218,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 58.3
+  },
+  {
+   "name": "городской округ город Донской",
+   "short": "Донской",
+   "lng": 38.32639,
+   "lat": 53.97293,
+   "minzoom": 10,
+   "tid": 2167,
+   "region": "Тульская область",
+   "area_km2": 58.41
+  },
+  {
+   "name": "городской округ город Торжок",
+   "short": "Торжок",
+   "lng": 34.95642,
+   "lat": 57.05012,
+   "minzoom": 10,
+   "tid": 2108,
+   "region": "Тверская область",
+   "area_km2": 58.52
+  },
+  {
+   "name": "городской округ город Ишим",
+   "short": "Ишим",
+   "lng": 69.46593,
+   "lat": 56.09538,
+   "minzoom": 10,
+   "tid": 2192,
+   "region": "Тюменская область",
+   "area_km2": 60.02
+  },
+  {
+   "name": "городской округ Анадырь",
+   "short": "Анадырь",
+   "lng": 177.45924,
+   "lat": 64.72057,
+   "minzoom": 10,
+   "tid": 2344,
+   "region": "Чукотский автономный округ",
+   "area_km2": 60.34
+  },
+  {
+   "name": "городской округ город Нововоронеж",
+   "short": "Нововоронеж",
+   "lng": 39.21541,
+   "lat": 51.29174,
+   "minzoom": 10,
+   "tid": 1075,
+   "region": "Воронежская область",
+   "area_km2": 60.36
+  },
+  {
+   "name": "городской округ город Минусинск",
+   "short": "Минусинск",
+   "lng": 91.67846,
+   "lat": 53.71835,
+   "minzoom": 10,
+   "tid": 676,
+   "region": "Красноярский край",
+   "area_km2": 60.5
+  },
+  {
+   "name": "городской округ город Искитим",
+   "short": "Искитим",
+   "lng": 83.29728,
+   "lat": 54.61506,
+   "minzoom": 10,
+   "tid": 1599,
+   "region": "Новосибирская область",
+   "area_km2": 61.62
+  },
+  {
+   "name": "городской округ Черноголовка",
+   "short": "Черноголовка",
+   "lng": 38.39502,
+   "lat": 56.03662,
+   "minzoom": 10,
+   "tid": 1483,
+   "region": "Московская область",
+   "area_km2": 61.68
+  },
+  {
+   "name": "городской округ Рошаль",
+   "short": "Рошаль",
+   "lng": 39.86675,
+   "lat": 55.66158,
+   "minzoom": 10,
+   "tid": 1476,
+   "region": "Московская область",
+   "area_km2": 61.94
+  },
+  {
+   "name": "городской округ Юргинский",
+   "short": "Юргинский",
+   "lng": 84.88738,
+   "lat": 55.72168,
+   "minzoom": 10,
+   "tid": 1238,
+   "region": "Кемеровская область",
+   "area_km2": 62.39
+  },
+  {
+   "name": "городской округ город Боготол",
+   "short": "Боготол",
+   "lng": 89.51531,
+   "lat": 56.22756,
+   "minzoom": 10,
+   "tid": 668,
+   "region": "Красноярский край",
+   "area_km2": 62.81
+  },
+  {
+   "name": "городской округ город Клинцы",
+   "short": "Клинцы",
+   "lng": 32.25605,
+   "lat": 52.74184,
+   "minzoom": 10,
+   "tid": 954,
+   "region": "Брянская область",
+   "area_km2": 63.2
+  },
+  {
+   "name": "городской округ город Бузулук",
+   "short": "Бузулук",
+   "lng": 52.28832,
+   "lat": 52.75868,
+   "minzoom": 10,
+   "tid": 1668,
+   "region": "Оренбургская область",
+   "area_km2": 63.33
+  },
+  {
+   "name": "городской округ Дубна",
+   "short": "Дубна",
+   "lng": 37.17553,
+   "lat": 56.74178,
+   "minzoom": 10,
+   "tid": 1446,
+   "region": "Московская область",
+   "area_km2": 63.36
+  },
+  {
+   "name": "городской округ город Кудымкар",
+   "short": "Кудымкар",
+   "lng": 54.65837,
+   "lat": 59.01288,
+   "minzoom": 10,
+   "tid": 768,
+   "region": "Пермский край",
+   "area_km2": 63.44
+  },
+  {
+   "name": "городской округ Похвистнево",
+   "short": "Похвистнево",
+   "lng": 52.01447,
+   "lat": 53.39237,
+   "minzoom": 10,
+   "tid": 1880,
+   "region": "Самарская область",
+   "area_km2": 64.77
+  },
+  {
+   "name": "городской округ Евпатория",
+   "short": "Евпатория",
+   "lng": 33.36944,
+   "lat": 45.19807,
+   "minzoom": 10,
+   "tid": 248,
+   "region": "Республика Крым",
+   "area_km2": 65.29
+  },
+  {
+   "name": "городской округ город Енисейск",
+   "short": "Енисейск",
+   "lng": 92.18584,
+   "lat": 58.4425,
+   "minzoom": 10,
+   "tid": 671,
+   "region": "Красноярский край",
+   "area_km2": 66.0
+  },
+  {
+   "name": "городской округ город Азов",
+   "short": "Азов",
+   "lng": 39.42407,
+   "lat": 47.08845,
+   "minzoom": 10,
+   "tid": 1791,
+   "region": "Ростовская область",
+   "area_km2": 66.23
+  },
+  {
+   "name": "городской округ город Агидель",
+   "short": "Агидель",
+   "lng": 53.96897,
+   "lat": 55.88306,
+   "minzoom": 10,
+   "tid": 22,
+   "region": "Республика Башкортостан",
+   "area_km2": 66.5
+  },
+  {
+   "name": "городской округ Черкесский",
+   "short": "Черкесский",
+   "lng": 42.0682,
+   "lat": 44.22538,
+   "minzoom": 10,
+   "tid": 194,
+   "region": "Карачаево-Черкесская Республика",
+   "area_km2": 66.66
+  },
+  {
+   "name": "городской округ город Ковров",
+   "short": "Ковров",
+   "lng": 41.31699,
+   "lat": 56.35539,
+   "minzoom": 10,
+   "tid": 988,
+   "region": "Владимирская область",
+   "area_km2": 66.98
+  },
+  {
+   "name": "городской округ поселок Агинское",
+   "short": "поселок Агинское",
+   "lng": 114.55421,
+   "lat": 51.10494,
+   "minzoom": 10,
+   "tid": 604,
+   "region": "Забайкальский край",
+   "area_km2": 68.52
+  },
+  {
+   "name": "городской округ Электрогорск",
+   "short": "Электрогорск",
+   "lng": 38.80278,
+   "lat": 55.88137,
+   "minzoom": 10,
+   "tid": 1487,
+   "region": "Московская область",
+   "area_km2": 70.83
+  },
+  {
+   "name": "городской округ город Елец",
+   "short": "Елец",
+   "lng": 38.52904,
+   "lat": 52.61505,
+   "minzoom": 10,
+   "tid": 1411,
+   "region": "Липецкая область",
+   "area_km2": 71.08
+  },
+  {
+   "name": "городской округ Осинниковский",
+   "short": "Осинниковский",
+   "lng": 87.38715,
+   "lat": 53.65059,
+   "minzoom": 10,
+   "tid": 1234,
+   "region": "Кемеровская область",
+   "area_km2": 71.55
+  },
+  {
+   "name": "городской округ город Бердск",
+   "short": "Бердск",
+   "lng": 83.06269,
+   "lat": 54.74377,
+   "minzoom": 10,
+   "tid": 1598,
+   "region": "Новосибирская область",
+   "area_km2": 72.07
+  },
+  {
+   "name": "городской округ город Глазов",
+   "short": "Глазов",
+   "lng": 52.64793,
+   "lat": 58.14813,
+   "minzoom": 10,
+   "tid": 420,
+   "region": "Удмуртская Республика",
+   "area_km2": 72.49
+  },
+  {
+   "name": "городской округ город Новоалтайск",
+   "short": "Новоалтайск",
+   "lng": 83.92903,
+   "lat": 53.41733,
+   "minzoom": 10,
+   "tid": 509,
+   "region": "Алтайский край",
+   "area_km2": 74.94
+  },
+  {
+   "name": "городской округ город Батайск",
+   "short": "Батайск",
+   "lng": 39.76833,
+   "lat": 47.10799,
+   "minzoom": 10,
+   "tid": 1792,
+   "region": "Ростовская область",
+   "area_km2": 75.02
+  },
+  {
+   "name": "городской округ город Бугуруслан",
+   "short": "Бугуруслан",
+   "lng": 52.38624,
+   "lat": 53.63735,
+   "minzoom": 10,
+   "tid": 1667,
+   "region": "Оренбургская область",
+   "area_km2": 76.46
+  },
+  {
+   "name": "городской округ Чебаркульский",
+   "short": "Чебаркульский",
+   "lng": 60.36814,
+   "lat": 54.98374,
+   "minzoom": 10,
+   "tid": 2288,
+   "region": "Челябинская область",
+   "area_km2": 76.94
+  },
+  {
+   "name": "городской округ ЗАТО поселок Видяево",
+   "short": "ЗАТО поселок Видяево",
+   "lng": 32.81697,
+   "lat": 69.355,
+   "minzoom": 10,
+   "tid": 1514,
+   "region": "Мурманская область",
+   "area_km2": 77.46
+  },
+  {
+   "name": "городской округ Малышевский",
+   "short": "Малышевский",
+   "lng": 61.38923,
+   "lat": 57.09801,
+   "minzoom": 10,
+   "tid": 1975,
+   "region": "Свердловская область",
+   "area_km2": 77.55
+  },
+  {
+   "name": "городской округ город Мичуринск",
+   "short": "Мичуринск",
+   "lng": 40.44962,
+   "lat": 52.92326,
+   "minzoom": 10,
+   "tid": 2074,
+   "region": "Тамбовская область",
+   "area_km2": 77.78
+  },
+  {
+   "name": "городской округ город Абаза",
+   "short": "Абаза",
+   "lng": 90.13436,
+   "lat": 52.63557,
+   "minzoom": 10,
+   "tid": 449,
+   "region": "Республика Хакасия",
+   "area_km2": 78.38
+  },
+  {
+   "name": "городской округ город Заринск",
+   "short": "Заринск",
+   "lng": 84.94107,
+   "lat": 53.71724,
+   "minzoom": 10,
+   "tid": 508,
+   "region": "Алтайский край",
+   "area_km2": 79.16
+  },
+  {
+   "name": "городской округ город Усолье-Сибирское",
+   "short": "Усолье-Сибирское",
+   "lng": 103.64303,
+   "lat": 52.76704,
+   "minzoom": 10,
+   "tid": 1140,
+   "region": "Иркутская область",
+   "area_km2": 79.19
+  },
+  {
+   "name": "городской округ округ Муром",
+   "short": "округ Муром",
+   "lng": 42.01908,
+   "lat": 55.5671,
+   "minzoom": 10,
+   "tid": 989,
+   "region": "Владимирская область",
+   "area_km2": 79.69
+  },
+  {
+   "name": "городской округ город Пыть-Ях",
+   "short": "Пыть-Ях",
+   "lng": 72.78338,
+   "lat": 60.71278,
+   "minzoom": 10,
+   "tid": 2224,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 81.56
+  },
+  {
+   "name": "городской округ Котлас",
+   "short": "Котлас",
+   "lng": 46.66032,
+   "lat": 61.22562,
+   "minzoom": 10,
+   "tid": 892,
+   "region": "Архангельская область",
+   "area_km2": 82.33
+  },
+  {
+   "name": "городской округ город Саянск",
+   "short": "Саянск",
+   "lng": 102.19613,
+   "lat": 54.07079,
+   "minzoom": 10,
+   "tid": 1138,
+   "region": "Иркутская область",
+   "area_km2": 82.42
+  },
+  {
+   "name": "городской округ город Таганрог",
+   "short": "Таганрог",
+   "lng": 38.8755,
+   "lat": 47.23922,
+   "minzoom": 10,
+   "tid": 1800,
+   "region": "Ростовская область",
+   "area_km2": 83.1
+  },
+  {
+   "name": "городской округ город Рубцовск",
+   "short": "Рубцовск",
+   "lng": 81.19753,
+   "lat": 51.52099,
+   "minzoom": 10,
+   "tid": 510,
+   "region": "Алтайский край",
+   "area_km2": 83.25
+  },
+  {
+   "name": "городской округ город Карабулак",
+   "short": "Карабулак",
+   "lng": 44.87674,
+   "lat": 43.38075,
+   "minzoom": 10,
+   "tid": 161,
+   "region": "Республика Ингушетия",
+   "area_km2": 83.61
+  },
+  {
+   "name": "городской округ город Кимры",
+   "short": "Кимры",
+   "lng": 37.35632,
+   "lat": 56.85632,
+   "minzoom": 10,
+   "tid": 2103,
+   "region": "Тверская область",
+   "area_km2": 84.41
+  },
+  {
+   "name": "городской округ Звенигород",
+   "short": "Звенигород",
+   "lng": 36.87432,
+   "lat": 55.72038,
+   "minzoom": 10,
+   "tid": 1450,
+   "region": "Московская область",
+   "area_km2": 85.06
+  },
+  {
+   "name": "городской округ город Мегион",
+   "short": "Мегион",
+   "lng": 76.11847,
+   "lat": 61.09639,
+   "minzoom": 10,
+   "tid": 2219,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 85.17
+  },
+  {
+   "name": "городской округ Светловский",
+   "short": "Светловский",
+   "lng": 20.25669,
+   "lat": 54.71048,
+   "minzoom": 10,
+   "tid": 1180,
+   "region": "Калининградская область",
+   "area_km2": 85.59
+  },
+  {
+   "name": "городской округ город Сарапул",
+   "short": "Сарапул",
+   "lng": 53.78052,
+   "lat": 56.4799,
+   "minzoom": 10,
+   "tid": 422,
+   "region": "Удмуртская Республика",
+   "area_km2": 86.01
+  },
+  {
+   "name": "городской округ город Назарово",
+   "short": "Назарово",
+   "lng": 90.40915,
+   "lat": 56.01713,
+   "minzoom": 10,
+   "tid": 677,
+   "region": "Красноярский край",
+   "area_km2": 87.93
+  },
+  {
+   "name": "городской округ Сосновоборский",
+   "short": "Сосновоборский",
+   "lng": 29.13079,
+   "lat": 59.87769,
+   "minzoom": 10,
+   "tid": 1409,
+   "region": "Ленинградская область",
+   "area_km2": 88.42
+  },
+  {
+   "name": "городской округ Поронайский",
+   "short": "Поронайский",
+   "lng": 143.57069,
+   "lat": 49.18438,
+   "minzoom": 10,
+   "tid": 1963,
+   "region": "Сахалинская область",
+   "area_km2": 90.56
+  },
+  {
+   "name": "городской округ ЗАТО Звёздный",
+   "short": "ЗАТО Звёздный",
+   "lng": 56.29636,
+   "lat": 57.72278,
+   "minzoom": 10,
+   "tid": 733,
+   "region": "Пермский край",
+   "area_km2": 90.83
+  },
+  {
+   "name": "городской округ Лосино-Петровский",
+   "short": "Лосино-Петровский",
+   "lng": 38.19935,
+   "lat": 55.87195,
+   "minzoom": 10,
+   "tid": 1462,
+   "region": "Московская область",
+   "area_km2": 91.27
+  },
+  {
+   "name": "городской округ Лосино-Петровский",
+   "short": "Лосино-Петровский",
+   "lng": 38.17352,
+   "lat": 55.92344,
+   "minzoom": 10,
+   "tid": 2648,
+   "region": "Московская область",
+   "area_km2": 91.27
+  },
+  {
+   "name": "городской округ город Муравленко",
+   "short": "Муравленко",
+   "lng": 74.53637,
+   "lat": 63.79137,
+   "minzoom": 10,
+   "tid": 2241,
+   "region": "Ямало-Ненецкий автономный округ",
+   "area_km2": 91.59
+  },
+  {
+   "name": "городской округ город Южно-Сухокумск",
+   "short": "Южно-Сухокумск",
+   "lng": 45.64466,
+   "lat": 44.65871,
+   "minzoom": 10,
+   "tid": 116,
+   "region": "Республика Дагестан",
+   "area_km2": 91.7
+  },
+  {
+   "name": "городской округ город Канск",
+   "short": "Канск",
+   "lng": 95.71286,
+   "lat": 56.21528,
+   "minzoom": 10,
+   "tid": 674,
+   "region": "Красноярский край",
+   "area_km2": 91.8
+  },
+  {
+   "name": "городской округ город Белокуриха",
+   "short": "Белокуриха",
+   "lng": 85.01233,
+   "lat": 51.9675,
+   "minzoom": 10,
+   "tid": 506,
+   "region": "Алтайский край",
+   "area_km2": 92.31
+  },
+  {
+   "name": "городской округ город-курорт Железноводск",
+   "short": "город-курорт Железноводск",
+   "lng": 43.09257,
+   "lat": 44.11438,
+   "minzoom": 10,
+   "tid": 813,
+   "region": "Ставропольский край",
+   "area_km2": 93.13
+  },
+  {
+   "name": "городской округ Великий Новгород",
+   "short": "Великий Новгород",
+   "lng": 31.2809,
+   "lat": 58.56096,
+   "minzoom": 10,
+   "tid": 1575,
+   "region": "Новгородская область",
+   "area_km2": 93.7
+  },
+  {
+   "name": "городской округ Жигулевск",
+   "short": "Жигулевск",
+   "lng": 49.48266,
+   "lat": 53.41159,
+   "minzoom": 10,
+   "tid": 1875,
+   "region": "Самарская область",
+   "area_km2": 94.0
+  },
+  {
+   "name": "городской округ город Псков",
+   "short": "Псков",
+   "lng": 28.3654,
+   "lat": 57.81162,
+   "minzoom": 10,
+   "tid": 1764,
+   "region": "Псковская область",
+   "area_km2": 95.6
+  },
+  {
+   "name": "городской округ город Ржев",
+   "short": "Ржев",
+   "lng": 34.35496,
+   "lat": 56.26395,
+   "minzoom": 10,
+   "tid": 2106,
+   "region": "Тверская область",
+   "area_km2": 96.38
+  },
+  {
+   "name": "городской округ город Горно-Алтайск",
+   "short": "Горно-Алтайск",
+   "lng": 85.97887,
+   "lat": 51.92989,
+   "minzoom": 10,
+   "tid": 10,
+   "region": "Республика Алтай",
+   "area_km2": 96.6
+  },
+  {
+   "name": "городской округ город Губкинский",
+   "short": "Губкинский",
+   "lng": 76.37058,
+   "lat": 64.41984,
+   "minzoom": 10,
+   "tid": 2239,
+   "region": "Ямало-Ненецкий автономный округ",
+   "area_km2": 97.14
+  },
+  {
+   "name": "городской округ город Губкинский",
+   "short": "Губкинский",
+   "lng": 76.37058,
+   "lat": 64.41984,
+   "minzoom": 10,
+   "tid": 2879,
+   "region": "Ямало-Ненецкий автономный округ",
+   "area_km2": 97.14
+  },
+  {
+   "name": "городской округ Калтанский",
+   "short": "Калтанский",
+   "lng": 87.27015,
+   "lat": 53.48179,
+   "minzoom": 10,
+   "tid": 1228,
+   "region": "Кемеровская область",
+   "area_km2": 98.45
+  },
+  {
+   "name": "городской округ город Невинномысск",
+   "short": "Невинномысск",
+   "lng": 41.93489,
+   "lat": 44.64309,
+   "minzoom": 10,
+   "tid": 820,
+   "region": "Ставропольский край",
+   "area_km2": 98.71
+  },
+  {
+   "name": "городской округ город Октябрьский",
+   "short": "Октябрьский",
+   "lng": 53.50508,
+   "lat": 54.4941,
+   "minzoom": 10,
+   "tid": 26,
+   "region": "Республика Башкортостан",
+   "area_km2": 98.83
+  },
+  {
+   "name": "городской округ город Рыбинск",
+   "short": "Рыбинск",
+   "lng": 38.81901,
+   "lat": 58.06111,
+   "minzoom": 10,
+   "tid": 2320,
+   "region": "Ярославская область",
+   "area_km2": 99.54
+  },
+  {
+   "name": "городской округ город Йошкар-Ола",
+   "short": "Йошкар-Ола",
+   "lng": 47.88795,
+   "lat": 56.64711,
+   "minzoom": 10,
+   "tid": 269,
+   "region": "Республика Марий Эл",
+   "area_km2": 100.39
+  },
+  {
+   "name": "городской округ город Малгобек",
+   "short": "Малгобек",
+   "lng": 44.65021,
+   "lat": 43.52661,
+   "minzoom": 10,
+   "tid": 159,
+   "region": "Республика Ингушетия",
+   "area_km2": 100.79
+  },
+  {
+   "name": "городской округ рабочий поселок (поселок городского типа) Прогресс",
+   "short": "рабочий поселок (поселок городского типа) Прогресс",
+   "lng": 129.57925,
+   "lat": 49.77735,
+   "minzoom": 10,
+   "tid": 868,
+   "region": "Амурская область",
+   "area_km2": 101.46
+  },
+  {
+   "name": "городской округ ЗАТО Циолковский",
+   "short": "ЗАТО Циолковский",
+   "lng": 128.14987,
+   "lat": 51.78402,
+   "minzoom": 10,
+   "tid": 869,
+   "region": "Амурская область",
+   "area_km2": 102.37
+  },
+  {
+   "name": "городской округ город-курорт Пятигорск",
+   "short": "город-курорт Пятигорск",
+   "lng": 43.03637,
+   "lat": 44.03754,
+   "minzoom": 10,
+   "tid": 824,
+   "region": "Ставропольский край",
+   "area_km2": 103.73
+  },
+  {
+   "name": "городской округ Симферополь",
+   "short": "Симферополь",
+   "lng": 34.12818,
+   "lat": 44.98395,
+   "minzoom": 10,
+   "tid": 244,
+   "region": "Республика Крым",
+   "area_km2": 103.79
+  },
+  {
+   "name": "городской округ город Димитровград",
+   "short": "Димитровград",
+   "lng": 49.57116,
+   "lat": 54.2284,
+   "minzoom": 10,
+   "tid": 2252,
+   "region": "Ульяновская область",
+   "area_km2": 103.98
+  },
+  {
+   "name": "городской округ город Ачинск",
+   "short": "Ачинск",
+   "lng": 90.50153,
+   "lat": 56.26257,
+   "minzoom": 10,
+   "tid": 667,
+   "region": "Красноярский край",
+   "area_km2": 104.5
+  },
+  {
+   "name": "городской округ Кашира",
+   "short": "Кашира",
+   "lng": 38.25839,
+   "lat": 54.75102,
+   "minzoom": 10,
+   "tid": 1454,
+   "region": "Московская область",
+   "area_km2": 105.18
+  },
+  {
+   "name": "городской округ Мамоновский",
+   "short": "Мамоновский",
+   "lng": 19.9471,
+   "lat": 54.46712,
+   "minzoom": 10,
+   "tid": 1178,
+   "region": "Калининградская область",
+   "area_km2": 106.13
+  },
+  {
+   "name": "городской округ Иваново",
+   "short": "Иваново",
+   "lng": 40.96306,
+   "lat": 57.0088,
+   "minzoom": 10,
+   "tid": 1107,
+   "region": "Ивановская область",
+   "area_km2": 106.14
+  },
+  {
+   "name": "городской округ город Салават",
+   "short": "Салават",
+   "lng": 55.92284,
+   "lat": 53.38148,
+   "minzoom": 10,
+   "tid": 27,
+   "region": "Республика Башкортостан",
+   "area_km2": 106.23
+  },
+  {
+   "name": "городской округ Керчь",
+   "short": "Керчь",
+   "lng": 36.44399,
+   "lat": 45.30404,
+   "minzoom": 10,
+   "tid": 249,
+   "region": "Республика Крым",
+   "area_km2": 107.63
+  },
+  {
+   "name": "городской округ Кинель",
+   "short": "Кинель",
+   "lng": 50.60059,
+   "lat": 53.22767,
+   "minzoom": 10,
+   "tid": 1876,
+   "region": "Самарская область",
+   "area_km2": 108.76
+  },
+  {
+   "name": "городской округ город Стерлитамак",
+   "short": "Стерлитамак",
+   "lng": 55.94583,
+   "lat": 53.65607,
+   "minzoom": 10,
+   "tid": 29,
+   "region": "Республика Башкортостан",
+   "area_km2": 110.3
+  },
+  {
+   "name": "городской округ город Донецк",
+   "short": "Донецк",
+   "lng": 39.96419,
+   "lat": 48.31904,
+   "minzoom": 10,
+   "tid": 1795,
+   "region": "Ростовская область",
+   "area_km2": 110.34
+  },
+  {
+   "name": "городской округ город Северобайкальск",
+   "short": "Северобайкальск",
+   "lng": 109.28131,
+   "lat": 55.62463,
+   "minzoom": 10,
+   "tid": 85,
+   "region": "Республика Бурятия",
+   "area_km2": 110.5
+  },
+  {
+   "name": "городской округ Южноуральский",
+   "short": "Южноуральский",
+   "lng": 61.24745,
+   "lat": 54.4383,
+   "minzoom": 10,
+   "tid": 2289,
+   "region": "Челябинская область",
+   "area_km2": 110.57
+  },
+  {
+   "name": "городской округ город Абакан",
+   "short": "Абакан",
+   "lng": 91.39001,
+   "lat": 53.68757,
+   "minzoom": 10,
+   "tid": 448,
+   "region": "Республика Хакасия",
+   "area_km2": 112.77
+  },
+  {
+   "name": "городской округ Петрозаводский",
+   "short": "Петрозаводский",
+   "lng": 34.4506,
+   "lat": 61.78518,
+   "minzoom": 10,
+   "tid": 206,
+   "region": "Республика Карелия",
+   "area_km2": 113.26
+  },
+  {
+   "name": "городской округ город Железногорск",
+   "short": "Железногорск",
+   "lng": 35.42438,
+   "lat": 52.33142,
+   "minzoom": 10,
+   "tid": 1360,
+   "region": "Курская область",
+   "area_km2": 113.72
+  },
+  {
+   "name": "городской округ город Вологда",
+   "short": "Вологда",
+   "lng": 39.87224,
+   "lat": 59.22646,
+   "minzoom": 10,
+   "tid": 1045,
+   "region": "Вологодская область",
+   "area_km2": 116.6
+  },
+  {
+   "name": "городской округ город Белогорск",
+   "short": "Белогорск",
+   "lng": 128.47761,
+   "lat": 50.87921,
+   "minzoom": 10,
+   "tid": 862,
+   "region": "Амурская область",
+   "area_km2": 117.25
+  },
+  {
+   "name": "городской округ город Саяногорск",
+   "short": "Саяногорск",
+   "lng": 91.33841,
+   "lat": 53.19589,
+   "minzoom": 10,
+   "tid": 450,
+   "region": "Республика Хакасия",
+   "area_km2": 117.5
+  },
+  {
+   "name": "городской округ город Черногорск",
+   "short": "Черногорск",
+   "lng": 91.26892,
+   "lat": 53.85043,
+   "minzoom": 10,
+   "tid": 452,
+   "region": "Республика Хакасия",
+   "area_km2": 117.87
+  },
+  {
+   "name": "городской округ город Камышин",
+   "short": "Камышин",
+   "lng": 45.38449,
+   "lat": 50.06525,
+   "minzoom": 10,
+   "tid": 1009,
+   "region": "Волгоградская область",
+   "area_km2": 117.97
+  },
+  {
+   "name": "городской округ город Черемхово",
+   "short": "Черемхово",
+   "lng": 103.12111,
+   "lat": 53.13428,
+   "minzoom": 10,
+   "tid": 1142,
+   "region": "Иркутская область",
+   "area_km2": 118.6
+  },
+  {
+   "name": "городской округ город Воткинск",
+   "short": "Воткинск",
+   "lng": 53.96389,
+   "lat": 57.04813,
+   "minzoom": 10,
+   "tid": 419,
+   "region": "Удмуртская Республика",
+   "area_km2": 119.33
+  },
+  {
+   "name": "городской округ Ленинск-Кузнецкий",
+   "short": "Ленинск-Кузнецкий",
+   "lng": 86.19497,
+   "lat": 54.66287,
+   "minzoom": 10,
+   "tid": 1230,
+   "region": "Кемеровская область",
+   "area_km2": 119.44
+  },
+  {
+   "name": "городской округ Большой Камень",
+   "short": "Большой Камень",
+   "lng": 132.35975,
+   "lat": 43.10343,
+   "minzoom": 10,
+   "tid": 778,
+   "region": "Приморский край",
+   "area_km2": 119.82
+  },
+  {
+   "name": "городской округ город Орёл",
+   "short": "Орёл",
+   "lng": 36.0995,
+   "lat": 52.96802,
+   "minzoom": 10,
+   "tid": 1707,
+   "region": "Орловская область",
+   "area_km2": 121.21
+  },
+  {
+   "name": "городской округ Люберцы",
+   "short": "Люберцы",
+   "lng": 37.97373,
+   "lat": 55.64379,
+   "minzoom": 10,
+   "tid": 1465,
+   "region": "Московская область",
+   "area_km2": 122.05
+  },
+  {
+   "name": "городской округ Березовский",
+   "short": "Березовский",
+   "lng": 86.28652,
+   "lat": 55.6496,
+   "minzoom": 10,
+   "tid": 1227,
+   "region": "Кемеровская область",
+   "area_km2": 122.29
+  },
+  {
+   "name": "городской округ город Тында",
+   "short": "Тында",
+   "lng": 124.75001,
+   "lat": 55.17961,
+   "minzoom": 10,
+   "tid": 866,
+   "region": "Амурская область",
+   "area_km2": 124.3
+  },
+  {
+   "name": "городской округ город Новочеркасск",
+   "short": "Новочеркасск",
+   "lng": 40.08673,
+   "lat": 47.41975,
+   "minzoom": 10,
+   "tid": 1798,
+   "region": "Ростовская область",
+   "area_km2": 127.94
+  },
+  {
+   "name": "городской округ Красноуфимск",
+   "short": "Красноуфимск",
+   "lng": 57.74539,
+   "lat": 56.57541,
+   "minzoom": 10,
+   "tid": 1995,
+   "region": "Свердловская область",
+   "area_km2": 128.01
+  },
+  {
+   "name": "городской округ город Кунгур",
+   "short": "Кунгур",
+   "lng": 56.98943,
+   "lat": 57.39154,
+   "minzoom": 10,
+   "tid": 730,
+   "region": "Пермский край",
+   "area_km2": 128.52
+  },
+  {
+   "name": "городской округ город Тулун",
+   "short": "Тулун",
+   "lng": 100.58606,
+   "lat": 54.55836,
+   "minzoom": 10,
+   "tid": 1139,
+   "region": "Иркутская область",
+   "area_km2": 128.73
+  },
+  {
+   "name": "городской округ город Аргун",
+   "short": "Аргун",
+   "lng": 45.8048,
+   "lat": 43.25873,
+   "minzoom": 10,
+   "tid": 462,
+   "region": "Чеченская Республика",
+   "area_km2": 130.21
+  },
+  {
+   "name": "городской округ город Череповец",
+   "short": "Череповец",
+   "lng": 37.91247,
+   "lat": 59.12442,
+   "minzoom": 10,
+   "tid": 1046,
+   "region": "Вологодская область",
+   "area_km2": 130.89
+  },
+  {
+   "name": "городской округ Нальчик",
+   "short": "Нальчик",
+   "lng": 43.62239,
+   "lat": 43.46612,
+   "minzoom": 10,
+   "tid": 167,
+   "region": "Кабардино-Балкарская Республика",
+   "area_km2": 133.01
+  },
+  {
+   "name": "городской округ Электросталь",
+   "short": "Электросталь",
+   "lng": 38.42501,
+   "lat": 55.75017,
+   "minzoom": 10,
+   "tid": 1488,
+   "region": "Московская область",
+   "area_km2": 135.37
+  },
+  {
+   "name": "городской округ Сызрань",
+   "short": "Сызрань",
+   "lng": 48.39406,
+   "lat": 53.09579,
+   "minzoom": 10,
+   "tid": 1881,
+   "region": "Самарская область",
+   "area_km2": 136.18
+  },
+  {
+   "name": "городской округ город Новошахтинск",
+   "short": "Новошахтинск",
+   "lng": 39.89356,
+   "lat": 47.79627,
+   "minzoom": 10,
+   "tid": 1799,
+   "region": "Ростовская область",
+   "area_km2": 138.09
+  },
+  {
+   "name": "городской округ Троицкий",
+   "short": "Троицкий",
+   "lng": 61.54432,
+   "lat": 54.08431,
+   "minzoom": 10,
+   "tid": 2286,
+   "region": "Челябинская область",
+   "area_km2": 139.15
+  },
+  {
+   "name": "городской округ город Нефтеюганск",
+   "short": "Нефтеюганск",
+   "lng": 72.49067,
+   "lat": 61.06839,
+   "minzoom": 10,
+   "tid": 2220,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 140.96
+  },
+  {
+   "name": "городской округ город Каменск-Уральский",
+   "short": "Каменск-Уральский",
+   "lng": 61.93067,
+   "lat": 56.40987,
+   "minzoom": 10,
+   "tid": 1986,
+   "region": "Свердловская область",
+   "area_km2": 142.24
+  },
+  {
+   "name": "городской округ город Лабытнанги",
+   "short": "Лабытнанги",
+   "lng": 66.43472,
+   "lat": 66.68888,
+   "minzoom": 10,
+   "tid": 2240,
+   "region": "Ямало-Ненецкий автономный округ",
+   "area_km2": 147.17
+  },
+  {
+   "name": "городской округ город Лабытнанги",
+   "short": "Лабытнанги",
+   "lng": 66.43472,
+   "lat": 66.68888,
+   "minzoom": 10,
+   "tid": 2880,
+   "region": "Ямало-Ненецкий автономный округ",
+   "area_km2": 147.17
+  },
+  {
+   "name": "городской округ город Нефтекамск",
+   "short": "Нефтекамск",
+   "lng": 54.35995,
+   "lat": 56.20521,
+   "minzoom": 10,
+   "tid": 25,
+   "region": "Республика Башкортостан",
+   "area_km2": 147.25
+  },
+  {
+   "name": "городской округ город Кострома",
+   "short": "Кострома",
+   "lng": 40.96933,
+   "lat": 57.79649,
+   "minzoom": 10,
+   "tid": 1303,
+   "region": "Костромская область",
+   "area_km2": 149.17
+  },
+  {
+   "name": "городской округ Среднеуральск",
+   "short": "Среднеуральск",
+   "lng": 60.45958,
+   "lat": 56.98528,
+   "minzoom": 10,
+   "tid": 1980,
+   "region": "Свердловская область",
+   "area_km2": 151.7
+  },
+  {
+   "name": "городской округ город Тверь",
+   "short": "Тверь",
+   "lng": 35.89524,
+   "lat": 56.85967,
+   "minzoom": 10,
+   "tid": 2101,
+   "region": "Тверская область",
+   "area_km2": 152.39
+  },
+  {
+   "name": "городской округ город Сибай",
+   "short": "Сибай",
+   "lng": 58.67981,
+   "lat": 52.7151,
+   "minzoom": 10,
+   "tid": 28,
+   "region": "Республика Башкортостан",
+   "area_km2": 154.31
+  },
+  {
+   "name": "городской округ город Шахты",
+   "short": "Шахты",
+   "lng": 40.26104,
+   "lat": 47.73661,
+   "minzoom": 10,
+   "tid": 1801,
+   "region": "Ростовская область",
+   "area_km2": 159.08
+  },
+  {
+   "name": "городской округ город Каменск-Шахтинский",
+   "short": "Каменск-Шахтинский",
+   "lng": 40.23183,
+   "lat": 48.27552,
+   "minzoom": 10,
+   "tid": 1797,
+   "region": "Ростовская область",
+   "area_km2": 159.99
+  },
+  {
+   "name": "городской округ город Белгород",
+   "short": "Белгород",
+   "lng": 36.56379,
+   "lat": 50.58603,
+   "minzoom": 10,
+   "tid": 931,
+   "region": "Белгородская область",
+   "area_km2": 160.63
+  },
+  {
+   "name": "городской округ Армянск",
+   "short": "Армянск",
+   "lng": 33.73259,
+   "lat": 46.14608,
+   "minzoom": 10,
+   "tid": 246,
+   "region": "Республика Крым",
+   "area_km2": 162.42
+  },
+  {
+   "name": "городской округ Трехгорный",
+   "short": "Трехгорный",
+   "lng": 58.50553,
+   "lat": 54.78782,
+   "minzoom": 10,
+   "tid": 2285,
+   "region": "Челябинская область",
+   "area_km2": 162.49
+  },
+  {
+   "name": "городской округ город Назрань",
+   "short": "Назрань",
+   "lng": 44.73755,
+   "lat": 43.26596,
+   "minzoom": 10,
+   "tid": 160,
+   "region": "Республика Ингушетия",
+   "area_km2": 164.25
+  },
+  {
+   "name": "городской округ город Смоленск",
+   "short": "Смоленск",
+   "lng": 32.04718,
+   "lat": 54.77897,
+   "minzoom": 10,
+   "tid": 2044,
+   "region": "Смоленская область",
+   "area_km2": 166.35
+  },
+  {
+   "name": "городской округ город Мурманск",
+   "short": "Мурманск",
+   "lng": 33.11603,
+   "lat": 68.97182,
+   "minzoom": 10,
+   "tid": 1506,
+   "region": "Мурманская область",
+   "area_km2": 168.15
+  },
+  {
+   "name": "городской округ город Волгодонск",
+   "short": "Волгодонск",
+   "lng": 42.22789,
+   "lat": 47.54123,
+   "minzoom": 10,
+   "tid": 1793,
+   "region": "Ростовская область",
+   "area_km2": 168.82
+  },
+  {
+   "name": "городской округ город Радужный",
+   "short": "Радужный",
+   "lng": 77.32919,
+   "lat": 62.18354,
+   "minzoom": 10,
+   "tid": 2225,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 168.91
+  },
+  {
+   "name": "городской округ город Биробиджан",
+   "short": "Биробиджан",
+   "lng": 132.91242,
+   "lat": 48.79367,
+   "minzoom": 10,
+   "tid": 2338,
+   "region": "Еврейская автономная область",
+   "area_km2": 169.38
+  },
+  {
+   "name": "городской округ город Кумертау",
+   "short": "Кумертау",
+   "lng": 55.82133,
+   "lat": 52.78105,
+   "minzoom": 10,
+   "tid": 23,
+   "region": "Республика Башкортостан",
+   "area_km2": 169.6
+  },
+  {
+   "name": "городской округ город Набережные Челны",
+   "short": "Набережные Челны",
+   "lng": 52.43595,
+   "lat": 55.7128,
+   "minzoom": 10,
+   "tid": 355,
+   "region": "Республика Татарстан",
+   "area_km2": 171.03
+  },
+  {
+   "name": "городской округ город-курорт Кисловодск",
+   "short": "город-курорт Кисловодск",
+   "lng": 42.72609,
+   "lat": 43.88843,
+   "minzoom": 10,
+   "tid": 816,
+   "region": "Ставропольский край",
+   "area_km2": 172.94
+  },
+  {
+   "name": "городской округ город-курорт Кисловодск",
+   "short": "город-курорт Кисловодск",
+   "lng": 42.75062,
+   "lat": 43.88904,
+   "minzoom": 10,
+   "tid": 2876,
+   "region": "Ставропольский край",
+   "area_km2": 172.94
+  },
+  {
+   "name": "городской округ город Шадринск",
+   "short": "Шадринск",
+   "lng": 63.73746,
+   "lat": 56.1275,
+   "minzoom": 10,
+   "tid": 1334,
+   "region": "Курганская область",
+   "area_km2": 173.66
+  },
+  {
+   "name": "городской округ Балтийский",
+   "short": "Балтийский",
+   "lng": 19.87982,
+   "lat": 54.63105,
+   "minzoom": 10,
+   "tid": 1184,
+   "region": "Калининградская область",
+   "area_km2": 174.59
+  },
+  {
+   "name": "городской округ Баксан",
+   "short": "Баксан",
+   "lng": 43.54307,
+   "lat": 43.68765,
+   "minzoom": 10,
+   "tid": 168,
+   "region": "Кабардино-Балкарская Республика",
+   "area_km2": 180.12
+  },
+  {
+   "name": "городской округ Златоустовский",
+   "short": "Златоустовский",
+   "lng": 59.52927,
+   "lat": 55.03464,
+   "minzoom": 10,
+   "tid": 2277,
+   "region": "Челябинская область",
+   "area_km2": 186.45
+  },
+  {
+   "name": "городской округ Златоустовский",
+   "short": "Златоустовский",
+   "lng": 59.52927,
+   "lat": 55.03464,
+   "minzoom": 10,
+   "tid": 3011,
+   "region": "Челябинская область",
+   "area_km2": 186.45
+  },
+  {
+   "name": "городской округ город Брянск",
+   "short": "Брянск",
+   "lng": 34.36589,
+   "lat": 53.27896,
+   "minzoom": 10,
+   "tid": 953,
+   "region": "Брянская область",
+   "area_km2": 186.73
+  },
+  {
+   "name": "городской округ город Ноябрьск",
+   "short": "Ноябрьск",
+   "lng": 75.3467,
+   "lat": 63.11912,
+   "minzoom": 10,
+   "tid": 2243,
+   "region": "Ямало-Ненецкий автономный округ",
+   "area_km2": 189.0
+  },
+  {
+   "name": "городской округ город Курск",
+   "short": "Курск",
+   "lng": 36.19225,
+   "lat": 51.72704,
+   "minzoom": 10,
+   "tid": 1359,
+   "region": "Курская область",
+   "area_km2": 191.59
+  },
+  {
+   "name": "городской округ ЗАТО город Радужный",
+   "short": "ЗАТО город Радужный",
+   "lng": 40.3365,
+   "lat": 55.90298,
+   "minzoom": 10,
+   "tid": 990,
+   "region": "Владимирская область",
+   "area_km2": 200.61
+  },
+  {
+   "name": "городской округ Чапаевск",
+   "short": "Чапаевск",
+   "lng": 49.87029,
+   "lat": 52.92678,
+   "minzoom": 10,
+   "tid": 1883,
+   "region": "Самарская область",
+   "area_km2": 200.95
+  },
+  {
+   "name": "городской округ Ленинский",
+   "short": "Ленинский",
+   "lng": 37.76363,
+   "lat": 55.55427,
+   "minzoom": 10,
+   "tid": 1493,
+   "region": "Московская область",
+   "area_km2": 202.82
+  },
+  {
+   "name": "городской округ город Когалым",
+   "short": "Когалым",
+   "lng": 74.48948,
+   "lat": 62.28664,
+   "minzoom": 10,
+   "tid": 2217,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 207.0
+  },
+  {
+   "name": "городской округ город Астрахань",
+   "short": "Астрахань",
+   "lng": 48.05522,
+   "lat": 46.36525,
+   "minzoom": 10,
+   "tid": 918,
+   "region": "Астраханская область",
+   "area_km2": 208.69
+  },
+  {
+   "name": "городской округ город Стрежевой",
+   "short": "Стрежевой",
+   "lng": 77.59406,
+   "lat": 60.75061,
+   "minzoom": 10,
+   "tid": 2146,
+   "region": "Томская область",
+   "area_km2": 212.97
+  },
+  {
+   "name": "городской округ город Ярославль",
+   "short": "Ярославль",
+   "lng": 39.87186,
+   "lat": 57.65084,
+   "minzoom": 10,
+   "tid": 2318,
+   "region": "Ярославская область",
+   "area_km2": 214.53
+  },
+  {
+   "name": "городской округ город Усть-Илимск",
+   "short": "Усть-Илимск",
+   "lng": 102.72996,
+   "lat": 58.00831,
+   "minzoom": 10,
+   "tid": 1141,
+   "region": "Иркутская область",
+   "area_km2": 215.34
+  },
+  {
+   "name": "городской округ город Тамбов",
+   "short": "Тамбов",
+   "lng": 41.43458,
+   "lat": 52.73377,
+   "minzoom": 10,
+   "tid": 2071,
+   "region": "Тамбовская область",
+   "area_km2": 219.81
+  },
+  {
+   "name": "городской округ город Тамбов",
+   "short": "Тамбов",
+   "lng": 41.42806,
+   "lat": 52.69305,
+   "minzoom": 10,
+   "tid": 3009,
+   "region": "Тамбовская область",
+   "area_km2": 219.81
+  },
+  {
+   "name": "городской округ Беловский",
+   "short": "Беловский",
+   "lng": 86.32451,
+   "lat": 54.38563,
+   "minzoom": 10,
+   "tid": 1226,
+   "region": "Кемеровская область",
+   "area_km2": 220.15
+  },
+  {
+   "name": "городской округ ЗАТО город Межгорье",
+   "short": "ЗАТО город Межгорье",
+   "lng": 57.85172,
+   "lat": 54.14137,
+   "minzoom": 10,
+   "tid": 24,
+   "region": "Республика Башкортостан",
+   "area_km2": 220.78
+  },
+  {
+   "name": "городской округ город Рязань",
+   "short": "Рязань",
+   "lng": 39.68844,
+   "lat": 54.67025,
+   "minzoom": 10,
+   "tid": 1845,
+   "region": "Рязанская область",
+   "area_km2": 221.84
+  },
+  {
+   "name": "городской округ город Калининград",
+   "short": "Калининград",
+   "lng": 20.45657,
+   "lat": 54.70465,
+   "minzoom": 10,
+   "tid": 1176,
+   "region": "Калининградская область",
+   "area_km2": 224.58
+  },
+  {
+   "name": "городской округ город Райчихинск",
+   "short": "Райчихинск",
+   "lng": 129.44301,
+   "lat": 49.7739,
+   "minzoom": 10,
+   "tid": 864,
+   "region": "Амурская область",
+   "area_km2": 224.77
+  },
+  {
+   "name": "городской округ город Свободный",
+   "short": "Свободный",
+   "lng": 128.10499,
+   "lat": 51.37885,
+   "minzoom": 10,
+   "tid": 865,
+   "region": "Амурская область",
+   "area_km2": 224.82
+  },
+  {
+   "name": "городской округ Прокопьевский",
+   "short": "Прокопьевский",
+   "lng": 86.71847,
+   "lat": 53.85924,
+   "minzoom": 10,
+   "tid": 1236,
+   "region": "Кемеровская область",
+   "area_km2": 225.2
+  },
+  {
+   "name": "городской округ Краснобродский",
+   "short": "Краснобродский",
+   "lng": 86.44045,
+   "lat": 54.15553,
+   "minzoom": 10,
+   "tid": 1239,
+   "region": "Кемеровская область",
+   "area_km2": 225.85
+  },
+  {
+   "name": "городской округ Красногорск",
+   "short": "Красногорск",
+   "lng": 37.25048,
+   "lat": 55.82475,
+   "minzoom": 10,
+   "tid": 1459,
+   "region": "Московская область",
+   "area_km2": 226.54
+  },
+  {
+   "name": "городской округ город Волжский",
+   "short": "Волжский",
+   "lng": 44.76546,
+   "lat": 48.82999,
+   "minzoom": 10,
+   "tid": 1008,
+   "region": "Волгоградская область",
+   "area_km2": 229.12
+  },
+  {
+   "name": "городской округ Верхняя Тура",
+   "short": "Верхняя Тура",
+   "lng": 59.66656,
+   "lat": 58.39989,
+   "minzoom": 10,
+   "tid": 1997,
+   "region": "Свердловская область",
+   "area_km2": 236.43
+  },
+  {
+   "name": "городской округ город Тобольск",
+   "short": "Тобольск",
+   "lng": 68.36961,
+   "lat": 58.21071,
+   "minzoom": 10,
+   "tid": 2193,
+   "region": "Тюменская область",
+   "area_km2": 239.21
+  },
+  {
+   "name": "городской округ Балашиха",
+   "short": "Балашиха",
+   "lng": 37.95306,
+   "lat": 55.78809,
+   "minzoom": 10,
+   "tid": 1439,
+   "region": "Московская область",
+   "area_km2": 243.98
+  },
+  {
+   "name": "городской округ город Кызыл",
+   "short": "Кызыл",
+   "lng": 94.43867,
+   "lat": 51.70263,
+   "minzoom": 10,
+   "tid": 399,
+   "region": "Республика Тыва",
+   "area_km2": 244.49
+  },
+  {
+   "name": "городской округ ЗАТО город Саров",
+   "short": "ЗАТО город Саров",
+   "lng": 43.34666,
+   "lat": 54.89118,
+   "minzoom": 10,
+   "tid": 1531,
+   "region": "Нижегородская область",
+   "area_km2": 249.36
+  },
+  {
+   "name": "городской округ город Сунжа",
+   "short": "Сунжа",
+   "lng": 45.06614,
+   "lat": 43.37351,
+   "minzoom": 10,
+   "tid": 162,
+   "region": "Республика Ингушетия",
+   "area_km2": 249.57
+  },
+  {
+   "name": "городской округ город Чебоксары",
+   "short": "Чебоксары",
+   "lng": 47.26582,
+   "lat": 56.17552,
+   "minzoom": 10,
+   "tid": 478,
+   "region": "Чувашская Республика",
+   "area_km2": 252.76
+  },
+  {
+   "name": "городской округ город Новоульяновск",
+   "short": "Новоульяновск",
+   "lng": 48.45751,
+   "lat": 54.14694,
+   "minzoom": 10,
+   "tid": 2253,
+   "region": "Ульяновская область",
+   "area_km2": 253.67
+  },
+  {
+   "name": "городской округ Химки",
+   "short": "Химки",
+   "lng": 37.44806,
+   "lat": 55.93374,
+   "minzoom": 10,
+   "tid": 1482,
+   "region": "Московская область",
+   "area_km2": 257.77
+  },
+  {
+   "name": "городской округ Химки",
+   "short": "Химки",
+   "lng": 37.36799,
+   "lat": 55.97587,
+   "minzoom": 10,
+   "tid": 3008,
+   "region": "Московская область",
+   "area_km2": 257.77
+  },
+  {
+   "name": "городской округ Новокуйбышевск",
+   "short": "Новокуйбышевск",
+   "lng": 49.73678,
+   "lat": 53.06159,
+   "minzoom": 10,
+   "tid": 1877,
+   "region": "Самарская область",
+   "area_km2": 263.25
+  },
+  {
+   "name": "городской округ город Лесосибирск",
+   "short": "Лесосибирск",
+   "lng": 92.40207,
+   "lat": 58.21202,
+   "minzoom": 10,
+   "tid": 675,
+   "region": "Красноярский край",
+   "area_km2": 270.83
+  },
+  {
+   "name": "городской округ город Нижневартовск",
+   "short": "Нижневартовск",
+   "lng": 76.59268,
+   "lat": 60.94993,
+   "minzoom": 10,
+   "tid": 2221,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 271.32
+  },
+  {
+   "name": "городской округ город Иркутск",
+   "short": "Иркутск",
+   "lng": 104.33328,
+   "lat": 52.31307,
+   "minzoom": 10,
+   "tid": 1134,
+   "region": "Иркутская область",
+   "area_km2": 277.35
+  },
+  {
+   "name": "городской округ ЗАТО Свободный",
+   "short": "ЗАТО Свободный",
+   "lng": 60.50473,
+   "lat": 58.13696,
+   "minzoom": 10,
+   "tid": 2013,
+   "region": "Свердловская область",
+   "area_km2": 279.4
+  },
+  {
+   "name": "городской округ Красноармейск",
+   "short": "Красноармейск",
+   "lng": 38.26682,
+   "lat": 56.17431,
+   "minzoom": 10,
+   "tid": 1458,
+   "region": "Московская область",
+   "area_km2": 280.32
+  },
+  {
+   "name": "городской округ город Ставрополь",
+   "short": "Ставрополь",
+   "lng": 41.98485,
+   "lat": 45.04078,
+   "minzoom": 10,
+   "tid": 809,
+   "region": "Ставропольский край",
+   "area_km2": 282.01
+  },
+  {
+   "name": "городской округ город Майкоп",
+   "short": "Майкоп",
+   "lng": 39.98504,
+   "lat": 44.67687,
+   "minzoom": 10,
+   "tid": 1,
+   "region": "Республика Адыгея",
+   "area_km2": 283.58
+  },
+  {
+   "name": "городской округ Ялта",
+   "short": "Ялта",
+   "lng": 34.15287,
+   "lat": 44.50337,
+   "minzoom": 10,
+   "tid": 254,
+   "region": "Республика Крым",
+   "area_km2": 284.09
+  },
+  {
+   "name": "городской округ Тольятти",
+   "short": "Тольятти",
+   "lng": 49.37476,
+   "lat": 53.52185,
+   "minzoom": 10,
+   "tid": 1882,
+   "region": "Самарская область",
+   "area_km2": 284.33
+  },
+  {
+   "name": "городской округ Соликамский",
+   "short": "Соликамский",
+   "lng": 56.73747,
+   "lat": 59.65084,
+   "minzoom": 10,
+   "tid": 732,
+   "region": "Пермский край",
+   "area_km2": 285.07
+  },
+  {
+   "name": "городской округ город Армавир",
+   "short": "Армавир",
+   "lng": 41.09108,
+   "lat": 44.91991,
+   "minzoom": 10,
+   "tid": 624,
+   "region": "Краснодарский край",
+   "area_km2": 285.67
+  },
+  {
+   "name": "городской округ город Пенза",
+   "short": "Пенза",
+   "lng": 45.00674,
+   "lat": 53.19378,
+   "minzoom": 10,
+   "tid": 1734,
+   "region": "Пензенская область",
+   "area_km2": 290.38
+  },
+  {
+   "name": "городской округ ЗАТО город Зеленогорск",
+   "short": "ЗАТО город Зеленогорск",
+   "lng": 94.56759,
+   "lat": 56.10495,
+   "minzoom": 10,
+   "tid": 673,
+   "region": "Красноярский край",
+   "area_km2": 290.67
+  },
+  {
+   "name": "городской округ город Владикавказ",
+   "short": "Владикавказ",
+   "lng": 44.63488,
+   "lat": 42.92885,
+   "minzoom": 10,
+   "tid": 345,
+   "region": "Республика Северная Осетия — Алания",
+   "area_km2": 291.03
+  },
+  {
+   "name": "городской округ город Бийск",
+   "short": "Бийск",
+   "lng": 85.04197,
+   "lat": 52.51065,
+   "minzoom": 10,
+   "tid": 507,
+   "region": "Алтайский край",
+   "area_km2": 291.67
+  },
+  {
+   "name": "городской округ Киселевский",
+   "short": "Киселевский",
+   "lng": 86.63468,
+   "lat": 54.02699,
+   "minzoom": 10,
+   "tid": 1229,
+   "region": "Кемеровская область",
+   "area_km2": 292.0
+  },
+  {
+   "name": "городской округ город Архангельск",
+   "short": "Архангельск",
+   "lng": 40.53208,
+   "lat": 64.58527,
+   "minzoom": 10,
+   "tid": 890,
+   "region": "Архангельская область",
+   "area_km2": 294.42
+  },
+  {
+   "name": "городской округ город Томск",
+   "short": "Томск",
+   "lng": 85.01274,
+   "lat": 56.52572,
+   "minzoom": 10,
+   "tid": 2144,
+   "region": "Томская область",
+   "area_km2": 295.1
+  },
+  {
+   "name": "городской округ ЗАТО Фокино",
+   "short": "ЗАТО Фокино",
+   "lng": 132.4836,
+   "lat": 42.94396,
+   "minzoom": 10,
+   "tid": 786,
+   "region": "Приморский край",
+   "area_km2": 295.83
+  },
+  {
+   "name": "городской округ Дальнереченский",
+   "short": "Дальнереченский",
+   "lng": 133.64094,
+   "lat": 45.86829,
+   "minzoom": 10,
+   "tid": 780,
+   "region": "Приморский край",
+   "area_km2": 298.92
+  },
+  {
+   "name": "городской округ город Ижевск",
+   "short": "Ижевск",
+   "lng": 53.19773,
+   "lat": 56.86052,
+   "minzoom": 10,
+   "tid": 418,
+   "region": "Удмуртская Республика",
+   "area_km2": 315.15
+  },
+  {
+   "name": "городской округ город Югорск",
+   "short": "Югорск",
+   "lng": 63.26033,
+   "lat": 61.30095,
+   "minzoom": 10,
+   "tid": 2228,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 323.8
+  },
+  {
+   "name": "городской округ город Комсомольск-на-Амуре",
+   "short": "Комсомольск-на-Амуре",
+   "lng": 136.99951,
+   "lat": 50.5618,
+   "minzoom": 10,
+   "tid": 843,
+   "region": "Хабаровский край",
+   "area_km2": 325.1
+  },
+  {
+   "name": "городской округ город Петровск-Забайкальский",
+   "short": "Петровск-Забайкальский",
+   "lng": 108.86872,
+   "lat": 51.31662,
+   "minzoom": 10,
+   "tid": 574,
+   "region": "Забайкальский край",
+   "area_km2": 326.84
+  },
+  {
+   "name": "городской округ Кемеровский",
+   "short": "Кемеровский",
+   "lng": 86.06041,
+   "lat": 55.40074,
+   "minzoom": 10,
+   "tid": 1224,
+   "region": "Кемеровская область",
+   "area_km2": 329.25
+  },
+  {
+   "name": "городской округ город Владимир",
+   "short": "Владимир",
+   "lng": 40.43795,
+   "lat": 56.13685,
+   "minzoom": 10,
+   "tid": 986,
+   "region": "Владимирская область",
+   "area_km2": 329.67
+  },
+  {
+   "name": "городской округ город Липецк",
+   "short": "Липецк",
+   "lng": 39.55849,
+   "lat": 52.60304,
+   "minzoom": 10,
+   "tid": 1410,
+   "region": "Липецкая область",
+   "area_km2": 333.56
+  },
+  {
+   "name": "городской округ город Ханты-Мансийск",
+   "short": "Ханты-Мансийск",
+   "lng": 69.15607,
+   "lat": 61.01493,
+   "minzoom": 10,
+   "tid": 2216,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 337.76
+  },
+  {
+   "name": "городской округ город Новый Уренгой",
+   "short": "Новый Уренгой",
+   "lng": 78.08098,
+   "lat": 66.02897,
+   "minzoom": 10,
+   "tid": 2242,
+   "region": "Ямало-Ненецкий автономный округ",
+   "area_km2": 338.39
+  },
+  {
+   "name": "городской округ Подольск",
+   "short": "Подольск",
+   "lng": 37.53981,
+   "lat": 55.39041,
+   "minzoom": 10,
+   "tid": 1472,
+   "region": "Московская область",
+   "area_km2": 339.12
+  },
+  {
+   "name": "городской округ Вилючинский ЗАТО",
+   "short": "Вилючинский ЗАТО",
+   "lng": 158.4662,
+   "lat": 52.91442,
+   "minzoom": 10,
+   "tid": 609,
+   "region": "Камчатский край",
+   "area_km2": 341.25
+  },
+  {
+   "name": "городской округ город Ростов-на-Дону",
+   "short": "Ростов-на-Дону",
+   "lng": 39.72491,
+   "lat": 47.26104,
+   "minzoom": 10,
+   "tid": 1790,
+   "region": "Ростовская область",
+   "area_km2": 348.5
+  },
+  {
+   "name": "городской округ Феодосия",
+   "short": "Феодосия",
+   "lng": 35.31117,
+   "lat": 45.03312,
+   "minzoom": 10,
+   "tid": 253,
+   "region": "Республика Крым",
+   "area_km2": 350.42
+  },
+  {
+   "name": "городской округ Дегтярск",
+   "short": "Дегтярск",
+   "lng": 60.11077,
+   "lat": 56.71696,
+   "minzoom": 10,
+   "tid": 2007,
+   "region": "Свердловская область",
+   "area_km2": 351.25
+  },
+  {
+   "name": "городской округ город Новотроицк",
+   "short": "Новотроицк",
+   "lng": 58.29502,
+   "lat": 51.19733,
+   "minzoom": 10,
+   "tid": 1672,
+   "region": "Оренбургская область",
+   "area_km2": 352.34
+  },
+  {
+   "name": "городской округ город Сургут",
+   "short": "Сургут",
+   "lng": 73.46698,
+   "lat": 61.30216,
+   "minzoom": 10,
+   "tid": 2226,
+   "region": "Ханты-Мансийский автономный округ — Югра",
+   "area_km2": 353.98
+  },
+  {
+   "name": "городской округ ЗАТО Александровск",
+   "short": "ЗАТО Александровск",
+   "lng": 33.2959,
+   "lat": 69.29256,
+   "minzoom": 10,
+   "tid": 1513,
+   "region": "Мурманская область",
+   "area_km2": 353.99
+  },
+  {
+   "name": "городской округ город Благовещенск",
+   "short": "Благовещенск",
+   "lng": 127.64484,
+   "lat": 50.38788,
+   "minzoom": 10,
+   "tid": 861,
+   "region": "Амурская область",
+   "area_km2": 354.26
+  },
+  {
+   "name": "городской округ Копейский",
+   "short": "Копейский",
+   "lng": 61.57138,
+   "lat": 55.071,
+   "minzoom": 10,
+   "tid": 2279,
+   "region": "Челябинская область",
+   "area_km2": 355.61
+  },
+  {
+   "name": "городской округ город Медногорск",
+   "short": "Медногорск",
+   "lng": 57.62804,
+   "lat": 51.39394,
+   "minzoom": 10,
+   "tid": 1671,
+   "region": "Оренбургская область",
+   "area_km2": 355.66
+  },
+  {
+   "name": "городской округ город Лесной",
+   "short": "Лесной",
+   "lng": 59.6755,
+   "lat": 58.63519,
+   "minzoom": 10,
+   "tid": 1998,
+   "region": "Свердловская область",
+   "area_km2": 359.38
+  },
+  {
+   "name": "городской округ Находкинский",
+   "short": "Находкинский",
+   "lng": 132.65354,
+   "lat": 42.91041,
+   "minzoom": 10,
+   "tid": 782,
+   "region": "Приморский край",
+   "area_km2": 360.41
+  },
+  {
+   "name": "городской округ Петропавловск-Камчатский",
+   "short": "Петропавловск-Камчатский",
+   "lng": 158.76393,
+   "lat": 53.00586,
+   "minzoom": 10,
+   "tid": 608,
+   "region": "Камчатский край",
+   "area_km2": 360.63
+  },
+  {
+   "name": "городской округ город Грозный",
+   "short": "Грозный",
+   "lng": 45.69779,
+   "lat": 43.292,
+   "minzoom": 10,
+   "tid": 461,
+   "region": "Чеченская Республика",
+   "area_km2": 360.78
+  },
+  {
+   "name": "городской округ город Улан-Удэ",
+   "short": "Улан-Удэ",
+   "lng": 107.64292,
+   "lat": 51.86564,
+   "minzoom": 10,
+   "tid": 84,
+   "region": "Республика Бурятия",
+   "area_km2": 365.62
+  },
+  {
+   "name": "городской округ Анжеро-Судженский",
+   "short": "Анжеро-Судженский",
+   "lng": 86.05679,
+   "lat": 56.03301,
+   "minzoom": 10,
+   "tid": 1225,
+   "region": "Кемеровская область",
+   "area_km2": 366.4
+  },
+  {
+   "name": "городской округ Снежинский",
+   "short": "Снежинский",
+   "lng": 60.62219,
+   "lat": 56.12841,
+   "minzoom": 10,
+   "tid": 2284,
+   "region": "Челябинская область",
+   "area_km2": 374.0
+  },
+  {
+   "name": "городской округ город Оренбург",
+   "short": "Оренбург",
+   "lng": 54.42348,
+   "lat": 51.55319,
+   "minzoom": 10,
+   "tid": 1665,
+   "region": "Оренбургская область",
+   "area_km2": 375.43
+  },
+  {
+   "name": "городской округ город Красноярск",
+   "short": "Красноярск",
+   "lng": 92.88294,
+   "lat": 56.02279,
+   "minzoom": 10,
+   "tid": 666,
+   "region": "Красноярский край",
+   "area_km2": 379.46
+  },
+  {
+   "name": "городской округ Саранск",
+   "short": "Саранск",
+   "lng": 45.26791,
+   "lat": 54.12713,
+   "minzoom": 10,
+   "tid": 286,
+   "region": "Республика Мордовия",
+   "area_km2": 383.27
+  },
+  {
+   "name": "городской округ город Хабаровск",
+   "short": "Хабаровск",
+   "lng": 135.06036,
+   "lat": 48.46491,
+   "minzoom": 10,
+   "tid": 842,
+   "region": "Хабаровский край",
+   "area_km2": 388.17
+  },
+  {
+   "name": "городской округ ЗАТО Озерный",
+   "short": "ЗАТО Озерный",
+   "lng": 33.74169,
+   "lat": 57.73624,
+   "minzoom": 10,
+   "tid": 2104,
+   "region": "Тверская область",
+   "area_km2": 390.81
+  },
+  {
+   "name": "городской округ город Курган",
+   "short": "Курган",
+   "lng": 65.38522,
+   "lat": 55.41285,
+   "minzoom": 10,
+   "tid": 1333,
+   "region": "Курганская область",
+   "area_km2": 393.03
+  },
+  {
+   "name": "городской округ Магнитогорский",
+   "short": "Магнитогорский",
+   "lng": 59.05073,
+   "lat": 53.42569,
+   "minzoom": 10,
+   "tid": 2281,
+   "region": "Челябинская область",
+   "area_km2": 394.69
+  },
+  {
+   "name": "городской округ город Элиста",
+   "short": "Элиста",
+   "lng": 44.2417,
+   "lat": 46.31281,
+   "minzoom": 10,
+   "tid": 180,
+   "region": "Республика Калмыкия",
+   "area_km2": 396.57
+  },
+  {
+   "name": "городской округ город Нижний Новгород",
+   "short": "Нижний Новгород",
+   "lng": 43.9213,
+   "lat": 56.27693,
+   "minzoom": 10,
+   "tid": 1523,
+   "region": "Нижегородская область",
+   "area_km2": 410.68
+  },
+  {
+   "name": "городской округ город Дзержинск",
+   "short": "Дзержинск",
+   "lng": 43.5522,
+   "lat": 56.28219,
+   "minzoom": 10,
+   "tid": 1527,
+   "region": "Нижегородская область",
+   "area_km2": 421.53
+  },
+  {
+   "name": "городской округ Новоуральский",
+   "short": "Новоуральский",
+   "lng": 59.94814,
+   "lat": 57.16541,
+   "minzoom": 10,
+   "tid": 2003,
+   "region": "Свердловская область",
+   "area_km2": 422.24
+  },
+  {
+   "name": "городской округ Новокузнецкий",
+   "short": "Новокузнецкий",
+   "lng": 87.21439,
+   "lat": 53.79443,
+   "minzoom": 10,
+   "tid": 1233,
+   "region": "Кемеровская область",
+   "area_km2": 424.27
+  },
+  {
+   "name": "городской округ Мытищи",
+   "short": "Мытищи",
+   "lng": 37.65399,
+   "lat": 56.01074,
+   "minzoom": 10,
+   "tid": 1467,
+   "region": "Московская область",
+   "area_km2": 430.6
+  },
+  {
+   "name": "городской округ город Братск",
+   "short": "Братск",
+   "lng": 101.62702,
+   "lat": 56.18039,
+   "minzoom": 10,
+   "tid": 1136,
+   "region": "Иркутская область",
+   "area_km2": 432.41
+  },
+  {
+   "name": "городской округ ЗАТО город Островной",
+   "short": "ЗАТО город Островной",
+   "lng": 39.63386,
+   "lat": 68.04584,
+   "minzoom": 10,
+   "tid": 1516,
+   "region": "Мурманская область",
+   "area_km2": 462.94
+  },
+  {
+   "name": "городской округ ЗАТО Северск",
+   "short": "ЗАТО Северск",
+   "lng": 84.78153,
+   "lat": 56.75755,
+   "minzoom": 10,
+   "tid": 2147,
+   "region": "Томская область",
+   "area_km2": 485.65
+  },
+  {
+   "name": "городской округ ЗАТО город Североморск",
+   "short": "ЗАТО город Североморск",
+   "lng": 33.56561,
+   "lat": 68.98282,
+   "minzoom": 10,
+   "tid": 1517,
+   "region": "Мурманская область",
+   "area_km2": 494.04
+  }
+ ],
+ "place_name_rule": {
+  "prefixes": [
+   "городской округ город ",
+   "городской округ ",
+   "муниципальный район ",
+   "городское поселение ",
+   "сельское поселение "
+  ],
+  "minzoom": 10
+ },
+ "counts": {
+  "regions": 85,
+  "places": 384,
+  "regions_where_weighted_centroid_missed_own_land": 31
+ },
+ "labels_by_zoom": {
+  "3": 9,
+  "4": 34,
+  "5": 74,
+  "6": 81,
+  "7": 84,
+  "8": 85,
+  "9": 85,
+  "10": 469,
+  "11": 469,
+  "12": 469
+ }
+}

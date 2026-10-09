@@ -1,0 +1,11 @@
+{
+ "generated_by": "inline at stage 1 from committed artifacts only",
+ "what_this_is": "Per-district spending-amount quintiles beside the shipped k=5 cluster and the preserved k=3 money-in partition.",
+ "role": "data for a recolored comparison view; no color is hand-picked, the ramp is the quintile of the district's own monthly spending",
+ "rows": 2016,
+ "amount_column": "total_mean_rub",
+ "quintiles": 5,
+ "rendering_note": "the map surface that draws it is the second goal's work",
+ "moved_between_partitions": 0.8775,
+ "moved_rule": "share of districts whose cluster differs between the shipped k=5 partition and the preserved money-in k=3 partition"
+}

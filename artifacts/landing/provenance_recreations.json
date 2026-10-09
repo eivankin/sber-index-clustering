@@ -1,0 +1,86 @@
+{
+ "generated_by": "scripts/build_provenance_recreations.py",
+ "what_this_is": "Recreations of land cover for three named districts, drawn from per-district class confidences in the added-layer table, each labelled as a re-drawing of a table rather than an observation.",
+ "recreations_exist_because": "Real crops were exported from the asset for these same districts, so these are not a substitute for missing evidence. They show the numeric class confidences the panel reads, and they stand in as the labelled example whenever a crop cannot be fetched.",
+ "never_presented_as_observation": true,
+ "records": [
+  {
+   "tid": 2518,
+   "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+   "cluster": 2,
+   "why_chosen": "the most built-up district of the urbanised cluster",
+   "kind": "recreation from tabular values, not an observation",
+   "source_artifact": "data/processed/covariates_added.parquet",
+   "fields_used": [
+    "dw_bare@2023",
+    "dw_built@2023",
+    "dw_crops@2023",
+    "dw_grass@2023",
+    "dw_trees@2023"
+   ],
+   "classified_pixels": 794,
+   "shares_2023": [
+    0.0718,
+    0.0451,
+    0.2729,
+    0.1013,
+    0.1474
+   ],
+   "signature_value": 0.6216,
+   "committed_file": "artifacts/landing/provenance/recreation_2518.png",
+   "committed_bytes": 19400
+  },
+  {
+   "tid": 2208,
+   "district": "Сорокинский муниципальный район",
+   "cluster": 3,
+   "why_chosen": "the most burnt district of the fire-affected cluster",
+   "kind": "recreation from tabular values, not an observation",
+   "source_artifact": "data/processed/covariates_added.parquet",
+   "fields_used": [
+    "dw_bare@2023",
+    "dw_built@2023",
+    "dw_crops@2023",
+    "dw_grass@2023",
+    "dw_trees@2023"
+   ],
+   "classified_pixels": 2615,
+   "shares_2023": [
+    0.0717,
+    0.0475,
+    0.2052,
+    0.0865,
+    0.1741
+   ],
+   "signature_value": 44.1492,
+   "committed_file": "artifacts/landing/provenance/recreation_2208.png",
+   "committed_bytes": 18995
+  },
+  {
+   "tid": 2000,
+   "district": "городской округ город Нижний Тагил",
+   "cluster": 4,
+   "why_chosen": "the most forested district of the forest-interior cluster",
+   "kind": "recreation from tabular values, not an observation",
+   "source_artifact": "data/processed/covariates_added.parquet",
+   "fields_used": [
+    "dw_bare@2023",
+    "dw_built@2023",
+    "dw_crops@2023",
+    "dw_grass@2023",
+    "dw_trees@2023"
+   ],
+   "classified_pixels": 15043,
+   "shares_2023": [
+    0.0502,
+    0.0433,
+    0.039,
+    0.0544,
+    0.4792
+   ],
+   "signature_value": 0.5143,
+   "committed_file": "artifacts/landing/provenance/recreation_2000.png",
+   "committed_bytes": 16715
+  }
+ ]
+}

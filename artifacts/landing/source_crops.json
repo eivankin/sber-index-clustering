@@ -1,0 +1,1795 @@
+{
+  "generated_by": "scripts/export_source_crops.py",
+  "what_this_is": "source crops for three named districts, each drawn with the municipal boundary from the committed master geometry",
+  "scale_m": 500,
+  "windows_shared_by_all_sources": true,
+  "boundary_source": "data/processed/territory_master.parquet, column geometry (well-known binary, EPSG:4326)",
+  "outside_the_boundary_is_dimmed": true,
+  "grid_cell_pixels": 10,
+  "grid_cell_km": 5.0,
+  "grid_is_a_second_committed_image": "the browser switches files; it draws nothing",
+  "never_names_the_granting_project": true,
+  "cache_location": "gee-cache",
+  "cache_inside_the_repository": false,
+  "records": [
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "dynamic_world",
+      "source_label": "земля по классам",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "meaning": "каждый пиксель - класс земли с наибольшей уверенностью: деревья, травы, пашня, застройка, открытая земля",
+      "asset_year": "2023",
+      "asset_leaf": "dw_mean_2023_500m",
+      "region_bbox": [
+        58.4573,
+        57.2373,
+        60.4214,
+        58.3171
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "stats": {
+        "valid_share": 1.0,
+        "min": null,
+        "max": null
+      },
+      "scale_basis": "класс земли - категория, а не уровень",
+      "kind": "rebuilt from cache",
+      "cache_path": "gee-cache/crop_2000_2023_1964x1080_500m.tif",
+      "payload_sha256": "e6f8b14b615bf2141ed3669a579f0a69530b7c3df3f50eaa716d88bb1ebc0a89",
+      "committed_file": "artifacts/landing/provenance/crop_2000_dw_2023.png",
+      "committed_bytes": 18984,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_dw_2023_plain.png",
+      "committed_bytes_plain": 16467,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "dynamic_world",
+      "source_label": "земля по классам",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "meaning": "каждый пиксель - класс земли с наибольшей уверенностью: деревья, травы, пашня, застройка, открытая земля",
+      "asset_year": "2024",
+      "asset_leaf": "dw_mean_2024_500m",
+      "region_bbox": [
+        58.4573,
+        57.2373,
+        60.4214,
+        58.3171
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "stats": {
+        "valid_share": 1.0,
+        "min": null,
+        "max": null
+      },
+      "scale_basis": "класс земли - категория, а не уровень",
+      "kind": "rebuilt from cache",
+      "cache_path": "gee-cache/crop_2000_2024_1964x1080_500m.tif",
+      "payload_sha256": "fcd16139444946ad9fbd4910e59409cbb74eaa10c586997048f3c0184cdcf111",
+      "committed_file": "artifacts/landing/provenance/crop_2000_dw_2024.png",
+      "committed_bytes": 17783,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_dw_2024_plain.png",
+      "committed_bytes_plain": 15436,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "dynamic_world",
+      "source_label": "земля по классам",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "meaning": "каждый пиксель - класс земли с наибольшей уверенностью: деревья, травы, пашня, застройка, открытая земля",
+      "asset_year": "2023",
+      "asset_leaf": "dw_mean_2023_500m",
+      "region_bbox": [
+        69.2222,
+        56.395,
+        70.4472,
+        57.1401
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "stats": {
+        "valid_share": 1.0,
+        "min": null,
+        "max": null
+      },
+      "scale_basis": "класс земли - категория, а не уровень",
+      "kind": "rebuilt from cache",
+      "cache_path": "gee-cache/crop_2208_2023_1225x745_500m.tif",
+      "payload_sha256": "a7c5aedb3cbbe9b1c50a148c9401cba9eef2508d24758a276a716112e7fd425f",
+      "committed_file": "artifacts/landing/provenance/crop_2208_dw_2023.png",
+      "committed_bytes": 16859,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_dw_2023_plain.png",
+      "committed_bytes_plain": 14560,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "dynamic_world",
+      "source_label": "земля по классам",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "meaning": "каждый пиксель - класс земли с наибольшей уверенностью: деревья, травы, пашня, застройка, открытая земля",
+      "asset_year": "2024",
+      "asset_leaf": "dw_mean_2024_500m",
+      "region_bbox": [
+        69.2222,
+        56.395,
+        70.4472,
+        57.1401
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "stats": {
+        "valid_share": 1.0,
+        "min": null,
+        "max": null
+      },
+      "scale_basis": "класс земли - категория, а не уровень",
+      "kind": "rebuilt from cache",
+      "cache_path": "gee-cache/crop_2208_2024_1225x745_500m.tif",
+      "payload_sha256": "214d6f8fbce55758a77e38085fe0d6672db50ce07ae74dcf23691bc72ce9ba39",
+      "committed_file": "artifacts/landing/provenance/crop_2208_dw_2024.png",
+      "committed_bytes": 14275,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_dw_2024_plain.png",
+      "committed_bytes_plain": 12291,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "dynamic_world",
+      "source_label": "земля по классам",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "meaning": "каждый пиксель - класс земли с наибольшей уверенностью: деревья, травы, пашня, застройка, открытая земля",
+      "asset_year": "2023",
+      "asset_leaf": "dw_mean_2023_500m",
+      "region_bbox": [
+        37.4869,
+        55.7166,
+        37.7369,
+        55.8766
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "stats": {
+        "valid_share": 1.0,
+        "min": null,
+        "max": null
+      },
+      "scale_basis": "класс земли - категория, а не уровень",
+      "kind": "rebuilt from cache",
+      "cache_path": "gee-cache/crop_2518_2023_250x160_100m.tif",
+      "payload_sha256": "4faccadce5849d5df1c8c7c5e37328dc740495cf43490a3160db39a9389a7b92",
+      "committed_file": "artifacts/landing/provenance/crop_2518_dw_2023.png",
+      "committed_bytes": 4288,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_dw_2023_plain.png",
+      "committed_bytes_plain": 3961,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "dynamic_world",
+      "source_label": "земля по классам",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "meaning": "каждый пиксель - класс земли с наибольшей уверенностью: деревья, травы, пашня, застройка, открытая земля",
+      "asset_year": "2024",
+      "asset_leaf": "dw_mean_2024_500m",
+      "region_bbox": [
+        37.4869,
+        55.7166,
+        37.7369,
+        55.8766
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "stats": {
+        "valid_share": 1.0,
+        "min": null,
+        "max": null
+      },
+      "scale_basis": "класс земли - категория, а не уровень",
+      "kind": "rebuilt from cache",
+      "cache_path": "gee-cache/crop_2518_2024_250x160_100m.tif",
+      "payload_sha256": "ad435839e63ac27861cafc97de6adfc0f7f678ee2defd22088f4a1a01cdb05cb",
+      "committed_file": "artifacts/landing/provenance/crop_2518_dw_2024.png",
+      "committed_bytes": 4279,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_dw_2024_plain.png",
+      "committed_bytes_plain": 3951,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    },
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "hansen",
+      "source_label": "потеря леса",
+      "meaning": "год, когда лес на этом пикселе был потерян; серый - потери не было",
+      "asset": "UMD/hansen/global_forest_change_2025_v1_13",
+      "band": "lossyear",
+      "region_bbox": [
+        58.457279764999996,
+        57.2372941625,
+        60.421376034999994,
+        58.317057337499996
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "inside_pixels": 6660,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "stats": {
+        "valid_pixels": 30728,
+        "total_pixels": 106238,
+        "valid_share": 0.2892,
+        "min": 1.0,
+        "max": 25.0,
+        "mean": 12.9206,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "год потери леса - категория, а не уровень",
+      "scale_low": null,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": 153.0,
+      "relief_max_m": 19.0,
+      "cache_path": "gee-cache/crop_2000_hansen_1964x1080_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "2f230e21eb7d7866897dfae17c2fddcefb3687a32435248252d52b73917c658d",
+      "committed_file": "artifacts/landing/provenance/crop_2000_hansen.png",
+      "committed_bytes": 112456,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_hansen_plain.png",
+      "committed_bytes_plain": 101422,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "hansen",
+      "source_label": "потеря леса",
+      "meaning": "год, когда лес на этом пикселе был потерян; серый - потери не было",
+      "asset": "UMD/hansen/global_forest_change_2025_v1_13",
+      "band": "lossyear",
+      "region_bbox": [
+        69.22217738,
+        56.39501276,
+        70.44715922,
+        57.14008303999999
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "inside_pixels": 2316,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "stats": {
+        "valid_pixels": 4764,
+        "total_pixels": 45758,
+        "valid_share": 0.1041,
+        "min": 1.0,
+        "max": 25.0,
+        "mean": 11.6092,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "год потери леса - категория, а не уровень",
+      "scale_low": null,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": 153.0,
+      "relief_max_m": 19.0,
+      "cache_path": "gee-cache/crop_2208_hansen_1225x745_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "5dfba15c18750208b57cf28c0afabb72a2fc5c93b8bde69648535d315a9780d6",
+      "committed_file": "artifacts/landing/provenance/crop_2208_hansen.png",
+      "committed_bytes": 25175,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_hansen_plain.png",
+      "committed_bytes_plain": 22167,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "hansen",
+      "source_label": "потеря леса",
+      "meaning": "год, когда лес на этом пикселе был потерян; серый - потери не было",
+      "asset": "UMD/hansen/global_forest_change_2025_v1_13",
+      "band": "lossyear",
+      "region_bbox": [
+        37.4869307,
+        55.716627450000004,
+        37.7369307,
+        55.87662745
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "inside_pixels": 9,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "stats": {
+        "valid_pixels": 1776,
+        "total_pixels": 49941,
+        "valid_share": 0.0356,
+        "min": 1.0,
+        "max": 25.0,
+        "mean": 12.7252,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "год потери леса - категория, а не уровень",
+      "scale_low": null,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": 153.0,
+      "relief_max_m": 19.0,
+      "cache_path": "gee-cache/crop_2518_hansen_250x160_100m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "2a406e2b6339c940a1ac0440801d900f68c043ce89c309aa4e8ed58a55bcb172",
+      "committed_file": "artifacts/landing/provenance/crop_2518_hansen.png",
+      "committed_bytes": 13479,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_hansen_plain.png",
+      "committed_bytes_plain": 13372,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    },
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "ndvi",
+      "source_label": "зелёность",
+      "meaning": "индекс зелёности MODIS: чем выше, тем активнее фотосинтез на этом пикселе",
+      "asset": "MODIS/061/MOD13Q1",
+      "band": "NDVI",
+      "region_bbox": [
+        58.457279764999996,
+        57.2372941625,
+        60.421376034999994,
+        58.317057337499996
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "inside_pixels": 32833,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "stats": {
+        "valid_pixels": 106238,
+        "total_pixels": 106238,
+        "valid_share": 1.0,
+        "min": -551.2381,
+        "max": 6932.0,
+        "mean": 5238.9776,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "одна шкала на все примеры: linear",
+      "scale_low": 0.0,
+      "scale_high": 8000.0,
+      "scale_mode": "linear",
+      "asset_year": 2023,
+      "lit_share_pct": null,
+      "step_shares_pct": [
+        0.1,
+        2.7,
+        97.2
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2000_ndvi_2023_1964x1080_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "2c82d3c5cf16233480fe7b7078bc338092a990f3164abcb308471aa9d97b0d58",
+      "committed_file": "artifacts/landing/provenance/crop_2000_ndvi_2023.png",
+      "committed_bytes": 138920,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_ndvi_2023_plain.png",
+      "committed_bytes_plain": 146222,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "ndvi",
+      "source_label": "зелёность",
+      "meaning": "индекс зелёности MODIS: чем выше, тем активнее фотосинтез на этом пикселе",
+      "asset": "MODIS/061/MOD13Q1",
+      "band": "NDVI",
+      "region_bbox": [
+        58.457279764999996,
+        57.2372941625,
+        60.421376034999994,
+        58.317057337499996
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "inside_pixels": 32833,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "stats": {
+        "valid_pixels": 106238,
+        "total_pixels": 106238,
+        "valid_share": 1.0,
+        "min": -282.45,
+        "max": 6854.6957,
+        "mean": 5048.8802,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "одна шкала на все примеры: linear",
+      "scale_low": 0.0,
+      "scale_high": 8000.0,
+      "scale_mode": "linear",
+      "asset_year": 2024,
+      "lit_share_pct": null,
+      "step_shares_pct": [
+        0.1,
+        2.5,
+        97.4
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2000_ndvi_2024_1964x1080_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "ef69fdbf95b62e060d68459b7296d1923f37a4f2d65e80e498b7ed325e494bf0",
+      "committed_file": "artifacts/landing/provenance/crop_2000_ndvi_2024.png",
+      "committed_bytes": 138563,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_ndvi_2024_plain.png",
+      "committed_bytes_plain": 146133,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "ndvi",
+      "source_label": "зелёность",
+      "meaning": "индекс зелёности MODIS: чем выше, тем активнее фотосинтез на этом пикселе",
+      "asset": "MODIS/061/MOD13Q1",
+      "band": "NDVI",
+      "region_bbox": [
+        69.22217738,
+        56.39501276,
+        70.44715922,
+        57.14008303999999
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "inside_pixels": 19672,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "stats": {
+        "valid_pixels": 45758,
+        "total_pixels": 45758,
+        "valid_share": 1.0,
+        "min": -917.65,
+        "max": 5761.2174,
+        "mean": 3448.8293,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "одна шкала на все примеры: linear",
+      "scale_low": 0.0,
+      "scale_high": 8000.0,
+      "scale_mode": "linear",
+      "asset_year": 2023,
+      "lit_share_pct": null,
+      "step_shares_pct": [
+        0.0,
+        10.2,
+        89.8
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2208_ndvi_2023_1225x745_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "8e48abec2862c8a0b0c18c058f2613c5a8e665b0ee1ad81b0b810231feca2b24",
+      "committed_file": "artifacts/landing/provenance/crop_2208_ndvi_2023.png",
+      "committed_bytes": 49577,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_ndvi_2023_plain.png",
+      "committed_bytes_plain": 54221,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "ndvi",
+      "source_label": "зелёность",
+      "meaning": "индекс зелёности MODIS: чем выше, тем активнее фотосинтез на этом пикселе",
+      "asset": "MODIS/061/MOD13Q1",
+      "band": "NDVI",
+      "region_bbox": [
+        69.22217738,
+        56.39501276,
+        70.44715922,
+        57.14008303999999
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "inside_pixels": 19672,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "stats": {
+        "valid_pixels": 45758,
+        "total_pixels": 45758,
+        "valid_share": 1.0,
+        "min": -726.45,
+        "max": 5608.3043,
+        "mean": 3598.8179,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "одна шкала на все примеры: linear",
+      "scale_low": 0.0,
+      "scale_high": 8000.0,
+      "scale_mode": "linear",
+      "asset_year": 2024,
+      "lit_share_pct": null,
+      "step_shares_pct": [
+        0.0,
+        5.4,
+        94.6
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2208_ndvi_2024_1225x745_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "943eb99e38d6c7d3baa360b5a47c5df3989669bf1572bde77845554918caaa9f",
+      "committed_file": "artifacts/landing/provenance/crop_2208_ndvi_2024.png",
+      "committed_bytes": 48701,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_ndvi_2024_plain.png",
+      "committed_bytes_plain": 53024,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "ndvi",
+      "source_label": "зелёность",
+      "meaning": "индекс зелёности MODIS: чем выше, тем активнее фотосинтез на этом пикселе",
+      "asset": "MODIS/061/MOD13Q1",
+      "band": "NDVI",
+      "region_bbox": [
+        37.4869307,
+        55.716627450000004,
+        37.7369307,
+        55.87662745
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "inside_pixels": 827,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "stats": {
+        "valid_pixels": 49941,
+        "total_pixels": 49941,
+        "valid_share": 1.0,
+        "min": 424.0435,
+        "max": 5759.3478,
+        "mean": 2498.2088,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "одна шкала на все примеры: linear",
+      "scale_low": 0.0,
+      "scale_high": 8000.0,
+      "scale_mode": "linear",
+      "asset_year": 2023,
+      "lit_share_pct": null,
+      "step_shares_pct": [
+        0.0,
+        100.0,
+        0.0
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2518_ndvi_2023_250x160_100m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "b89f268e990bcc66938f342a867b4ebeaea6ea3df7042fd5a8e2984c64b454a5",
+      "committed_file": "artifacts/landing/provenance/crop_2518_ndvi_2023.png",
+      "committed_bytes": 28891,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_ndvi_2023_plain.png",
+      "committed_bytes_plain": 24156,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "ndvi",
+      "source_label": "зелёность",
+      "meaning": "индекс зелёности MODIS: чем выше, тем активнее фотосинтез на этом пикселе",
+      "asset": "MODIS/061/MOD13Q1",
+      "band": "NDVI",
+      "region_bbox": [
+        37.4869307,
+        55.716627450000004,
+        37.7369307,
+        55.87662745
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "inside_pixels": 827,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "stats": {
+        "valid_pixels": 49941,
+        "total_pixels": 49941,
+        "valid_share": 1.0,
+        "min": 402.3913,
+        "max": 5795.1304,
+        "mean": 2559.8289,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "одна шкала на все примеры: linear",
+      "scale_low": 0.0,
+      "scale_high": 8000.0,
+      "scale_mode": "linear",
+      "asset_year": 2024,
+      "lit_share_pct": null,
+      "step_shares_pct": [
+        1.1,
+        98.9,
+        0.0
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2518_ndvi_2024_250x160_100m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "3b7f906cfe5cb4bab1053539c2d008019817377b9a8c6292ad859fdbc2988c8f",
+      "committed_file": "artifacts/landing/provenance/crop_2518_ndvi_2024.png",
+      "committed_bytes": 28310,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_ndvi_2024_plain.png",
+      "committed_bytes_plain": 24011,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    },
+    {
+      "tid": null,
+      "source": "sentinel2",
+      "kind": "not exported",
+      "error": "sent by the entrant on 2026-10-09: a 500 m photographic mosaic reads as noise next to classified layers, so it is not offered as a source and not re-cropped"
+    },
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "soil",
+      "source_label": "влага в почве",
+      "meaning": "содержание органического углерода в слое 15-30 см, тёмнее - больше",
+      "asset": "ISRIC/SoilGrids250m/v2_0",
+      "band": "val_15_30cm_mean",
+      "region_bbox": [
+        58.457279764999996,
+        57.2372941625,
+        60.421376034999994,
+        58.317057337499996
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "inside_pixels": 32316,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "stats": {
+        "valid_pixels": 104727,
+        "total_pixels": 106238,
+        "valid_share": 0.9858,
+        "min": 108.0,
+        "max": 279.8706,
+        "mean": 132.3525,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "шкала этого окна",
+      "scale_low": null,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2000_soil_1964x1080_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "2569a5d51d7be5dc853e78f4174927552d90999d186f54e856f4e1fb78b3160a",
+      "committed_file": "artifacts/landing/provenance/crop_2000_soil.png",
+      "committed_bytes": 137019,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_soil_plain.png",
+      "committed_bytes_plain": 139893,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "soil",
+      "source_label": "влага в почве",
+      "meaning": "содержание органического углерода в слое 15-30 см, тёмнее - больше",
+      "asset": "ISRIC/SoilGrids250m/v2_0",
+      "band": "val_15_30cm_mean",
+      "region_bbox": [
+        69.22217738,
+        56.39501276,
+        70.44715922,
+        57.14008303999999
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "inside_pixels": 19661,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "stats": {
+        "valid_pixels": 45705,
+        "total_pixels": 45758,
+        "valid_share": 0.9988,
+        "min": 133.0,
+        "max": 272.6132,
+        "mean": 145.0224,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "шкала этого окна",
+      "scale_low": null,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2208_soil_1225x745_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "d68f56cef8889e5cdf26ca7a8171fc331856febcc6d4cfab42316a4ff3610ae4",
+      "committed_file": "artifacts/landing/provenance/crop_2208_soil.png",
+      "committed_bytes": 53574,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_soil_plain.png",
+      "committed_bytes_plain": 53404,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "soil",
+      "source_label": "влага в почве",
+      "meaning": "содержание органического углерода в слое 15-30 см, тёмнее - больше",
+      "asset": "ISRIC/SoilGrids250m/v2_0",
+      "band": "val_15_30cm_mean",
+      "region_bbox": [
+        37.4869307,
+        55.716627450000004,
+        37.7369307,
+        55.87662745
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "inside_pixels": 0,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "stats": {
+        "valid_pixels": 5981,
+        "total_pixels": 49941,
+        "valid_share": 0.1198,
+        "min": 93.0,
+        "max": 150.0,
+        "mean": 119.4519,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "шкала этого окна",
+      "scale_low": null,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2518_soil_250x160_100m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "b52d2bdb46a7ef330c9641b6c79f3737d9abe6633c753e01381e21ee4401bc30",
+      "committed_file": "artifacts/landing/provenance/crop_2518_soil.png",
+      "committed_bytes": 6913,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_soil_plain.png",
+      "committed_bytes_plain": 6615,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    },
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "terrain",
+      "source_label": "высота местности",
+      "meaning": "высота над уровнем моря, метры",
+      "asset": "USGS/SRTMGL1_003",
+      "band": "elevation",
+      "region_bbox": [
+        58.457279764999996,
+        57.2372941625,
+        60.421376034999994,
+        58.317057337499996
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "inside_pixels": 32833,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "stats": {
+        "valid_pixels": 106238,
+        "total_pixels": 106238,
+        "valid_share": 1.0,
+        "min": 78.0,
+        "max": 738.0,
+        "mean": 319.5137,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "высота над уровнем моря: от самой низкой точки этого окна до самой высокой точки района",
+      "scale_low": 78.0,
+      "scale_high": 738.0,
+      "scale_mode": "linear",
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": 78.0,
+      "relief_max_m": 660.0,
+      "cache_path": "gee-cache/crop_2000_terrain_1964x1080_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "089ff8811d7884e3203a36ae461dd9f3c40b7cba6e2af8e5bf32db0d90912aa8",
+      "committed_file": "artifacts/landing/provenance/crop_2000_terrain.png",
+      "committed_bytes": 112631,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_terrain_plain.png",
+      "committed_bytes_plain": 124902,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "terrain",
+      "source_label": "высота местности",
+      "meaning": "высота над уровнем моря, метры",
+      "asset": "USGS/SRTMGL1_003",
+      "band": "elevation",
+      "region_bbox": [
+        69.22217738,
+        56.39501276,
+        70.44715922,
+        57.14008303999999
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "inside_pixels": 19672,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "stats": {
+        "valid_pixels": 45758,
+        "total_pixels": 45758,
+        "valid_share": 1.0,
+        "min": 60.0,
+        "max": 133.0,
+        "mean": 100.3909,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "высота над уровнем моря: от самой низкой точки этого окна до самой высокой точки района",
+      "scale_low": 72.0,
+      "scale_high": 130.0,
+      "scale_mode": "linear",
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": 72.0,
+      "relief_max_m": 58.0,
+      "cache_path": "gee-cache/crop_2208_terrain_1225x745_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "7543217a039c6cdba9eeda8d41ff26760474cd8a0768f8ae84790d91ef8ef075",
+      "committed_file": "artifacts/landing/provenance/crop_2208_terrain.png",
+      "committed_bytes": 55320,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_terrain_plain.png",
+      "committed_bytes_plain": 54115,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "terrain",
+      "source_label": "высота местности",
+      "meaning": "высота над уровнем моря, метры",
+      "asset": "USGS/SRTMGL1_003",
+      "band": "elevation",
+      "region_bbox": [
+        37.4869307,
+        55.716627450000004,
+        37.7369307,
+        55.87662745
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "inside_pixels": 827,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "stats": {
+        "valid_pixels": 49941,
+        "total_pixels": 49941,
+        "valid_share": 1.0,
+        "min": 102.0,
+        "max": 190.0,
+        "mean": 150.5112,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "высота над уровнем моря: от самой низкой точки этого окна до самой высокой точки района",
+      "scale_low": 153.0,
+      "scale_high": 172.0,
+      "scale_mode": "linear",
+      "asset_year": null,
+      "lit_share_pct": null,
+      "step_shares_pct": null,
+      "zero_m_above_sea": 153.0,
+      "relief_max_m": 19.0,
+      "cache_path": "gee-cache/crop_2518_terrain_250x160_100m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "39d84e439378a4f4d8c8a11519b00b6434ab10c606449c962764206597de7bdd",
+      "committed_file": "artifacts/landing/provenance/crop_2518_terrain.png",
+      "committed_bytes": 65512,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_terrain_plain.png",
+      "committed_bytes_plain": 69287,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    },
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "viirs",
+      "source_label": "ночные огни",
+      "meaning": "сколько света видно сверху ночью: чем ярче, тем больше освещённых объектов",
+      "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+      "band": "average",
+      "region_bbox": [
+        58.457279764999996,
+        57.2372941625,
+        60.421376034999994,
+        58.317057337499996
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "inside_pixels": 32833,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "stats": {
+        "valid_pixels": 106238,
+        "total_pixels": 106238,
+        "valid_share": 1.0,
+        "min": 0.3608,
+        "max": 789.0616,
+        "mean": 1.0087,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5",
+      "scale_low": 0.5,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": 2023,
+      "lit_share_pct": 47.77,
+      "step_shares_pct": [
+        91.6,
+        3.8,
+        2.3,
+        2.3
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2000_viirs_2023_1964x1080_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "8ece50883c2617ea875a4dd48ff8b51894d9894f533b793f9ce1f37992485a58",
+      "committed_file": "artifacts/landing/provenance/crop_2000_viirs_2023.png",
+      "committed_bytes": 15931,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_viirs_2023_plain.png",
+      "committed_bytes_plain": 13627,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2000,
+      "district": "городской округ город Нижний Тагил",
+      "cluster": 4,
+      "source": "viirs",
+      "source_label": "ночные огни",
+      "meaning": "сколько света видно сверху ночью: чем ярче, тем больше освещённых объектов",
+      "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+      "band": "average",
+      "region_bbox": [
+        58.457279764999996,
+        57.2372941625,
+        60.421376034999994,
+        58.317057337499996
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        242,
+        439
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 30.91,
+      "district_pixels": 32833,
+      "inside_pixels": 32833,
+      "boundary_paths": [
+        "M 673,251 L 676,251 L 676,256 L 682,257 L 679,258 L 681,259 L 680,261 L 687,262 L 685,267 L 688,269 L 685,272 L 688,273 L 687,274 L 688,276 L 692,277 L 681,306 L 650,303 L 638,338 L 604,334 L 599,391 L 980,430 L 999,413 L 1013,375 L 975,372 L 998,293 L 1082,298 L 1088,276 L 1164,281 L 1157,310 L 1185,312 L 1191,295 L 1189,291 L 1201,285 L 1224,285 L 1228,278 L 1258,288 L 1265,283 L 1266,272 L 1260,269 L 1263,263 L 1279,263 L 1294,273 L 1315,268 L 1332,272 L 1343,268 L 1347,263 L 1417,259 L 1413,262 L 1402,287 L 1494,300 L 1497,294 L 1508,292 L 1536,295 L 1562,286 L 1578,282 L 1589,282 L 1639,289 L 1629,301 L 1629,305 L 1600,310 L 1581,316 L 1583,322 L 1581,323 L 1586,325 L 1586,328 L 1613,329 L 1608,340 L 1505,338 L 1510,349 L 1521,350 L 1523,354 L 1541,356 L 1552,352 L 1551,358 L 1541,365 L 1547,365 L 1542,380 L 1526,381 L 1522,390 L 1495,387 L 1489,384 L 1458,382 L 1458,396 L 1444,437 L 1443,439 L 1396,441 L 1396,450 L 1392,456 L 1398,464 L 1397,473 L 1387,476 L 1385,483 L 1378,484 L 1370,489 L 1344,486 L 1330,488 L 1327,490 L 1313,493 L 1314,495 L 1312,500 L 1305,502 L 1299,499 L 1279,497 L 1274,507 L 1266,510 L 1254,512 L 1251,514 L 1252,517 L 1248,519 L 1235,522 L 1219,521 L 1204,523 L 1188,530 L 1184,534 L 1183,548 L 1168,556 L 1172,579 L 1168,595 L 1156,620 L 1043,610 L 1048,569 L 990,568 L 998,505 L 921,503 L 882,646 L 1099,665 L 1104,649 L 1185,656 L 1219,661 L 1208,689 L 1162,704 L 1116,723 L 1114,730 L 1091,739 L 1080,753 L 1098,773 L 1091,781 L 1095,788 L 1092,797 L 1108,799 L 1108,809 L 1092,870 L 1158,875 L 1149,904 L 1065,900 L 1060,895 L 973,887 L 978,871 L 826,857 L 838,823 L 802,818 L 808,794 L 775,794 L 693,784 L 704,750 L 617,743 L 614,758 L 578,753 L 568,762 L 564,772 L 563,784 L 550,786 L 558,800 L 550,823 L 537,822 L 525,843 L 516,837 L 515,820 L 525,819 L 527,812 L 522,804 L 508,804 L 501,799 L 490,799 L 466,807 L 467,785 L 489,782 L 483,778 L 489,773 L 479,767 L 488,761 L 415,755 L 421,737 L 261,721 L 306,606 L 205,595 L 282,551 L 310,532 L 346,537 L 345,532 L 337,526 L 340,518 L 338,515 L 343,512 L 374,431 L 253,418 L 259,384 L 228,392 L 218,389 L 209,378 L 201,379 L 200,377 L 208,375 L 206,369 L 208,365 L 192,353 L 192,347 L 181,344 L 176,337 L 189,332 L 168,309 L 172,299 L 165,283 L 157,284 L 145,274 L 128,269 L 123,254 L 118,250 L 154,235 L 175,243 L 199,226 L 187,194 L 205,186 L 254,159 L 275,161 L 286,128 L 313,130 L 323,96 L 363,101 L 376,68 L 406,71 L 408,75 L 437,78 L 426,123 L 452,124 L 446,144 L 477,147 L 465,197 L 675,220 L 677,226 L 682,229 L 678,237 L 660,231 L 656,236 L 660,237 L 659,239 L 662,240 L 658,240 L 663,244 L 671,241 L 670,239 L 671,238 L 678,241 L 679,243 L 673,251 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1756,
+        968
+      ],
+      "stats": {
+        "valid_pixels": 106238,
+        "total_pixels": 106238,
+        "valid_share": 1.0,
+        "min": 0.4235,
+        "max": 553.516,
+        "mean": 1.252,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5",
+      "scale_low": 0.5,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": 2024,
+      "lit_share_pct": 97.91,
+      "step_shares_pct": [
+        88.6,
+        6.6,
+        2.2,
+        2.6
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2000_viirs_2024_1964x1080_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "d47b9d9ecba60d8aa10a1e32c91ce9a28013871416c0bd68eac11f61298dce90",
+      "committed_file": "artifacts/landing/provenance/crop_2000_viirs_2024.png",
+      "committed_bytes": 19112,
+      "committed_pixels": [
+        1756,
+        968
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2000_viirs_2024_plain.png",
+      "committed_bytes_plain": 16555,
+      "committed_pixels_plain": [
+        1756,
+        968
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "viirs",
+      "source_label": "ночные огни",
+      "meaning": "сколько света видно сверху ночью: чем ярче, тем больше освещённых объектов",
+      "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+      "band": "average",
+      "region_bbox": [
+        69.22217738,
+        56.39501276,
+        70.44715922,
+        57.14008303999999
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "inside_pixels": 19672,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "stats": {
+        "valid_pixels": 45758,
+        "total_pixels": 45758,
+        "valid_share": 1.0,
+        "min": 0.4352,
+        "max": 11.3575,
+        "mean": 0.5848,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5",
+      "scale_low": 0.5,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": 2023,
+      "lit_share_pct": 98.08,
+      "step_shares_pct": [
+        98.0,
+        1.4,
+        0.6,
+        0.0
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2208_viirs_2023_1225x745_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "051e44e0ee9e79218b6fe254a409016bb094023f91b3ea68fe1ff6fd682ba6dc",
+      "committed_file": "artifacts/landing/provenance/crop_2208_viirs_2023.png",
+      "committed_bytes": 5475,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_viirs_2023_plain.png",
+      "committed_bytes_plain": 4218,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2208,
+      "district": "Сорокинский муниципальный район",
+      "cluster": 3,
+      "source": "viirs",
+      "source_label": "ночные огни",
+      "meaning": "сколько света видно сверху ночью: чем ярче, тем больше освещённых объектов",
+      "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+      "band": "average",
+      "region_bbox": [
+        69.22217738,
+        56.39501276,
+        70.44715922,
+        57.14008303999999
+      ],
+      "scale_m": 500,
+      "native_pixels": [
+        167,
+        274
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 42.99,
+      "district_pixels": 19672,
+      "inside_pixels": 19672,
+      "boundary_paths": [
+        "M 324,67 L 329,71 L 375,64 L 478,74 L 566,56 L 697,45 L 725,50 L 805,81 L 546,98 L 479,99 L 441,106 L 369,103 L 377,114 L 341,136 L 352,151 L 391,161 L 389,163 L 500,156 L 698,254 L 727,245 L 768,238 L 793,237 L 846,239 L 872,260 L 846,275 L 849,275 L 860,300 L 885,314 L 895,317 L 900,313 L 911,312 L 953,350 L 967,346 L 971,359 L 977,361 L 958,377 L 940,374 L 913,413 L 861,413 L 858,460 L 882,463 L 910,463 L 910,473 L 996,478 L 1008,483 L 1013,519 L 1022,538 L 985,548 L 959,544 L 923,552 L 930,560 L 918,571 L 862,571 L 850,562 L 850,552 L 809,541 L 798,529 L 750,539 L 763,562 L 754,586 L 736,589 L 731,605 L 658,617 L 583,593 L 578,594 L 590,613 L 538,620 L 485,622 L 449,621 L 449,610 L 402,596 L 395,554 L 395,536 L 231,525 L 159,527 L 128,504 L 122,477 L 73,447 L 110,431 L 260,430 L 270,414 L 273,392 L 181,390 L 153,335 L 83,335 L 96,276 L 118,267 L 145,267 L 171,260 L 212,220 L 216,204 L 196,183 L 194,157 L 183,128 L 216,128 L 280,86 L 287,75 L 286,72 L 324,67 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1096,
+        668
+      ],
+      "stats": {
+        "valid_pixels": 45758,
+        "total_pixels": 45758,
+        "valid_share": 1.0,
+        "min": 0.4073,
+        "max": 21.9041,
+        "mean": 1.0824,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5",
+      "scale_low": 0.5,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": 2024,
+      "lit_share_pct": 99.54,
+      "step_shares_pct": [
+        24.9,
+        74.2,
+        0.8,
+        0.1
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2208_viirs_2024_1225x745_500m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "b2ba724f128ac6a46a9191d13ff742e44e5c4cd3519d9fadfea718f50675e9f3",
+      "committed_file": "artifacts/landing/provenance/crop_2208_viirs_2024.png",
+      "committed_bytes": 11675,
+      "committed_pixels": [
+        1096,
+        668
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2208_viirs_2024_plain.png",
+      "committed_bytes_plain": 10064,
+      "committed_pixels_plain": [
+        1096,
+        668
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "viirs",
+      "source_label": "ночные огни",
+      "meaning": "сколько света видно сверху ночью: чем ярче, тем больше освещённых объектов",
+      "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+      "band": "average",
+      "region_bbox": [
+        37.4869307,
+        55.716627450000004,
+        37.7369307,
+        55.87662745
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "inside_pixels": 827,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "stats": {
+        "valid_pixels": 49941,
+        "total_pixels": 49941,
+        "valid_share": 1.0,
+        "min": 6.0089,
+        "max": 608.3156,
+        "mean": 110.543,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5",
+      "scale_low": 0.5,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": 2023,
+      "lit_share_pct": 100.0,
+      "step_shares_pct": [
+        0.0,
+        0.0,
+        0.0,
+        100.0
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2518_viirs_2023_250x160_100m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "8587a0aa1760c9c65c00f5c4b1d3e6ec38104491f5b036392d22b31b6e666ef8",
+      "committed_file": "artifacts/landing/provenance/crop_2518_viirs_2023.png",
+      "committed_bytes": 3844,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_viirs_2023_plain.png",
+      "committed_bytes_plain": 3507,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    },
+    {
+      "tid": 2518,
+      "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+      "cluster": 2,
+      "source": "viirs",
+      "source_label": "ночные огни",
+      "meaning": "сколько света видно сверху ночью: чем ярче, тем больше освещённых объектов",
+      "asset": "NOAA/VIIRS/DNB/ANNUAL_V22",
+      "band": "average",
+      "region_bbox": [
+        37.4869307,
+        55.716627450000004,
+        37.7369307,
+        55.87662745
+      ],
+      "scale_m": 100,
+      "native_pixels": [
+        179,
+        279
+      ],
+      "kind": "real observation",
+      "interior_share_pct": 1.66,
+      "district_pixels": 827,
+      "inside_pixels": 827,
+      "boundary_paths": [
+        "M 457,377 L 489,349 L 484,319 L 565,295 L 660,356 L 659,379 L 577,374 L 579,405 L 573,419 L 560,421 L 512,409 L 501,376 L 457,377 Z"
+      ],
+      "boundary_basis": "the extent the exported raster actually covers",
+      "boundary_pixels": [
+        1116,
+        716
+      ],
+      "stats": {
+        "valid_pixels": 49941,
+        "total_pixels": 49941,
+        "valid_share": 1.0,
+        "min": 7.6097,
+        "max": 641.6032,
+        "mean": 126.8896,
+        "carries_values": true,
+        "transform_scale_m": 0.0
+      },
+      "scale_basis": "четыре ступени яркости - это способ читать картинку; кластеризация считает по порогу 0,5",
+      "scale_low": 0.5,
+      "scale_high": null,
+      "scale_mode": null,
+      "asset_year": 2024,
+      "lit_share_pct": 100.0,
+      "step_shares_pct": [
+        0.0,
+        0.0,
+        0.0,
+        100.0
+      ],
+      "zero_m_above_sea": null,
+      "relief_max_m": null,
+      "cache_path": "gee-cache/crop_2518_viirs_2024_250x160_100m.tif",
+      "taken_from_cache": true,
+      "payload_sha256": "54d3c3357dc39a8ad8ee5c036803db7ebd08eadbb3ca41d4218c3ac6aa1426a0",
+      "committed_file": "artifacts/landing/provenance/crop_2518_viirs_2024.png",
+      "committed_bytes": 3808,
+      "committed_pixels": [
+        1116,
+        716
+      ],
+      "committed_file_plain": "artifacts/landing/provenance/crop_2518_viirs_2024_plain.png",
+      "committed_bytes_plain": 3476,
+      "committed_pixels_plain": [
+        1116,
+        716
+      ]
+    }
+  ]
+}

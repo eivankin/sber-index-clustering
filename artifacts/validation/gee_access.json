@@ -1,0 +1,203 @@
+{
+ "generated_by": "scripts/probe_gee_access.py",
+ "what_this_is": "Which Earth Engine layers named in the registry answer a request at one point, measured with a service-account key held outside this repository.",
+ "point": {
+  "lng": 37.5462,
+  "lat": 55.7202
+ },
+ "registry": "configs/gee_sources.yaml",
+ "project": "named in the key file, not reproduced here",
+ "key_is_inside_this_repository": false,
+ "layers": {
+  "worldcover": {
+   "status": "answered",
+   "kind": "image",
+   "bands": [
+    "Map"
+   ],
+   "seconds": 0.5,
+   "older_vintage_exists": null,
+   "why": "a single image has no older vintage behind it; the provider page decides"
+  },
+  "gls_lcz": {
+   "status": "answered",
+   "kind": "collection",
+   "year": 2019,
+   "images_in_named_year": 1,
+   "images_in_previous_year": 1,
+   "older_vintage_exists": true,
+   "bands": [
+    "bare-coverfraction",
+    "change-confidence",
+    "crops-coverfraction",
+    "data-density-indicator",
+    "discrete_classification",
+    "discrete_classification-proba",
+    "forest_type",
+    "grass-coverfraction",
+    "moss-coverfraction",
+    "shrub-coverfraction",
+    "snow-coverfraction",
+    "tree-coverfraction"
+   ],
+   "seconds": 1.8
+  },
+  "gls_fraction": {
+   "status": "answered",
+   "kind": "collection",
+   "year": 2019,
+   "images_in_named_year": 1,
+   "images_in_previous_year": 1,
+   "older_vintage_exists": true,
+   "bands": [
+    "bare-coverfraction",
+    "change-confidence",
+    "crops-coverfraction",
+    "data-density-indicator",
+    "discrete_classification",
+    "discrete_classification-proba",
+    "forest_type",
+    "grass-coverfraction",
+    "moss-coverfraction",
+    "shrub-coverfraction",
+    "snow-coverfraction",
+    "tree-coverfraction"
+   ],
+   "seconds": 1.4
+  },
+  "viirs": {
+   "status": "answered",
+   "kind": "collection",
+   "year": 2023,
+   "images_in_named_year": 1,
+   "images_in_previous_year": 1,
+   "older_vintage_exists": true,
+   "bands": [
+    "average",
+    "average_masked",
+    "cf_cvg",
+    "cvg",
+    "maximum",
+    "median",
+    "median_masked",
+    "minimum"
+   ],
+   "seconds": 1.3
+  },
+  "viirs_lit": {
+   "status": "answered",
+   "kind": "collection",
+   "year": 2023,
+   "images_in_named_year": 1,
+   "images_in_previous_year": 1,
+   "older_vintage_exists": true,
+   "bands": [
+    "average",
+    "average_masked",
+    "cf_cvg",
+    "cvg",
+    "maximum",
+    "median",
+    "median_masked",
+    "minimum"
+   ],
+   "seconds": 1.7
+  },
+  "modis_lcc": {
+   "status": "answered",
+   "kind": "collection",
+   "year": 2023,
+   "images_in_named_year": 1,
+   "images_in_previous_year": 1,
+   "older_vintage_exists": true,
+   "bands": [
+    "LC_Prop1",
+    "LC_Prop1_Assessment",
+    "LC_Prop2",
+    "LC_Prop2_Assessment",
+    "LC_Prop3",
+    "LC_Prop3_Assessment",
+    "LC_Type1",
+    "LC_Type2",
+    "LC_Type3",
+    "LC_Type4",
+    "LC_Type5",
+    "LW"
+   ],
+   "seconds": 2.6
+  },
+  "modis_burn": {
+   "status": "answered",
+   "kind": "collection",
+   "year": 2023,
+   "images_in_named_year": 12,
+   "images_in_previous_year": 12,
+   "older_vintage_exists": true,
+   "bands": [
+    "BurnDate",
+    "FirstDay",
+    "LastDay",
+    "QA",
+    "Uncertainty"
+   ],
+   "seconds": 1.7
+  },
+  "modis_ndvi": {
+   "status": "answered",
+   "kind": "collection",
+   "year": 2023,
+   "images_in_named_year": 23,
+   "images_in_previous_year": 23,
+   "older_vintage_exists": true,
+   "bands": [
+    "DayOfYear",
+    "DetailedQA",
+    "EVI",
+    "NDVI",
+    "RelativeAzimuth",
+    "SolarZenith",
+    "SummaryQA",
+    "ViewZenith",
+    "sur_refl_b01",
+    "sur_refl_b02",
+    "sur_refl_b03",
+    "sur_refl_b07"
+   ],
+   "seconds": 1.8
+  },
+  "worldclim": {
+   "status": "answered",
+   "kind": "image",
+   "bands": [
+    "bio01",
+    "bio02",
+    "bio03",
+    "bio04",
+    "bio05",
+    "bio06",
+    "bio07",
+    "bio08",
+    "bio09",
+    "bio10",
+    "bio11",
+    "bio12"
+   ],
+   "seconds": 0.4,
+   "older_vintage_exists": null,
+   "why": "a single image has no older vintage behind it; the provider page decides"
+  },
+  "elevation": {
+   "status": "answered",
+   "kind": "image",
+   "bands": [
+    "elevation"
+   ],
+   "seconds": 0.4,
+   "older_vintage_exists": null,
+   "why": "a single image has no older vintage behind it; the provider page decides"
+  }
+ },
+ "warnings_seen": [
+  "Your project has exceeded its noncommercial compute quota and is now in restricted mode. Visit https://developers.google.com/earth-engine/guides/noncommercial_tiers#restricted_mode to learn more."
+ ]
+}

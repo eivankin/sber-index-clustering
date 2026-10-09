@@ -1,0 +1,267 @@
+{
+ "generated_by": "scripts/build_derivation_chain.py",
+ "what_this_is": "A step-by-step derivation for named districts, from classified pixel counts through the share denominator to spending per official square kilometre, naming the artifact and field behind each value.",
+ "share_denominator": "classified pixels only",
+ "density_denominator": "official Rosstat land area, never the raw OSM municipal polygon",
+ "rejected_denominator_evidence": "raw_over_official per district, recorded beside the official area",
+ "districts_without_register_area": [
+  "городской округ город Нижний Тагил"
+ ],
+ "districts": [
+  {
+   "tid": 2000,
+   "district": "городской округ город Нижний Тагил",
+   "cluster": 4,
+   "steps": [
+    {
+     "step": "pixels observed inside the district boundary",
+     "artifact": "data/processed/covariates_added.parquet",
+     "fields": [
+      "hly_total_px",
+      "hly_classified_px"
+     ],
+     "values": {
+      "total_pixels": 15043,
+      "classified_pixels": 15043
+     },
+     "note": "Only classified pixels enter a share denominator; unclassified and no-data pixels are kept in the total so the classified share of the footprint stays visible."
+    },
+    {
+     "step": "class shares from per-pixel confidence",
+     "artifact": "data/processed/covariates_added.parquet",
+     "fields": [
+      "dw_trees@2023",
+      "dw_grass@2023",
+      "dw_crops@2023",
+      "dw_built@2023",
+      "dw_bare@2023"
+     ],
+     "values": {
+      "trees": 0.4792,
+      "grass": 0.0544,
+      "crops": 0.039,
+      "built": 0.0433,
+      "bare": 0.0502
+     },
+     "note": "Dynamic World reports a confidence per pixel per class; the value is the mean over the district's pixels, so the denominator is classified pixels, not the polygon area."
+    },
+    {
+     "step": "independent land-cover reference for the same district",
+     "artifact": "data/processed/feature_space.parquet",
+     "fields": [
+      "gls_fraction_tree",
+      "gls_fraction_crop",
+      "gls_fraction_urban"
+     ],
+     "values": {
+      "gls_fraction_tree": 93.1421,
+      "gls_fraction_crop": null,
+      "gls_fraction_urban": 2.8367
+     },
+     "note": "The global land-surface fractions are kept as corroboration, not as clustering input; their agreement with the Dynamic World classes is measured in artifacts/validation/dw_substitution.json."
+    },
+    {
+     "step": "area denominator",
+     "artifact": "data/processed/territory_master.parquet",
+     "fields": [
+      "official_land_area_km2",
+      "area_year",
+      "osm_area_km2"
+     ],
+     "values": {
+      "official_land_area_km2": null,
+      "area_year": null,
+      "osm_area_km2": 8211.79,
+      "raw_over_official": null
+     },
+     "note": "The register records no area for this district, so no density can be computed for it. The raw polygon area is shown to make clear that it was not substituted for the register figure; a missing official area is reported as missing."
+    },
+    {
+     "step": "spending density per official square kilometre",
+     "artifact": "data/processed/feature_space.parquet",
+     "fields": [
+      "total_mean_rub",
+      "total_per_official_km2"
+     ],
+     "values": {
+      "total_mean_rub": 34357.79,
+      "recomputed_from_official_area": null,
+      "stored_density": null,
+      "recomputed_over_stored": null
+     },
+     "note": "Spending is recorded for this district but there is no register area to divide it by, so the density step cannot be walked. This district has no spending-density feature for that reason, which is reported rather than papered over."
+    }
+   ]
+  },
+  {
+   "tid": 2208,
+   "district": "Сорокинский муниципальный район",
+   "cluster": 3,
+   "steps": [
+    {
+     "step": "pixels observed inside the district boundary",
+     "artifact": "data/processed/covariates_added.parquet",
+     "fields": [
+      "hly_total_px",
+      "hly_classified_px"
+     ],
+     "values": {
+      "total_pixels": 2615,
+      "classified_pixels": 2615
+     },
+     "note": "Only classified pixels enter a share denominator; unclassified and no-data pixels are kept in the total so the classified share of the footprint stays visible."
+    },
+    {
+     "step": "class shares from per-pixel confidence",
+     "artifact": "data/processed/covariates_added.parquet",
+     "fields": [
+      "dw_trees@2023",
+      "dw_grass@2023",
+      "dw_crops@2023",
+      "dw_built@2023",
+      "dw_bare@2023"
+     ],
+     "values": {
+      "trees": 0.1741,
+      "grass": 0.0865,
+      "crops": 0.2052,
+      "built": 0.0475,
+      "bare": 0.0717
+     },
+     "note": "Dynamic World reports a confidence per pixel per class; the value is the mean over the district's pixels, so the denominator is classified pixels, not the polygon area."
+    },
+    {
+     "step": "independent land-cover reference for the same district",
+     "artifact": "data/processed/feature_space.parquet",
+     "fields": [
+      "gls_fraction_tree",
+      "gls_fraction_crop",
+      "gls_fraction_urban"
+     ],
+     "values": {
+      "gls_fraction_tree": 32.1697,
+      "gls_fraction_crop": null,
+      "gls_fraction_urban": 0.269
+     },
+     "note": "The global land-surface fractions are kept as corroboration, not as clustering input; their agreement with the Dynamic World classes is measured in artifacts/validation/dw_substitution.json."
+    },
+    {
+     "step": "area denominator",
+     "artifact": "data/processed/territory_master.parquet",
+     "fields": [
+      "official_land_area_km2",
+      "area_year",
+      "osm_area_km2"
+     ],
+     "values": {
+      "official_land_area_km2": 2701.22,
+      "area_year": 2023,
+      "osm_area_km2": 4917.85,
+      "raw_over_official": 1.82
+     },
+     "note": "The official register area is the denominator. The raw polygon area is shown only to record that it is not used: taking polygons at face value inflates density figures."
+    },
+    {
+     "step": "spending density per official square kilometre",
+     "artifact": "data/processed/feature_space.parquet",
+     "fields": [
+      "total_mean_rub",
+      "total_per_official_km2"
+     ],
+     "values": {
+      "total_mean_rub": 25254.62,
+      "recomputed_from_official_area": 9.3493,
+      "stored_density": 9.3493,
+      "recomputed_over_stored": 1.0
+     },
+     "note": "The recomputed figure divides the same monthly spending mean by the register area; it is set beside the stored density so any mismatch is visible rather than smoothed over."
+    }
+   ]
+  },
+  {
+   "tid": 2518,
+   "district": "внутригородская территория города федерального значения муниципальный округ Марьина роща",
+   "cluster": 2,
+   "steps": [
+    {
+     "step": "pixels observed inside the district boundary",
+     "artifact": "data/processed/covariates_added.parquet",
+     "fields": [
+      "hly_total_px",
+      "hly_classified_px"
+     ],
+     "values": {
+      "total_pixels": 794,
+      "classified_pixels": 794
+     },
+     "note": "Only classified pixels enter a share denominator; unclassified and no-data pixels are kept in the total so the classified share of the footprint stays visible."
+    },
+    {
+     "step": "class shares from per-pixel confidence",
+     "artifact": "data/processed/covariates_added.parquet",
+     "fields": [
+      "dw_trees@2023",
+      "dw_grass@2023",
+      "dw_crops@2023",
+      "dw_built@2023",
+      "dw_bare@2023"
+     ],
+     "values": {
+      "trees": 0.1474,
+      "grass": 0.1013,
+      "crops": 0.2729,
+      "built": 0.0451,
+      "bare": 0.0718
+     },
+     "note": "Dynamic World reports a confidence per pixel per class; the value is the mean over the district's pixels, so the denominator is classified pixels, not the polygon area."
+    },
+    {
+     "step": "independent land-cover reference for the same district",
+     "artifact": "data/processed/feature_space.parquet",
+     "fields": [
+      "gls_fraction_tree",
+      "gls_fraction_crop",
+      "gls_fraction_urban"
+     ],
+     "values": {
+      "gls_fraction_tree": 0.8212,
+      "gls_fraction_crop": null,
+      "gls_fraction_urban": 98.0337
+     },
+     "note": "The global land-surface fractions are kept as corroboration, not as clustering input; their agreement with the Dynamic World classes is measured in artifacts/validation/dw_substitution.json."
+    },
+    {
+     "step": "area denominator",
+     "artifact": "data/processed/territory_master.parquet",
+     "fields": [
+      "official_land_area_km2",
+      "area_year",
+      "osm_area_km2"
+     ],
+     "values": {
+      "official_land_area_km2": 4.68,
+      "area_year": 2023,
+      "osm_area_km2": 8.31,
+      "raw_over_official": 1.78
+     },
+     "note": "The official register area is the denominator. The raw polygon area is shown only to record that it is not used: taking polygons at face value inflates density figures."
+    },
+    {
+     "step": "spending density per official square kilometre",
+     "artifact": "data/processed/feature_space.parquet",
+     "fields": [
+      "total_mean_rub",
+      "total_per_official_km2"
+     ],
+     "values": {
+      "total_mean_rub": 52217.83,
+      "recomputed_from_official_area": 11157.656,
+      "stored_density": 11152.8905,
+      "recomputed_over_stored": 1.0004
+     },
+     "note": "The recomputed figure divides the same monthly spending mean by the register area; it is set beside the stored density so any mismatch is visible rather than smoothed over."
+    }
+   ]
+  }
+ ]
+}

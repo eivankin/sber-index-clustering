@@ -1,0 +1,49 @@
+{
+  "seconds": 245.1,
+  "territories": 2660,
+  "checksums": {
+    "gls_lc": "b2203d6dd8b6918e27cd1413e7dfec4a9e4ce03dbf50f209d7f04c550c23cf53",
+    "gls_urban": "ba196ad35acc43c3b36c98559b2c30bbf0656aee0f176040e6950a4821aa1bec",
+    "gls_water": "838376f0236f654696d407636cb62203b39e3312c5c83025a764302b29e6f20e",
+    "gls_forest_type": "d908a2558f638a8a5f0a0e8caba215ce735f9524e9e97f3513f94493b171515b"
+  },
+  "layers": [
+    "gls_lc",
+    "gls_urban",
+    "gls_water",
+    "gls_forest_type",
+    "dem"
+  ],
+  "coverage": {
+    "gls_px_total": 2660,
+    "gls_unclassified_pct": 2658,
+    "gls_c20_pct": 1491,
+    "gls_c30_pct": 2554,
+    "gls_c40_pct": 2454,
+    "gls_c50_pct": 2628,
+    "gls_c60_pct": 789,
+    "gls_c80_pct": 2435,
+    "gls_c90_pct": 2586,
+    "gls_c111_pct": 2133,
+    "gls_c114_pct": 2421,
+    "gls_c115_pct": 2405,
+    "gls_c116_pct": 2557,
+    "gls_c124_pct": 2161,
+    "gls_c125_pct": 1827,
+    "gls_c126_pct": 2624,
+    "gls_urban_fraction": 2648,
+    "gls_water_fraction": 2648,
+    "gls_forest_unclassified_pct": 2658,
+    "gls_ft_c1_pct": 2103,
+    "gls_ft_c4_pct": 2442,
+    "gls_ft_c5_pct": 2413,
+    "gls_c70_pct": 71,
+    "gls_c100_pct": 127,
+    "gls_c113_pct": 402,
+    "gls_c121_pct": 1252,
+    "gls_c123_pct": 295,
+    "gls_ft_c3_pct": 409,
+    "gls_c200_pct": 182
+  },
+  "max_px": 40000000
+}

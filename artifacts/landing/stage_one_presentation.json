@@ -1,0 +1,26 @@
+{
+  "generated_by": "scripts/build_stage_one_presentation.py",
+  "page_bytes": 159539,
+  "tabs": 3,
+  "numbers_rendered_from": "the injected PDATA object; no number is typed into the template",
+  "internal_machinery_lives_in": "a collapsed per-figure drawer, not on the visible face",
+  "images_copied": 90,
+  "sections": {
+    "provenance_artifacts": [
+      "artifacts/landing/provenance_crops.json",
+      "artifacts/validation/derivation_chain.json"
+    ],
+    "cadence_artifacts": [
+      "artifacts/validation/cadence_scope.json"
+    ],
+    "decision_artifacts": [
+      "artifacts/validation/k_decision.json",
+      "artifacts/validation/amount_dominance.json",
+      "artifacts/validation/dw_substitution.json"
+    ]
+  },
+  "caveats_kept": [
+    "dynamic world year-to-year movement is uncorroborated",
+    "monthly and quarterly resolutions were never measured"
+  ]
+}

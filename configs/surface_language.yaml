@@ -1,0 +1,13 @@
+# The submission surface is Russian only. Recorded here because a removed surface must leave a
+# trace explaining why it is gone, not just an absent file.
+language: ru
+retired_on: "2026-10-09"
+retired:
+  - path: index-en.html
+    what: the English landing page
+  - path: artifacts/interpretation/cluster_names_en.json
+    what: English cluster names generated beside the Russian ones
+instruction: >
+  The entrant asked, on 2026-10-09, for the stage-one submission surface to be Russian only and
+  for English versions of everything to be dropped completely. Nothing that resolves a number into
+  English remains; every claim's appears_on no longer names an English surface.
